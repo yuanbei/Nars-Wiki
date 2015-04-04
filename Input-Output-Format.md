@@ -66,24 +66,24 @@ In a task, all the space characters are optional, and will be ignored by the sys
 
 * Tim is dead.
 
-<{Tim} --> [dead]>.
+  <{Tim} --> [dead]>.
 
 * Tim is a human.
 
-<{Tim} --> human>.
+  <{Tim} --> human>.
 
 * Humans are a lifeform.
 
-<human --> lifeform>.
+  <human --> lifeform>.
 
 * Lifeforms are like machines.
 
-<lifeform <-> machine>.
+  <lifeform <-> machine>.
 
 * Tom eats chocolate.
 
-<(*,{Tom},chocolate) --> eat>.
+  <(*,{Tom},chocolate) --> eat>.
 
-<{Tom} --> (/,eat,_,chocolate)>.
+  <{Tom} --> (/,eat,_,chocolate)>.
 
-<chocolate --> (/,eat,{Tom},_)>.
+  <chocolate --> (/,eat,{Tom},_)>.
