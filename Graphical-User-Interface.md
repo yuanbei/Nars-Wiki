@@ -55,5 +55,8 @@ Shows a listing of the sentences which were output of the system. Here you can s
 
 ***
 ### Plugin Menu
-Shows the loaded plugins of the system and its configuration options.
+Shows the loaded plugins of the system and its configuration options. 
+
 ![pluginmenu](https://cloud.githubusercontent.com/assets/11791925/6993936/8c596790-db38-11e4-9d01-5745486029a0.png)
+
+See Plugins wiki page.
