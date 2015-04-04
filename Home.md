@@ -21,6 +21,6 @@ The current stable versions of the system are available for [download](https://d
 |Page Name| Summary and Labels |
 | ------- | :-----------------:|
 | Variable Usage | When to use what variable |
-|Open Nars One Dot Six| Functions and remaining issues of Open-Nars 1.6.x.|
+|OpenNarsOneDotSix| Functions and remaining issues of Open-Nars 1.6.x.|
 
 
