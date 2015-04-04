@@ -22,5 +22,23 @@ The current stable versions of the system are available for [download](https://d
 |:-------:|:-----------------:|
 | Variable Usage | When to use what variable |
 |OpenNarsOneDotSix| Functions and remaining issues of Open-Nars 1.6.x.|
-
-
+|GraphicalUserInterface|How to work with and what it displays.|
+|ProjectStatus|The current status and the plan for the near future of the project.|
+|OpenNARSOneDotSixDotOne|Everything about OpenNARS-1.6.1.|
+|OpenNARSOneDotSixDotTwo|What is new in OpenNARS-1.6.2.|
+|InferenceControl|The control aspect of NARS.|
+|Plugins|How plugins can help, what they need to fulfill to be valid, and what plugins we have.|
+|ReinforcementLearning|NARS in the RL domain.|
+|ProceduralLearning|Learning temporal and procedural knowledge|
+|NaturalLanguageProcessing|How to provide natural language experience.|
+|PerceptionInNARS|How to do perception in NARS|
+|ApplicationPrograms|Example Programs using OpenNARS as AI.|
+|InputOutputFormat|The input/output format of the system|
+|DataStructures|What the different data structures represent|
+|Videos|Description of the Video Examples|
+|Overview|A high-level overview of this NARS implementation|
+|StampInNARS|The design and function of Stamp in NARS.|
+|DataAndKnowledgeBases|How to connect NARS to databases and knowledge bases.|
+|MultiStepExamples|Inference Examples|
+|SingleStepTestingCases|Expected results of inference rules|
+|FAQ|Theory & Software FAQ|
