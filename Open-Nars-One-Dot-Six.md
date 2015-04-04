@@ -46,3 +46,20 @@ In most rules, the occurrenceTime is processed independent of the other aspects 
 Normally, if the premises are "tensed", so is the conclusion --- the knowledge derived about a moment is only valid for that moment. It is through "eternalization" that an eternal conclusion is arrived, at the cost of a confidence lost.
 
 In principle, all inference rules should take temporal information into account. However, since an inference rule may be implemented as the cooperation of multiple methods, not all of them will be responsible to check temporal information.
+
+#####-Temporal induction and detachment
+An inference where temporal order and occurrence time are tangled is temporal induction and its reverse, detachment (as special case of deduction and abduction).
+
+In NARS, temporal induction refers to the situation where events e1 and e2 are observed as occurring in succession, with a time interval in between with a length of n clock cycles. As far as this sequence of events is noticed by the system, an inductive conclusion (&/,e1,interval(n)) =/> e2 is derived.
+
+This rule is one of the exceptions of the "generalized syllogistic" pattern in NAL inference rules, which requires the premises to have a common term. This pattern guarantees the semantic relevance among the statements involved, and also greatly reduced the number of legal combinations of premises. The current exception is allowed, because the two events are related temporally, though not semantically, and in future works on sensation organs similar exceptions will be allowed for spatially related events to be combined into compound events without shared components. This rule also includes variable introduction. If e1 and e2 have common subject or predicate, an independent variable will be introduced in the conclusion.
+
+**Issue:** There may be other forms of variable introduction where the shared term is neither the common subject nor the common predicate.
+
+**Issue:** Whether to derive conclusions like e2 =\> (&/,e1,interval(n))?
+
+**Issue:** Though in principle temporal induction can happen between any two tensed judgments, to do that exhaustively is not affordable. Beside what has been implemented, the rule may be invoked (1) as question driven, too, in response to e1 =/> e2? or similar questions, and (2) exhaustively between events in a buffer (the system's "flow of consciousness") that contains "active events", which is separated from the current task buffers in that it only contains significant events after preprocessing. In this way, non-event tasks and trivial (i.e., anticipated or irrelevant) events will not be involved.
+
+As for the time interval n between the two events, to simply derive e1 =/> e2 is correct, but it does not capture the temporal information about the interval. To use another event to represent the interval (as tried in version 1.3.3) is too accurate to be useful, because (&/,e1,interval(100)) =/> e2 and (&/,e1,interval(101)) =/> e2 probably should be merged by the revision rule, since the difference between the two numbers are negligible. For this consideration, in the current implementation, the interval is represented by a special type of term, which approximately record m = log(n) as an integer. With such a belief as premise, the detachment rule will do deduction with e1, and abduction with e2, and the occurrenceTime of the conclusion is calculated from that of the other event, plus or minus exp(m) to approximately recover the n value. Whether the log/exp functions should be replaced by power functions (such as sqrt/square) is a question to be answered later. As in other places, whenever an accurate time interval is needed, it is always possible to replace the approximate time interval by a better defined event, so that is not an issue.
+
+Since the interval measurement is subjective, it will not appear in the system's communication language, but is used in internal representation only. In the future, different intervals will be associated with different temporal terms, such as "after a while", "hours later", etc., via learning, so as to be expressible in communication.
