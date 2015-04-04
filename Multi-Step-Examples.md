@@ -69,19 +69,19 @@ Input:
 Display:
 
 ```
-  IN: <coffee --> beverage>. %1.00;0.90% {0 : 1} 
-  IN: <Java --> coffee>. %1.00;0.90% {0 : 2} 
-  IN: (--,<Java --> coffee>). %1.00;0.90% {0 : 3} 
+IN: <coffee --> beverage>. %1.00;0.90% {0 : 1} 
+IN: <Java --> coffee>. %1.00;0.90% {0 : 2} 
+IN: (--,<Java --> coffee>). %1.00;0.90% {0 : 3} 
 10
-  IN: <Java --> coffee>?  {10 : 4} 
+IN: <Java --> coffee>?  {10 : 4} 
 1
- OUT: <Java --> coffee>. %0.50;0.95% {5 : 2;3} 
+OUT: <Java --> coffee>. %0.50;0.95% {5 : 2;3} 
 9
-  IN: <tea --> beverage>?  {20 : 5} 
+IN: <tea --> beverage>?  {20 : 5} 
 10
-  IN: <coffee --> beverage>?  {30 : 6} 
+IN: <coffee --> beverage>?  {30 : 6} 
 1
- OUT: <coffee --> beverage>. %1.00;0.90% {0 : 1} 
+OUT: <coffee --> beverage>. %1.00;0.90% {0 : 1} 
 ```
 
 A contradiction makes the system unsure on directly related questions, but will not make the system to derive an arbitrary conclusion on other questions, as in propositional logic.
@@ -128,8 +128,8 @@ IN: <{Willy} --> fish>. %0.00;0.90% {51 : 8}
 OUT: <{Willy} --> [black]>. %0.00;0.90% {51 : 7} 
 OUT: <{Willy} --> fish>. %0.00;0.90% {51 : 8} 
 1
- OUT: <{Willy} --> [black]>. %0.32;0.93% {52 : 5;7;4} 
- OUT: <{Willy} --> fish>. %0.08;0.91% {52 : 2;8;1} 
+OUT: <{Willy} --> [black]>. %0.32;0.93% {52 : 5;7;4} 
+OUT: <{Willy} --> fish>. %0.08;0.91% {52 : 2;8;1} 
 ```
 
 Even when all the input judgments using the default confidence value, different rules produce conclusions with difference confidence, which have different sensitivity when facing the same amount of new evidence.
