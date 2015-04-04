@@ -47,7 +47,7 @@ Originally built just to be able to visualize the existing NAL8 examples, it is 
 
 * make closed: same for closing
 
-* be chatty: let NARS gain some defined experience in which case it will get desire to apply the say operator in different situations. (experimental, but works, communication as a desire, see more in: [NaturalLanguageProcessing](https://github.com/opennars/opennars/wiki/Natural-Language-Processing)wiki page)
+* be chatty: let NARS gain some defined experience in which case it will get desire to apply the say operator in different situations. (experimental, but works, communication as a desire, see more in: [NaturalLanguageProcessing](https://github.com/opennars/opennars/wiki/Natural-Language-Processing) wiki page)
 
 Predefine knowledge: Contains some knowledge one can tell it about, like for example common sense in which case it will have evidence that it is somewhere after it goes there, that it holds something after it picks it, made to speed up learning a bit.
 
