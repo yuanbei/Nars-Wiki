@@ -11,7 +11,7 @@ Since NARS is now very stable and has reached a certain value of stability and c
 
 Originally built just to be able to visualize the existing NAL8 examples, it is now our most complex application example, there you can built arbitrary logic circuits, combine doors and lights with switches, create machines which produce pizza, build arbitrary mazes the system has to solve on the fly, where the structure of the circuits are not known to NARS (if not especially told). This example will one day show the difference between narrow AI and general AI very clearly, and already now is a source of very interesting results.
 
-The Elements of TestChamber in the left window from top to bottom:
+**The Elements of TestChamber in the left window from top to bottom:**
 
 * Structural: Place walls, floors, or water
 
@@ -19,7 +19,7 @@ The Elements of TestChamber in the left window from top to bottom:
 
 * Machine: Add things like lights, doors etc.
 
-Force Action: Force NARS to do something.
+**Force Action: Force NARS to do something.**
 
 * "Go-To named" will make NARS go to a clicked place.
 
@@ -31,7 +31,7 @@ Force Action: Force NARS to do something.
 
 * perceive/name lets you define new places, you can let NARS go there with "Go-To named" or force the goal "be somewhere" on it in which case NARS will try to get there whatever it involves to make this possible.
 
-Request Goal: Force NARS to desire something.
+**Request Goal: Force NARS to desire something.**
 
 * try things will desire applying its actions on different things, which keeps it active. (Since desires like visiting switches will develop anyway, this is not needed after some training, at least if tell object categories is enabled)
 
