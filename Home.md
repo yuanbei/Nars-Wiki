@@ -20,4 +20,6 @@ The current stable versions of the system are available for [download](https://d
 
 |Page Name| Summary and Labels |
 | ------- | :-----------------:|
+| Variable Usage | When to use what variable |
+
 
