@@ -35,7 +35,7 @@ and even if the to these topics proposed related solutions are mostly incompatib
 
 ### How to use NARS in RL domains
 
-- Actions: -
+-Actions:-
 
 Let's say we have a finite set of actions: A={a1,...,an}.
 
