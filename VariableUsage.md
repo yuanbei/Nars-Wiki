@@ -1,5 +1,5 @@
 ### VariableUsage
-### When to use what variable type
+When to use what variable type
 
 ***
 ### Introduction
