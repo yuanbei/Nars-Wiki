@@ -53,7 +53,7 @@ Predefine knowledge: Contains some knowledge one can tell it about, like for exa
 
 Need of resources: if "need pizza" is activated, a hunger goal will show up in NARS from time to time, which is only achievable by eating pizza which can be placed.
 
-Advanced Settings:
+**Advanced Settings:**
 
 * Allow joy in action inserts forced actions as goal, in which case they will gain desire of forced actions directly, which distracts NARS from doing what you want often as consequence, but allows it to like repeating what it was forced to do. Don't allow joy deactivates this mode.
 
