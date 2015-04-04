@@ -1,5 +1,5 @@
 > ### Procedural Learning  
-> ### Learning temporal and procedural knowledge 
+> Learning temporal and procedural knowledge 
 
 ***
 
