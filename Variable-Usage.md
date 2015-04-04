@@ -20,3 +20,16 @@ They refer to a specific term and have to start with "#". Intuitively, they allo
 This type of variable typically appears as the common subject term or predicate term of two (or more) inheritance statements in a conjunction. They correspond at least loosely to variables under the existential ("there is") quantifier in first order logic.
 
 Example: There are red apples.
+
+`(&&,<#1 --> [red]>,<#1 --> apple>).`
+***
+### Query Variables
+
+Used just as placeholder for a specific constant statement to ask about:
+
+Who is a cat?
+`<?1 --> cat>?`
+Note the difference to for example "Are there red apples?" and "Which is a red apple?" are expressed respectively as
+`(&&,<#1 --> [red]>,<#1 --> apple>)?`
+`(&&,<?1 --> [red]>,<?1 --> apple>)?`
+where the former only asks for a truth-value, while the latter asks for a concrete instance.
