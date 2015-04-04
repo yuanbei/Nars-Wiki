@@ -1,4 +1,4 @@
-> ### ReinforcementLearning  
+> ### Reinforcement Learning  
 > NARS in the RL domain.
 
 ***
