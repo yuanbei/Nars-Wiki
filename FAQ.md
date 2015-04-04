@@ -45,7 +45,7 @@
 
   Not really, but you can have a look at tests in https://opennars.googlecode.com/svn/trunk/nars_core/src/main/java and https://open-nars.googlecode.com/svn/trunk/nars_core/src/main/scala
 
-*** Are there some examples for supervised machine learning with NARS ?**
+* ** Are there some examples for supervised machine learning with NARS ?**
 
 * **How to call Java code from NARS?**
 
