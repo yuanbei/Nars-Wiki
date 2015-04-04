@@ -28,8 +28,31 @@ Example: There are red apples.
 Used just as placeholder for a specific constant statement to ask about:
 
 Who is a cat?
+
 `<?1 --> cat>?`
+
 Note the difference to for example "Are there red apples?" and "Which is a red apple?" are expressed respectively as
+
 `(&&,<#1 --> [red]>,<#1 --> apple>)?`
+
 `(&&,<?1 --> [red]>,<?1 --> apple>)?`
+
 where the former only asks for a truth-value, while the latter asks for a concrete instance.
+
+***
+### Mixed Examples
+
+Different types of variable can be used together in several ways to represent something more complicated. For example, the "uncle" relation in Prolog can be defined as: uncle(X,Y) :- parent(Z,Y), brother(X,Z).
+
+In Narsese, a similar representation is:
+
+`<(&&,<#1 --> human>,<$Y --> (/,parent,#1,_)>,<$X --> (/,brother,_,#1)>) ==> <(*,$X,$Y) --> uncle>>.`
+
+Let's try with:
+
+`<{tim} --> human>.
+<{tom} --> human>.
+<{john} --> human>.
+<{tom} --> (/,parent,{john},_)>.
+<{tim} --> (/,brother,_,{john})>.
+<(*,{?who},{?ofWho}) --> uncle>?`
