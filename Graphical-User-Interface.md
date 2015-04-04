@@ -8,7 +8,7 @@ This is the start window, it shows you several options:
 
 Run NARS GUI - runs OpenNARS with main GUI interface
 Run Web GUI - runs OpenNARS with experimental web interface
-Run several application examples. See ApplicationPrograms wiki page.
+Run several application examples. See [Application Programs](https://github.com/opennars/opennars/wiki/Application-Programs) wiki page.
 
 ![launcher](https://cloud.githubusercontent.com/assets/11791925/6993904/baba6b30-db37-11e4-8ded-505fee49a04c.png)
 
