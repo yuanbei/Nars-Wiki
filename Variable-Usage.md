@@ -97,5 +97,6 @@ As a result, in order to make the goal true, it will ask who is similar to Tom.
 ### Syllogistic Pattern
 
 Dependent Variables and Independent Variables only get introduced in the following semantic patterns:
+
                     independent                       dependent
 extensional    <<$x --> S> ==> <$x --> P>>       (&&,<#x --> S>,<#x --> P>)
