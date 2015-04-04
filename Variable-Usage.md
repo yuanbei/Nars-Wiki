@@ -106,7 +106,7 @@ As a result, in order to make the goal true, it will ask who is similar to Tom.
 Dependent Variables and Independent Variables only get introduced in the following semantic patterns:
 
 ```
-                 independent                       dependent
-extensional      <<$x --> S> ==> <$x --> P>>       (&&,<#x --> S>,<#x --> P>)
+                 independent                    dependent
+extensional      <<$x --> S> ==> <$x --> P>>    (&&,<#x --> S>,<#x --> P>)
 
 ```
