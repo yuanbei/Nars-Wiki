@@ -9,7 +9,7 @@
 
 Every reasoning system has a "logic" part and a "control" part. The former specifies what can be expressed (the grammar and semantics) and what can be derived in each step (the inference rules), while the latter specifies what tasks can be carried out by linking the inference steps into inference processes. This relation is put into an intuitive formula by Robert Kowalski as "Algorithm = Logic + Control", though it can be extended beyond algorithmic processes.
 
-The logic part of NARS consists of the formal language Narsese, Experience-Grounded Semantics (EGS), and Non-Axiomatic Logic (NAL). It has been formally specified and mostly implemented.
+The logic part of NARS consists of the formal language [Narsese](https://github.com/opennars/opennars/wiki/Input-Output-Format), [Experience-Grounded Semantics (EGS)](http://www.cis.temple.edu/~pwang/Publication/semantics.pdf), and [Non-Axiomatic Logic (NAL)](http://www.worldscientific.com/worldscibooks/10.1142/8665). It has been formally specified and mostly implemented.
 
 The control part of NARS is relatively underdeveloped. Its fundamental principles had been decided at the very beginning of the project, but many concrete details remain to be decided, and the current implementation is only a very rough prototype that only handles simple cases. A major reason of this situation is the dependency of the control part on the logic part: each time a major change is made in the logic, the control often needs to be changed accordingly, while on the other hand, the logic part does not depend on the details of the control part. Because of this, the past work on NARS has been focused on the logic, and the control has been implemented mainly to test Narsese and NAL, rather than to solve actual problems. Now the logic of NARS is relatively mature, so the work is gradually moving into the control part of the system.
 
@@ -21,7 +21,7 @@ NARS is based on the theory that intelligence is a relative rationality, and an 
 
 Roughly speaking, the function of control mechanism in NARS is to dynamically allocate the system's limited resources to the activities demanding them. The objective is to optimize the expected overall efficiency, estimated according to the system's beliefs summarizing the past experience. Under the assumption of insufficient resources, the system will not be able to satisfy all the resource demands, and under the assumption of insufficient knowledge, there is no guarantee that the selections the system makes are really optimal when judged according to the system's future experience.
 
-For theoretical discussions about this approach, see the two books and the publications on Resource Management.
+For theoretical discussions about this approach, see the two books and the [publications on Resource Management](http://www.cis.temple.edu/~pwang/papers.html).
 
 ####Formal model of resource allocation
 
@@ -209,7 +209,7 @@ Finally, a desire-value will be added to every term, to record the system's appr
 
 ####The proper usage of NARS
 
-The current implementation mostly services as a proof of concept and a platform to test Narsese and NAL. As shown by the testing cases, the current system can be used to carry out single-step inference processes, as well as simple multi-step inference processes. However, the system is not ready for complicated inference processes.
+The current implementation mostly services as a proof of concept and a platform to test Narsese and NAL. As shown by the [testing cases](http://www.cis.temple.edu/~pwang/demos.html), the current system can be used to carry out single-step inference processes, as well as simple multi-step inference processes. However, the system is not ready for complicated inference processes.
 
 In the future versions, the inference control of NARS will be improved in the following ways:
 
