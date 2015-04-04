@@ -108,5 +108,15 @@ Dependent Variables and Independent Variables only get introduced in the followi
 ```
                independent                    dependent
 extensional    <<$x --> S> ==> <$x --> P>>    (&&,<#x --> S>,<#x --> P>)
+intensional    <<P --> $x> ==> <S --> $x>>    (&&,<S --> #x>,<P --> #x>) 
+```
+
+and for equivalence
 
 ```
+               independent                    dependent
+extensional  <<$x --> S> <=> <$x --> P>>      <#x --> (&,S,P)>
+intensional  <<P --> $x> <=> <S --> $x>>      <(|,P,S) --> #x>
+```
+
+For example <<$x --> S> ==> <$x --> P>>. can be created based on <a --> S> and <a --> P> because <<$x --> S> ==> <$x --> P>> matches <<$x --> S> ==> <$x --> P>> by instantiating $x with a.
