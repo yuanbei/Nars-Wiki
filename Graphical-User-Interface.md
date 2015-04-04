@@ -25,10 +25,15 @@ The main GUI. The left window shows from left to right, from top to bottom:
 * A finish button, which sets the system to maximum speed and maximum silence, in which case only executions and answers to input questions will show up in the output log. (recommended for question answering)
 
 * A volume slider, which controls how much priority a task needs to have in order to be shown in the output log.
+
 * A decision threshold slider.
+
 * Task Memory Duration, a forgetting parameter for tasklinks.
+
 * Belief Memory Duration, the same for beliefs.
+
 * Concept Memory Duration, the same for the entire concept.
+
 Plotted are several different system parameters, like the CPU time the system needed for the different inference steps, the emotion indicators like happiness and busyness, when certain inference rules were applied and so on.
 
 ![mainGUI](https://cloud.githubusercontent.com/assets/11791925/6993913/00a37740-db38-11e4-855e-9c5f1c9b7be5.png)
