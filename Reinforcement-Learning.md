@@ -45,7 +45,7 @@ But with NARS there is a solution to this dilemma: A meta-action ^r, "select a r
 
 `<{a1,...,an} --> A>.`
 
-a operator ^r is introduced, and an additional goal of average importance which says
+an operator ^r is introduced, and an additional goal of average importance which says
 
 `(^r,A)!`
 
@@ -63,7 +63,7 @@ in which case NARS will:
 
 3. Decide on its own when it chooses a random action, when it has a better idea in a certain situation, it will tend to not do so while a RL approach wouldn't have any control about this. (This principle we may also apply to the mental operators, as innate low priority goals)
 
-- Reinforcement: -
+-Reinforcement:-
 
 In simplest case in order to represent a binary reward value, it would just be
 
@@ -83,7 +83,7 @@ The goal in this case would be for example:
 
 so that it will desire this state and try to achieve it.
 
-- Input: -
+-Input:-
 
 This one works analogous,
 
