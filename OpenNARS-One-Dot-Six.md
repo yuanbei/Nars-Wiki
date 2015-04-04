@@ -107,7 +107,9 @@ As an example, a nars.operator.math package is defined to contain some simple ma
 In summary, there will be three types of operators in NARS that share the format (oper, args):
 
 * Native operators, the connectors of CompoundTerms that are directly recognized and processed by the grammar rules and inference rules
+
 * Standard operators, the operators to be introduced in NAL-9, and equipped in every normal NARS implementation
+
 * Optional operators, the specific operators that turn a standard NARS into a customized NARS+ described in the book
 
 The first two types will be fixed, while the last is extendable. For more details, see Plugins.
@@ -122,9 +124,13 @@ This layer of NAL will be mainly implemented as a set of mental operations whose
 The package nars.operator.mental contains operators that allow the system to deliberately override the automatic inference control mechanism:
 
 * task creation: This group of operators each takes a Term as argument, and uses it as content to create a new task to be processed: ^believe for judgment, ^want for goal, ^wonder for question, and ^evaluate for query.
+
 * truth-value/desire-value correction: The operators ^doubt and ^hesitate each takes a Term as argument, find the corresponding Concept, then reduce the confidence by Parameters.DISCOUNT_RATE of all the truth-values and desire-values, respectively. These operations are used when the system realized that some previous evidence is unreliable or unjustified. Please note that no operator is needed to increase the confidence value, because it can be achieved by the revision rule with new evidence.
+
 * compound compiling: The operators ^name and ^abbreviate both builds a similarity relation with high confidence between a compound term and an atomic term, so as to reduce the syntactic complexity of the corresponding concept. Their difference is that ^name takes a given atomic term as the second argument, while ^abbreviate makes a new internal name.
+
 * concept activation: The operators ^remind increases the priority of a specified concept; ^consider directly carries out an inference cycle on a specified concept.
+
 * operator binding: The operators ^register add a new operator when the system is running.
 
 The name of a mental operator only roughly corresponds to its meaning. The exact meaning of an operator is revealed by its preconditions and consequences.
@@ -149,8 +155,11 @@ In summary, at any moment the system's appraisal is represented at two levels: a
 The appraisal information will serve several functions:
 
 * The desire-values of data items (concepts, tasks, and beliefs) will be taken into account by the budget functions, where items with strong feeling (extreme desire-values) will get more resources than items with weak feeling (neutral desire-values).
+
 * The overall satisfaction will be used as feedback to adjust the desire-values of data items, so that the ones associated with positive feeling will be rewarded, and the ones associated with positive feeling punished. In this way, the system will show a "pleasure seeking" tendency, and its extent can be adjusted by a system parameter.
+
 * By involving the feeling-grounded concepts in self-control knowledge, the system will learn strategies to handle various situations specified by their associated emotions. For example, the system will learn what it should do when it is "happy" or "sad", each of which covers many situations that differ in details, but share important common properties.
+
 * The system's feelings and emotions can be communicated to other systems, either by using the "emotional" terms in Narsese, or by showing the related measurements in the GUI.
 
 ####Internal experience
@@ -158,8 +167,11 @@ The appraisal information will serve several functions:
 Beside satisfaction, the system may use other system-level indicators:
 
 * busyness that summarizes the average priority values of the recently processed. This measurement will decide the chance for tentative ideas to be explored.
+
 * alertness that summarizes the average difference between recently processed input and the corresponding anticipation. This measurement will decide the time spent on direct input.
+
 * well-being that summarizes the situation of energy supply, I/O channel connection, device functioning, etc. This measurement will become necessary when the system directly controls a hardware body.
+
 There will be corresponding feeling operators for each of these indicators. In a sense these indicators are not emotions, since they are not handled exactly as described in the previous section, though in a similar way. All these feelings are included in the system's internal experience.
 
 Beside that, it will also be necessary to record the major events within the system, and make it available to the inference. For this purpose, the current inference log will become partially perceivable by the system itself via certain feeling operations, or, some events will even automatically get into the internal experience, so as to allow the system to answer questions like "What I have been thinking?" or "what methods I've tried on that problem?".
