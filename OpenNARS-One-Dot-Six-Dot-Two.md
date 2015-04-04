@@ -1,4 +1,4 @@
-> ### OpenNARSOneDotSixDotTwo  
+> ### OpenNARS One Dot Six Dot Two  
 > What is new in OpenNARS-1.6.2.
 
 ***
