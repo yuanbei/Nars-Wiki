@@ -46,7 +46,9 @@ Different types of variable can be used together in several ways to represent so
 
 In Narsese, a similar representation is:
 
-`<(&&,<#1 --> human>,<$Y --> (/,parent,#1,_)>,<$X --> (/,brother,_,#1)>) ==> <(*,$X,$Y) --> uncle>>.`
+`<(&&,<#1 --> human>,<$Y --> (/,parent,#1,_)>,<$X --> (/,brother,_,#1)>)`
+
+` ==> <(*,$X,$Y) --> uncle>>.`
 
 Let's try with:
 
