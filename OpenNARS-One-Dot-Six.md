@@ -40,9 +40,13 @@ The temporal order in CompoundTerms is processed in the following way:
 In most rules, the occurrenceTime is processed independent of the other aspects of the rule. There are the following cases:
 
 * If both premises are ETERNAL, so is the conclusion. Therefore all the inference rules defined in the lower layers remain valid.
+
 * If the task is "tensed" (i.e., with an occurrenceTime that is not ETERNAL) but the belief is not, then the conclusion has the same occurrenceTime as the tensed premise.
+
 * If the task is not tensed but the belief is, then an eternalization rule is used to take the belief as providing evidence for the sentence in the task.
+
 * If both premises are tensed, then the belief is "projected" to the occurrenceTime of the task. Ideally, temporal inference is valid only when the premises are about the same moment, i.e., have the same occurrenceTime or no occurrenceTime (i.e., eternal). However, since occurrenceTime is an approximation and the system is adaptive, a conclusion about one moment (that of the belief) can be projected to another (that of the task), at the cost of a confidence discount. Let t0 be the current time, and t1 and t2 are the occurrenceTime of the premises, then the discount factor is d = 1 - |t1-t2| / (|t0-t1| + |t0-t2|), which is in [0,1]. This factor d is multiplied to the confidence of a promise as a "temporal discount" to project it to the occurrence of the other promise, so as to derive a conclusion about that moment. In this way, if there are conflicting conclusions, the temporally closer one will be preferred by the choice rule.
+
 Normally, if the premises are "tensed", so is the conclusion --- the knowledge derived about a moment is only valid for that moment. It is through "eternalization" that an eternal conclusion is arrived, at the cost of a confidence lost.
 
 In principle, all inference rules should take temporal information into account. However, since an inference rule may be implemented as the cooperation of multiple methods, not all of them will be responsible to check temporal information.
