@@ -13,4 +13,4 @@ The current stable versions of the system are available for [download](https://d
 ***
 [YourKit](https://www.yourkit.com/) supports OpenNARS project with its full-featured Java Profiler. [YourKit, LLC](https://www.yourkit.com/) is the creator of innovative and intelligent tools for profiling Java and .NET applications. Take a look at [YourKit](https://www.yourkit.com/)'s leading software products [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp). 
 
-![YourKit](https://www.yourkit.com/images/yk_logo.png)
+![YourKit](https://jitsi.org/wiki/pub/logo-yourkit.png)
