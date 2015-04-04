@@ -1,3 +1,0 @@
-## Opennars
-
-Opennars
