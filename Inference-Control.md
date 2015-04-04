@@ -54,9 +54,13 @@ The following figure summarizes the overall architecture and procedure of NARS:
 More accurately, the system runs by repeating the following working cycle:
 
 1. Probabilistically select a concept C from the memory
+
 2. Probabilistically select a tasklink from C, which specifies the task T to be used
+
 3. Probabilistically select a termlink from C, which specifies the belief B to be used
+
 4. With T and B as premises, trigger the applicable inference rules to derive new tasks and add them into the task buffer
+
 5. Probabilistically select some tasks from the task buffer for pre-processing
 
 Pre-processing of a task means to puts it into the corresponding concepts (and create them if they do not exist). Within a concept, the new task may create new belief, revise existing beliefs, satisfy a goal, or answer a question. If an input question obtains a best-so-far answer, it will be reported.
@@ -74,7 +78,9 @@ The system's working cycle follow a fixed algorithm, and takes a small constant 
 In OpenNARS, every data item participating in resource competition (such as belief, task, concept, as well as the links to them) extends the abstract class Item, which has a budget consisting of 3 EB values: priority, durability, and quality.
 
 * The priority of an item determines its current access chance with respect to the other items in the same bag. This value is increased when the item is activated, and is highly context-sensitive. It summarizes many factors.
+
 * The durability of an item determines the decay rate of the priority by multiplying into it periodically. This process is responsible for the relative forgetting of items, and is normally the only one that deactivates an item, that is, there is no "inhibition" or "forced forgetting" at this level.
+
 * The quality of an item is mostly determined by its intrinsic value to the system, without considering its relevance to the current context. It also determines the residual priority of the item where relative forgetting stops.
 
 In each working cycle, only the directly related items will have their budgets adjusted, which means the system may need to decide for an item how long a decay has been "overdue", and to decrease its priority for multiple decay periods. The system will not attempt to globally traverse the items to implement forgetting.
@@ -86,13 +92,17 @@ A belief is a judgment that is already accepted into memory as summary of the sy
 The quality of a belief is determined by the following factors:
 
 * its confidence: higher values are preferred
+
 * its frequency: extreme values (closer to 1 or 0) are preferred
+
 * its complexity: lower values are preferred
 
 The priority a belief is increased in the following situations:
 
 * When the same conclusion is derived repeatedly, it will become more active.
+
 * When a belief contributes to the solution of a task, it will be rewarded and become more accessible.
+
 * When the concepts a belief refers to are active, the belief becomes more accessible. Therefore, when a concept is activated, the beliefs mentioning it in the other concepts will become more accessible.
 
 **Issue:** The last process has not been implemented.
@@ -132,7 +142,9 @@ The quality of links is a more complicated issue. Currently only a very rough fu
 **Issue:** The quality of a concept is probably a compromise or balance of the following factors:
 
 * "Well-defined" concepts are preferred. The beliefs of such a concept can be derived from a small and relatively stable "core meaning" (as its "essence" or "definition"), and most questions about its instance or properties have sharp "yes/no" answers.
+
 * "Basic-level" concepts are preferred. Such a concept has balanced extension and intension, that is, many instances sharing many properties. For example, concept "car" is usually preferred than both the more general concept "vehicle" and the more specific concept "truck".
+
 * Useful concepts are preferred. This evaluation is completely based on the system's experience, according how often a task is successfully solved using the concept.
 
 How to measure the above factors and whether there are others remain to be decided.
@@ -150,7 +162,9 @@ The resource competition of items in a bag is similar to the competition of indi
 The memory of NARS can be naturally interpreted as a conceptual network that supports distributed representation and parallel processing, with the inference rules as actions that modify the topological structure and weights on the links. Under this interpretation, the priority distribution among concepts is similar to the activation distribution in neural networks (NNs), and priority adjustments is similar to activation spreading. However, there are several key differences in this analogy:
 
 * In NARS, the logic and the control are clearly separated. Priority is part of the latter, so does not play a representational role (as in NNs).
+
 * In NARS, activation spreading is not a stand-alone process, but a consequence of task derivation. That is, what is sent from a concept to another is not "pure energy", but a task with meaning, which triggers an increase in priority of the receiver.
+
 * In NARS, this activation spreading is highly selective. A "firing concept" does not increase the activity of all of its neighbors, but only a small portion of them.
 
 The overall priority distribution in memory at a moment represents how the system's attention is distributed at that time, and this attention shifts constantly, both according to the external input tasks and the internal processing of the tasks.
@@ -174,7 +188,9 @@ In the long run, the inference activities of the system will be controlled by bo
 Beside (external) knowledge about the environment, NARS will learn several types of (internal) knowledge directly related to inference control:
 
 * Structural knowledge embedded among the priority values. This type of knowledge decides the chance for a data item (task, belief, or concept) to be accessed, and it cannot be expressed in Narsese, but have to be obtained via repeated practise.
+
 * Procedural knowledge expressed as compound operations. This type of knowledge control the routine actions taken by the system, and is also mainly obtained through practise, though it can be expressed in Narsese.
+
 * Declaritive knowledge expressed as descriptions of methods and processes. This type of knowledge can be fully represented as judgments in Narsese, and can influence the system's selections.
 
 ####Feeling and emotion
@@ -198,7 +214,9 @@ The current implementation mostly services as a proof of concept and a platform 
 In the future versions, the inference control of NARS will be improved in the following ways:
 
 * A refined design of the automatic control mechanism. Effort is being made to develop a general theory of resource allocation, based on the previous research on attention mechanism and decision theory.
+
 * A full implementation of self-monitor and self-control. Certain internal control activities will be implemented as mental operations that can be executed as the result of inference.
+
 * Proper tutoring. As mentioned above, control knowledge usually cannot be directly loaded into the system, but has to grow by the system itself. Similar to how a human is trained in a domain, not only the content of the input knowledge matters, but also the order and timing of the input, as well as the existence of guiding questions and driving goals. This will still be the case after the control system is fully developed.
 
 On the other hand, if the objective of a project is to build a NARS-based application for a specific domain, the above strategy is probably not the best approach. It will be much more efficient to control the inference process using problem-specific algorithms.
