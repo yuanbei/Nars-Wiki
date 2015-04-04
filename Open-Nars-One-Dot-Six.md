@@ -67,3 +67,43 @@ Since the interval measurement is subjective, it will not appear in the system's
 ***
 ### Procedural Inference (NAL-8)
 Beside Non-Axiomatic Logic: A Model of Intelligent Reasoning, procedural reasoning in NARS is also discussed in Solving a Problem With or Without a Program. A previous implementation exists as version 1.3.3, with working examples in several files, as well as descriptions in ProceduralLearning.
+
+####Inference on goals
+
+In nars.entity.Sentence, a "desire" value is added, which is truth-value interpreted differently. The desire-value of statement S is the truth-value of S==>D, where D is a virtual statement representing a desired situation. Furthermore, add "Goal" and "Query" as two types of Sentence, and process them like "Judgment" and "Question", but using desire-value, rather than truth-value.
+
+In all the inference rules, "Query/Goal" and "Judgment/Question" are processed in parallel. Most of the code for this already exist in 1.3.3, and only minor revisions are made.
+
+Given the reversibility of the inference rules of NAL, the derivation of Goals and Quests are basically the existing rules, except that the desire-values are calculated using different functions, according to the above correspondence between truth-value and desire-value.
+
+Though both Question and Goal are derived by backward inference, there is a major difference between the two: while derived Questions are directly accepted as new tasks, derived Goals do not immediately become tasks. instead, they contribute to the desirability of the corresponding sentences. Only when the desirability of a sentence reach a threshold, does a decision-making rule is triggered to decide whether to pursue the sentence as a goal.
+
+Issue: The inference on Quest, as Question on desire-values, has not been carefully evaluated. In particular, the budget-value functions need to be properly selected in each rule, since in the same method, the selection may be different between Quest and Question on truth-value.
+
+####Inference on operations
+
+Goals are eventually achieved by the execution of operations. An "operation" package is introduced, with each operator defined as a class, with an "execute" method that takes a list of arguments for the operation. In Memory, a HashMap<String, Operator> is used to associate the operators with their names. When a goal corresponds to an operation, the execute method of its operator is called.
+
+An operation with acquired operator oper and arguments args is internally represented as an Inheritance statement (*, SELF, args) --> oper, though at the I/O interface it is displayed as (oper, args). Here SELF is a special term representing the system itself.
+
+**Issue:** Technically, (*, SELF, args) --> oper and (*, args, SELF) --> oper both work as the internal representation of an operation. The former looks more natural (so is used in the book), while the latter is slightly more efficient (so is used in the code). A final decision will need to be made to keep the descriptions consistent.
+
+The key of procedural learning is the generation of "compound operations". The major structures compound operations are sequential, parallel, conditional, and recursive.
+
+**Issue:** Do all of the four fully covered in the current code? Does recursive operations need special treatment, or can be handled as special cases of conditional statements?
+
+**Issue:** Should "compound operations" be clearly separated from "compound terms", so that they can be directly executed, without going through the intermediate inference steps?
+
+####Operational interface
+
+A "universal sensorimotor interface" is provided, where the commands or functions of other systems or decides can be registered in NARS, and called by it. With each operator, some initial knowledge about its preconditions and consequences should be provided to the system, so inference can be carried out on it.
+
+As an example, a nars.operator.math package is defined to contain some simple math operators. Currently there are two operators, which can be called as "(^count, {a, b, c}, #x)!" and "(^add, 2, 3, #x)!", where #x will be replaced by the result after the execution, as "(^count, {a, b, c}, 3)." and "(^add, 2, 3, 5)." To embed them into knowledge, the input arguments should be independent variables, such as "... (^count, $y, #x) ..." and "... (^add, $y, $z, #x) ...". In the future, each group of optional operators should be kept in a sub-package of nars.operator, and each class should extend Operator.java, as well as to add a line to call registerOperator in its super class.
+
+In summary, there will be three types of operators in NARS that share the format (oper, args):
+
+* Native operators, the connectors of CompoundTerms that are directly recognized and processed by the grammar rules and inference rules
+* Standard operators, the operators to be introduced in NAL-9, and equipped in every normal NARS implementation
+* Optional operators, the specific operators that turn a standard NARS into a customized NARS+ described in the book
+
+The first two types will be fixed, while the last is extendable. For more details, see Plugins.
