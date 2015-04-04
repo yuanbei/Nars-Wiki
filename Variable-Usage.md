@@ -51,8 +51,13 @@ In Narsese, a similar representation is:
 Let's try with:
 
 `<{tim} --> human>.
+
 <{tom} --> human>.
+
 <{john} --> human>.
+
 <{tom} --> (/,parent,{john},_)>.
+
 <{tim} --> (/,brother,_,{john})>.
+
 <(*,{?who},{?ofWho}) --> uncle>?`
