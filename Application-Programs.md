@@ -99,4 +99,4 @@ Such a input will be transformed to
 <(*,word-tom,word-is,word-the,word-brother,word-of,word-me) --> linepart>. :|: %1.00;0.90%
 ```
 
-where the words are changed automatically so that the words won't conflict with the concepts the words represent. See [NaturalLanguageProcessing](https://github.com/opennars/opennars/wiki/Natural-Language-Processing) wiki page for more information of how such a input will be interpreted according to the current situation. Also "Natural Language Processing by Reasoning and Learning" is relevant here: http://www.cis.temple.edu/~pwang/Publication/NLP.pdf
+where the words are changed automatically so that the words won't conflict with the concepts the words represent. See [Natural Language Processing](https://github.com/opennars/opennars/wiki/Natural-Language-Processing) wiki page for more information of how such a input will be interpreted according to the current situation. Also "Natural Language Processing by Reasoning and Learning" is relevant here: http://www.cis.temple.edu/~pwang/Publication/NLP.pdf
