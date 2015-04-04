@@ -19,8 +19,11 @@ Run several application examples. See ApplicationPrograms wiki page.
 The main GUI. The left window shows from left to right, from top to bottom:
 
 * The start button which activates the system.
+
 * A step button to apply a single inference step.
+
 * A finish button, which sets the system to maximum speed and maximum silence, in which case only executions and answers to input questions will show up in the output log. (recommended for question answering)
+
 * A volume slider, which controls how much priority a task needs to have in order to be shown in the output log.
 * A decision threshold slider.
 * Task Memory Duration, a forgetting parameter for tasklinks.
