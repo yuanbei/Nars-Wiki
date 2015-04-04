@@ -50,14 +50,14 @@ In Narsese, a similar representation is:
 
 Let's try with:
 
-`<{tim} --> human>.
+`<{tim} --> human>.`
 
-<{tom} --> human>.
+`<{tom} --> human>.`
 
-<{john} --> human>.
+`<{john} --> human>.`
 
-<{tom} --> (/,parent,{john},_)>.
+`<{tom} --> (/,parent,{john},_)>.`
 
-<{tim} --> (/,brother,_,{john})>.
+`<{tim} --> (/,brother,_,{john})>.`
 
-<(*,{?who},{?ofWho}) --> uncle>?`
+`<(*,{?who},{?ofWho}) --> uncle>?`
