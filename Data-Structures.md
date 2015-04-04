@@ -41,7 +41,7 @@ Creation Time, Occurence Time, Evidental Base, Derivation Chain. Exists in order
 
 This is the most complex data type in the system which adds some additional terminology: A concept is named by one term. Not all terms are concepts though: For example if the term of the concept has subterms, the concepts which were named by the subterms which once existed may have been already forgotten. A concept links to tasks with different budget which are here called TaskLinks. A concept links to other terms with termlinks, linking to exactly those terms who share a common term in bi-directional manner. Using the terms as name, this type of link eventually link a concept to other concepts. All this links are managed in bags, and as such may be forgotten. Also note: Concepts are itself in a bag fighting against getting forgotten, see InferenceControl wikipage for this.
 
-WHen the term that naming the concept is a statement, the concept also consists of additional information:
+When the term that naming the concept is a statement, the concept also consists of additional information:
 
 * Beliefs, which are judgements (i.e., truth-values on the statement) sorted according to confidence and other factors.
 
