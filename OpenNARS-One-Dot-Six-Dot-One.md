@@ -10,7 +10,7 @@ Watch this version at http://www.youtube.com/watch?v=pdaUNX7iKlQ
 
 ![maingui](https://cloud.githubusercontent.com/assets/11791925/6993979/24735846-db3a-11e4-9477-5a1215f2a748.png)
 
-A list of the news of 1.6.1:
+**A list of the news of 1.6.1:**
 
 * A nicely working NAL9 mode.
 
@@ -28,7 +28,7 @@ A list of the news of 1.6.1:
 
 * Multicore Support
 
-Plugins we created include:
+**Plugins we created include:**
 
 * TemporalParticlePlanner
 
@@ -44,11 +44,11 @@ Plugins we created include:
 
 * Other mental plugins
 
-New inference rules:
+**New inference rules:**
 
 * Temporal Chaining Rule
 
-Others:
+**Others:**
 
 * It is more correct NAL-wise (from NAL6 till 9 especially) than all versions before and extremely stable.
 
@@ -68,7 +68,7 @@ Others:
 
 * New memory graph.
 
-All the application examples except TestChamber are new:
+**All the application examples except TestChamber are new:**
 
 * Tic Tac Toe
 
