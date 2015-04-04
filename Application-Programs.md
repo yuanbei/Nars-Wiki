@@ -31,7 +31,7 @@ Force Action: Force NARS to do something.
 
 * perceive/name lets you define new places, you can let NARS go there with "Go-To named" or force the goal "be somewhere" on it in which case NARS will try to get there whatever it involves to make this possible.
 
-* Request Goal: Force NARS to desire something.
+Request Goal: Force NARS to desire something.
 
 * try things will desire applying its actions on different things, which keeps it active. (Since desires like visiting switches will develop anyway, this is not needed after some training, at least if tell object categories is enabled)
 
