@@ -18,8 +18,8 @@ The current stable versions of the system are available for [download](https://d
 ***
 ### Page list
 
-|Page Name| Summary and Labels |
-| ------- | -----------------|
+|Page Name|Summary and Labels|
+|:-------:|:-----------------:|
 | Variable Usage | When to use what variable |
 |OpenNarsOneDotSix| Functions and remaining issues of Open-Nars 1.6.x.|
 
