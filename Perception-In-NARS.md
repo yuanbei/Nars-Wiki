@@ -17,7 +17,7 @@ In NARS there is no separate "perception module" (or modules for vision, hearing
 
 A "term" in NARS is an identifier to a recognizable entity in its experience or memory. Unlike "symbol" in traditional AI and cognitive science, a term does not "refers to" or "represent" an "object" in the world.
 
-A "concept" in NARS is a data structure in its memory. Every concept is named by exactly one term, but not every term names a concept --- some terms are variables (see VariableUsage), while some others could name concepts but the system does not consider them important enough to deserve the expense.
+A "concept" in NARS is a data structure in its memory. Every concept is named by exactly one term, but not every term names a concept --- some terms are variables (see [VariableUsage](https://github.com/opennars/opennars/wiki/Variable-Usage)), while some others could name concepts but the system does not consider them important enough to deserve the expense.
 
 Terms are related to each other in the system's experience, and these relations are organized into relations of the corresponding concepts. It is these relations that defines the "meaning" of a term and a concept. There is no "interpretation" necessary, and nor "symbol grounding problem" --- the meaning of a term/concept is always "grounded" in the system's experience about it. A term may correspond to words in a language, sensational signals, perceptual patterns, executable operators, or none of them but an "abstract" identifier. However, in all these cases, its meaning is determined in the same way, i.e., by how it is related to the other terms.
 
