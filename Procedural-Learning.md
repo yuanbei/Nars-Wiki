@@ -238,7 +238,7 @@ OUT: <<(&/,<a --> b>,+3) =/> <b --> c>>. :\: %0.92;0.91%
 
 ####Procedural Examples
 
-The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in SingleStepTestingCases.
+The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
 
 This group of examples show how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
