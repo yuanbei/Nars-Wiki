@@ -28,7 +28,9 @@ The details of the control part (memory structure and resource allocation) will 
 There are several types of testing cases:
 
 * Single-step examples show the premise-conclusion relationship of each inference rule
+
 * Multi-step examples show typical functions of the system that takes several steps
+
 * There are more complicated tests described in ApplicationPrograms and Testing Cases.
 
 To carry out an application test, it is important to remember that it cannot be done by simply dump a large number of tasks into the system then let it run. It is more efficient to do it in a step-by-step manner, and to follow the order of (1) Narsese (i.e., make sure all the problems and solutions can be expressed), (2) NAL (i.e., make sure all the desired steps are supported by existing rules), and (3) NARS (i.e., make sure the complete process can be carried out when given proper experience).
@@ -40,8 +42,11 @@ Some testing cases can be the problems that have been studied in AI and cognitiv
 Beside the conceptual issues, future developmental tasks include:
 
 * Debugging
+
 * Documentation (both javadoc and wiki)
+
 * Refactoring (some ad hoc code should be merged into the overall structure)
+
 * Database connection (as explained in DataAndKnowledgeBases)
 
 In the near future, it is still too early to spend time on detailed parameter tuning or performance improvements.
