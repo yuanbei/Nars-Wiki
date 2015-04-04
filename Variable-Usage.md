@@ -78,7 +78,8 @@ Interesting NAL9 case which involves all variable types:
 
 If something is a good question, and you ask yourself the question, some agent will be a good agent.
 
-`<(&&,<#1 --> (&, [good], question)>, (*, {$2}, #1) --> wonder>) ==> ({#2} --> (&, [good], agent)>.`
+`<(&&,<#1 --> (&, [good], question)>, (*, {$2}, #1) --> wonder>)` 
+`==> ({#2} --> (&, [good], agent)>.`
 
 NARS is a agent
 
