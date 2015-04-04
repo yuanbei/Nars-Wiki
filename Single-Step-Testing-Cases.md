@@ -17,13 +17,13 @@ OUT: <bird --> swimmer>. %0.87;0.91% {1 : 1;2}
 
 A line starting with '*' indicates the beginning of a new example, and will initialize the system when feed into the demo as input. A line starting with '/' is a comment. A line starting with an optional "IN:" is an input task to the system, and a line starting with "OUT:" is output from the system. A line containing a single number indicates the number of inference cycles between in/out lines. Spaces, tabs, and blank lines are ignored.
 
-String like "<bird --> swimmer>. %0.87;0.91%" is a Narsese sentence, and the grammar is specified in InputOutputFormat. The following "{1 : 1;2}" is a 'stamp' automatically attached by the system, to indicate the creation time and evidential base of that sentence.
+String like "<bird --> swimmer>. %0.87;0.91%" is a Narsese sentence, and the grammar is specified in [Input Output Format](https://github.com/opennars/opennars/wiki/Input-Output-Format). The following "{1 : 1;2}" is a 'stamp' automatically attached by the system, to indicate the creation time and evidential base of that sentence.
 
 To run the demonstration of Open-NARS under nars-dist, the user can copy/paste an example into the input window, then click "OK" to run the example. In this process, the output lines and the stamps will be ignored. The user can also load a complete example file, by choosing it from the Main Window, using "File/Load experience". Since the input/output line produced in this way will be quickly overwritten in the display area, it is usually necessary to save it into a file, using "File/Save experience". The first time this item is selected, the user can open a (new or existing) file to catch the user/system communication. To close the file, select "File/Save experience" again.
 
 With this file load/save function, each example file comes with two versions. The "edited" version is manually edited to only contain the relevant information for each example with approximate English translations, so is easier to understand; the "unedited" version contains all actual user-system communication as displayed then either version is loaded into the system.
 
-The examples are grouped according to the order they are introduced in the book Non-Axiomatic Logic: A Model of Intelligent Reasoning. They are not self-explained, and the readers should consult the book to fully understand them.
+The examples are grouped according to the order they are introduced in the book [Non-Axiomatic Logic: A Model of Intelligent Reasoning](http://www.worldscientific.com/worldscibooks/10.1142/8665). They are not self-explained, and the readers should consult the book to fully understand them.
 
 * Example-NAL1 shows the basic rules on atomic terms and the inheritance relation, including revision, deduction, abduction, induction, and question answering.
 
