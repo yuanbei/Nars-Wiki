@@ -4,7 +4,7 @@
 ***
 ### Launcher
 
-This is the start window, it shows you several options:
+This is the start window of 1.6, it shows you several options:
 
 Run NARS GUI - runs OpenNARS with main GUI interface
 Run Web GUI - runs OpenNARS with experimental web interface
