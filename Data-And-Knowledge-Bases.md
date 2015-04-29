@@ -5,7 +5,7 @@
 
 ### Introduction
 
-The current implementation (open-nars 1.5.5) does not use database. The system keeps its whole memory in RAM, and handles input and output using GUI and text files. However, in the future there are several possible ways for databases and knowledge bases to be used in NARS.
+The current implementation does not use database. The system keeps its whole memory in RAM, and handles input and output using GUI and text files. However, in the future there are several possible ways for databases and knowledge bases to be used in NARS.
 
 ### Permanent memory
 
@@ -19,11 +19,11 @@ For NARS to keep its memory from run to run, it is necessary to save the image o
 
 One possible way is to swap concepts between RAM and database when the system is running. In this way, the system only keep high-priority concepts in the RAM, and save the low-priority concepts in the database.
 
-Since the units of data are belief, task, and concept, and the database also need to keep the priority distribution among them, the database should be object-oriented, rather than relational.
+Since the units of data are belief, task, and concept, and the database also needs to keep the priority distribution among them, the database should be object-oriented, rather than relational.
 
 ### Knowledge source
 
-Another way to use database in NARS is to store knowledge to be read into the system. Different from the database that stores the memory image, a knowledge base of NARS can have any internal structure, as far as its query result can be translated into Narsese sentences. Examples of knowledge base include WordNet, Cyc, and DBpedia. It is also possible to build database containing Narsese sentences that are converted from other sources, and use it to train a NARS.
+Another way to use database in NARS is to store knowledge to be read into the system. Different from the database that stores the memory image, a knowledge base of NARS can have any internal structure, as far as its query result can be translated into Narsese sentences. Examples of knowledge base include WordNet, Cyc, and DBpedia. It is also possible to build database containing Narsese sentences that are converted from other sources, and to use it to train a NARS.
 
 There are two major modes for NARS to get knowledge from such a knowledge base:
 
@@ -32,6 +32,8 @@ There are two major modes for NARS to get knowledge from such a knowledge base:
 2. Knowledge browsing, that is, systematically convert part or all of its content into the system's experience.
 
 In the browsing mode, the knowledge base only consists part of the system's experience, without blocking the other input channels. It is like reading a book, in the sense that the system not only inserts the new knowledge into memory, but also carries out inference triggered by the knowledge. Therefore, to keep a proper "browsing speed" is necessary.
+
+Reference: [Intelligent Reasoning on Natural Language Data: a Non-Axiomatic Reasoning System Approach](http://www.cis.temple.edu/~pwang/9991-PJ/Reports/OzkanKilicThesis.pdf) (Master Thesis by Ozkan Kilic)
 
 ### JDBC
 
