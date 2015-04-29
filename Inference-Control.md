@@ -41,7 +41,7 @@ A control function is designed by first considering the factors that should be i
 
 To realize dynamic resource allocation, NARS self-organizes its memory using probabilistic priority-queue to give data items prioritized treatment. A bag is a data structure with the basic operations (1) put in, (2) take out, and (3) access by key. The take-out operation is probabilistic, according to the priority distribution of the items in the bag. Each operation takes a small constant time to finish.
 
-Issue: Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
+**Issue:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
 Since NAL is a term logic, its inference rules typically require shared term in premises, so tasks and beliefs can be indexed and clustered by their component terms. In NARS, each concept is a data structure named by a term, and it links to the tasks and beliefs with the term in it. Consequently, a concept is an independent unit of storage and processing.
 
@@ -69,7 +69,7 @@ A graphical description of how questions are answered by the system by this proc
 
 ![question_answering](https://cloud.githubusercontent.com/assets/11791925/6994024/04f57344-db3c-11e4-9a9b-b3a6ac54a699.png)
 
-**Issue:** It may be necessary to add task buffers to each concept to hold the tasks added, so as to postpone their processing until the concept is selected. Competition can be added into the buffer, so only selected tasks are processed.
+**Issue:** It may be necessary to add task buffers to each concept to hold the tasks added, so as to postpone their preprocessing until the concept is selected. Competition can be added into the buffer, so only selected tasks are processed.
 
 The system's working cycle follow a fixed algorithm, and takes a small constant time to finish. The processing of a task is carried out by a number of working cycles, though their number and order are not predetermined, but decided by the control mechanism at the run time.
 
@@ -81,7 +81,7 @@ In OpenNARS, every data item participating in resource competition (such as beli
 
 * The durability of an item determines the decay rate of the priority by multiplying into it periodically. This process is responsible for the relative forgetting of items, and is normally the only one that deactivates an item, that is, there is no "inhibition" or "forced forgetting" at this level.
 
-* The quality of an item is mostly determined by its intrinsic value to the system, without considering its relevance to the current context. It also determines the residual priority of the item where relative forgetting stops.
+* The quality of an item is mostly determined by its long-term value to the system, without considering its relevance to the current context. It also determines the residual priority of the item where relative forgetting stops.
 
 In each working cycle, only the directly related items will have their budgets adjusted, which means the system may need to decide for an item how long a decay has been "overdue", and to decrease its priority for multiple decay periods. The system will not attempt to globally traverse the items to implement forgetting.
 
@@ -119,11 +119,11 @@ The quality of a task is similar to that of a belief, though goal and question h
 
 The priority and durability of an input task are specified by the user, which gives the user an opportunity to influence the system's processing of the task. System default values are used when no values are provided.
 
-Issue: In the future when different types of users and task sources are involved, each may have a different default budget or a different allowed budget range. One option is to add this into input channel.
+**Issue:** In the future when different types of users and task sources are involved, each may have a different default budget or a different allowed budget range. One option is to add this into input channel.
 
 The priority and durability of a derived task depends on those of its parent task and belief, as well as the type of the inference.
 
-Issue: One unusual feature of NARS is that a derived task will exist and be processed independently, without a permanent bond to its parent task. For some applications, such a feature may be undesired. In that case, a link can be added so every derived task links to its parent task. Each time when it is selected, the existence of its parent task is checked first, and when the parent no longer exist, the child will be removed, too. However, such a treatment will decrease the system's creativity and autonomy. A compromise is to use a system parameter to tune the durability of the derived tasks, so that after the parent task is removed, its children will all disappear soon.
+**Issue:** One unusual feature of NARS is that a derived task will exist and be processed independently, without a permanent bond to its parent task. For some applications, such a feature may be undesired. In that case, a link can be added so every derived task links to its parent task. Each time when it is selected, the existence of its parent task is checked first, and when the parent no longer exist, the child will be removed, too. However, such a treatment will decrease the system's creativity and autonomy. A compromise is to use a system parameter to tune the durability of the derived tasks, so that after the parent task is removed, its children will all disappear soon.
 
 The priority and durability of a task are increased only on one situation: the same task is repeatedly generated, either from the same source and from different sources. This situation should not be confused with the treatment of truth-value. If the same judgment is derived multiple times from the same parent task and belief, the copies will be merged into a task with a larger budget, though the truth-value remains the same, since the premises are based on overlapping evidence. In this way, repeated inference is not completely a waste of time, since it will at least increase the chance for the conclusion to be further processed.
 
@@ -135,7 +135,7 @@ A concept is created when an accepted task contains a term for which there is no
 
 The quality of a concept is initially determined by the complexity of the term, and then adjusted according to the quality of the links and the usefulness of the concept to the system.
 
-Issue: Currently the complexity of a term is completely defined according to its internal structure: atomic terms have complexity value 1, and a compound's complexity is the sum of the complexity values of its components plus 1 (for the operator). To reward often used compounds, their complexity may be considered as lower than their "literal complexity" defined above, since they are often used as a whole, and its internal structure becomes less and less "visible". The same effect can be achieved by the ^naming operator, which creates an atomic term for an often used compound, and builds a strong similarity statement between the two. It is unclear whether both mechanisms are needed, and if not, which one should be used.
+**Issue:** Currently the complexity of a term is completely defined according to its internal structure: atomic terms have complexity value 1, and a compound's complexity is the sum of the complexity values of its components plus 1 (for the operator). To reward often used compounds, their complexity may be considered as lower than their "literal complexity" defined above, since they are often used as a whole, and its internal structure becomes less and less "visible". The same effect can be achieved by the ^naming operator, which creates an atomic term for an often used compound, and builds a strong similarity statement between the two. It is unclear whether both mechanisms are needed, and if not, which one should be used.
 
 The quality of links is a more complicated issue. Currently only a very rough function is there as a placeholder.
 
@@ -195,17 +195,17 @@ Beside (external) knowledge about the environment, NARS will learn several types
 
 ####Feeling and emotion
 
-Feeling and emotion play an important role in truly intelligent systems, and they start from subjective appraisal of events, entities, and situations, with respect to goals of the system.
+Feeling and emotion play an important role in truly intelligent systems, and they start from subjective appraisal of events, entities, and situations, with respect to the goals of the system.
 
-Goals provide the ultimate criteria for the system's appraisals and references.
+Goals provide the ultimate criteria for the system's appraisals and preferences.
 
-First, the appraisal of statements is represented by the desire-value of a statement. It is determined by the statement's logical relation with the goals that have been taken into account.
+First, the appraisal of a statement is represented by its desire-value. It is determined by the statement's logical relation with the goals that have been taken into account. Since a goal is an event, a desire-value has its creation-time recorded, which is also the expected occurrence-time (all desires are about the current moment), and is not eternal. 
 
-Second, the overall status of the system in goal satisfaction is measured by a few global variables, such as satisfaction and busyness.
+Second, the overall status of the system in goal satisfaction is indicated by a global _satisfaction_ measurement, which is an accumulation of the satisfaction levels of the recent tasks.
 
-Finally, a desire-value will be added to every term, to record the system's appraisal to it, evaluated according to the relation of the term with the events and situations. Its value may be various degrees of "like" or "dislike", as well as "mixed" or "don't care".
+Finally, the desire-value of a concept measures the system's appraisal to it, evaluated according to the relation of the term with the global satisfaction. Each time a concept fires, its desire-value is adjusted according to the current overall feeling of the system. Consequently, the system's feeling about a concept (term) may be various degrees of "like" or "dislike", as well as "mixed" or "don't care".
 
-**Issue:** The last type has not been implemented yet, and may wait the first two to become relatively stable. Another open issue is how to effectively use emotion in the control mechanism.
+**Issue:** The last form of desire-value has not been implemented yet, and may wait the first two to become relatively stable. Another open issue is how to effectively use emotion in the control mechanism. The basic idea is that when the system's satisfaction level is high, it is more likely to work on low-priority tasks.
 
 ####The proper usage of NARS
 
