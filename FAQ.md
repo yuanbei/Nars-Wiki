@@ -7,7 +7,7 @@
 
 * **How relevant is Pei Wang’s thesis to today’s theory? As of 2013, are there some revisions of ideas, or ”just” deepening of analysis?**
 
-  Most of the basic ideas in Pei Wang’s thesis (1995) and first book (2006) remain in today's NARS, though some  details (grammar rules, inference rules, implementation, etc.) have be revised. The most comprehensive and up-to-date description of the Non-Axiomatic Logic (i.e., the grammar rules and inference rules implemented in NARS) is Pei Wang's second book (2003).
+  Most of the basic ideas in Pei Wang’s thesis (1995) and first book (2006) remain in today's NARS, though some  details (grammar rules, inference rules, implementation, etc.) have be revised. The most comprehensive and up-to-date description of the Non-Axiomatic Logic (i.e., the grammar rules and inference rules implemented in NARS) is Pei Wang's second book (2013).
 
 * **What is the difference between NARS reasoning and OpenCog’s PLN (Probabilistic Logic Network)?**
 
@@ -35,7 +35,7 @@
 
 * **What importers are there from other data or knowledge formats?**
 
-  None at the moment, but work is under way in EulerGUI project for a translation from RDF/N3 (Semantic Web standards) into Narsese.
+  One importer for WordNet has been built (see http://www.cis.temple.edu/~pwang/9991-PJ/Reports/OzkanKilicThesis.pdf), and  work is under way in EulerGUI project for a translation from RDF/N3 (Semantic Web standards) into Narsese.
 
 * **Which API is available for embedding NARS in an application?**
 
@@ -59,11 +59,11 @@
 
 * **Is it possible, or even necessary to declare terms and relations like in done in RDF Schema, OWL, UML, or are terms and relations implicitly declared like in Prolog?**
 
-  NO
+  Not at the moment
 
 * **Is there some special syntax for literals ( numbers, strings, ...) ?**
 
-  NO
+  Yes. Numbers and strings have been added into Narsese grammar.
 
 * **Does NARS index strings and identifiers, like Prolog implementations do ?**
 
@@ -71,4 +71,4 @@
 
 * **Are there some stress tests for NARS?**
 
-  NO
+  Not at the moment
