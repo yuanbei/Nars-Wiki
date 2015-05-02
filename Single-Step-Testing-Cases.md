@@ -3,7 +3,9 @@
 
 ***
 
-There are example files in http://code.google.com/p/open-nars/source/browse/trunk/nars-dist/Examples/, showing conclusions of single-step inference, as implemented in open-nars 1.5.5.
+There are example files in https://github.com/opennars/opennars/tree/1.6.4_devel/nal/Examples, showing conclusions of single-step inference.
+
+For each level of NAL1 to NAL6, there are two files. The "edited" file only contains the conclusions produced by the rules defined at that level, while the "unedited" files contains the actual outputs for the given input. Different versions of the system may need to adjust the exact timing of input, so the exact input and output lines may be different from the following record, which was produced by Open-NARS 1.5.5.
 
 Each file contains a sequence of examples. An example looks like the following:
 
