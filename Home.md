@@ -1,6 +1,8 @@
 Welcome to the opennars wiki!
 
-Open-NARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project, which attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a unified theory, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
+Open-NARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project, licensed under [GNU GPL v2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a unified theory, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
 
 What makes NARS different from conventional computer systems is its ability to learn from its experience and to work with insufficient knowledge and resources.
 
