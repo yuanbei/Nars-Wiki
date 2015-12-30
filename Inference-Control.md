@@ -117,7 +117,7 @@ A task can be a new judgment to be absorbed into beliefs, a goal to be achieved,
 
 The quality of a task is similar to that of a belief, though goal and question have no truth-value.
 
-The priority and durability of an input task are specified by the user, which gives the user an opportunity to influence the system's processing of the task. System default values are used when no values are provided.
+The priority and durability of an input task are specified by the user, which gives the user an opportunity to influence the system's processing of the task. System default values are used when no values are provided. Note that input is one of the key drivers of attention (besides derivation), new perceived input alters the attention. Especially input goals, and events caused by failed anticipations have high budget value assigned.
 
 **Issue:** In the future when different types of users and task sources are involved, each may have a different default budget or a different allowed budget range. One option is to add this into input channel.
 
