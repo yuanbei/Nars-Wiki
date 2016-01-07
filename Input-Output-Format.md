@@ -14,7 +14,7 @@ In a task, all the space characters are optional, and will be ignored by the sys
 ```
                         GRAMMAR RULE                          BRIEF EXPLANATION
                <task> ::= [<budget>] <sentence>              // task to be processed
-           <sentence> ::= <statement>"." [<tense>] [<truth>] // judgment to be remembered
+           <sentence> ::= <statement>"." [<tense>] [<truth>] // judgement to be remembered
                         | <statement>"?" [<tense>]           // question to be answered
                         | <statement>"@" [<tense>]           // question on desire value to be answered
                         | <statement>"!" [<truth>]           // goal to be realized
