@@ -7,9 +7,13 @@
 
 In the context of NARS, "perception" is the process to organize the system's experience into its internal representation, to be used to carry out its tasks.
 
-The previous NARS implementations depend on a "native input" channel, where the system's experience is a stream of Narsese sentences that can be directly transformed into the system's memory, which is a conceptual network. Perception based on this input takes the form of "high-level perception", in which new concepts are formed to organize the system's experience into a more general and stable way. Beside that, the system can be extended to have sensation and low-level perception, so as to get experience consisting of other types of stimulus, and to integrate them into the system's memory.
+Perception is based on sensation, but provides more complicated structures and patterns to satisfy the needs of the system. Perception is restricted by the system's (1) sensitive capability (what can be experienced), (2) cognitive capability (what can be derived from experience), and (3) motivations/tasks (what are important and urgent). The actual result of perception also depends on the content of the system's experience. Therefore, perception in NARS is not an attempt to model the world "as it is", nor to emulate human perception in all details.
+
+In NARS there is no separate "perception module" (or modules for vision, hearing, etc.). Perception is unified with other cognitive processes, including reasoning, learning, and so on. Notions like "perception" can be used to stress certain aspects of this process, but not to isolate a sub-process from it.
 
 ####Sensation
+
+The previous NARS implementations depend on a "native input" channel, where the system's experience is a stream of Narsese sentences that can be directly transformed into the system's memory, which is a conceptual network. Perception based on this input takes the form of "high-level perception", in which new concepts are formed to organize the system's experience into a more general and stable way. Beside that, the system can be extended to have sensation and low-level perception, so as to get experience consisting of other types of stimulus, and to integrate them into the system's memory.
 
 NARS can have multiple sensory channels, each corresponds to a type of sensor that converts a form of stimulus in the external or internal environment into the system. Such a channel can either be built into the system at compile time, or connected to the system at run time. It is taken to be an organ or tool of the system, which can be invoked by the system by executing certain commands with arguments, as introduced in NAL-8, and produce output values in return.
 
@@ -23,34 +27,47 @@ Assume the system has no initial knowledge about human body temperature at all, 
 
 A more accurate measurement of frequency can take the difference _t1 - ti_ into account, by using its sign to separate positive and negative evidence, and its absolute value as the weight of the evidence.
 
-In summary, all sensation will be "normalized" into values in [0, 1], eventually become truth-values of Narsese.
+In summary, all sensation will be "normalized" into values in [0, 1], and eventually become truth-values of Narsese.
 
+####Low-level perception
 
-The front-end of each channel is a receptive field, consisting of sensors of the same type in a multi-dimentional space. For instance, an simple auditory channal can have a single sensor, a tactile channal can have a vector of sensors, while a visual channal can have a matrix of sensors. When there are multiple sensors, their relative position implicitly provide spatial information.
+Low-level perception organize the sensory inputs into temporal and spatial patterns.
 
+The front-end of each sensory channel is a receptive field, consisting of sensors of the same type in a multi-dimensional space. For instance, an simple auditory channel can have a single sensor, a tactile channel can have a vector of sensors, while a visual channel can have a matrix of sensors. When there are multiple sensors, their relative position implicitly provide spatial information.
 
+All the values of the same receptive field are taken as a special type of term, "sensational term", as a snapshot of the sensation. For instance, a two-dimensional receptive field will produce a matrix _Mnnn_, which will get an automatically generated term '_Tnnn_' as name (here '_nnn_' indicates a serial number), so the Narsese statement returned by the operation is "_Mnnn <-> Tnnn_". Here '_Tnnn_' is just like the other terms, while '_Mnnn_' conceptually is equivalent to the conjunction of the individual values in the matrix plus the spatial information about their relative location.
 
-the native Narsese
-NARS can have multiple sensorimotor channels, each uses a specific type of sensor to convert certain external stimulus into experience in Narsese.
+Based on this definition, the similarity between these terms can be calculated, according to the extent of overlap of the sensational terms. Inheritance statements can be formed between sensational terms and terms describing the patterns included in the sensation, which in the simplest case will just be a partial and approximate description of the receptive field.
 
+Each sensory channel has a buffer with a constant capacity (corresponding to the 'duration' parameter) that holds what the system senses "at present". On this buffer temporal-spatial term operators are triggered to form compound terms. For instance, multiple sensors that are activated at the same time will form a spatial pattern, such as a line or a blob, while sensors activated in successive time will form a temporal pattern. The components in such a pattern do not have to be continuous in the receptive field, though simpler patterns will have higher priority. For the same reason, compounds whose components are temporally or spatially closer to each other are easier to be generated and kept longer.
 
-Perception depends on "sensation", the process to convert the interaction between the system and its environment into Narsese. Sensation of NARS is carried out eventually by the operations, which can be built-in (defined in NAL-9, and implemented in every NARS), implanted-in (not defined in NAL, but innate in a NARS+ at design time), or plugged-in (added into a NARS+ at run time). In all these forms, it can be invoked by NARS, and its observable consequences will come into the system's experience, either immediately or after an unspecified amount of time. There is no additional requirement on the nature of the sensors --- they do not need to similar to human sensors, or limited by our current knowledge.
+**ISSUE**: _How to describe a spatial pattern in a receptive field? Should they to be described with respect to certain coordination system? How to prevent a component from participating in multiple compounds?_
 
-Perception is based on sensation, but provides more complicated structures and patterns to satisfy the needs of the system. Perception is restricted by the system's (1) sensitive capability (what can be experienced), (2) cognitive capability (what can be derived from experience), and (3) motivations/tasks (what are important and urgent). The actual result of perception also depends on the content of the system's experience. Therefore, perception in NARS is not an attempt to model the world "as it is", nor to emulate human perception in all details.
+Outside the buffer, the terms involved can be used together with other terms, so as to allow perception to be based on multiple modalities, as well as related to the system's existing knowledge. For example, various colors are represented by combining the primary colors, where the involved receptive fields need to be aligned properly.
 
-In NARS there is no separate "perception module" (or modules for vision, hearing, etc.). Perception is unified with other cognitive processes, including reasoning, learning, and so on. Notions like "perception" can be used to stress certain aspects of this process, but not to isolate a sub-process from it.
+Though in principle there are many possible sensory patterns that can be formed and recognized, only those that repeatedly appear in experience and contribute to the task processing of the system will be kept, while the others will be gradually forgot. Here the situation is basically the same as in cognition, except that temporal-spatial adjacency also triggers the composition of compound terms. Remote terms can still be combined, though with a lower chance, as well as lower priority of the result.
 
-####Term and Concept
+Attention allocation may happen within receptive field. For example, the the center of the field may get attention, though its location with respect to the environment can be changed by mental operation.
 
-A "term" in NARS is an identifier to a recognizable entity in its experience or memory. Unlike "symbol" in traditional AI and cognitive science, a term does not "refers to" or "represent" an "object" in the world.
+Different perceptions of the same sensation is possible, though the revision rule and the choice rule will attempt to get the best interpretation of the sensation, and implicitly inhibit the alternatives when possible. In this process, the related factors include:
 
-A "concept" in NARS is a data structure in its memory. Every concept is named by exactly one term, but not every term names a concept --- some terms are variables (see [VariableUsage](https://github.com/opennars/opennars/wiki/Variable-Usage)), while some others could name concepts but the system does not consider them important enough to deserve the expense.
+1. Evidential support of each perception (i.e., the expectation of the corresponding statement)
 
-Terms are related to each other in the system's experience, and these relations are organized into relations of the corresponding concepts. It is these relations that defines the "meaning" of a term and a concept. There is no "interpretation" necessary, and nor "symbol grounding problem" --- the meaning of a term/concept is always "grounded" in the system's experience about it. A term may correspond to words in a language, sensational signals, perceptual patterns, executable operators, or none of them but an "abstract" identifier. However, in all these cases, its meaning is determined in the same way, i.e., by how it is related to the other terms.
+1. Simplicity of the description (i.e., the syntactic complexity of the categorization)
 
-Since the system's experience constantly unfolds in time, the meaning of a term is never fixed, but change over time. Furthermore, when a term is used, only part of its relations are involved, due to the resource restriction and attentional focus of the system. Even so, in a given time some terms may have relatively stable meaning. Sometimes it is possible to identify certain relations about a term (or concept) as its "essence" or "definition", in the sense that they are stable and can derive the other relations. However, this is usually an approximation, and even such an approximation is not always possible. Many terms (concepts) cannot be defined at all, though they are still meaningful. It is just that their meaning cannot be briefly and reliably summarized. Terms corresponding to words in natural languages may have "conventional definitions" made by the community using the language, but these definitions do not fully capture the meaning of these terms to the system, though contribute to it. Actuately speaking, a term in NARS has no "correct" or "true" meaning, nor does it converge to such a meaning in the long run.
+1. The priority of the concept (quality, usefulness, relevance to the context)
 
-####Compound Terms
+These factors will balance against each other. The competing perceptions may even at different levels of description. We can expect many phenomena discussed in Gestalt psychology.
+
+####High-level perception
+
+By "high-level perception" we usually mean perceptive process at conceptual level, without directly referring to receptive fields, even though the involved concepts do not necessarily have verbal descriptions in a communication language. On NARS, the input to the high-level perception can come either from the low-level perception described above that is based on the system's sensory organs, or from another devices that are blackboxes to NARS that can be invoked by certain operations to get information about the environment. In either way, There is no requirement on the nature of the sensors --- they do not need to similar to human sensors, or limited by our current knowledge.
+
+Since a 'term' is NARS is an identifier with experience-grounded meaning, not a 'symbol' waiting to be interpreted to become meaningful, the distinction between perception and cognition is a matter of degree, roughly corresponding to the distance from a term to the sensory terms. It is quite common for a "abstract concept" to have perceptual aspects, as well as for a "mental image" to have conceptual associations.
+
+Since the system's experience constantly unfolds in time, the meaning of a term is never fixed, but change over time. Furthermore, when a term is used, only part of its relations are involved, due to the resource restriction and attentional focus of the system. Even so, in a given time some terms may have relatively stable meaning. Sometimes it is possible to identify certain relations about a term (or concept) as its "essence" or "definition", in the sense that they are stable and can derive the other relations. However, this is usually an approximation, and even such an approximation is not always possible. Many terms (concepts) cannot be defined at all, though they are still meaningful. It is just that their meaning cannot be briefly and reliably summarized. Terms corresponding to words in natural languages may have "conventional definitions" made by the community using the language, but these definitions do not fully capture the meaning of these terms to the system, though contribute to it. Actually speaking, a term in NARS has no "correct" or "true" meaning, nor does it converge to such a meaning in the long run.
+
+Object and event recognition usually requires multiple levels of abstraction and composition, though the terms do not form an accurately layered structure, but a conceptual graph where links can go in any direction, and between any pairs of concepts (in principle). In this way, "perception" and "cognition" become continuous, and perceptual concepts and abstract concepts are relatively separated, and the meaning of a concept can be partially perceptual and partially abstract. The experience-grounded semantics still applies to perception, though some concepts have fixed aspects in their meaning (as for operations).
 
 Beside atomic terms that are simply strings in an alphabet, NARS has various types of compound term, formed by a logical operator (or connector) and one or more component terms, which can be compound terms themselves. There is no limit in the level of composition, though terms with complicated internal structure are not favored in resource competition, other factors being the same.
 
@@ -90,13 +107,13 @@ A question on categorical relationship typically requests the evaluation of a se
 
 ####Compared with other AI Techniques
 
-The approach NARS taking for perception is fundamentally different from the most common approaches.
+The approach NARS taking for perception is fundamentally different from the most existing approaches.
 
-NARS does not take perception as a separate module or process, but see it as unified with other cognitive processes.
+* NARS does not take perception as a separate module or process, but see it as unified with other cognitive processes.
 
-NARS does not take perception as a purely input, "data-mining", process that takes all sensory data as the input at the beginning, and produces certain desired results at the end. Instead, perception is taken to be an interactive, incremental, and lifelong process that is driven both by input data and active tasks (goals).
+* NARS does not take perception as a purely input, "data-mining", process that passively accepts all sensory data as the input at the beginning, and produces certain desired results at the end. Instead, perception is taken to be an interactive, incremental, and lifelong process that is driven both by input data and active tasks (goals).
 
-NARS does not following a predetermined algorithm at the problem-solving level. Since many factors are ever-changing and their combinations are not repeatable, the process does not follow an overall algorithm. Even for the same input, in different context the results of perception may be different, though they are neither arbitrary nor random.
+* NARS does not following a predetermined algorithm at the problem-solving level. Since many factors are ever-changing and their combinations are not repeatable, the process does not follow an overall algorithm. Even for the same input, in different context the results of perception may be different, though they are neither arbitrary nor random.
 
 The development of perception in NARS will be more like what happens in a baby than in an traditional AI program.
 
