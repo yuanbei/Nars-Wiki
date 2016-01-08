@@ -7,6 +7,32 @@
 
 In the context of NARS, "perception" is the process to organize the system's experience into its internal representation, to be used to carry out its tasks.
 
+The previous NARS implementations depend on a "native input" channel, where the system's experience is a stream of Narsese sentences that can be directly transformed into the system's memory, which is a conceptual network. Perception based on this input takes the form of "high-level perception", in which new concepts are formed to organize the system's experience into a more general and stable way. Beside that, the system can be extended to have sensation and low-level perception, so as to get experience consisting of other types of stimulus, and to integrate them into the system's memory.
+
+####Sensation
+
+NARS can have multiple sensory channels, each corresponds to a type of sensor that converts a form of stimulus in the external or internal environment into the system. Such a channel can either be built into the system at compile time, or connected to the system at run time. It is taken to be an organ or tool of the system, which can be invoked by the system by executing certain commands with arguments, as introduced in NAL-8, and produce output values in return.
+
+In general, the difference of the output values can be either _qualitative_ or _quantitative_. 
+
+If the channel C produces values that are qualitative distinguished from each other, then when the value is Vi, the experience is expressed as "(Ti * Vi) --> C", where Ti is a term representing the current sensation, the channel is expressed as a relation representing an attribute, with Vi as value. When there is no ambiguity, the statement can be simplified into "Ti --> [Vi]". For example, "(this-thing * red) --> color-of" can become "this-thing --> [red]". The truth-value of the statement represents the quality or strength of the sensation, determined from the feedback of the sensor and other factors.
+
+If the channel C produces values that are quantitative distinguished from each other, then to be general the values are assumed to be real numbers. In this case, the channel itself is taken to be a property, and the value is transformed into truth-values of the statement "Ti --> [C]" %f,c%, that is, %f,c% comes from Vi plus other factors, such as the feedback from the sensor on sensation quality and so on. This transformation can be specified in a problem-specific manner, or use the general semantics of Narsese as explained in [The Interpretation of Fuzziness](http://www.cis.temple.edu/~pwang/Publication/fuzziness.pdf), which is summarized in the following, using the temperature of a patient as an example.
+
+Assume the system has no initial knowledge about human body temperature at all, and has to categorize patients on this property. The by default the system will form two opposite concepts: "high-temperature" and "low-temperature", in the sense that the truth-value for a patient to belong to one of them is the negation of the other, and the truth-values are built up gradually by compare a patient's temperature to that of the other patients, according to the system's experience. For the first patient _p1_ whose temperature is _t1_, since nobody can be compared to, the statement "{p1} --> [high-temperature]" will have a confidence 0. Then the second patient _p2_ has a temperature _t2_, then the frequency of the former statement can becomes 1 (if _t1 > t2_), or 0 (if _t1 < t2_), or remains undefined (if _t1 = t2_).
+
+
+
+ In the former case, each value is represented by a term, and interpreted as an attribute value
+
+The front-end of each channel is a receptive field, consisting of sensors of the same type in a multi-dimentional space. For instance, an simple auditory channal can have a single sensor, a tactile channal can have a vector of sensors, while a visual channal can have a matrix of sensors. When there are multiple sensors, their relative position implicitly provide spatial information.
+
+
+
+the native Narsese
+NARS can have multiple sensorimotor channels, each uses a specific type of sensor to convert certain external stimulus into experience in Narsese.
+
+
 Perception depends on "sensation", the process to convert the interaction between the system and its environment into Narsese. Sensation of NARS is carried out eventually by the operations, which can be built-in (defined in NAL-9, and implemented in every NARS), implanted-in (not defined in NAL, but innate in a NARS+ at design time), or plugged-in (added into a NARS+ at run time). In all these forms, it can be invoked by NARS, and its observable consequences will come into the system's experience, either immediately or after an unspecified amount of time. There is no additional requirement on the nature of the sensors --- they do not need to similar to human sensors, or limited by our current knowledge.
 
 Perception is based on sensation, but provides more complicated structures and patterns to satisfy the needs of the system. Perception is restricted by the system's (1) sensitive capability (what can be experienced), (2) cognitive capability (what can be derived from experience), and (3) motivations/tasks (what are important and urgent). The actual result of perception also depends on the content of the system's experience. Therefore, perception in NARS is not an attempt to model the world "as it is", nor to emulate human perception in all details.
