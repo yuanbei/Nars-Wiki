@@ -12,54 +12,81 @@ In a task, all the space characters are optional, and will be ignored by the sys
 ### Narsese Grammar
 
 ```
-                        GRAMMAR RULE                          BRIEF EXPLANATION
-               <task> ::= [<budget>] <sentence>              // task to be processed
-           <sentence> ::= <statement>"." [<tense>] [<truth>] // judgement to be remembered
-                        | <statement>"?" [<tense>]           // question to be answered
-                        | <statement>"@" [<tense>]           // question on desire value to be answered
-                        | <statement>"!" [<truth>]           // goal to be realized
-          <statement> ::= "<"<term> <copula> <term>">"       // two terms related to each other
-                        | <term>                             // a term can name a statement
-                        | "(^"<word> {","<term>} ")"         // an operation to be executed                         
-             <copula> ::= "-->"                              // inheritance
-                        | "<->"                              // similarity
-                        | "{--"                              // instance
-                        | "--]"                              // property
-                        | "{-]"                              // instance-property
-                        | "==>"                              // implication
-                        | "=/>"                              // predictive implication
-                        | "=|>"                              // concurrent implication
-                        | "=\>"                              // retrospective implication
-                        | "<=>"                              // equivalence
-                        | "</>"                              // predictive equivalence
-                        | "<|>"                              // concurrent equivalence
-               <term> ::= <word>                             // an atomic constant term
-                        | <variable>                         // an atomic variable term
-                        | <compound-term>                    // a term with internal structure
-                        | <statement>                        // a statement can serve as a term
-      <compound-term> ::= "{" <term> {","<term>} "}"         // extensional set
-                        | "[" <term> {","<term>} "]"         // intensional set
-                        | "(&," <term> {","<term>} ")"       // extensional intersection
-                        | "(|," <term> {","<term>} ")"       // intensional intersection
-                        | "(-," <term> "," <term> ")"        // extensional difference
-                        | "(~," <term> "," <term> ")"        // intensional difference
-                        | "(*," <term> {","<term>} ")"       // product
-                        | "(/," <term> {","<term>} ")"       // extensional image
-                        | "(\," <term> {","<term>} ")"       // intensional image
-                        | "(--," <term> ")"                  // negation
-                        | "(||," <term> {","<term>} ")"      // disjunction
-                        | "(&&," <term> {","<term>} ")"      // conjunction
-                        | "(&/," <term> {","<term>} ")"      // sequential events
-                        | "(&|," <term> {","<term>} ")"      // parallel events
-           <variable> ::= "$"<word>                          // independent variable
-                        | "#"[<word>]                        // dependent variable
-                        | "?"[<word>]                        // query variable in question
-              <tense> ::= ":/:"                              // future event
-                        | ":|:"                              // present event
-                        | ":\:"                              // past event
-              <truth> ::= "%"<frequency>[";"<confidence>]"%" // two numbers in [0,1]x(0,1)
-             <budget> ::= "$"<priority>[";"<durability>]"$"  // two numbers in [0,1]x(0,1)
-               <word> : Unicode string in an arbitrary alphabet
+             task ::= [budget] sentence                     (* task to be processed *)
+
+         sentence ::= statement"." [tense] [truth]          (* judgement to be remembered *)
+                    | statement"?" [tense] [truth]          (* question to be answered, tense added in OpenNARS 1.7 *)
+                    | statement"@" [tense] [truth]          (* question on desire value to be answered, tense added in OpenNARS 1.7 *)
+                    | statement"!" [tense] [truth]          (* goal to be realized, tense added in OpenNARS 1.7 *)
+
+        statement ::= <"<">term copula term<">">            (* two terms related to each other *)
+                    | <"(">term copula term<")">            (* two terms related to each other, new notation *)
+                    | term                                  (* a term can name a statement *)
+                    | "(^"word {","term} ")"                (* an operation to be executed *)
+                    | word"("term {","term} ")"             (* an operation to be executed, new notation *)
+
+           copula ::= "-->"                                 (* inheritance *)
+                    | "<->"                                 (* similarity *)
+                    | "{--"                                 (* instance *)
+                    | "--]"                                 (* property *)
+                    | "{-]"                                 (* instance-property *)
+                    | "==>"                                 (* implication *)
+                    | "=/>"                                 (* predictive implication *)
+                    | "=|>"                                 (* concurrent implication *)
+                    | "=\\>"                                (* =\> retrospective implication *)
+                    | "<=>"                                 (* equivalence *)
+                    | "</>"                                 (* predictive equivalence *)
+                    | "<|>"                                 (* concurrent equivalence *)
+
+             term ::= word                                  (* an atomic constant term *)
+                    | variable                              (* an atomic variable term *)
+                    | compound-term                         (* a term with internal structure *)
+                    | statement                             (* a statement can serve as a term *)
+                    | interval                              (* time measure between events *)
+
+    compound-term ::= "{" term {","term} "}"                (* extensional set *)
+                    | "[" term {","term} "]"                (* intensional set *)
+                    | "("op-multi","term{","term} ")"       (* compound term with prefix operator *)
+                    | "("op-single","term"," term ")"       (* compound term with prefix operator *)
+                    | "(" term {op-multi term} ")"          (* compound term with infix operator *)
+                    | "(" term op-single term ")"           (* compound term with infix operator *)
+                    | "(" term {","term} ")"                (* product, new notation *)
+                    | "(/," term {","term} ")"              (* extensional image *)
+                    | "(\\," term {","term} ")"             (* \ intensional image *)
+                    | "(--," term ")"                       (* negation *)
+                    | "--"term                              (* negation, new notation *)
+
+         op-multi ::= "&&"                                  (* conjunction *)
+                    | "*"                                   (* product *)
+                    | "||"                                  (* disjunction *)
+                    | "&|"                                  (* parallel events *)
+                    | "&/"                                  (* sequential events *)
+                    | "|"                                   (* intensional intersection *)
+                    | "&"                                   (* extensional intersection *)
+
+        op-single ::= "-"                                   (* extensional difference *)
+                    | "~"                                   (* intensional difference *)
+
+         variable ::= "$"word                               (* independent variable *)
+                    | "#"[word]                             (* dependent variable *)
+                    | "?"[word]                             (* query variable in question *)
+
+            tense ::= ":/:"                                 (* future event *)
+                    | ":|:"                                 (* present event *)
+                    | ":\\:"                                (* :\: past event *)
+                    | <":">#"\d+"<":">                      (* defined event, output only *)
+
+         interval ::= <"/">#"\d+"                           (* integer *)
+
+            truth ::= <"%">frequency[<";">confidence]<"%">  (* two numbers in [0,1]x(0,1) *)
+           budget ::= <"$">priority[<";">durability][<";">quality]<"$">   (* three numbers in [0,1]x(0,1)x[0,1] *)
+
+               word : #"\w+"                                (* unicode string *)    
+           priority : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
+         durability : #"[0]?\.[0]*[1-9]{1}[0-9]*"           (* 0 <  x <  1 *)
+            quality : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
+          frequency : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
+         confidence : #"[0]?\.[0]*[1-9]{1}[0-9]*"           (* 0 <  x <  1 *)
 ```
 
 ### Example Usage
