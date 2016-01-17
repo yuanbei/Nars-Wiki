@@ -51,11 +51,13 @@ In a task, all the space characters are optional, and will be ignored by the sys
                     | "(" term {op-multi term} ")"          (* compound term with infix operator *)
                     | "(" term op-single term ")"           (* compound term with infix operator *)
                     | "(" term {","term} ")"                (* product, new notation *)
-                    | "(/," term {","term} ")"              (* extensional image *)
-                    | "(\\," term {","term} ")"             (* \ intensional image *)
-                    | "(--," term ")"                       (* negation *)
-                    | "--"term                              (* negation, new notation *)
-
+                    | "(" op-ext-image "," term {","term} ")" (* extensional image *)
+                    | "(" op-int-image "," term {","term} ")" (* \ intensional image *)
+                    | "(" op-negation "," term ")"          (* negation *)
+                    | op-negation term                      (* negation, new notation *)
+       op-negation::= "--"
+      op-int-image::= "\\"
+      op-ext-image::= "/"
          op-multi ::= "&&"                                  (* conjunction *)
                     | "*"                                   (* product *)
                     | "||"                                  (* disjunction *)
@@ -82,10 +84,10 @@ In a task, all the space characters are optional, and will be ignored by the sys
            budget ::= <"$">priority[<";">durability][<";">quality]<"$">   (* three numbers in [0,1]x(0,1)x[0,1] *)
 
                word : #"\w+"                                (* unicode string *)    
-           priority : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
+           priority : #"([0]?\.[0-9]+|1\.[0]*|1|0)"         (* 0 <= x <= 1 *)
          durability : #"[0]?\.[0]*[1-9]{1}[0-9]*"           (* 0 <  x <  1 *)
-            quality : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
-          frequency : #"([0]?\.[0-9]+|1|0)"                 (* 0 <= x <= 1 *)
+            quality : #"([0]?\.[0-9]+|1\.[0]*|1|0)"         (* 0 <= x <= 1 *)
+          frequency : #"([0]?\.[0-9]+|1\.[0]*|1|0)"         (* 0 <= x <= 1 *)
          confidence : #"[0]?\.[0]*[1-9]{1}[0-9]*"           (* 0 <  x <  1 *)
 ```
 
