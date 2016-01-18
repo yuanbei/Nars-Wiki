@@ -51,13 +51,15 @@ In a task, all the space characters are optional, and will be ignored by the sys
                     | "(" term {op-multi term} ")"          (* compound term with infix operator *)
                     | "(" term op-single term ")"           (* compound term with infix operator *)
                     | "(" term {","term} ")"                (* product, new notation *)
-                    | "(" op-ext-image "," term {","term} ")" (* extensional image *)
-                    | "(" op-int-image "," term {","term} ")" (* \ intensional image *)
+                    | "("op-ext-image"," term {","term} ")" (* extensional image *)
+                    | "("op-int-image"," term {","term} ")" (* \ intensional image *)
                     | "(" op-negation "," term ")"          (* negation *)
                     | op-negation term                      (* negation, new notation *)
+
        op-negation::= "--"
       op-int-image::= "\\"
       op-ext-image::= "/"
+
          op-multi ::= "&&"                                  (* conjunction *)
                     | "*"                                   (* product *)
                     | "||"                                  (* disjunction *)
