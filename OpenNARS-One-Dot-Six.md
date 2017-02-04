@@ -16,7 +16,7 @@ In software structure, it absorbs the ideas from previous discussions, as well a
 
 #### Representation of temporal information
 
-Beside [Non-Axiomatic Logic: A Model of Intelligent Reasoning](http://www.worldscientific.com/worldscibooks/10.1142/8665), temporal reasoning in NARS is also discussed in [Issues in Temporal and Causal Inference](http://www.cis.temple.edu/~pwang/Publication/temporal-causal.pdf). A previous implementation exists as version 1.3.3, with working examples.
+Beside [Non-Axiomatic Logic: A Model of Intelligent Reasoning](http://www.worldscientific.com/worldscibooks/10.1142/8665), temporal reasoning in NARS is also discussed in [Issues in Temporal and Causal Inference](http://agi-conf.org/2015/wp-content/uploads/2015/07/agi15_wang_issues.pdf). A previous implementation exists as version 1.3.3, with working examples.
 
 Beside using terms whose meanings are explicitly temporal, Narsese is extended to allow temporal order among components in certain CompoundTerm, as well as an "occurrence time stamp" on a truth-value.
 
