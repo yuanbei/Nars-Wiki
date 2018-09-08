@@ -38,4 +38,4 @@ In detail, the inference happens through the following control loop:
 
 Note here that 6 also happens for input tasks, which is how we obtained the memory structure resulting from the example.
 
-Next tutorial: While the truth of the conclusion is decided by Non-Axiomatic Logic, how is the budget of the conclusion derived?
+Next tutorial: While the term and truth of the conclusion is decided by Non-Axiomatic Logic, how is the budget of the conclusion derived?
