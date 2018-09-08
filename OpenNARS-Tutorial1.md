@@ -7,7 +7,7 @@ with these 3 components, inference can be understood as a cycle:
 2. apply the logic rules that apply
 3. obtain the results and put them back into memory.
 
-Since NARS works under the Assumption of Insufficient Knowledge and Resources, it has to maintain a max. memory capacity, which the Bag data structure, a kind of priority queue, allows for: 
+Since NARS works under the Assumption of Insufficient Knowledge and Resources, it has to maintain a max. memory capacity, which the Bag data structure, a kind of stochastic priority queue, allows for: 
 ![AIKR and Bag](https://user-images.githubusercontent.com/8284677/45257215-7eceef00-b370-11e8-8a8a-51990dafa8cf.png)
 ![Budget value](https://user-images.githubusercontent.com/8284677/45256919-4d075980-b36b-11e8-98c4-c028e87f1784.png)
 The for us relevant operation will be a combination of select, then some usage we didn't specify yet, and then and Add call with the selected item to put the item Bag into the data structure, with Forgetting applied in-between.
