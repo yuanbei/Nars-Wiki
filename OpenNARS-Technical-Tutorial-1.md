@@ -20,11 +20,13 @@ Besides being linked with other concepts by their component terms (using Termlin
 
 The other data types:
 ![The data items](https://user-images.githubusercontent.com/8284677/45256951-049c6b80-b36c-11e8-8bfc-78baec482068.png)
+
 Note: Input and derivation are always tasks. And when derived or input, tasks enter the tasklink bag of the concept with the same term, and all of its subterm component concepts.
 
 The following example input:
 
 ![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
+
 leads to the following memory structure:
 ![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257017-dec39680-b36c-11e8-8d26-f84965c6f9e0.png)
 
