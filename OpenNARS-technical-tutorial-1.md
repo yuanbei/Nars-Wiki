@@ -12,7 +12,7 @@ Since NARS works under the Assumption of Insufficient Knowledge and Resources, i
 ![Budget value](https://user-images.githubusercontent.com/8284677/45256919-4d075980-b36b-11e8-98c4-c028e87f1784.png)
 The for us relevant operation will be a combination of select, then some usage we didn't specify yet, and then and Add call with the selected item to put the item Bag into the data structure, with Forgetting applied in-between.
 
-Since NARS uses a term logic, memory is structured by the occurring terms, which can be compound terms and their components. Each such term gets a concept container associated with:
+Since NARS uses a term logic, memory is structured by the occurring terms, which can be compound terms and their components. Each such term gets a concept container associated with, which resides in memory, which is a Bag of concepts:
 ![Memory as a bag of concepts, concepts named by term](https://user-images.githubusercontent.com/8284677/45256897-db2f1000-b36a-11e8-8daf-79b530809ad4.png)
 
 Each such concept container has a belief table, that stores sentences that have the same term as the concept is named by:
