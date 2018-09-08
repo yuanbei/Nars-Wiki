@@ -3,9 +3,9 @@ This tutorial is work in progress, the images will be gradually replaced with re
 NARS is an inference engine that consists of the three major parts:
 ![Inference engine and reasoning cycle](https://user-images.githubusercontent.com/8284677/45256877-7d022d00-b36a-11e8-8ff3-b13db705cad6.png)
 with these 3 components, inference can be understood as a cycle:
-1. Select 2 premises from memory
-2. apply the logic rules that apply
-3. obtain the results and put them back into memory.
+1. Select 2 premises from memory (Control mechanism)
+2. apply the logic rules that apply (Logic)
+3. obtain the results and put them back into memory. (Memory)
 
 Since NARS works under the Assumption of Insufficient Knowledge and Resources, it has to maintain a max. memory capacity, which the Bag data structure, a kind of stochastic priority queue, allows for: 
 ![AIKR and Bag](https://user-images.githubusercontent.com/8284677/45257215-7eceef00-b370-11e8-8a8a-51990dafa8cf.png)
