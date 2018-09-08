@@ -25,14 +25,15 @@ Note: Input and derivation are always tasks. And when derived or input, tasks en
 
 The following example input:
 
-![Example1](https://user-images.githubusercontent.com/8284677/45257702-6b278680-b378-11e8-81ef-25bd329f6264.png)
+![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
 
 leads to the following memory structure:
 
 ![Example1, memory view](https://user-images.githubusercontent.com/8284677/45257659-f3f1f280-b377-11e8-8b30-177115ef5e64.png)
 
 And in detail, with the concept's internals:
-![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257017-dec39680-b36c-11e8-8d26-f84965c6f9e0.png)
+
+![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257702-6b278680-b378-11e8-81ef-25bd329f6264.png)
 
 The following deduction done by the selection of the concept animal, cat --> animal as tasklink (determining the selected Task), and animal --> being as termlink (determining the selected belief):
 ![Example1](https://user-images.githubusercontent.com/8284677/45256939-c901a180-b36b-11e8-985b-a5a3cc32ba84.png)
