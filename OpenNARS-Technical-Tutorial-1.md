@@ -28,7 +28,8 @@ The following example input:
 ![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
 
 leads to the following memory structure:
-https://user-images.githubusercontent.com/8284677/45257659-f3f1f280-b377-11e8-8b30-177115ef5e64.png
+
+![Example1, memory view](https://user-images.githubusercontent.com/8284677/45257659-f3f1f280-b377-11e8-8b30-177115ef5e64.png)
 
 And in detail, with the concept's internals:
 ![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257017-dec39680-b36c-11e8-8d26-f84965c6f9e0.png)
