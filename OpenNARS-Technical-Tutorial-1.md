@@ -15,7 +15,7 @@ The for us relevant operation will be a combination of select, then some usage w
 Since NARS uses a term logic, memory is structured by the occurring terms, which can be compound terms and their components. Each such term gets a concept container associated with, which resides in memory, which is a Bag of concepts:
 ![Memory as a bag of concepts, concepts named by term](https://user-images.githubusercontent.com/8284677/45256897-db2f1000-b36a-11e8-8daf-79b530809ad4.png)
 
-Besides being linked with other concepts by their component terms (using Termlink bag), such concept containers have a belief table, that stores sentences with judgment punctuation that have the same term as the concept is named by:
+Besides being linked with other concepts by their component terms (using Termlink bag), such concept containers have a belief table, (similar to Bag but ranked by confidence) that stores sentences with judgment punctuation that have the same term as the concept is named by:
 ![Belief table of concepts](https://user-images.githubusercontent.com/8284677/45256980-4a593400-b36c-11e8-8243-75d8c65bc1c5.png)
 
 The other data types:
