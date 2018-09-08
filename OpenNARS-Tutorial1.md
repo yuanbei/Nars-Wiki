@@ -32,4 +32,6 @@ The following deduction done by the selection of the concept animal, cat --> ani
 In detail, the inference happens through the following control loop:
 ![Control loop](https://user-images.githubusercontent.com/8284677/45257040-4aa5ff00-b36d-11e8-8e2f-efe6d66a5a9f.png)
 
+Note here that 6 also happens for input tasks, which is how we obtained the memory structure resulting from the example.
+
 Next tutorial: While the truth of the conclusion is decided by Non-Axiomatic Logic, how is the budget of the conclusion derived?
