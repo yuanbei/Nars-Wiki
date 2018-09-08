@@ -21,11 +21,14 @@ Each such concept container has a belief table, that stores sentences that have 
 The other data types:
 ![The data items](https://user-images.githubusercontent.com/8284677/45256951-049c6b80-b36c-11e8-8bfc-78baec482068.png)
 
-![Example1](https://user-images.githubusercontent.com/8284677/45256939-c901a180-b36b-11e8-985b-a5a3cc32ba84.png)
+![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
 This example results in the following memory structure:
 ![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257017-dec39680-b36c-11e8-8d26-f84965c6f9e0.png)
 
-And the inference can happen through the following control loop:
+The following deduction done by the selection of the concept animal, cat --> animal as tasklink (determining the selected Task), and animal --> being as termlink (determining the selected belief):
+![Example1](https://user-images.githubusercontent.com/8284677/45256939-c901a180-b36b-11e8-985b-a5a3cc32ba84.png)
+
+In detail, the inference happens through the following control loop:
 ![Control loop](https://user-images.githubusercontent.com/8284677/45257040-4aa5ff00-b36d-11e8-8e2f-efe6d66a5a9f.png)
 
 Next tutorial: While the truth of the conclusion is decided by Non-Axiomatic Logic, how is the budget of the conclusion derived?
