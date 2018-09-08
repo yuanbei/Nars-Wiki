@@ -43,5 +43,4 @@ The current stable versions of the system are available for [download](https://d
 |[Multi-StepExamples](https://github.com/opennars/opennars/wiki/Multi-Step-Examples)|Inference Examples|
 |[SingleStepTestingCases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases)|Expected results of inference rules|
 |[FAQ](https://github.com/opennars/opennars/wiki/FAQ)|Theory & Software FAQ|
-
 |[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1|Technical Tutorial|
