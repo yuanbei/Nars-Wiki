@@ -21,8 +21,9 @@ Each such concept container has a belief table, that stores sentences that have 
 The other data types:
 ![The data items](https://user-images.githubusercontent.com/8284677/45256951-049c6b80-b36c-11e8-8bfc-78baec482068.png)
 
+The following example input:
 ![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
-This example results in the following memory structure:
+leads to the following memory structure:
 ![Resulting memory structure](https://user-images.githubusercontent.com/8284677/45257017-dec39680-b36c-11e8-8d26-f84965c6f9e0.png)
 
 The following deduction done by the selection of the concept animal, cat --> animal as tasklink (determining the selected Task), and animal --> being as termlink (determining the selected belief):
