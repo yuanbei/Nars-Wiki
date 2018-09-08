@@ -25,7 +25,7 @@ Note: Input and derivation are always tasks. And when derived or input, tasks en
 
 The following example input:
 
-![Example1](https://user-images.githubusercontent.com/8284677/45257254-2d732f80-b371-11e8-934d-f6f5a046dfcd.png)
+![Example1](https://user-images.githubusercontent.com/8284677/45257702-6b278680-b378-11e8-81ef-25bd329f6264.png)
 
 leads to the following memory structure:
 
