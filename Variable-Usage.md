@@ -17,7 +17,7 @@ Example:
 Something which is a cat, is also an animal
 
 `<<$1 --> cat> ==> <$1 --> animal>>.`
-Mandatory to appear on both sides
+(Independent vars must appear on both sides of the implication)
 
 ***
 ### Dependent Variables
