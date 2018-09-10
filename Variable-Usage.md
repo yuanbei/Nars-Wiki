@@ -17,6 +17,8 @@ Example:
 Something which is a cat, is also an animal
 
 `<<$1 --> cat> ==> <$1 --> animal>>.`
+Mandatory to appear on both sides
+
 ***
 ### Dependent Variables
 
