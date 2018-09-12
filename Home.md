@@ -23,11 +23,8 @@ The current stable versions of the system are available for [download](https://d
 |Page Name|Summary and Labels|
 |:-------:|:-----------------:|
 | [VariableUsage](https://github.com/opennars/opennars/wiki/Variable-Usage) | When to use what variable |
-|[OpenNarsOneDotSix](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six)| Functions and remaining issues of Open-Nars 1.6.x.|
 |[GraphicalUserInterface](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)|How to work with and what it displays.|
 |[ProjectStatus](https://github.com/opennars/opennars/wiki/Project-Status)|The current status and the plan for the near future of the project.|
-|[OpenNARSOneDotSixDotOne](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six-Dot-One)|Everything about OpenNARS-1.6.1.|
-|[OpenNARSOneDotSixDotTwo](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six-Dot-Two)|What is new in OpenNARS-1.6.2.|
 |[InferenceControl](https://github.com/opennars/opennars/wiki/Inference-Control)|The control aspect of NARS.|
 |[Plugins](https://github.com/opennars/opennars/wiki/Plugins)|How plugins can help, what they need to fulfill to be valid, and what plugins we have.|
 |[ReinforcementLearning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)|NARS in the RL domain.|
@@ -44,4 +41,12 @@ The current stable versions of the system are available for [download](https://d
 |[Multi-StepExamples](https://github.com/opennars/opennars/wiki/Multi-Step-Examples)|Inference Examples|
 |[SingleStepTestingCases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases)|Expected results of inference rules|
 |[FAQ](https://github.com/opennars/opennars/wiki/FAQ)|Theory & Software FAQ|
-|[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1|Technical Tutorial|
+|[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1|Technical Tutorial)|
+
+**Implementation**
+
+|Page Name|Summary and Labels|
+|:-------:|:-----------------:|
+|[OpenNarsOneDotSix](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six)| Functions and remaining issues of Open-Nars 1.6.x.|
+|[OpenNARSOneDotSixDotOne](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six-Dot-One)|Everything about OpenNARS-1.6.1.|
+|[OpenNARSOneDotSixDotTwo](https://github.com/opennars/opennars/wiki/OpenNARS-One-Dot-Six-Dot-Two)|What is new in OpenNARS-1.6.2.|
