@@ -10,7 +10,7 @@ What makes NARS different from conventional computer systems is its ability to _
 This project is still mostly at the conceptual design and prototype development stage. If you are interested to join this research, the best place to start reading is the Wiki pages, not the source code.
 
 ***
-The current stable versions of the system are available for [download](https://drive.google.com/a/temple.edu/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing#). Each version contains a JAR file and some working examples. [Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html) is needed to run the recent versions. There is a [discussion group] (http://groups.google.com/group/open-nars) of this project.
+The current stable versions of the system are available for [download](https://drive.google.com/a/temple.edu/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing#). Each version contains a JAR file and some working examples. [Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html) is needed to run the recent versions. There is a [discussion group](http://groups.google.com/group/open-nars) of this project.
 
 ***
 [YourKit](https://www.yourkit.com/) supports OpenNARS project with its full-featured Java Profiler. [YourKit, LLC](https://www.yourkit.com/) is the creator of innovative and intelligent tools for profiling Java and .NET applications. Take a look at [YourKit](https://www.yourkit.com/)'s leading software products [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp). 
