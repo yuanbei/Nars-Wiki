@@ -3,9 +3,9 @@ Welcome to the opennars wiki!
 Open-NARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project.
 The reasoner "core" of Open-NARS is licensed under [MIT](https://opensource.org/licenses/MIT).
 
-This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a unified theory, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
+This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a _unified theory_, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
 
-What makes NARS different from conventional computer systems is its ability to learn from its experience and to work with insufficient knowledge and resources.
+What makes NARS different from conventional computer systems is its ability to _learn_ from its experience and to work with _insufficient knowledge and resources_.
 
 This project is still mostly at the conceptual design and prototype development stage. If you are interested to join this research, the best place to start reading is the Wiki pages, not the source code.
 
