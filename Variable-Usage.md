@@ -54,28 +54,20 @@ Different types of variable can be used together in several ways to represent so
 In Narsese, a similar representation is:
 
 ```
-<(&&,<#1 --> human>,<$Y --> (/,parent,#1,_)>,<$X --> (/,brother,_,#1)>) ==> <(*,$X,$Y) --> uncle>>.
+<(&&,<(*,$1,#2) --> brother>,<(*,#2,$3) --> parent>) ==> <(*,$1,$3) --> uncle>>. %1.00;0.90%
 ```
 
 Let's try with:
 
 ```
-<{tim} --> human>.
-
-<{tom} --> human>.
-
-<{john} --> human>.
-
-<{tom} --> (/,parent,{john},_)>.
-
-<{tim} --> (/,brother,_,{john})>.
-
+<(*,{john},{tom}) --> parent>.
+<(*,{tim},{john}) --> brother>.
 <(*,{?who},{?ofWho}) --> uncle>?
 ```
 
 works:
 
-`Answer <(*,{tim},{tom}) --> uncle>. %1.00;0.35%`
+`Answer <(*,{tim},{tom}) --> uncle>. %1.00;0.73%`
 
 More complicated cases: "Every lock can be opened by some key" is expressed as:
 
