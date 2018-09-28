@@ -7,8 +7,8 @@ Each NarNode has a list of
 **targets=[targetNar_1,...,targetNar_n]**
 where for each **targetNar_i**, tasks above **priorityThreshold(targetNar_i)** are sent to, optionally only if **mustContainTerm(targetNar_i)** is included in the task.
 
-To add a targetNar to the targets of a NarNode nar, simply call **nar.addRedirectionTo(TargetNar target)**
-or alternatively nar.addRedirectionTo(String **targetIP**, int **targetPort**, float **taskThreshold**, Term **mustContainTerm**, boolean **sendInput**)
+To add a targetNar to the targets of a NarNode nar, simply call ****nar.addRedirectionTo**(TargetNar target)**
+or alternatively **nar.addRedirectionTo**(String **targetIP**, int **targetPort**, float **taskThreshold**, Term **mustContainTerm**, boolean **sendInput**)
 where
 
 **targetIP** = the IP of the target Nar (IPv6 untested, but should work too)
