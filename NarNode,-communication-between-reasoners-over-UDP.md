@@ -73,6 +73,8 @@ where as in the code, these parameters can be interpreted in the following way:
 **java -jar OpenNARS_v3.0.0.jar null null null null 64001 127.0.0.1 64002 0.5 cat True**
 starts a NarNode with random ID, without any background knowledge or memory file to load, running forever, and sending result tasks to target NAR with IP 127.0.0.1, port 64002, whenever they have above 0.5 priority, contain cat as subterm, and also sending input tasks that fulfill these two criteria.
 
+Note: Since in this case NarNode runs through Shell, it additionally listens to standard-IO.
+
 # Questions
 
 Why do we not just send Narsese between Nar nodes, why are entire tasks sent?
