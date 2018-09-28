@@ -47,3 +47,6 @@ NarNode is designed to work in any possible configuration of nodes, involving cy
 in simplest case NarNode **A **sends to NarNode **B**, and NarNode **B** send to **A**.
 In such cases, cyclic reasoning can become a potential issue, that is, if **A** believes **x. {1} **and **<x ==> y>. {2}** and **B** believes **<y ==> x>. {3}**, **x.** could be derived by deriving **y. {1,2}**  in NarNode **A**, and sending to to NarNode **B**, which can then derive **x. {1,2,3}** and send it over to **A**. If **A** wouldn't know the evidental base, it would revise the derived task **x. {1,2,3}** with the **x. {1}** it started with, becoming more and more confident about **x** just by doing the same derivations again and again, clearly we don't want that.
 Another reason: Sending the task also makes it keep track of occurrence time of derived tasks for time-critical applications.
+
+Why UDP?
+The TCP overhead is not required, should a packet be lost, re-derivation will re-deliver it anyway.
