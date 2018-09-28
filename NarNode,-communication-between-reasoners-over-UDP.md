@@ -23,3 +23,6 @@ where
 **taskThreshold** = the priority tasks that appear in nar must at least have to be sent to all targets
 
 **mustContainTerm** = a term that must be contained in the task's term as subterm to be sent.
+
+# Example
+One full code example can be seen in our NarNode test: https://github.com/opennars/opennars/blob/master/src/test/java/org/opennars/core/NarNodeTest.java#L46
