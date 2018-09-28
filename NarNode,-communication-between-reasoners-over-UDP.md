@@ -1,6 +1,8 @@
 NarNode is used to let two Nar instances communicate over UDP over the network.
 
-Each NarNode has a list of **targets=[targetNar_1,...,targetNar_n]** where for each **targetNar_i**, tasks above **priorityThreshold(targetNar_i)** are sent to, optionally only if **mustContainTerm(targetNar_i)** is included in the task.
+Each NarNode has a list of 
+**targets=[targetNar_1,...,targetNar_n]**
+where for each **targetNar_i**, tasks above **priorityThreshold(targetNar_i)** are sent to, optionally only if **mustContainTerm(targetNar_i)** is included in the task.
 
 To add a targetNar to the targets of a NarNode nar, simply call **nar.addRedirectionTo(TargetNar target)**
 or alternatively nar.addRedirectionTo(String **targetIP**, int **targetPort**, float **taskThreshold**, Term **mustContainTerm**, boolean **sendInput**)
