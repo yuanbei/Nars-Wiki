@@ -49,4 +49,4 @@ In such cases, cyclic reasoning can become a potential issue, that is, if **A** 
 Another reason: Sending the task also makes it keep track of occurrence time of derived tasks for time-critical applications.
 
 Why UDP?
-The TCP overhead is not required, should a packet be lost, re-derivation will re-deliver it anyway.
+The TCP overhead is not required, should a packet be lost, re-derivation will re-deliver it anyway. Also, there is no need for derived tasks to be received in the order they were derived.
