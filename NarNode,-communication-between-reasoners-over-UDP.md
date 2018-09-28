@@ -45,7 +45,7 @@ One full code example can be seen in our NarNode test: https://github.com/openna
 
 # Using NarNode from command line
 Run the **org.opennars.main.Shell** java class (which is the main class in the .jar provided in https://github.com/opennars/opennars/releases/tag/v3.0.0) with the parameters **narOrConfigFileOrNull idOrNull nalFileOrNull cyclesToRunOrNull listenPort targetIP1 targetPort1 prioThres1 mustContainTermOrNull1 sendInput1 ... targetIPN targetPortN prioThresN mustContainTermOrNullN sendInputN**
-Here, OrNull means they can be **null **too.
+Here, OrNull means they can be **null** too.
 
 The first five parameters are shell features, plus the port to listen for tasks and Narsese input:
 **narOrConfigFileOrNull** .. either put null, or for instance put yourConfigFile.xml or exportedMemoryFile.
