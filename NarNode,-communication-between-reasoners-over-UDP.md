@@ -45,9 +45,7 @@ One full code example can be seen in our NarNode test: https://github.com/openna
 
 # Using NarNode from command line
 Run the **org.opennars.main.Shell** java class (which is the main class in the .jar provided in https://github.com/opennars/opennars/releases/tag/v3.0.0) with the parameters **narOrConfigFileOrNull idOrNull nalFileOrNull cyclesToRunOrNull listenPort targetIP1 targetPort1 prioThres1 mustContainTermOrNull1 sendInput1 ... targetIPN targetPortN prioThresN mustContainTermOrNullN sendInputN**
-Here, OrNull means they can be **null **too, example: 
-**null null null null 64001 127.0.0.1 64002 0.5 cat True**
-starts a NarNode with random ID, without any background knowledge or memory file to load, running forever, and sending result tasks to target NAR with IP 127.0.0.1, port 64002, whenever they have above 0.5 priority, contain cat as subterm, and also sending input tasks that fulfill these two criteria.
+Here, OrNull means they can be **null **too.
 
 The first five parameters are shell features, plus the port to listen for tasks and Narsese input:
 **narOrConfigFileOrNull** .. either put null, or for instance put yourConfigFile.xml or exportedMemoryFile.
@@ -71,8 +69,9 @@ where as in the code, these parameters can be interpreted in the following way:
 
 **mustContainTerm** = a term that must be contained in the task's term as subterm to be sent.
 
-
-
+## Example (using the core .jar in https://github.com/opennars/opennars/releases/tag/v3.0.0): 
+**java -jar OpenNARS_v3.0.0.jar null null null null 64001 127.0.0.1 64002 0.5 cat True**
+starts a NarNode with random ID, without any background knowledge or memory file to load, running forever, and sending result tasks to target NAR with IP 127.0.0.1, port 64002, whenever they have above 0.5 priority, contain cat as subterm, and also sending input tasks that fulfill these two criteria.
 
 # Questions
 
