@@ -6,10 +6,10 @@ To add a targetNar to the targets of a NarNode nar, simply call nar.addRedirecti
 or alternatively nar.addRedirectionTo(final String targetIP, final int targetPort, final float taskThreshold, Term mustContainTerm, boolean sendInput)
 where
 
-*targetIP* = the IP of the target Nar (IPv6 untested, but should work too)
+**targetIP** = the IP of the target Nar (IPv6 untested, but should work too)
 
-*targetPort* = the target port to connect to
+**targetPort** = the target port to connect to
 
-*taskThreshold* = the priority tasks that appear in nar must at least have to be sent to all targets
+**taskThreshold** = the priority tasks that appear in nar must at least have to be sent to all targets
 
-*mustContainTerm* = a term that must be contained in the task's term as subterm to be sent.
+**mustContainTerm** = a term that must be contained in the task's term as subterm to be sent.
