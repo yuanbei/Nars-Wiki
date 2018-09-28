@@ -48,7 +48,7 @@ Run the **org.opennars.main.Shell** java class (which is the main class in the .
 Here, OrNull means they can be **null** too.
 
 The first five parameters are shell features, plus the port to listen for tasks and Narsese input:
-**narOrConfigFileOrNull** .. either put null, or for instance put yourConfigFile.xml or exportedMemoryFile.
+**narOrConfigFileOrNull** .. either put **null**, or for instance put **yourConfigFile.xml** or **exportedMemoryFile**.
 
 **idOrNull** .. The id number the Nar should have, put null if a random one should be generated
 
