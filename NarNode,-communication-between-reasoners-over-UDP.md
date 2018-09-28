@@ -44,12 +44,13 @@ Additionally, consistently as for addRedirectionTo, there is an alternative:
 One full code example can be seen in our NarNode test: https://github.com/opennars/opennars/blob/master/src/test/java/org/opennars/core/NarNodeTest.java#L46
 
 # Using NarNode from command line
-Run the org.opennars.main.Shell java class with the parameters **narOrConfigFileOrNull idOrNull nalFileOrNull cyclesToRunOrNull listenPort targetIP1 targetPort1 prioThres1 mustContainTermOrNull1 sendInput1 ... targetIPN targetPortN prioThresN mustContainTermOrNullN sendInputN**
-Here, OrNull means they can be null too, example: 
-null null null null 64001 127.0.0.1 64002 0.5 null True
+Run the **org.opennars.main.Shell** java class (which is the main class in the .jar provided in https://github.com/opennars/opennars/releases/tag/v3.0.0) with the parameters **narOrConfigFileOrNull idOrNull nalFileOrNull cyclesToRunOrNull listenPort targetIP1 targetPort1 prioThres1 mustContainTermOrNull1 sendInput1 ... targetIPN targetPortN prioThresN mustContainTermOrNullN sendInputN**
+Here, OrNull means they can be **null **too, example: 
+**null null null null 64001 127.0.0.1 64002 0.5 cat True**
+starts a NarNode with random ID, without any background knowledge or memory file to load, running forever, and sending result tasks to target NAR with IP 127.0.0.1, port 64002, whenever they have above 0.5 priority, contain cat as subterm, and also sending input tasks that fulfill these two criteria.
 
-The first four parameters are shell features:
-**narOrConfigFileOrNull** .. either put null, or for instance put yourConfigFile.xml
+The first five parameters are shell features, plus the port to listen for tasks and Narsese input:
+**narOrConfigFileOrNull** .. either put null, or for instance put yourConfigFile.xml or exportedMemoryFile.
 
 **idOrNull** .. The id number the Nar should have, put null if a random one should be generated
 
@@ -57,7 +58,9 @@ The first four parameters are shell features:
 
 **cyclesToRunOrNull** .. For how many cycles the system should run, put null if it should never terminate.
 
-The other parameters are for adding target NarNodes similar as in the code usage case, where a target node can simply be specified by adding for more parameters of the form **targetIP targetPort prioThreshold mustContainTermOrNull**
+**listenPort** .. listen port to listen for tasks
+
+The next parameters are for adding target NarNodes similar as in the code usage case, where a target node can simply be specified by adding for more parameters of the form **targetIP targetPort prioThreshold mustContainTermOrNull**
 where as in the code, these parameters can be interpreted in the following way:
 
 **targetIP** = the IP of the target Nar (IPv6 untested, but should work too)
