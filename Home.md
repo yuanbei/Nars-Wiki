@@ -42,6 +42,7 @@ The current stable versions of the system are available for [download](https://d
 |[SingleStepTestingCases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases)|Expected results of inference rules|
 |[FAQ](https://github.com/opennars/opennars/wiki/FAQ)|Theory & Software FAQ|
 |[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1)|Technical Tutorial|
+|[NARNode](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)|
 
 **Implementation**
 
