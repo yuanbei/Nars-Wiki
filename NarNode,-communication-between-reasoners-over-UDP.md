@@ -24,5 +24,21 @@ where
 
 **mustContainTerm** = a term that must be contained in the task's term as subterm to be sent.
 
-# Example
+# Sending Narsese input
+
+It is also possible to send Narsese string input to a NarNode without using a NarNode.
+For this purpose, there is a static function in NarNode:
+**void sendNarsese**(String **input**, TargetNar **target**)
+Additionally, consistently as for addRedirectionTo, there is an alternative:
+**sendNarsese**(String **input**, String **targetIP**, int **targetPort**, float **taskThreshold**, Term **mustContainTerm**)
+
+# Code example
 One full code example can be seen in our NarNode test: https://github.com/opennars/opennars/blob/master/src/test/java/org/opennars/core/NarNodeTest.java#L46
+
+# Used protocol
+Currently, sendNarsese sends a serialized String object, and the tasks are transferred as serialized Task objects,
+each of which is assumed to fit into a single UDP packet.
+
+# Questions
+
+Why do we not just sendNarsese between 
