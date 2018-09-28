@@ -1,13 +1,17 @@
 NarNode is used to let two Nar instances communicate over UDP over the network.
 
-It can be constructed using **NarNode(int listenPort)** (the port to listen for incoming UDP packets),
+# Creating a NarNode instance
+A NarNode instance can be created using **NarNode(int listenPort)** (the port to listen for incoming UDP packets),
 alternatively it can be constructed by using an existing Nar instance: **NarNode(Nar nar, int listenPort)**
 
+# How NarNodes communicate
 Each NarNode has a list of 
 **targets=[targetNar_1,...,targetNar_n]**
 where for each **targetNar_i**, tasks above **priorityThreshold(targetNar_i)** are sent to, optionally only if **mustContainTerm(targetNar_i)** is included in the task.
+The sent task gets then processed in each **targetNar_i** as if it would be a derived task of itself.
 
-To add a targetNar to the targets of a NarNode nar, simply call ****nar.addRedirectionTo**(TargetNar target)**
+# How to specify NarNodes targets
+To add a targetNar to the targets of a NarNode nar, we simply call ****nar.addRedirectionTo**(TargetNar target)**
 or alternatively **nar.addRedirectionTo**(String **targetIP**, int **targetPort**, float **taskThreshold**, Term **mustContainTerm**, boolean **sendInput**)
 where
 
