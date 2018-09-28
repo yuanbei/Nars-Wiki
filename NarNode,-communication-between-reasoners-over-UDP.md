@@ -75,7 +75,7 @@ starts a NarNode with random ID, without any background knowledge or memory file
 
 Note: Since in this case NarNode runs through Shell, it additionally listens to standard-IO.
 
-# Questions
+# Questions and answers
 
 ## Why do we not just send Narsese between Nar nodes, why are entire tasks sent?
 
