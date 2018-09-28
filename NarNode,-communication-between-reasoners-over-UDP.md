@@ -1,4 +1,4 @@
-NarNode is used to let two Nar instances communicate over UDP. This allows multiple Nar instances to exchange knowledge over the network, which can be especially useful when multiple Nar instances work on similar problems.
+NarNode is used to let two Nar instances communicate over UDP. This allows multiple Nar instances to exchange useful knowledge over the network, which can be especially be fruitful when multiple Nar instances work on similar problems.
 In such cases, the learning speed can be extremely accelerated, because when one Nar agent has to deal with a new case, it might be a case another Nar already had to deal with. This is even more likely when more agents are involved. 
 
 # Creating a NarNode instance
