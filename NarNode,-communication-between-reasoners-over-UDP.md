@@ -9,7 +9,7 @@ where for each **targetNar_i**, tasks above **priorityThreshold(targetNar_i)** a
 The sent task gets then processed in each **targetNar_i** as if it would be a derived task of itself.
 
 ## Used protocol
-Currently, Narsese strings, as well as tasks are transferred as with Java's object serialization protocol serialized objects, each of which is assumed to fit into a single UDP packet.
+Currently, Narsese strings, as well as tasks are serialized with Java's object serialization protocol, each of which is assumed to fit into a single UDP packet.
 
 ## Protocol limitations
 We are aware that is not very convenient to use the Java's object serialization protocol from native code using JNI, and although it is possible to do so without running a JVM,
