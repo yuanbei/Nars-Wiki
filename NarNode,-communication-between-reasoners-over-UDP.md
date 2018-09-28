@@ -37,7 +37,10 @@ One full code example can be seen in our NarNode test: https://github.com/openna
 
 # Used protocol
 Currently, **sendNarsese** sends a serialized String object, and the tasks are transferred as serialized Task objects,
-each of which is assumed to fit into a single UDP packet. We are aware that is not very convenient to use the Java's object serialization protocol from native code using JNI, and although it is possible to do so without running a JVM,
+each of which is assumed to fit into a single UDP packet. 
+
+#Protocol limitations
+We are aware that is not very convenient to use the Java's object serialization protocol from native code using JNI, and although it is possible to do so without running a JVM,
 it might be easier to use existing UNIX tools to pipe text sent over network into the standard IO of one of the NarNodes within the network. In the future we might improve the protocol so that char byte sequences, as can be easily generated in C/C++, will also be usable by the NarNode to be received within a UDP packet as Narsese input.
 
 
