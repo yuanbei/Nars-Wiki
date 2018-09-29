@@ -33,10 +33,8 @@ The current stable versions of the system are available for [download](https://d
 |[PerceptionInNARS](https://github.com/opennars/opennars/wiki/Perception-In-NARS)|How to do perception in NARS|
 |[ApplicationPrograms](https://github.com/opennars/opennars/wiki/Application-Programs)|Example Programs using OpenNARS as AI.|
 |[InputOutputFormat](https://github.com/opennars/opennars/wiki/Input-Output-Format)|The input/output format of the system|
-|[DataStructures](https://github.com/opennars/opennars/wiki/Data-Structures)|What the different data structures represent|
 |[Videos](https://github.com/opennars/opennars/wiki/Videos)|Description of the Video Examples|
 |[Overview](https://github.com/opennars/opennars/wiki/Overview)|A high-level overview of this NARS implementation|
-|[StampInNARS](https://github.com/opennars/opennars/wiki/Stamp-In-NARS)|The design and function of Stamp in NARS.|
 |[DataAndKnowledgeBases](https://github.com/opennars/opennars/wiki/Data-And-Knowledge-Bases)|How to connect NARS to databases and knowledge bases.|
 |[Multi-StepExamples](https://github.com/opennars/opennars/wiki/Multi-Step-Examples)|Inference Examples|
 |[SingleStepTestingCases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases)|Expected results of inference rules|
@@ -44,7 +42,14 @@ The current stable versions of the system are available for [download](https://d
 |[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1)|Technical Tutorial|
 |[NARNode](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)|Communication between reasoners over network|
 
-**Implementation**
+**Implementation Details**
+
+|Page Name|Summary and Labels|
+|:-------:|:-----------------:|
+|[StampInNARS](https://github.com/opennars/opennars/wiki/Stamp-In-NARS)|The design and function of Stamp in NARS.|
+|[DataStructures](https://github.com/opennars/opennars/wiki/Data-Structures)|What the different data structures represent|
+
+**(old) Implementations**
 
 |Page Name|Summary and Labels|
 |:-------:|:-----------------:|
