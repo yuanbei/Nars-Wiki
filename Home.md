@@ -36,7 +36,7 @@ The current stable versions of the system are available for [download](https://d
 |[Videos](https://github.com/opennars/opennars/wiki/Videos)|Description of the Video Examples|
 |[Overview](https://github.com/opennars/opennars/wiki/Overview)|A high-level overview of this NARS implementation|
 |[DataAndKnowledgeBases](https://github.com/opennars/opennars/wiki/Data-And-Knowledge-Bases)|How to connect NARS to databases and knowledge bases.|
-|[Multi-StepExamples](https://github.com/opennars/opennars/wiki/Multi-Step-Examples)|Inference Examples|
+|[Multi-StepExamples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)|Inference Examples|
 |[SingleStepTestingCases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases)|Expected results of inference rules|
 |[FAQ](https://github.com/opennars/opennars/wiki/FAQ)|Theory & Software FAQ|
 |[TechnicalTutorial](https://github.com/opennars/opennars/wiki/OpenNARS-technical-tutorial-1)|Technical Tutorial|
