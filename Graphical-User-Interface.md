@@ -140,3 +140,8 @@ Complex NLP example distinguishing words from the concepts they represent (mappi
 //and the knowledge that "beer" stands for its internal concept "BEER".
 <nars> EXE: ^say([{SELF}, I, want, beer, SELF])
 ```
+
+The relevant learned knowledge in this example is:
+```
+<(&/,<(*,#1,$2) --> REPRESENT>,+12,(^say,{SELF},I,want,#1),+13) =/> <(*,{SELF},$2) --> HAS>>. %1.00;0.30%
+```
