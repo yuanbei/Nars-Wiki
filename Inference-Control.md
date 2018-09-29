@@ -3,9 +3,7 @@
 
 ***
 
-### Inference Control in NARS
-
-####Introduction
+# Introduction
 
 Every reasoning system has a "logic" part and a "control" part. The former specifies what can be expressed (the grammar and semantics) and what can be derived in each step (the inference rules), while the latter specifies what tasks can be carried out by linking the inference steps into inference processes. This relation is put into an intuitive formula by Robert Kowalski as "Algorithm = Logic + Control", though it can be extended beyond algorithmic processes.
 
@@ -13,7 +11,7 @@ The logic part of NARS consists of the formal language [Narsese](https://github.
 
 The control part of NARS is relatively underdeveloped. Its fundamental principles had been decided at the very beginning of the project, but many concrete details remain to be decided, and the current implementation is only a very rough prototype that only handles simple cases. A major reason of this situation is the dependency of the control part on the logic part: each time a major change is made in the logic, the control often needs to be changed accordingly, while on the other hand, the logic part does not depend on the details of the control part. Because of this, the past work on NARS has been focused on the logic, and the control has been implemented mainly to test Narsese and NAL, rather than to solve actual problems. Now the logic of NARS is relatively mature, so the work is gradually moving into the control part of the system.
 
-####Design principle
+# Design principle
 
 Traditionally, the control mechanism in a reasoning system depends on either a domain-specific "strong method" or a domain-independent "weak method". In the former case, the inference steps are organized into inference algorithms specially designed for the problem to be solved; in the latter case, some universal algorithm, such as exhaustive research, is applied that does not need domain-specific knowledge. In both cases, the inference process follows an algorithm that is repeatable, either deterministically or probabilistically.
 
@@ -23,7 +21,7 @@ Roughly speaking, the function of control mechanism in NARS is to dynamically al
 
 For theoretical discussions about this approach, see the two books and the [publications on Resource Management](http://www.cis.temple.edu/~pwang/papers.html).
 
-####Formal model of resource allocation
+# Formal model of resource allocation
 
 The control problem can be abstractly specified as an optimization problem: given finite processing time and storage space, find the best allocation plan to satisfy the demands as much as possible.
 
@@ -37,7 +35,7 @@ Similar to the design of truth-value functions, in the control part of NARS almo
 
 A control function is designed by first considering the factors that should be involved in that case, then analyzing their relationship and representing it using the basic EB functions. All the control functions are tentative, since they are based on the current research results, so may be revised as the research progresses.
 
-####Memory structure and control strategy
+# Memory structure and control strategy
 
 To realize dynamic resource allocation, NARS self-organizes its memory using probabilistic priority-queue to give data items prioritized treatment. A bag is a data structure with the basic operations (1) put in, (2) take out, and (3) access by key. The take-out operation is probabilistic, according to the priority distribution of the items in the bag. Each operation takes a small constant time to finish.
 
@@ -73,7 +71,7 @@ A graphical description of how questions are answered by the system by this proc
 
 The system's working cycle follow a fixed algorithm, and takes a small constant time to finish. The processing of a task is carried out by a number of working cycles, though their number and order are not predetermined, but decided by the control mechanism at the run time.
 
-#### Budget values and functions
+# Budget values and functions
 
 In OpenNARS, every data item participating in resource competition (such as belief, task, concept, as well as the links to them) extends the abstract class Item, which has a budget consisting of 3 EB values: priority, durability, and quality.
 
@@ -85,7 +83,7 @@ In OpenNARS, every data item participating in resource competition (such as beli
 
 In each working cycle, only the directly related items will have their budgets adjusted, which means the system may need to decide for an item how long a decay has been "overdue", and to decrease its priority for multiple decay periods. The system will not attempt to globally traverse the items to implement forgetting.
 
-####budget of belief
+# budget of belief
 
 A belief is a judgment that is already accepted into memory as summary of the system's partial experience. It is created by a task with identical content, and its initial budget will simply be a copy of that of the task. However, after that its budget is adjusted independently.
 
@@ -111,7 +109,7 @@ The durability a belief is increased together with the priority in the first two
 
 **Issue:** The increasing of priority and durability should be further differentiated to show different effects.
 
-####budget of task
+# budget of task
 
 A task can be a new judgment to be absorbed into beliefs, a goal to be achieved, or a question to be answered. Each of the three types is handled differently, though there are some common treatments.
 
@@ -129,7 +127,7 @@ The priority and durability of a task are increased only on one situation: the s
 
 The budget of a goal or a question is reduced when the task is partially satisfied. The better the solution is (evaluated by the choice rule), the lower the budget will become. This process and the relative forgetting process will eventually let a task be removed from the system, though it does not necessarily mean that the task has been processed to a certain level of satisfaction.
 
-####budget of concept
+# budget of concept
 
 A concept is created when an accepted task contains a term for which there is no existing concept. In this case, the initial priority and durability of the concept is determined by those of the task. After that, the budget of the concept is adjusted independently.
 
@@ -149,11 +147,11 @@ The quality of links is a more complicated issue. Currently only a very rough fu
 
 How to measure the above factors and whether there are others remain to be decided.
 
-####budget of link
+# budget of link
 
 Each concept contains a bag of task-links that refers to the relevant tasks and a bag of term-links that refers to its compound or component terms from where the beliefs are obtained. Therefore, the initial budget of a link is obtained from the target it links to. However, after that, the budget of the link is adjusted independently. For example, the belief "dove --> bird" is linked from both the concept "dove" and the concept "bird", and the quality of the belief remains the same for the two concepts. However, this belief is more useful for "dove" than for "bird", so gradually the two links will have very different budget values.
 
-####Attention and activation spreading
+# Attention and activation spreading
 
 The control mechanism of NARS shares ideas with evolutionary computation and neural network, though does not directly use their techniques.
 
@@ -171,7 +169,7 @@ The overall priority distribution in memory at a moment represents how the syste
 
 For a given task, the current priority distribution in memory and in the relevant concept form the processing context of the task, and it determines what beliefs will be used to process the task. Unlike most other approaches, NARS does not take "context" as micro world models with labels, but as the internal environment in which a task is processed. In this sense, context is unlabeled, ever-changing, and have no clear boundary. Even so, it still captures what we usually mean by "context sensitive" in AI and cognitive science.
 
-####System parameters
+# System parameters
 
 The control mechanism is specified with many "system parameters", which are quantities that has not been given a unique value. It is may be because the best value has not been found, but more likely it is because there is no "best value". As the development advances, the former cases will be gradually eliminated, while the latter cases will remain.
 
@@ -179,7 +177,7 @@ A system parameter indicates a bias of the system, so different values will give
 
 One way to tune and study system parameters is to compare them in a community of multiple NARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities. However, such experiments should wait until the individual NARS systems to become relatively complete and stable.
 
-####Dual-process in control
+# Dual-process in control
 
 Beside the above automatic process that unconsciously controls the inference process of the system, the mental operations defined in NAL-9 also let the system consciously control its own inference process, as well as to self-program the system and to follow existing algorithms.
 
@@ -193,7 +191,7 @@ Beside (external) knowledge about the environment, NARS will learn several types
 
 * Declaritive knowledge expressed as descriptions of methods and processes. This type of knowledge can be fully represented as judgments in Narsese, and can influence the system's selections.
 
-####Feeling and emotion
+# Feeling and emotion
 
 Feeling and emotion play an important role in truly intelligent systems, and they start from subjective appraisal of events, entities, and situations, with respect to the goals of the system.
 
@@ -207,7 +205,7 @@ Finally, the desire-value of a concept measures the system's appraisal to it, ev
 
 **Issue:** The last form of desire-value has not been implemented yet, and may wait the first two to become relatively stable. Another open issue is how to effectively use emotion in the control mechanism. The basic idea is that when the system's satisfaction level is high, it is more likely to work on low-priority tasks.
 
-####The proper usage of NARS
+# The proper usage of NARS
 
 The current implementation mostly services as a proof of concept and a platform to test Narsese and NAL. As shown by the [testing cases](http://www.cis.temple.edu/~pwang/demos.html), the current system can be used to carry out single-step inference processes, as well as simple multi-step inference processes. However, the system is not ready for complicated inference processes.
 
