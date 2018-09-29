@@ -124,17 +124,18 @@ Complex NLP example distinguishing words from the concepts they represent (mappi
 
 ```
 //the word food stands for the concept FOOD
-<(*,food,FOOD) --> REPRESENT>.
-//the word beer stands for the concept BEER
-<(*,beer,BEER) --> REPRESENT>.
-//saying "I want food"
+<(*,food,FOOD) --> REPRESENT>. :|:
+10
 (^say,{SELF},I,want,food). :|:
- //leads to NARS having food (for example this is body feedback)
-<(\,{SELF},_,HAS) --> FOOD>. :|:
- //adding the goal that it should have beer (giving more priority by adding multiple time, I was impatient :) )
-<(\,{SELF},_,HAS) --> BEER>!
-<(\,{SELF},_,HAS) --> BEER>!
-<(\,{SELF},_,HAS) --> BEER>!
+10
+//leads to NARS having food (for example this is body feedback)
+<(*,{SELF},FOOD) --> HAS>. :|:
+100
+
+//the word beer stands for the concept BEER
+<(*,beer,BEER) --> REPRESENT>. :|:
+//I want BEER
+<(*,{SELF},BEER) --> HAS>!
 //leads to execution of saying "I want beer", supported by past experience namely by the observed temporal coherence, 
 //and the knowledge that "beer" stands for its internal concept "BEER".
 <nars> EXE: ^say([{SELF}, I, want, beer, SELF])
