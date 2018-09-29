@@ -19,7 +19,7 @@ As a general-purpose system, NARS can have any belief or goal, as far as its con
 
 ###Actions
 
-Each operation consists of an operator and an argument list, like Op(A1, ..., An). From a logical point of view, it is a statement <(*, Self, A1, ..., An) {-- Op>, where the subject is a product indicating a temporal relation between the system itself and the arguments, the predicate is the type of the relation, and the relation is Instance, since operations are countable.
+Each operation consists of an operator and an argument list, like Op(A1, ..., An). From a logical point of view, it is a statement <(*, {SELF}, A1, ..., An) {-- Op>, where the subject is a product indicating a temporal relation between the system itself and the arguments, the predicate is the type of the relation, and the relation is Instance, since operations are countable.
 
 In the current implementation, adding an operator into the system means
 
@@ -75,25 +75,25 @@ This example is set in the same environment as the other examples used in NAL-8,
 
 The initial given sentences are the following four lines:
 
-`*** [01] <(*, Self, key001) --> hold>!`
+`*** [01] <(*, {SELF}, key001) --> hold>!`
 
-This is a goal (indicated by "!"), which ask the statement <(*, Self, key001) --> hold> to be realized. Here Self is a special term indicating the system itself, key001 is the object to be picked up (intuitively, a key), and hold is a relation to be established between the two. Therefore, the goal roughly corresponds to command "Pick up key001!"
+This is a goal (indicated by "!"), which ask the statement <(*, {SELF}, key001) --> hold> to be realized. Here Self is a special term indicating the system itself, key001 is the object to be picked up (intuitively, a key), and hold is a relation to be established between the two. Therefore, the goal roughly corresponds to command "Pick up key001!"
 
-`*** [02] (--, <(*, Self, key001) --> hold>). :|:`
+`*** [02] (--, <(*, {SELF}, key001) --> hold>). :|:`
 
 This is a judgment (indicated by ".") saying that the key is not holding by the system. Here "--" is negation, and ":|:" indicates present tense.
 
 Truth-values are optional for input judgments. To make things simple, in this example all input judgments are given as binary statements, which means the default truth-value %1.0;0.9% will be assigned to them by the system. Since the internal representation requires a higher accuracy than external communication, all the derived judgments will have their truth-values represented explicitly.
 
 ```
-*** [03] <(&/, <(*, Self, key001) --> reachable>, (^pick, key001)) =/> <(*, Self, key001) --> hold>>.
+*** [03] <(&/, <(*, {SELF}, key001) --> reachable>, (^pick, {SELF}, key001)) =/> <(*, {SELF}, key001) --> hold>>.
 ```
 
 The system's knowledge about the `^pick' operator: "If the operator is executed on key001 after it becomes reachable, it will be hold by the system".
 
 In practical situations, such knowledge is usually represented in more general form, with the key001 replaced by independent variable #x, since it applies to many (though not all) terms. However, in that case, the frequency of the belief will not be very high, since there are many things that are reachable, but cannot be picked up. Adding more preconditions will increase the frequency, but decrease the generality and simplicity of the knowledge.
 
-`*** [04] <(*, Self, key001) --> reachable>. :|:`
+`*** [04] <(*, {SELF}, key001) --> reachable>. :|:`
 
 The key is currently reachable. As shown in other examples in ProceduralExamples, if this is not the case, the system will recursively treat it as a derived goal.
 
@@ -103,24 +103,24 @@ Since this example focuses on the logic of the system rather than the control me
 
 ```
 ********** [03 + 04 -> 05]:
-IN: <(&/,<(*,Self,key001) --> reachable>,<(*,key001) --> ^pick>) =/> <(*,Self,key001) --> hold>>.
-IN: <(*,Self,key001) --> reachable>. :|:
+IN: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <(*,{SELF},key001) --> hold>>.
+IN: <(*,{SELF},key001) --> reachable>. :|:
 1
-OUT: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%
+OUT: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.81%
 ```
 
 The first step simplifies the precondition of the operation by removing the conditions that is already realized. Given the uncertainty introduced by this deduction, the conclusion has a lower confidence value. Furthermore, while judgment [03] is tense-free, judgment [05] is true at the current moment, since the condition [04] is not always true.
 
-In [03], operation (^pick, key001) becomes <(*,key001) --> ^pick> when loaded into the system, though the former version remains its standard form in Narsese. In the latter version, the subject can be a product with a single argument, because in all operations there is an implicit argument, the system itself.
+In [03], operation (^pick, {SELF}, key001) becomes <(*,{SELF}, key001) --> ^pick> when loaded into the system, though the former version remains its standard form in Narsese. In the latter version, the subject can be a product with a single argument, because in all operations there is an implicit argument, the system itself.
 
 ```
 ********** [05 + 01 -> 06]:
-IN: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%
-IN: <(*,Self,key001) --> hold>!
+IN: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.81%
+IN: <(*,{SELF},key001) --> hold>!
 1
-OUT: <(*,Self,key001) --> hold>? :|:
+OUT: <(*,{SELF},key001) --> hold>? :|:
 2
-OUT: <(*,key001) --> ^pick>! %1.00;0.73%
+OUT: <(*,{SELF},key001) --> ^pick>! %1.00;0.73%
 ```
 
 When goal [01] is actually pursued, the system first checks if the desired situation has been somehow realized already. If this is the case, then no operation needs to be taken. This "active perception" is triggered by the derived question (indicated by "?"), which also serves as a command to the sensorimotor mechanism to report the perceived truth-value of the statement in the near future.
@@ -129,9 +129,9 @@ Also, a command to execute the operation is produced as a derived goal, by backw
 
 ```
 ********** [06 -> 07]:
-IN: <(*,key001) --> ^pick>! %1.00;0.73%
+IN: <(*,{SELF},key001) --> ^pick>! %1.00;0.73%
 1
-OUT: <(*,key001) --> ^pick>. :|: %1.00;0.90%
+OUT: <(*,{SELF},key001) --> ^pick>. :|: %1.00;0.90%
 ```
 
 Since there is no other reason to prevent this derived goal from being realized, the operation is executed, and this fact is remembered by the system.
@@ -140,29 +140,29 @@ Since there is no other reason to prevent this derived goal from being realized,
 
 ```
 ********** [07 + 05 -> 08]:
-IN: <(*,key001) --> ^pick>. :|:
-IN: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%
+IN: <(*,{SELF},key001) --> ^pick>. :|:
+IN: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.81%
 1
-OUT: <(*,Self,key001) --> hold>. :|: %1.00;0.73%
+OUT: <(*,{SELF},key001) --> hold>. :|: %1.00;0.73%
 ```
 
 From the fact that an operation has been executed, and knowledge about its consequence, the system forms an expectation about what has become the case. If the knowledge is reliable enough, the expectation will have a reasonably high confidence for the following decisions to be based on
 
 ```
 ********** [02 + 08 -> 08]:
-IN: (--,<(*,Self,key001) --> hold>). :|:
+IN: (--,<(*,{SELF},key001) --> hold>). :|:
 1
-OUT: <(*,Self,key001) --> hold>. :\: %0.00;0.90%
+OUT: <(*,{SELF},key001) --> hold>. :\: %0.00;0.90%
 1
-IN: <(*,Self,key001) --> hold>? :|:
+IN: <(*,{SELF},key001) --> hold>? :|:
 1
-OUT: <(*,Self,key001) --> hold>. :\: %0.00;0.90%
+OUT: <(*,{SELF},key001) --> hold>. :\: %0.00;0.90%
 1
-IN: <(*,Self,key001) --> hold>. :|: %1.00;0.73%
+IN: <(*,{SELF},key001) --> hold>. :|: %1.00;0.73%
 2
-IN: <(*,Self,key001) --> hold>? :|:
+IN: <(*,{SELF},key001) --> hold>? :|:
 1
-OUT: <(*,Self,key001) --> hold>. :\: %1.00;0.73%
+OUT: <(*,{SELF},key001) --> hold>. :\: %1.00;0.73%
 ```
 
 In this sequence of steps, the system is first told that it is not holding the key, then after a short time, it is expecting to be holding the key. Since both judgments have present-tense attached when entering the system, and they are significantly different, the system does not do a revision (that is, to treat them as collecting evidence from different channels about the same situation), but updating (that is, to treat the new judgment as the current situation, and the previous judgment as a situation that was the case, but no longer true).
@@ -171,11 +171,11 @@ A present-sense question can be answered by a past-tense judgment, as far as the
 
 ```
 ********** [08 + 09 -> 10]:
-IN: <(*,Self,key001) --> hold>. :|: %1.00;0.73%
+IN: <(*,{SELF},key001) --> hold>. :|: %1.00;0.73%
 1
-IN: <(*,Self,key001) --> hold>. :|:
+IN: <(*,{SELF},key001) --> hold>. :|:
 1
-OUT: <(*,Self,key001) --> hold>. :|: %1.00;0.92%
+OUT: <(*,{SELF},key001) --> hold>. :|: %1.00;0.92%
 ```
 
 Now the system is getting new input [09], which can be seen as a response triggered by the derived question sent out previously. Since this feedback confirms the expectation, they are merged into a more confident judgment about the current situation.
@@ -184,44 +184,44 @@ Now the system is getting new input [09], which can be seen as a response trigge
 
 ```
 ********** [07 + 09 -> 11]:
-IN: <(*,key001) --> ^pick>. :|:
+IN: <(*,{SELF},key001) --> ^pick>. :|:
 1
-IN: <(*,Self,key001) --> hold>. :|:
+IN: <(*,{SELF},key001) --> hold>. :|:
 1
-OUT: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.45%
+OUT: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.45%
 ```
 
 From the execution of an operation and a following situation, the system derives by induction that the situation is somehow a consequence of the operation.
 
 ```
 ********** [05 + 11 -> 12]:
-IN: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%
+IN: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.81%
 1
-IN: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.45%
+IN: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.45%
 1
-OUT: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.84%
+OUT: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.84%
 ```
 
 The new inductive conjunction confirms a previous belief, so they are merged by the revision rule to become a more stable belief.
 
 ```
 ********** [04 + 12 -> 13]:
-IN: <(*,Self,key001) --> reachable>. :|:
+IN: <(*,{SELF},key001) --> reachable>. :|:
 1
-IN: <<(*,key001) --> ^pick> =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.84%
+IN: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.84%
 1
-OUT: <(&/,<(*,Self,key001) --> reachable>,<(*,key001) --> ^pick>) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.43%
+OUT: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.43%
 ```
 
 Similarly, a belief about an implication relation can be conditioned, so as to get a more complicated precondition.
 
 ```
 ********** [03 + 13 -> 14]:
-IN: <(&/,<(*,Self,key001) --> reachable>,<(*,key001) --> ^pick>) =/> <(*,Self,key001) --> hold>>.
+IN: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <(*,{SELF},key001) --> hold>>.
 1
-IN: <(&/,<(*,Self,key001) --> reachable>,<(*,key001) --> ^pick>) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.43%
+IN: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.43%
 1
-OUT: <(&/,<(*,Self,key001) --> reachable>,<(*,key001) --> ^pick>) =/> <(*,Self,key001) --> hold>>. %1.00;0.91%
+OUT: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <(*,{SELF},key001) --> hold>>. %1.00;0.91%
 ```
 
 Again, the new evidence is merged with the previous knowledge, to gradually increase the confidence of knowledge about operations.
@@ -256,7 +256,7 @@ It starts with 9 input sentences, and they are roughly translated into English i
 
 "t001 is a door."
 
-`*** [03] <(&/, <(*, Self, {t002}) --> hold>, <(*, Self, {t001}) --> at>, (^open, {t001})) =/> <{t001} --> [opened]>>.`
+`*** [03] <(&/, <(*, {SELF}, {t002}) --> hold>, <(*, {SELF}, {t001}) --> at>, (^open, {SELF}, {t001})) =/> <{t001} --> [opened]>>.`
 
 "If I hold t002, arrive at t001, and execute the operation 'open' at t001, then t001 will be opened."
 
@@ -264,11 +264,11 @@ It starts with 9 input sentences, and they are roughly translated into English i
 
 "t002 is the key of t001."
 
-`*** [05] <(&/, <(*, Self, {t002}) --> reachable>, (^pick, {t002})) =/> <(*, Self, {t002}) --> hold>>.`
+`*** [05] <(&/, <(*, {SELF}, {t002}) --> reachable>, (^pick, {SELF}, {t002})) =/> <(*, {SELF}, {t002}) --> hold>>.`
 
 "If I can reach t002, and execute the operation 'pick' at t002, then I will hold t002."
 
-`*** [06] <(&|, <(*, $x, #y) --> on>, <(*, Self, #y) --> at>) =|> <(*, Self, $x) --> reachable>>.`
+`*** [06] <(&|, <(*, $x, #y) --> on>, <(*, {SELF}, #y) --> at>) =|> <(*, {SELF}, $x) --> reachable>>.`
 
 "If an object is on something, which is located at the same place as me, I can reach that object."
 
@@ -280,7 +280,7 @@ It starts with 9 input sentences, and they are roughly translated into English i
 
 "t003 is a desk."
 
-`*** [09] <(^go-to, $x) =/> <(*, Self, $x) --> at>>.`
+`*** [09] <(^go-to, {SELF},$x) =/> <(*, {SELF}, $x) --> at>>.`
 
 "If I execute the 'go to' operation aimed at a place, I'll arrive at that place."
 
@@ -289,10 +289,10 @@ The step-by-step process shows that the system uses backward inference to reduce
 In this process, the following operation sequence is displayed in Java console, which is what the system actually does:
 
 ```
-EXECUTE: ^go-to({t003})
-EXECUTE: ^pick({t002})
-EXECUTE: ^go-to({t001})
-EXECUTE: ^open({t001})
+EXECUTE: ^go-to({SELF},{t003})
+EXECUTE: ^pick({SELF},{t002})
+EXECUTE: ^go-to({SELF},{t001})
+EXECUTE: ^open({SELF},{t001})
 ```
 
 ####Example-NAL8-2
