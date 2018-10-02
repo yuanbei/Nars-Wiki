@@ -6,12 +6,12 @@
 
 **P**
 <br /><br/>
-Predicate term - term used to the right of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
+**[Predicate term](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - term used to the right of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
 <br /><br/>
 
 **S**
 <br /><br/>
-Subject term - term used to the left of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
+**[Subject term](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - term used to the left of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
 <br /><br/>
 
 **T**
