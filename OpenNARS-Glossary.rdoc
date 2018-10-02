@@ -7,7 +7,8 @@ Predicate term - term used to the right of [copula] (https://github.com/opennars
 
 
 **S**<br /><br/>
-Subject term - term used to the left of [copula] (https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
+Subject term - term used t
+o the left of [copula] (https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
 
 **T**<br /><br/>
 **Term** - simplest atomic structure within a grammar statement, basically a string of letters in alphabet<br /><br/>
