@@ -1,3 +1,8 @@
+**C**
+<br/><br/>
+**[Copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - a relational operator used within statement to indicate relationship between terms
+<br/><br/>
+
 **D**
 <br/><br/>
 **Durability** - measurement of computational resources allocated in priority data structure, it is attached to the concept and also serves as a time decay similar to human memory that tends to forget things
