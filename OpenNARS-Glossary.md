@@ -1,6 +1,6 @@
 **D**
 <br/><br/>
-**Durability** - measurement of computational resources allocated in priority data structure, it is attached to the concept and also serves as a time decay similar to human perception that tends to forget things
+**Durability** - measurement of computational resources allocated in priority data structure, it is attached to the concept and also serves as a time decay similar to human memory that tends to forget things
 <br/><br/>
 **N**
 <br/><br/>
