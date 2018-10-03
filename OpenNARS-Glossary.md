@@ -9,11 +9,13 @@
 **E**
 <br/><br/>
 **Extention** - 
+<br/><br/>
 **Extentional Set** - 
 <br/><br/>
 **I**
 <br/><br/>
 **Intension** - 
+<br/><br/>
 **Intensional set** - 
 <br/><br/>
 **N**
