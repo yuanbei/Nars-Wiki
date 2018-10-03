@@ -1,3 +1,7 @@
+**D**
+<br/><br/>
+**Durability** - measurement of computational resources allocated in priority data structure
+<br/><br/>
 **N**
 <br/><br/>
 **[NAL](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS)** - Non-Axiomatic Logic core logic used in OpenNARS <br />
