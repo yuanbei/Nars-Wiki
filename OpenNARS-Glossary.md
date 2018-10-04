@@ -31,8 +31,11 @@
 
 **S**
 <br /><br/>
+**Statement** - Connection of two terms, subject and predicate, with a copula.
+<br /><br/>
 **[Subject term](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - term used to the left of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
 <br /><br/>
+
 
 **T**
 <br /><br/>
