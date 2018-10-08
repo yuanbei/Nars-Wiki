@@ -4,7 +4,7 @@
 ***
 ### Introduction
 
-The newest openNARS version, 1.6.1, got released on 10th January 2015.
+OpenNARS version, 1.6.1, got released on 10th January 2015.
 
 Watch this version at http://www.youtube.com/watch?v=pdaUNX7iKlQ
 
