@@ -8,7 +8,7 @@
 [OpenNARS Tutorial Part 3](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
 * belief table
 * [Question table](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
-
+* Question & Answer
 
 [NARS Tutorial](https://www.youtube.com/watch?v=NzKYguOZTn8&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy)<br />
 # Presentations
