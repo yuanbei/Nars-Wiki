@@ -3,7 +3,7 @@
 
 ***
 
-####Basics
+# Basics
 
 In the context of NARS, "perception" is the process of organizing the system's experience into its internal representation, as concepts, beliefs, and tasks, as well as obtaining additional information about their priority and so on.
 
@@ -11,7 +11,7 @@ Perception is based on sensation, but provides more complicated structures and p
 
 In NARS there is no separate "perception module" (or modules for vision, hearing, etc.). Perception is unified with other cognitive processes, including reasoning, learning, and so on. Notions like "perception" can be used to stress certain aspects of this process, but not to isolate a sub-process from it.
 
-####Sensation
+# Sensation
 
 The early implementations of NARS only depend on a "native input" channel, where the system's experience is a stream of Narsese sentences that can be directly added into the system's memory, which can be considered as a conceptual graph. Beyond that stage, the system can be extended to carry out sensation and low-level perception, so as to get experience consisting of other types of stimulus, and to integrate them into the system's memory.
 
@@ -29,7 +29,7 @@ A more accurate measurement of frequency takes the difference _t1 - ti_ into acc
 
 In summary, all types of sensory values will be "normalized" into values in [0, 1], and eventually become truth-values in Narsese.
 
-####Low-level perception
+# Low-level perception
 
 Low-level perception organizes the sensory inputs into temporal and spatial patterns.
 
@@ -59,7 +59,7 @@ Different perceptions of the same sensation is possible, though the revision rul
 
 These factors will balance against each other. The competing perceptions may even be at different levels of description. We can expect many phenomena discussed by Gestalt psychology.
 
-####High-level perception
+# High-level perception
 
 "High-level perception" usually refers to perceptive process at conceptual level, without directly referring to receptive fields, even though the involved concepts do not necessarily have verbal descriptions in a communication language. On NARS, the input to the high-level perception can come either from the low-level perception described above using the system's sensory organs, or from other devices that are blackboxes to NARS that can be invoked by certain operations to get certain information about the environment. Either way, there is no requirement on the nature of the sensors --- they do not need to similar to human sensors, or limited by our current knowledge.
 
@@ -77,7 +77,7 @@ NARS does not search (deterministically or randomly) the space of all possible c
 
 Furthermore, the system does not keep a concept for every compound term it ever formed in history. On the contrary, most of them are forgot, and the ones kept are the concepts that have relatively high priorities, which means they have a relatively rich and stable meaning, as well as have been useful in the past in processing the tasks. In this way, the evaluation criteria for what concepts to keep are not coded in a fixed formula or algorithm, but are gradual, cumulative, and statistical. For a pattern in the experience to become a concept, both its occurrence frequency and its usefulness to the system matter. Also, if the pattern is complicated, it may take a long time for the system to recognize it, if it is found at all.
 
-####Conceptual Relations
+# Conceptual Relations
 
 To specify "meaning" by "relations" or "usages" is not really a new idea in AI and cognitive science. For example, similar ideas can be found in semantic networks, neural networks, and statistical semantics. What makes NARS different from the other approaches is how these "relations" are represented and processed.
 
@@ -95,7 +95,7 @@ For a given concept, all of its relations with other concepts collectively deter
 
 NARS concepts are naturally multi-modal. For example, the meaning of "cat" may consist of the vision of cats, the sounds they make, their smell and touch, the system's knowledge and beliefs about them, as well as the pending questions and goals about them.
 
-####Categorization Process
+# Categorization Process
 
 In this context, "categorization" is the process by which a concept is created, modified, evaluated, and used in various ways. In NARS, this process is fully carried out by the inference rules, so it is the same process as "reasoning" and "learning", though each notion stress certain aspects of the process.
 
@@ -105,7 +105,7 @@ With inference rules processing the built-in relations, NARS does not merely use
 
 A question on categorical relationship typically requests the evaluation of a semantic relation, and the answer is usually a matter of degree. Such a conclusion is usually the result of a cooperation of multiple inference rules in an inference process. Beside the available knowledge, this process is also influenced by the available resources. This process is history-dependent and context-sensitive, and usually not accurately repeatable.
 
-####Compared with other AI Techniques
+# Compared with other AI Techniques
 
 The approach NARS taking for perception is fundamentally different from the most existing approaches.
 
@@ -117,7 +117,7 @@ The approach NARS taking for perception is fundamentally different from the most
 
 The development of perception in NARS will be more like what happens in a baby than in an traditional AI program.
 
-####Implementation and Application
+# Implementation and Application
 
 To realize perception in the OpenNARS implementation, the following steps will be taken.
 
