@@ -3,7 +3,7 @@
 * term links
 * concept structure
 * belief table
-* [attenttion considerations](https://youtu.be/NzKYguOZTn8?t=1163)
+* [attention considerations](https://youtu.be/NzKYguOZTn8?t=1163)
 ---
 
 [NARS Tutorial](https://www.youtube.com/watch?v=NzKYguOZTn8&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy)<br />
