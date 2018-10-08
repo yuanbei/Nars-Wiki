@@ -26,7 +26,7 @@ In class nars.entity.Stamp, an occurrenceTime records the (observed, remembered,
 
 A system parameter DURATION is used to define the "present tense" as for events with an occurrenceTime in the [-DURATION, DURATION] neighborhood of the current time, as given by the system's internal clock. It's current default value is 5. The previous idea is to take 1 as its value, so "presently" means the current working cycle, but it seems too restrictive. For an input judgment, if its tense is "present", its occurrenceTime will be set to the current time on the internal clock, "past" is mapped to "current time - DURATION", and "future" to "current time + DURATION". If no tense is used, the occurrenceTime takes a special value ETERNAL. The reverse mapping is used for output.
 
-####Inference on temporal order
+#### Inference on temporal order
 
 As explained in the publications, temporal inference in NARS is designed by processing the logical and the temporal aspects separately. Therefore all the existing rules will be kept, except that the conclusion may contain a temporal term (with temporal order among components), a time interval (similar to the numbers in experience), and/or a temporal truth-value (with an occurrence time).
 
@@ -36,7 +36,7 @@ The temporal order in CompoundTerms is processed in the following way:
 
 2. Different from what is hinted in the book, the temporal order is taken to be binary, not multi-valued, so the matter of degree in the truth-value is completely caused by the logical factor, not the temporal factor. For this reason, in all inference rules (both strong and weak), the temporal order among the terms in the conclusion is the same order as those terms in the premises. If no such a temporal order can be decided in a certain combination of the terms, no conclusion is derived.
 
-#####-Inference on occurrence time
+##### -Inference on occurrence time
 In most rules, the occurrenceTime is processed independent of the other aspects of the rule. There are the following cases:
 
 * If both premises are ETERNAL, so is the conclusion. Therefore all the inference rules defined in the lower layers remain valid.
@@ -51,7 +51,7 @@ Normally, if the premises are "tensed", so is the conclusion --- the knowledge d
 
 In principle, all inference rules should take temporal information into account. However, since an inference rule may be implemented as the cooperation of multiple methods, not all of them will be responsible to check temporal information.
 
-#####-Temporal induction and detachment
+##### -Temporal induction and detachment
 An inference where temporal order and occurrence time are tangled is temporal induction and its reverse, detachment (as special case of deduction and abduction).
 
 In NARS, temporal induction refers to the situation where events e1 and e2 are observed as occurring in succession, with a time interval in between with a length of n clock cycles. As far as this sequence of events is noticed by the system, an inductive conclusion (&/,e1,interval(n)) =/> e2 is derived.
@@ -72,7 +72,7 @@ Since the interval measurement is subjective, it will not appear in the system's
 ### Procedural Inference (NAL-8)
 Beside [Non-Axiomatic Logic: A Model of Intelligent Reasoning](http://www.worldscientific.com/worldscibooks/10.1142/8665), procedural reasoning in NARS is also discussed in [Solving a Problem With or Without a Program](http://www.degruyter.com/view/j/jagi.2012.3.issue-3/v10229-011-0021-5/v10229-011-0021-5.xml?format=INT). A previous implementation exists as version 1.3.3, with working examples in several files, as well as descriptions in [Procedural Learning](https://github.com/opennars/opennars/wiki/Procedural-Learning).
 
-####Inference on goals
+#### Inference on goals
 
 In nars.entity.Sentence, a "desire" value is added, which is truth-value interpreted differently. The desire-value of statement S is the truth-value of S==>D, where D is a virtual statement representing a desired situation. Furthermore, add "Goal" and "Query" as two types of Sentence, and process them like "Judgment" and "Question", but using desire-value, rather than truth-value.
 
@@ -84,7 +84,7 @@ Though both Question and Goal are derived by backward inference, there is a majo
 
 Issue: The inference on Quest, as Question on desire-values, has not been carefully evaluated. In particular, the budget-value functions need to be properly selected in each rule, since in the same method, the selection may be different between Quest and Question on truth-value.
 
-####Inference on operations
+#### Inference on operations
 
 Goals are eventually achieved by the execution of operations. An "operation" package is introduced, with each operator defined as a class, with an "execute" method that takes a list of arguments for the operation. In Memory, a HashMap<String, Operator> is used to associate the operators with their names. When a goal corresponds to an operation, the execute method of its operator is called.
 
@@ -98,7 +98,7 @@ The key of procedural learning is the generation of "compound operations". The m
 
 **Issue:** Should "compound operations" be clearly separated from "compound terms", so that they can be directly executed, without going through the intermediate inference steps?
 
-####Operational interface
+#### Operational interface
 
 A "universal sensorimotor interface" is provided, where the commands or functions of other systems or decides can be registered in NARS, and called by it. With each operator, some initial knowledge about its preconditions and consequences should be provided to the system, so inference can be carried out on it.
 
@@ -119,7 +119,7 @@ The first two types will be fixed, while the last is extendable. For more detail
 
 This layer of NAL will be mainly implemented as a set of mental operations whose major consequences are within the system itself. These operations carries out various types of self-monitoring and self-control.
 
-####Deliberate control
+#### Deliberate control
 
 The package nars.operator.mental contains operators that allow the system to deliberately override the automatic inference control mechanism:
 
@@ -137,7 +137,7 @@ The name of a mental operator only roughly corresponds to its meaning. The exact
 
 These mental operators are introduced for experimental purpose. The details in each of them may be revised, and other operators may be introduced. In general, each operator should be relatively simple and meaningful. It is neither necessary nor possible for the system to explicitly manage all its internal actions, so it is not a good idea to define a large number of mental operators.
 
-####Feeling and emotion
+#### Feeling and emotion
 Feeling and emotion allow the system to appraise individual items and the overall situation, with respect to the system's goals, so as to make proper response.
 
 This appraisal process starts from the given (input or implant) goals. The desire-value of these goals represent drives and values imposed on the system by its designer or user. From these given goals, plus the system's beliefs, the derived goals are generated, which is biased by the system's own experience.
@@ -162,7 +162,7 @@ The appraisal information will serve several functions:
 
 * The system's feelings and emotions can be communicated to other systems, either by using the "emotional" terms in Narsese, or by showing the related measurements in the GUI.
 
-####Internal experience
+#### Internal experience
 
 Beside satisfaction, the system may use other system-level indicators:
 
