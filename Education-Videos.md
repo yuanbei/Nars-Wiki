@@ -14,6 +14,7 @@
 ---
 [OpenNARS Tutorial Part 4](https://www.youtube.com/watch?v=8i5n4uDlmHI&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=3)
 * [Evidential basis](https://youtu.be/8i5n4uDlmHI?t=20)
+* [Evidence overlap](https://youtu.be/8i5n4uDlmHI?t=201)
 ---
 [OpenNARS Tutorial Part 5](https://www.youtube.com/watch?v=4IZtwnbRZ-Y&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=4)
 ---
