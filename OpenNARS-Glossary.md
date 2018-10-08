@@ -2,7 +2,7 @@
 <br/><br/>
 **[Copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - a relational operator used within statement to indicate relationship between terms
 <br/><br/>
-**Confidence** - measurement of degree of believe in range [0,1], given __k__  is a temporal constant, might be seen as number of steps in the future, confidence __c__ is defined in terms of evidence w as **__c = w / (w + k)__**
+**Confidence** - measurement of degree of believe in range [0,1], given __k__  as a temporal constant, might be seen as number of steps in the future, confidence __c__ is defined in terms of evidence w as **__c = w / (w + k)__**, default value for __k__ is 1
 <br/><br/>
 **D**
 <br/><br/>
