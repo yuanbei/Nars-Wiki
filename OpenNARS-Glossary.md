@@ -25,6 +25,7 @@
 **Extensional Set** - 
 <br/><br/>
 **F**
+<br/><br/>
 **Frequency** - one of key metrics in NARS, it is measurement of uncertainty in the range **[0,1]** and defined as __positive evidence / total evidence__
 **I**
 <br/><br/>
