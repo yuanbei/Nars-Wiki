@@ -8,13 +8,13 @@
 <br/><br/>
 **E**
 <br/><br/>
-**Extention** - 
+**Extension** - extension of a term is a set of terms that appears to the LEFT of inheritance copula (x-->T, where x is extension of t)
 <br/><br/>
-**Extentional Set** - 
+**Extensional Set** - 
 <br/><br/>
 **I**
 <br/><br/>
-**Intension** - 
+**Intension** - intension of a term is a set of terms that appears to the RIGHT of inheritance copula (T-->x where x is intension of T)
 <br/><br/>
 **Intensional set** - 
 <br/><br/>
