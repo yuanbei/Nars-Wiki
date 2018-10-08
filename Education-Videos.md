@@ -1,18 +1,18 @@
 # Tutorials
-[OpenNARS Tutorial Part 2](https://www.youtube.com/watch?v=NzKYguOZTn8&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy)
+[OpenNARS Tutorial - Memory 1](https://www.youtube.com/watch?v=NzKYguOZTn8&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy)
 * term links
 * concept structure
 * belief table
 * [attention considerations](https://youtu.be/NzKYguOZTn8?t=1163)
 ---
-[OpenNARS Tutorial Part 3](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
+[OpenNARS Tutorial - Memory 2](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
 * belief table
 * [Question table](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
 * Question & Answer
 * [Revision](https://youtu.be/uAVfovN5uHQ?t=727)
 * [Evidential basis](https://youtu.be/uAVfovN5uHQ?t=1074)  (stamps)
 ---
-[OpenNARS Tutorial Part 4](https://www.youtube.com/watch?v=8i5n4uDlmHI&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=3)
+[OpenNARS Tutorial - Control System](https://www.youtube.com/watch?v=8i5n4uDlmHI&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=3)
 * [Evidential basis](https://youtu.be/8i5n4uDlmHI?t=20)
 * [Evidence overlap](https://youtu.be/8i5n4uDlmHI?t=201)
 ---
