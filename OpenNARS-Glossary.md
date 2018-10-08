@@ -14,6 +14,8 @@
 <br/><br/>
 **Evidence negative** - given the statement **S-->P**, negative evidence is difference of _extensions_ of both **S** and **P** and difference of _intensions_ of both **P** and **S**
 <br/><br/>
+**Evidence total** - total evidence is the **sum** of negative and positive evidences
+<br/><br/>
 **Extension** - extension of a term is a set of terms that appears to the LEFT of inheritance copula (x-->T, where x is extension of t)
 <br/><br/>
 **Extensional Set** - 
