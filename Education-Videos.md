@@ -9,6 +9,7 @@
 * belief table
 * [Question table](https://www.youtube.com/watch?v=uAVfovN5uHQ&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=2)
 * Question & Answer
+* [Revision](https://youtu.be/uAVfovN5uHQ?t=727)
 ---
 [OpenNARS Tutorial Part 4](https://www.youtube.com/watch?v=8i5n4uDlmHI&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=3)
 ---
