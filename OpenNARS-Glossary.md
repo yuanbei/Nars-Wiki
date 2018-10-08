@@ -2,6 +2,8 @@
 <br/><br/>
 **[Copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - a relational operator used within statement to indicate relationship between terms
 <br/><br/>
+**Confidence** - measurement of degree of believe in range [0,1], given __k__  is a temporal constant, might be seen as number of steps in the future, confidence __c__ is defined in terms of evidence w as **__c = w / (w + k)__**
+<br/><br/>
 **D**
 <br/><br/>
 **Durability** - measurement of computational resources allocated in priority data structure, it is attached to the concept and also serves as a time decay similar to human memory that tends to forget things
@@ -20,6 +22,8 @@
 <br/><br/>
 **Extensional Set** - 
 <br/><br/>
+**F**
+**Frequency** - one of key metrics in NARS, it is measurement of uncertainty in the range **[0,1]** and defined as __positive evidence / total evidence__
 **I**
 <br/><br/>
 **Intension** - intension of a term is a set of terms that appears to the RIGHT of inheritance copula (T-->x where x is intension of T)
