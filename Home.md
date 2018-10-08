@@ -33,7 +33,6 @@ The current stable versions of the system are available for [download](https://d
 |[PerceptionInNARS](https://github.com/opennars/opennars/wiki/Perception-In-NARS)|How to do perception in NARS|
 |[ApplicationPrograms](https://github.com/opennars/opennars/wiki/Application-Programs)|Example Programs using OpenNARS as AI.|
 |[InputOutputFormat](https://github.com/opennars/opennars/wiki/Input-Output-Format)|The input/output format of the system|
-|[Videos](https://github.com/opennars/opennars/wiki/Videos)|Description of the Video Examples|
 |[Overview](https://github.com/opennars/opennars/wiki/Overview)|A high-level overview of this NARS implementation|
 |[DataAndKnowledgeBases](https://github.com/opennars/opennars/wiki/Data-And-Knowledge-Bases)|How to connect NARS to databases and knowledge bases.|
 |[Multi-StepExamples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)|Inference Examples|
@@ -48,6 +47,13 @@ The current stable versions of the system are available for [download](https://d
 |:-------:|:-----------------:|
 |[StampInNARS](https://github.com/opennars/opennars/wiki/Stamp-In-NARS)|The design and function of Stamp in NARS.|
 |[DataStructures](https://github.com/opennars/opennars/wiki/Data-Structures)|What the different data structures represent|
+
+**Videos**
+
+|Page Name|Summary and Labels|
+|:-------:|:-----------------:|
+|[Videos](https://github.com/opennars/opennars/wiki/Videos)|Description of the Video Examples|
+|[Education Videos](https://github.com/opennars/opennars/wiki/Education-Videos)|Educatio Videos (OpenNARS + NARS)|
 
 **(old) Implementations**
 
