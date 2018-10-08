@@ -53,7 +53,7 @@ The current stable versions of the system are available for [download](https://d
 |Page Name|Summary and Labels|
 |:-------:|:-----------------:|
 |[Videos](https://github.com/opennars/opennars/wiki/Videos)|Description of the Video Examples|
-|[Education Videos](https://github.com/opennars/opennars/wiki/Education-Videos)|Educatio Videos (OpenNARS + NARS)|
+|[Education Videos](https://github.com/opennars/opennars/wiki/Education-Videos)|Education Videos (OpenNARS + NARS)|
 
 **(old) Implementations**
 
