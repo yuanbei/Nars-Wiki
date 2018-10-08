@@ -6,8 +6,6 @@
 
 OpenNARS version, 1.6.1, got released on 10th January 2015.
 
-Watch this version at http://www.youtube.com/watch?v=pdaUNX7iKlQ
-
 ![maingui](https://cloud.githubusercontent.com/assets/11791925/6993979/24735846-db3a-11e4-9477-5a1215f2a748.png)
 
 **A list of the news of 1.6.1:**
