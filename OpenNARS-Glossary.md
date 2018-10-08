@@ -8,6 +8,12 @@
 <br/><br/>
 **E**
 <br/><br/>
+**Evidence** - given the statement **S-->P**, evidence is in the intersection of _extension _of **S** and _intension_ of **P**
+<br/><br/>
+**Evidence positive** - given the statement **S-->P**, positive evidence is intersection of _extensions_ of both **S** and **P** and intersection of _intensions_ of both **P** and **S**
+<br/><br/>
+**Evidence negative** - given the statement **S-->P**, negative evidence is difference of _extensions_ of both **S** and **P** and difference of _intensions_ of both **P** and **S**
+<br/><br/>
 **Extension** - extension of a term is a set of terms that appears to the LEFT of inheritance copula (x-->T, where x is extension of t)
 <br/><br/>
 **Extensional Set** - 
