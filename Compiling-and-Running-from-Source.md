@@ -1,5 +1,5 @@
 To be able to compile and run OpenNARS the following is required:
-<br/>
+<br/><br/>
 **1.** Java jdk 1.8 or higher
 <br/>
 **2.** git 
