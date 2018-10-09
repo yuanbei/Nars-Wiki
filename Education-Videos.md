@@ -16,7 +16,7 @@
 * [Evidential basis](https://youtu.be/8i5n4uDlmHI?t=20)
 * [Evidence overlap](https://youtu.be/8i5n4uDlmHI?t=201)
 ---
-[OpenNARS Tutorial Part 5](https://www.youtube.com/watch?v=4IZtwnbRZ-Y&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=4)
+[OpenNARS Tutorial - Temporal Reasoning](https://www.youtube.com/watch?v=4IZtwnbRZ-Y&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=4)
 * [Temporal Inference](https://youtu.be/4IZtwnbRZ-Y?t=29)
 * [Temporal Induction rule](https://youtu.be/4IZtwnbRZ-Y?t=187)
 * [Event-bag structure](https://youtu.be/4IZtwnbRZ-Y?t=281)
