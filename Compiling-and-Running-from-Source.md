@@ -12,7 +12,7 @@ To be able to compile and run from source code the following is required:
 <br/><br/>
 **a.** terminal version of OpenNARS where Narsese statements can be entered from the terminal only
 <br/><br/>
-**b.** OpenNARS GUI where Narsese statements can be entered within GUI, and derivations, output and other useful info can also be seen
+**b.** OpenNARS GUI where Narsese statements are entered within GUI, and derivations, output and other useful info can also be seen
 <br/><br/>
 **c.** OpenNARS Lab - test cases that demonstrate NARS functionality and abilities
 <br/><br/>
