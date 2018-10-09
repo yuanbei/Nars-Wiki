@@ -28,7 +28,7 @@ To be able to compile and run from source code the following is required:
 **4.** Navigate to opennars directory where _pom.xml_ can be found and type _**mvn install**_, the building process will start
 Note: It should take about 5-7 minutes to complete since it will be running some tests. It is possible to skip tests by issuing command: _**mvn install -DskipTests=True**_
 <br/><br/>
-**5.**Stage 1 is done to Run OpenNARS from terminal just navigate to _target_ directory and run _**java -jar opennars-3.0.0-SNAPSHOT.jar**_
+**5.** Stage 1 is done to Run OpenNARS from terminal just navigate to _target_ directory and run _**java -jar opennars-3.0.0-SNAPSHOT.jar**_
 <br/><br/>
 **7.**
 <br/><br/>
