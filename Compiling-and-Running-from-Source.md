@@ -53,6 +53,5 @@ opennars
 opennars-GUI
 <br/>
 opennars-LAB
-
 <br/><br/>
-**You're all set!**
+**You're all set!!!**
