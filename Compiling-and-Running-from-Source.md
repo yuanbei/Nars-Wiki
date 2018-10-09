@@ -21,7 +21,7 @@ In order to use OpenNARS launcher, OpenNARS needs to be installed in three stage
 
 
 **1.** Create a directory and navigate to it
-<br/>
+<br/><br/>
 **2.** Clone git repository by typing git clone https://github.com/opennars/opennars.git
-<br/>
+<br/><br/>
 **3.** If using Windows only, Skip if using Unix or MMAC. In order for maven to find valid JDK JAVA_HOME variable must point to the correct location just set it to your directory of JDK. Ecample: set JAVA_HOME="C:\Progra~1\Java\jdk1.8.0_121"
