@@ -25,6 +25,7 @@
 ---
 [OpenNARS Tutorial - Temporal Reasoning 2](https://www.youtube.com/watch?v=LXvzWjpIFYo&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=5)
 * [Anticipation](https://www.youtube.com/watch?v=LXvzWjpIFYo)
+* [(Multistep conditioning)](https://youtu.be/LXvzWjpIFYo?t=94)
 ---
 [OpenNARS Tutorial Part 7](https://www.youtube.com/watch?v=-5sZ2wDmxVg&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=6)
 # Presentations
