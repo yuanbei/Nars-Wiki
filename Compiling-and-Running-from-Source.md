@@ -36,13 +36,13 @@ Note: It should take about 5-7 minutes to complete since it will be running some
 <br/><br/>
 **8.** Once completed navigate to opennars-GUI directory and issue command _**mvn install*_, building process will start, it should take few minutes to complete, again tests can be skipped
 <br/><br/>
-**9.** Step 2 is done! To run OpenNARS with GUI support just navigate to _target_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
+**9.** Step 2 is done! To run OpenNARS with GUI support just navigate to _opennars-GUI/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
 <br/><br/>
 **11.** To set up OpenNARS with launcher and test examples, navigate to _root_ directory
 <br/><br/>
 **12.** Clone OpenNars-LAB by issuing command _**git clone https://github.com/opennars/opennars-LAB.git**_
 <br/><br/>
-**13.** Once completed navigate to opennars-LAB directory and issue command _**mvn install*_, building process will start, it should take few minutes to complete.
+**13.** Once completed navigate to opennars-LAB directory and issue command  _**mvn install**_, building process will start, it should take few minutes to complete.
 <br/><br/>
 **14.** Step 3 is done! To run OpenNARS Launcher just navigate to _opennars-LAB/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
 
