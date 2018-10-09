@@ -8,9 +8,6 @@ To be able to compile and run OpenNARS the following is required:
 <br/><br/>
 **4.** Java git and Maven must be written to environment variables such that they are accessible from terminal
 <br/><br/>
-
-
-<br/><br/>
 **Note:** In order to use OpenNARS launcher, OpenNARS needs to be installed in three stages: 
 <br/><br/>
 **a.** terminal version of OpenNARS where Narsese statements can be entered from the terminal only
@@ -18,8 +15,9 @@ To be able to compile and run OpenNARS the following is required:
 **b.** OpenNARS GUI where Narsese statements can be entered in a special pane of a GUI where derivations, output and other useful info can be seen
 <br/><br/>
 **c.** OpenNARS Lab - test cases demonstrate NARS functionality and abilities
-
+<br/><br/>
 **Instruction to compile and run OpenNARS from source code using Maven**
+<br/><br/>
 **1.** Create a directory and navigate to it
 <br/><br/>
 **2.** Clone git repository by typing git clone https://github.com/opennars/opennars.git
