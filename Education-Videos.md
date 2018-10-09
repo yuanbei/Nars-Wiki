@@ -16,13 +16,15 @@
 * [Evidential basis](https://youtu.be/8i5n4uDlmHI?t=20)
 * [Evidence overlap](https://youtu.be/8i5n4uDlmHI?t=201)
 ---
-[OpenNARS Tutorial - Temporal Reasoning](https://www.youtube.com/watch?v=4IZtwnbRZ-Y&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=4)
+[OpenNARS Tutorial - Temporal Reasoning 1](https://www.youtube.com/watch?v=4IZtwnbRZ-Y&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=4)
 * [Temporal Inference](https://youtu.be/4IZtwnbRZ-Y?t=29)
 * [Temporal Induction rule](https://youtu.be/4IZtwnbRZ-Y?t=187)
 * [Event-bag structure](https://youtu.be/4IZtwnbRZ-Y?t=281)
 * [Input channels](https://youtu.be/4IZtwnbRZ-Y?t=1121)
+* [Anticipation](https://youtu.be/4IZtwnbRZ-Y?t=1411)
 ---
-[OpenNARS Tutorial Part 6](https://www.youtube.com/watch?v=LXvzWjpIFYo&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=5)
+[OpenNARS Tutorial - Temporal Reasoning 2](https://www.youtube.com/watch?v=LXvzWjpIFYo&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=5)
+* [Anticipation](https://www.youtube.com/watch?v=LXvzWjpIFYo)
 ---
 [OpenNARS Tutorial Part 7](https://www.youtube.com/watch?v=-5sZ2wDmxVg&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=6)
 # Presentations
