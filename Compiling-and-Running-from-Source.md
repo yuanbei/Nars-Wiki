@@ -1,4 +1,4 @@
-To be able to compile and run OpenNARS the following is required:
+To be able to compile and run from source code the following is required:
 <br/><br/>
 **1.** Java jdk 1.8 or higher
 <br/><br/>
