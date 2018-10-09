@@ -20,6 +20,7 @@
 * [Temporal Inference](https://youtu.be/4IZtwnbRZ-Y?t=29)
 * [Temporal Induction rule](https://youtu.be/4IZtwnbRZ-Y?t=187)
 * [Event-bag structure](https://youtu.be/4IZtwnbRZ-Y?t=281)
+* [Input channels](https://youtu.be/4IZtwnbRZ-Y?t=1121)
 ---
 [OpenNARS Tutorial Part 6](https://www.youtube.com/watch?v=LXvzWjpIFYo&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=5)
 ---
