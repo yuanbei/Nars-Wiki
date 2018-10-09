@@ -46,9 +46,12 @@ Note: It should take about 5-7 minutes to complete since it will be running some
 <br/><br/>
 **14.** Step 3 is done! To run OpenNARS Launcher just navigate to _opennars-LAB/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
 <br/><br/>
-Once all the steps are completed root directory should contain three folders:
+_Once all the steps are completed root directory should contain three folders:_
+<br/>
 opennars
+<br/>
 opennars-GUI
+<br/>
 opennars-LAB
 
 <br/><br/>
