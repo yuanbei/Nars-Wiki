@@ -12,10 +12,11 @@ To be able to compile and run from source code the following is required:
 <br/><br/>
 **a.** terminal version of OpenNARS where Narsese statements can be entered from the terminal only
 <br/><br/>
-**b.** OpenNARS GUI, GUI version where Narsese statements can be entered in a special pane, of a GUI, and derivations, output and other useful info can be seen
+**b.** OpenNARS GUI where Narsese statements can be entered within GUI, and derivations, output and other useful info can also be seen
 <br/><br/>
-**c.** OpenNARS Lab - test cases demonstrate NARS functionality and abilities
+**c.** OpenNARS Lab - test cases that demonstrate NARS functionality and abilities
 <br/><br/>
+
 ## Instruction to compile and run OpenNARS from source code using Maven
 <br/><br/>
 **1.** Create a directory and navigate to it
