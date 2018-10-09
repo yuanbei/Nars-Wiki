@@ -9,7 +9,7 @@ To be able to compile and run OpenNARS the following is required:
 **4.** Java git and Maven must be written to environment variables such that they are accessible from terminal
 <br/><br/>
 
-Instruction to compile and run OpenNARS from source code using Maven
+**Instruction to compile and run OpenNARS from source code using Maven**
 <br/><br/>
 1. Create a directory and navigate to it
 <br/><br/>
