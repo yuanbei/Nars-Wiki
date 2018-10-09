@@ -19,13 +19,14 @@ To be able to compile and run from source code the following is required:
 
 ## Instruction to compile and run OpenNARS from source code using Maven
 <br/><br/>
-**1.** Create a directory and navigate to it
+**1.** Create a directory and navigate to it, let call this directory a root
 <br/><br/>
-**2.** Clone git repository by typing git clone https://github.com/opennars/opennars.git
+**2.** Clone git repository by issuing command git clone https://github.com/opennars/opennars.git
 <br/><br/>
 **3.** For Windows users only, **skip this step if using Unix or MAC**. In order for maven to find valid JDK _**JAVA_HOME**_ variable must point to the correct location, just set it to your directory of JDK. Example: **set JAVA_HOME="C:\Progra~1\Java\jdk1.8.0_121"**
 <br/><br/>
-**5.**
+**4.** Navigate to opennars directory where _pom.xml_ can be found and type mvn install the building process will start
+Note: It should take about 5-7 minutes to complete because it will be completing some tests. It is possible just to build and skip the tests, just type _mvn install -DskipTests=True_ for this purpose
 <br/><br/>
 **6.**
 <br/><br/>
