@@ -23,4 +23,20 @@ To be able to compile and run from source code the following is required:
 <br/><br/>
 **2.** Clone git repository by typing git clone https://github.com/opennars/opennars.git
 <br/><br/>
-**3.** If using Windows only, Skip if using Unix or MMAC. In order for maven to find valid JDK JAVA_HOME variable must point to the correct location just set it to your directory of JDK. Ecample: set JAVA_HOME="C:\Progra~1\Java\jdk1.8.0_121"
+**3.** For Windows users only, **skip this step if using Unix or MAC**. In order for maven to find valid JDK _**JAVA_HOME**_ variable must point to the correct location, just set it to your directory of JDK. Example: **set JAVA_HOME="C:\Progra~1\Java\jdk1.8.0_121"**
+<br/><br/>
+**5.**
+<br/><br/>
+**6.**
+<br/><br/>
+**7.**
+<br/><br/>
+**8.**
+<br/><br/>
+**9.**
+<br/><br/>
+**10.**
+<br/><br/>
+**4.**
+<br/><br/>
+**4.**
