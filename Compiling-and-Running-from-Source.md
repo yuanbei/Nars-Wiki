@@ -19,7 +19,7 @@ To be able to compile and run from source code the following is required:
 
 ## Instruction to compile and run OpenNARS from source code using Maven
 <br/><br/>
-**1.** Create a directory and navigate to it, let call this directory a root
+**1.** Create a directory and navigate to it, let call this directory a _root_
 <br/><br/>
 **2.** Clone git repository by issuing command git clone https://github.com/opennars/opennars.git
 <br/><br/>
@@ -30,14 +30,12 @@ Note: It should take about 5-7 minutes to complete since it will be running some
 <br/><br/>
 **5.** Stage 1 is done! To run OpenNARS from terminal just navigate to _target_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ It should start, register with the shell and you should be able to enter Narsese statements to communicate with the system.
 <br/><br/>
-**7.**
+**6.** To set up OpenNARS with gui, navigate to _root_ directory
 <br/><br/>
-**8.**
+**7.** Clone OpenNars-GUI by issuing command _**git clone https://github.com/opennars/opennars-GUI.git**_
 <br/><br/>
-**9.**
+**8.** Once complete navigate to opennars-gui directory and issue command _**mvn install*_, building process will start, it should take few minutes to complete, again tests can be skipped
 <br/><br/>
-**10.**
+**9.** Step 2 is done! To run OpenNARS with GUI support just navigate to _target_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
 <br/><br/>
-**4.**
-<br/><br/>
-**4.**
+**11.**
