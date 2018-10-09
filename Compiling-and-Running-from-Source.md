@@ -45,5 +45,11 @@ Note: It should take about 5-7 minutes to complete since it will be running some
 **13.** Once completed navigate to opennars-LAB directory and issue command  _**mvn install**_, building process will start, it should take few minutes to complete.
 <br/><br/>
 **14.** Step 3 is done! To run OpenNARS Launcher just navigate to _opennars-LAB/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
+<br/><br/>
+Once all the steps are completed root directory should contain three folders:
+opennars
+opennars-GUI
+opennars-LAB
 
+<br/><br/>
 **You're all set!**
