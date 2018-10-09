@@ -6,13 +6,13 @@ To be able to compile and run from source code the following is required:
 <br/>
 **3.** Maven can be obtained from https://maven.apache.org/download.cgi
 <br/><br/>
-**4.** Java git and Maven must be written to environment variables such that they are accessible from terminal
+**4.** Java, git and Maven must be written to environment variables such that they are accessible from terminal
 <br/><br/>
 **Note:** In order to use OpenNARS launcher, OpenNARS needs to be installed in three stages: 
 <br/><br/>
 **a.** terminal version of OpenNARS where Narsese statements can be entered from the terminal only
 <br/><br/>
-**b.** OpenNARS GUI where Narsese statements can be entered in a special pane of a GUI where derivations, output and other useful info can be seen
+**b.** OpenNARS GUI, GUI version where Narsese statements can be entered in a special pane, of a GUI, and derivations, output and other useful info can be seen
 <br/><br/>
 **c.** OpenNARS Lab - test cases demonstrate NARS functionality and abilities
 <br/><br/>
