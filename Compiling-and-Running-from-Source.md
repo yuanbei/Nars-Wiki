@@ -28,13 +28,13 @@ To be able to compile and run from source code the following is required:
 **4.** Navigate to opennars directory where _pom.xml_ can be found and type _**mvn install**_, the building process will start
 Note: It should take about 5-7 minutes to complete since it will be running some tests. It is possible to skip tests by issuing command: _**mvn install -DskipTests=True**_
 <br/><br/>
-**5.** Stage 1 is done! To run OpenNARS from terminal just navigate to _target_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ It should start, register with the shell and you should be able to enter Narsese statements to communicate with the system.
+**5.** Stage 1 is done! To run OpenNARS from terminal just navigate to _opennars/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ It should start, register with the shell and you should be able to enter Narsese statements to communicate with the system.
 <br/><br/>
 **6.** To set up OpenNARS with gui, navigate to _root_ directory
 <br/><br/>
 **7.** Clone OpenNars-GUI by issuing command _**git clone https://github.com/opennars/opennars-GUI.git**_
 <br/><br/>
-**8.** Once completed navigate to opennars-GUI directory and issue command _**mvn install*_, building process will start, it should take few minutes to complete, again tests can be skipped
+**8.** Once completed navigate to opennars-GUI directory and issue command _**mvn install**_, building process will start, it should take few minutes to complete, again tests can be skipped
 <br/><br/>
 **9.** Step 2 is done! To run OpenNARS with GUI support just navigate to _opennars-GUI/target/_ directory and issue command _**java -jar opennars-3.0.0-SNAPSHOT.jar**_ 
 <br/><br/>
