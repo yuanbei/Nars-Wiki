@@ -19,6 +19,7 @@ To be able to compile and run from source code the following is required:
 
 ## Instruction to compile and run OpenNARS from source code using Maven
 <br/>
+
 **1.** Create a directory and navigate to it, let call this directory a _root_
 <br/><br/>
 **2.** Clone git repository by issuing command git clone https://github.com/opennars/opennars.git
