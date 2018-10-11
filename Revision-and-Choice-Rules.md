@@ -13,11 +13,11 @@ Now suppose these two tasks have disjoint evidential spaces that is they have no
 _f = [ f1c1(1 − c2) + f2c2(1 − c1) ] = [ c1(1 − c2) + c2(1 − c1) ]_ <br/>
 _c = [ c1(1 − c2) + c2(1 − c1) ] = [ c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2) ]_
 
-Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task
+Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 **Properties:** <br/>
 * Order of tasks is not important
 * Similar to weighted average of _f1_ and _f2_, new _f_ is usually closer to the one that has more evidence that is its _c_ is bigger
-*Value of new _c_ is never less than either _c1_ or _c2_
+* Value of new _c_ is never less than either _c1_ or _c2_
 <br/><br/>
 Serial number
 
