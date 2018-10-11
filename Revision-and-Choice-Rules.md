@@ -26,4 +26,4 @@ Each task in a system is assigned a _serial number_. During derivation process t
 ### Overlapping Evidence
 For two tasks if they share one or more same elements within their evidential bases, their evidence is **overlapped** i.e. they do not have disjoint evidential base. Ideally when combining evidence, and if some portion of evidence is present more than once, it should be subtracted from final result, however since it is impossible to determine exact amount of some portion of evidence influencing certain term this can't be done. **Therefore revision rule applies only if tasks have disjoint evidential bases that is they do not share common elements.**
 
-# Choice Rule
+## Choice Rule
