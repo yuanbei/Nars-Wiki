@@ -21,6 +21,5 @@ Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 <br/><br/>
 
 ### Evidential base
-Each task in a system is assigned a _serial number_. During derivation process the derived task stores the serial numbers of the tasks it is derived from in a list which called **evidential base** 
-
+Each task in a system is assigned a _serial number_. During derivation process the derived task stores the serial numbers of the tasks it is derived from in a list which is called **evidential base**. Derivation process is similar to a tree where two parent tasks create derived child task after a certain inference step. Evidential base of a child is a union of evidential bases of its parents, and each task has at least one element in the evidential base, its serial number. Of course, after numerous inference steps it is technically impossible to store all parent' serial numbers in child's evidential base 
 Forget
