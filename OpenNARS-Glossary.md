@@ -43,7 +43,9 @@
 <br /><br/>
 **[Predicate term](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - term used to the right of [copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)
 <br /><br/>
-
+**R**
+<br /><br/>
+**[Revision rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - rule applied during inference step when evidence comes from different sources. In this step frequency and confidence values are revised based on some preconditions
 **S**
 <br /><br/>
 **Statement** - Connection of two terms, subject and predicate, with a copula.
