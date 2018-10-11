@@ -29,6 +29,8 @@
 * [Intervals](https://youtu.be/LXvzWjpIFYo?t=311)
 * [(Nonlinear Interval Mapping)](https://youtu.be/LXvzWjpIFYo?t=1095)
 ---
-[OpenNARS Tutorial Part 7](https://www.youtube.com/watch?v=-5sZ2wDmxVg&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=6)
+[OpenNARS Tutorial - Temporal Reasoning 2](https://www.youtube.com/watch?v=-5sZ2wDmxVg&list=PLIuBkJssgnZE10fkTUhb6f5_uAeHeXWFy&index=6)
+* [Interval Considerations](https://youtu.be/-5sZ2wDmxVg)
+
 # Presentations
 [NARS Presentations](https://www.youtube.com/watch?v=T9eSVYLSSrs&index=1&list=PLIuBkJssgnZEvv1rs1vtknkJDV3UyqOHu)
