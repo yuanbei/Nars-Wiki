@@ -13,8 +13,9 @@ Now suppose these two tasks have disjoint evidential spaces that is they have no
 _f = [f1c1(1 − c2) + f2c2(1 − c1)] = [c1(1 − c2) + c2(1 − c1)]_
 
 _c = [c1(1 − c2) + c2(1 − c1)] = [c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2)]_
+
+Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task
 <br/><br/>
-Here the number 1 and 2 refers to c or f from the first or second task
 Serial number
 
 Forget
