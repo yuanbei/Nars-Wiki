@@ -11,7 +11,6 @@ Now suppose these two tasks have disjoint evidential spaces that is they have no
 **Revision function definition:** Given two tasks sharing same concepts, different truth value and disjoint evidential bases, **new** frequency _f_ and confidence _c_ are being defined as
 
 _f = [f1c1(1 − c2) + f2c2(1 − c1)] = [c1(1 − c2) + c2(1 − c1)]_
-
 _c = [c1(1 − c2) + c2(1 − c1)] = [c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2)]_
 
 Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task
