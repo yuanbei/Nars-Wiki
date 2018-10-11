@@ -8,6 +8,8 @@ Suppose there are two tasks with different truth values, for example:
 <br/><br/>
 Now suppose these two tasks have disjoint evidential spaces that is they have no overlapping evidence then they can be summarized into a task with revised truth value. Basically the idea is to sum positive and total evidences and pick a function such that it appropriately maps new evidence to relevant _frequency_ and _confidence_ values. Such function is called **revision function**.
 <br/><br/>
+**Revision function definition:** fT hf1; c1i; T hf2; c2ig ‘ T hFrevi
+<br/><br/>
 Serial number
 
 Forget
