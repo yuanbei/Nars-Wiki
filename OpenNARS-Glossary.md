@@ -20,6 +20,7 @@
 <br/><br/>
 **Evidence total** - total evidence is the **sum** of negative and positive evidences
 <br/><br/>
+**Evidential Base** - each derived task has an evidential base, that is a list of premises the task has been derived from, currently the list is length 4
 **Extension** - extension of a term is a set of terms that appears to the LEFT of inheritance copula (x-->T, where x is extension of t)
 <br/><br/>
 **Extensional Set** - 
