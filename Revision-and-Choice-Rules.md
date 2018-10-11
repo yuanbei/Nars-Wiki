@@ -19,6 +19,8 @@ Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 * Similar to weighted average of _f1_ and _f2_, new _f_ is usually closer to the one that has more evidence that is whose value of _c_ is bigger
 * Value of new _c_ is never less than either _c1_ or _c2_
 <br/><br/>
-Serial number
+
+### Evidential base
+Each task in a system is assigned a _serial number_. During derivation process the derived task stores the serial numbers of the tasks it is derived from in a list which called **evidential base** 
 
 Forget
