@@ -45,7 +45,8 @@
 <br /><br/>
 **R**
 <br /><br/>
-**[Revision rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - rule applied during inference step when evidence comes from different sources. In this step frequency and confidence values are revised based on some preconditions
+**[Revision rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - rule applied during inference step when evidence comes from different sources and needs to be combined. In this step _frequency_ and _confidence_ values are revised based on some preconditions
+<br /><br/>
 **S**
 <br /><br/>
 **Statement** - Connection of two terms, subject and predicate, with a copula.
