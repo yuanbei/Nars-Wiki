@@ -6,9 +6,8 @@ Suppose there are two tasks with different truth values, for example:
 <br/><br/>
 **<snow --> {white}>. %3/4, 4/5%** meaning that snow has been observed white 3 times and there are 4 total observations
 <br/><br/>
-Now suppose these two tasks has disjoint evidential spaces that is they have no overlapping evidences then they can be summarized into a task with revised truth value.
+Now suppose these two tasks has disjoint evidential spaces that is they have no overlapping evidences then they can be summarized into a task with revised truth value. Basically the idea is to combine positive and total evidences and pick a function such that it appropriately maps evidences to relevant _frequency_ and _confidence_ values.
 <br/><br/>
-Basically the idea is to combine positive and total evidences and pick a function that maps appropriately map it to relevant _frequency_ and _confidence_ values
 Serial number
 
 Forget
