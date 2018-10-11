@@ -6,7 +6,7 @@ Suppose there are two tasks with different truth values, for example:
 <br/><br/>
 **2. <snow --> {white}>. %3/4, 4/5%** means snow has been observed white 3 times and there are 4 total observations
 <br/><br/>
-Now suppose these two tasks have disjoint evidential spaces that is they have no overlapping evidence then they can be summarized into a task with revised truth value. Basically the idea is to sum positive and total evidences and pick a function such that it appropriately maps new evidence to relevant _frequency_ and _confidence_ values. Such function is called **revision function**
+Now suppose these two tasks have disjoint evidential spaces that is they have no overlapping evidence then they can be summarized into a task with revised truth value. Basically the idea is to sum positive and total evidences and pick a function such that it appropriately maps new evidence to relevant _frequency_ and _confidence_ values. Such function is called **revision function**.
 <br/><br/>
 Serial number
 
