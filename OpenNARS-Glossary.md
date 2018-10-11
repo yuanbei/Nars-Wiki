@@ -29,6 +29,7 @@
 **F**
 <br/><br/>
 **Frequency** - one of key metrics in NARS, it is measurement of uncertainty in the range **[0,1]** and defined as __positive evidence / total evidence__
+<br/><br/>
 **I**
 <br/><br/>
 **Intension** - intension of a term is a set of terms that appears to the RIGHT of inheritance copula (T-->x where x is intension of T)
