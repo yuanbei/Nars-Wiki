@@ -16,7 +16,7 @@ _c = [ c1(1 − c2) + c2(1 − c1) ] = [ c1(1 − c2) + c2(1 − c1) + (1 − c1
 Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 **Properties:** <br/>
 * Order of tasks is not important
-* Similar to weighted average of _f1_ and _f2_, new _f_ is usually closer to the one that has more evidence that is its _c_ is bigger
+* Similar to weighted average of _f1_ and _f2_, new _f_ is usually closer to the one that has more evidence that is whose value of _c_ is bigger
 * Value of new _c_ is never less than either _c1_ or _c2_
 <br/><br/>
 Serial number
