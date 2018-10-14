@@ -33,6 +33,7 @@ Choice rule is applicable in multiple scenarios.
 2. For the selective question of the form <S-->?1>? or <1? --> P>? the system is asked to predict an element in the intension of S or the extension of P. Suppose there are two competing candidate answers <S --> A>. _%f1, c2%_ and <S --> B> _%f2, c2%_ for the question <S-->?1>?. These candidates may be of the same or different natures and will have different truth values. Thus it is no longer appropriate to choose the answer with higher _confidence_. To handle such situations _truth expectation_ metrics is introduced. The candidate with the higher truth expectation is selected by choice rule.
 
 **Definition**  Truth expectation **_e = c * (f − 0.5) + 0.5_**
+
 **Properties:**
 * Truth expectation combines _frequency_ with _confidence_ and maps to single real number in the range [0,1]
 * When _confidence_ is close to 1 (full evidence), _truth expectation_ is close to _frequency_
