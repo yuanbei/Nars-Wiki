@@ -1,4 +1,4 @@
-This is a (chronological) ordered timeline of most NAR-Systems known:
+This is a (chronological) ordered timeline of most known NAR-Systems:
 
 Name | version | date | author |documentation | source
 --- | --- | --- | --- | --- | ---
