@@ -28,6 +28,6 @@ For two tasks if they share one or more same elements within their evidential ba
 
 ## II. Choice Rule
 Choice rule is applicable in multiple scenarios.
-1. Two tasks are based on overlapping evidence and revision rule can not be applied. For example for an evaluative question both candidate answers may contain same task but different truth value and these two conflicting tasks share at least one element in their evidential bias, the **choice rule** chooses the task with higher _confidence_ value. The intuition is that system makes a choice toward more experience of the task. 
+1. Two tasks are based on overlapping evidence and revision rule can not be applied. For example for an evaluative question both candidate answers may contain same task but different truth value and these two conflicting tasks share at least one element in their evidential bias, the **choice rule** chooses the task with **higher _confidence_ value**. The intuition is that system makes a choice toward more experience of the task. 
 
 2. 
