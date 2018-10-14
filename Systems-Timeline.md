@@ -2,6 +2,8 @@ This is a (chronological) ordered timeline of most NAR-Systems known:
 
 Name | version | date | author |documentation | source
 --- | --- | --- | --- | --- | ---
+Non-axiomatic logic | 2.1 | January 1993 | Pei Wang | |
+Non-axiomatic reasoning system | 2.2 | April 1993 | Pei Wang | |
 NARS | 3.0 | 1997? | Pei Wang | | ( https://web.archive.org/web/19970626035144/http://www.cogsci.indiana.edu/farg/peiwang/papers.html )
 NARS | 4.1 | 2000? | Pei Wang | Paper:The logic of learning | ?
 NARS | 4.3.2 | 2008? | Pei Wang | | ( [maillist](https://groups.google.com/forum/#!searchin/open-nars/4.3%7Csort:relevance/open-nars/FabXbmvWzbs/lYJNdUfx9OYJ) )  [jar](https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/open-nars/NARS.jar)
