@@ -27,4 +27,7 @@ Each task in a system is assigned a _serial number_. During derivation process t
 For two tasks if they share one or more same elements within their evidential bases, their evidence is **overlapped** i.e. they do not have disjoint evidential base. Ideally when combining evidence, and if some portion of evidence is present more than once, it should be subtracted from final result, however since it is impossible to determine exact amount of some portion of evidence influencing certain task this can't be done. **Therefore revision rule applies only if tasks have disjoint evidential bases that is they do not share common elements.**
 
 ## II. Choice Rule
-For the evaluative question As mentioned above, whenever two tasks that share at least one element in their evidential biases re
+Choice rule is applicable in multiple scenarios.
+1. For example for an evaluative question both candidate answers may contain same task but different truth value and these two conflicting tasks share at least one element in their evidential bias, that is based on overlapping evidence, the **choice rule** chooses the task with higher _confidence_ value. The intuition is that system makes a choice toward more experience of the task. 
+
+2. 
