@@ -67,4 +67,6 @@
 **Truth value** - each task is assigned a truth value, that is a pair of real numbers (frequency and confidence) in the range [0, 1]
 <br/><br/>
 **[Truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - a measurement that combines _frequency_ with _confidence_ and maps to real number value in range [0,1]. It is used to measure total importance of a statement when comparing different statements and choice is necessary.
+<br/><br/>
+**[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** - functions that determine truth value under different logical inference
 
