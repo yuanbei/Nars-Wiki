@@ -3,7 +3,7 @@ A typical simple inference cycle in OpenNARS takes two judgements as premise and
 
 Given a certain logical syllogistic rule applied to derive a conclusion, the truth value of a conclusion is being computed using **truth function**.  
 
-There are four truth functions that are applied in correspondence with syllogistic rule:
+There are four truth functions (F) that are applied in correspondence with syllogistic rule:
 1. F deduction
 2. F abduction
 3. F induction
