@@ -4,10 +4,10 @@ A typical simple inference cycle in OpenNARS takes two judgements as premise and
 Given a certain logical syllogistic rule applied to derive a conclusion, the truth value of a conclusion is being computed using **truth function**.  
 
 There are four truth functions (F) that are applied in correspondence with syllogistic rule:
-1. F deduction
-2. F abduction
-3. F induction
-4. F exemplification
+1. _F deduction_
+2. _F abduction_
+3. _F induction_
+4. _F exemplification_
 
 Truth functions presented here outline basic ideas and correspond to the first logical level NAL-1, a logical foundation of OpenNARS. NAL levels are added one by one each of which expands the grammar, inference rules and slightly modifies truth function to accommodate a higher capability of a corresponding NAL. Although truth functions undergo a slight modification in a higher NAL levels their meaning and application remains the same. 
  
