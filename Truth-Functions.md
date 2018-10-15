@@ -36,7 +36,7 @@ Truth value of the conclusion is defined through the positive and total evidence
 
 ### _F exemplification_
 
-Suppose two premises are  _\<S --> M\>.%f1; c1%_ and _\<M --> P\>. %f2; c2%_, then using **induction** syllogistic rule OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
+Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **induction** syllogistic rule OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
 Truth value of the conclusion is defined through the positive and total evidence where _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f2 * c1* c2_, Therefore:<br/><br/> 
 **_F induction_: f = f1 and c = (f1 * c1 * f2 * f2)/(f2 * c1 * c2 + k)**
 <br/> <br/> 
