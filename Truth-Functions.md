@@ -47,6 +47,8 @@ Truth value of the conclusion is defined through the positive and total evidence
 * Revision is the only rule where the confidence of the conclusion may be higher than those of the premises.
 * The confidence of a syllogistic conclusion is never higher than the confidence of either premise, that is, confidence “declines” in syllogistic inference.
 * Confidence declines much slower in deduction than in induction and abduction.
+* Positive evidence supports inheritance in both directions, that is order of premises is not important.
+* Negative evidence only supports conclusion in one direction, order of premises is important.
 
 
 
