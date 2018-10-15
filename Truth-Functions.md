@@ -42,7 +42,11 @@ Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, th
 Truth value of the conclusion is defined through the positive and total evidence which are equal since no negative evidence can be collected in reverse direction of inheritance. Thus _positive evidence = f1 * c1 * f2 * c2_ = _total evidence = f1 * c1 * f2 * c2_:<br/><br/> 
 **_F exemplification_: f = 1 and c = (f1 * c1 * f2 * f2)/(f1 * f2 * c1 * c2 + k)**
 <br/> <br/> 
-
+*Properties:*
+* Both frequency and confidence contribute to inference, but in different ways.
+* Revision is the only rule where the confidence of the conclusion may be higher than those of the premises.
+* The confidence of a syllogistic conclusion is never higher than the confidence of either premise, that is, confidence “declines” in syllogistic inference.
+* Confidence declines much slower in deduction than in induction and abduction.
 
 
 
