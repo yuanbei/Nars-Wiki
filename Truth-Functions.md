@@ -36,9 +36,9 @@ Truth value of the conclusion is defined through the positive and total evidence
 
 ### _F exemplification_
 
-Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **induction** syllogistic rule OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
-Truth value of the conclusion is defined through the positive and total evidence where _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f2 * c1* c2_, Therefore:<br/><br/> 
-**_F induction_: f = f1 and c = (f1 * c1 * f2 * f2)/(f2 * c1 * c2 + k)**
+Exemplification_ can be considered as "reversed deduction" since it derives an inheritance judgment in the opposite direction of deduction. Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **exemplification** OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
+Truth value of the conclusion is defined through the positive and total evidence which are equal since no negative evidence can be collected in reverse direction of inheritance. Thus _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f1 * c1 * f2 * c2_:<br/><br/> 
+**_F exemplification_: f = 1 and c = (f1 * c1 * f2 * f2)/(f1 * f2 * c1 * c2 + k)**
 <br/> <br/> 
 
 
