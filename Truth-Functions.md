@@ -48,7 +48,7 @@ Truth value of the conclusion is defined through the positive and total evidence
 * The confidence of a syllogistic conclusion is never higher than the confidence of either premise, that is, confidence “declines” in syllogistic inference.
 * Confidence declines much slower in deduction than in induction and abduction.
 * Positive evidence supports inheritance in both directions, that is order of premises is not important.
-* Negative evidence only supports conclusion in one direction, order of premises is important.
+* Negative evidence supports inheritance in only one direction, thus order of premises is important.
 
 
 
