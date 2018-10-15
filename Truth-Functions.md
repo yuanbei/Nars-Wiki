@@ -23,7 +23,8 @@ A chain of deduction can be formed by more than two judgments, and F deduction c
 ### _F abduction_
 
 Suppose two premise are  \<S --> M\>.%f1; c1% and \<P --> M\>. %f2;c2%, then using **abduction** syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f, c%. 
-Truth value of the conclusion is then a simple multiplication of truth values of premises:<br/>
+Truth value of the conclusion is defined through the positive evidence and total evidence:<br/>
+_positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f1 * c1* c2_
 
 
 
