@@ -26,7 +26,7 @@ Suppose two premise are  _\<S --> M\>.%f1; c1%_ and _\<P --> M\>. %f2;c2%_, then
 Truth value of the conclusion is defined through the positive and total evidence:<br/>
 _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f1 * c1* c2_ then
 
-**_F abduction: f = f2 and c = (f1 * c1 * f2 * f2)/(f1 * c1* c2 + k)_**
+**_F abduction_: f = f2 and c = (f1 * c1 * f2 * f2)/(f1 * c1* c2 + k)**
 
 
 
