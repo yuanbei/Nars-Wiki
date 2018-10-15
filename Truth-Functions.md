@@ -13,7 +13,7 @@ Truth functions presented here outline basic ideas and correspond to the first l
 
 ### _F deduction_
 
-Suppose two premise are  \<S --> M\>.%f1; c1% and \<M --> P\>. %f2;c2%, then using deduction syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f, c%. 
+Suppose two premise are  \<S --> M\>.%f1; c1% and \<M --> P\>. %f2;c2%, then using **deduction** syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f, c%. 
 Truth value of the conclusion is then a simple multiplication of truth values of premises:<br/>
 
 **_F deduction_: f = (f1 * f2) and c = (f1 * c1 * f2 * f2)**
@@ -21,6 +21,9 @@ Truth value of the conclusion is then a simple multiplication of truth values of
 A chain of deduction can be formed by more than two judgments, and F deduction can be applied multiple times. For example given premises: _\<a -->b\>. %f1; c1%,  \<b --> c\>. %f2; c2% and  \<c --> d\>. %f3; c3%_, a judgment on _\<a-->d\> %f; c%_ can be formed by applying the deduction rule and _F deduction_ twice.
 
 ### _F abduction_
+
+Suppose two premise are  \<S --> M\>.%f1; c1% and \<P --> M\>. %f2;c2%, then using **abduction** syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f, c%. 
+Truth value of the conclusion is then a simple multiplication of truth values of premises:<br/>
 
 
 
