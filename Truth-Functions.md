@@ -19,7 +19,7 @@ Truth value of the conclusion is then a simple multiplication of truth values of
 **_F deduction_: f = f1 * f2 and c = f1 * c1 * f2 * f2 **
 
 **Properties:**<br/>
-A chain of deduction can be formed by more than two judgments, and F deduction can be applied multiple times. For example {\<a -->b\>. %f1; c1%,  \<b --> c\>. %f2; c2%,  \<c --> d\>.%f3; c3%, a judgment on \<a-->d\> can be formed by applying the deduction rule and _F deduction_ twice.
+A chain of deduction can be formed by more than two judgments, and F deduction can be applied multiple times. For example: _\<a -->b\>. %f1; c1%,  \<b --> c\>. %f2; c2%,  \<c --> d\>.%f3; c3%_, a judgment on _\<a-->d\> %f; c%_ can be formed by applying the deduction rule and _F deduction_ twice.
 
 
 
