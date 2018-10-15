@@ -8,4 +8,7 @@ There are four truth functions (F) that are applied in correspondence with syllo
 2. F abduction
 3. F induction
 4. F exemplification
+
+Truth functions presented here outline basic ideas and correspond to the first logical level NAL-1 that provides a logical foundation of OpenNARS. NAL levels are added one by one each of which expands the grammar and inference rules of the logic in a certain way. During description of each logical level, truth function will be slightly modified to accommodate higher capability of a corresponding NAL.
+ 
  
