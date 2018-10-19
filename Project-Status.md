@@ -11,7 +11,7 @@ The most recent release (after version 1.6.0, up to the current release, v3.0.0)
 
 In the near future, there are the following tasks to be accomplished, probably in parallel.
 
-####Conceptual design
+#### Conceptual design
 
 Though the major design decisions have been implemented, there are still remaining conceptual issues. 
 
@@ -19,7 +19,7 @@ For the logic part, the remaining issues are listed in [OpenNars One Dot Six](ht
 
 The conceptual issues usually cannot be resolved as software development, but should be addressed in ways that are consistent with the overall design of NARS.
 
-####Testing and debugging
+#### Testing and debugging
 
 In the near future, the focus of testing will still be on the logic part, that is on the expressive power of Narsese and the inferential power of NAL. The hypothesis to be tested is that the language and the logic are complete with respect to the objective of A(G)I.
 
@@ -31,7 +31,7 @@ There are several types of testing cases:
 
 * [Application programs](https://github.com/opennars/opennars/wiki/Application-Programs) and [Testing reports](http://www.cis.temple.edu/~pwang/demos.html). Here the objective is to test the overall capability and performance of the system in a specific domain. To carry out such a test, it is important to remember that it cannot be done by simply dump a large number of tasks into the system then let it run. It is more efficient to do it in a step-by-step manner, and to follow the order of (1) Narsese (i.e., make sure all the problems and solutions can be expressed), (2) NAL (i.e., make sure all the desired steps are supported by existing rules), and (3) NARS (i.e., make sure the complete process can be carried out when given proper experience).
 
-####Software development
+#### Software development
 
 Beside debugging and improving the design according to software engineering considerations, major development tasks include: 
 * Database connection, as explained in [Data And Knowledge Bases](https://github.com/opennars/opennars/wiki/Data-And-Knowledge-Bases)
