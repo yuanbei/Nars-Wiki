@@ -33,6 +33,23 @@ NAL-2 adds similarity relation, modifies truth functions and introduces sets, in
 
 2. Because of similarity is symmetric, truth functions are modified:
 
+### _F comparison_
+Suppose two premises are  _\<P --> M\>. %f1; c1%_ and _\<S --> M\>.%f2; c2%_ or _\<M --> P\>. %f1; c1%_ and _\<M --> S\>.%f2; c2%_ then using **comparison** rule OpenNARS will derive conclusion  \<S <--> P\> %f; c%, by comparing the inheritance relations of two terms to a third term. It is easy to see that F comparison is similar to abduction and induction only conclusion is now symmetric. 
+_total evidence w = (f1 + f2 - f1 * f2) * c1 * c2_, and _positive evidence = f1 * c1 * f2 * c2_ resulting in frequency _f = f1*f2/(f1+f2-f1*f2)_ and confidence _c = [c1 * c2 * (f1 + f2 − f1 * f2)]/[c1 * c2 * (f1 + f2 − f1 * f2) + k]_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### _F deduction_
 
 Suppose two premises are  \<S --> M\>.%f1; c1% and \<M --> P\>. %f2; c2%, then using **deduction** syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f; c%. 
