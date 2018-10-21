@@ -8,9 +8,16 @@ In general nine NAL levels are divided into two groups: **First-Order Inference 
 NAL-1 is a logical foundation of OpenNARS it it features well known LOGICAL inference rules of _[deduction](https://en.wikipedia.org/wiki/Deductive_reasoning), [abduction](https://en.wikipedia.org/wiki/Abductive_reasoning), [induction](https://en.wikipedia.org/wiki/Inductive_reasoning) and exemplification_. 
 
 Brief description
-1. {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+1. _Deduction_: {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
 This is Aristotle’s first figure, and what Peirce called deduction.
-
+2. _Abduction_:  {P → M <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s second figure, and what Peirce called abduction
+(and hypothesis)
+3. _Induction_ {M → P <f1, c1 >, M → S <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s third figure, and what Peirce called induction
+4. {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This rule, not discussed by Aristotle or Peirce, in NAL it is called
+exemplification, basically reversed deduction
 
 
 
