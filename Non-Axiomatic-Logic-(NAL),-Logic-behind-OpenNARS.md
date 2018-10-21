@@ -61,5 +61,15 @@ If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as takin
 **Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by _(∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2)))_.<br/>
 **Example:** “Ravens are black birds” can be represented as <raven -->(&,[black], bird)>., where the predicate term is an extensional intersection of the term [black] and the term bird, and "&" is an operator for extensional intersection.
 <br/><br/>
-** Intensional intersection:** If T1 and T2 are different terms, their intensional intersection, (T1 ∪ T2), is a compound term defined by _(∀x)(((T1 ∪ T2) → x) ≡ ((T1 → x) ∧ (T2 → x)))_.<br/>
+**Intensional intersection:** If T1 and T2 are different terms, their intensional intersection, (T1 ∪ T2), is a compound term defined by _(∀x)(((T1 ∪ T2) → x) ≡ ((T1 → x) ∧ (T2 → x)))_.<br/>
 **Example:** "Dogs and cats are pets" can be expressed as <(|,dog, cat)-->pet>. where "|" is an operator for intensional intersection.
+<br/><br/>
+3. **Set Difference Definitions**
+<br/><br/>
+**Extensional Difference:** If T1 and T2 are different terms, their extensional difference, (T1 − T2), is a compound term defined by (∀x)((x → (T1 − T2)) ≡ ((x → T1) ∧ ¬(x → T2))).
+<br/><br/>
+**Example:** “Penguins are birds that cannot fly” can be represented as <penguin --> (-, bird, [flying])>., where the predicate term is a extensional difference of the term bird and the term [flying], and "-" is extensional difference operator
+<br/><br/>
+**Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).
+**Example:** "Human are only beings that can speak" can be represented as <(~, human,being) --> speak>. Where "~" is an intensional difference operator
+<br/><br/>
