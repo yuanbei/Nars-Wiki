@@ -30,3 +30,39 @@ NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence
 ### NAL-2
 NAL-2 adds similarity relation, modifies truth functions and introduces sets, instance and property features. 
 1. **Similarity**, “↔”, is symmetric inheritance relation. The similarity statement “S ↔ P ” is defined by the conjunction of two inheritance statements (S → P) ∧ (P → S). Therefore, the similarity relation is reflexive, symmetric, and transitive.
+
+2. Because of similarity is symmetric, truth functions are modified:
+
+### _F deduction_
+
+Suppose two premises are  \<S --> M\>.%f1; c1% and \<M --> P\>. %f2; c2%, then using **deduction** syllogistic rule OpenNARS will derive conclusion  \<S -- > P\> %f; c%. 
+Truth value of the conclusion is then a simple multiplication of truth values of premises:<br/>
+
+**_F deduction_: f = (f1 * f2) and c = (f1 * c1 * f2 * f2)**
+<br/><br/>
+A chain of deduction can be formed by more than two judgments, and F deduction can be applied multiple times. For example given premises: _\<a -->b\>. %f1; c1%,  \<b --> c\>. %f2; c2% and  \<c --> d\>. %f3; c3%_, a judgment on _\<a-->d\> %f; c%_ can be formed by applying the deduction rule and _F deduction_ twice.
+
+### _F abduction_
+
+Suppose two premises are  _\<P --> M\>. %f1; c1%_ and _\<S --> M\>.%f2; c2%_ , then using **abduction** syllogistic rule OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
+Truth value of the conclusion is defined through the positive and total evidence where _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f1 * c1* c2_, Therefore:<br/><br/> 
+**_F abduction_: f = f2 and c = (f1 * c1 * f2 * f2)/(f1 * c1 * c2 + k)**
+<br/>
+
+### _F induction_
+
+This function is symmetric to the abduction one. Suppose two premises are _\<M --> P\>. %f1; c1%_ and _\<M --> S\>.%f2; c2%_; , then using **induction** syllogistic rule OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
+Truth value of the conclusion is defined through the positive and total evidence where _positive evidence = f1 * c1 * f2 * c2_ and the _total evidence = f2 * c1* c2_, Therefore:<br/><br/> 
+**_F induction_: f = f1 and c = (f1 * c1 * f2 * f2)/(f2 * c1 * c2 + k)**
+<br/> 
+
+### _F exemplification_
+
+Exemplification can be considered as "reversed deduction" since it derives an inheritance judgment in the opposite direction of deduction. Negative evidence can not be collected in reverse direction of inheritance and thus not present in exemplification.
+
+Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **exemplification** OpenNARS will derive conclusion _\<S --> P\>. %f; c%_ 
+Truth value of the conclusion is defined through the positive and total evidence which are equal since no negative evidence can be collected in reverse direction of inheritance. Thus _positive evidence = f1 * c1 * f2 * c2_ = _total evidence = f1 * c1 * f2 * c2_:<br/><br/> 
+**_F exemplification_: f = 1 and c = (f1 * c1 * f2 * f2)/(f1 * f2 * c1 * c2 + k)**
+<br/> <br/> 
+
+ 
