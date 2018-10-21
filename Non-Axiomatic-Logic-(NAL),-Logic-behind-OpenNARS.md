@@ -21,8 +21,5 @@ exemplification, basically reversed deduction
 
 NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence through truth value, inference rules, truth functions and Narsese-1 grammar. <br/>
 1. **Inheritance relation**, “→”, is a relation from one term to another term, defined by being reflexive and transitive but neither symmetric nor anti-symmetric. An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S → P”, S is the **subject** term and P is the **predicate** term. Inheritance relation is closely related to many well-known relations, such as “IS-A” or “belongs to” or “subset”.<br/>
-**Example** <snow --> white>.  means snow "is"  white
-<br/>
-2. **Truth value**
-
-
+**Example** <snow --> white>.  means snow "is"  white<br/>
+2. **Truth value**.
