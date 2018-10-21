@@ -1,1 +1,6 @@
-There are 9 levels of Narsese Grammar levels that correspond to NARS Logic Levels (NAL). The higher the level the more complex is the grammar and the logic. In general levels can be divided into two (2) groups: First-Order Statements (Levels 1-4) and Higher Order Statements (Level 5-9)
+OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1-9). NAL levels are added one by one each of which expands the features and capabilities of a previous layer including the [grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), inference rules and [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions). This article introduces each level and briefly describes its features.
+
+In general nine NALs level are divided in **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-9)**
+
+##First-Order Inference (NALs 1-4)
+
