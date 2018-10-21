@@ -80,5 +80,5 @@ NAL-4 allows for "ordinary relations", that are the relations not present in pre
 as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> (*, acid, base)>. Where "*" is product operator
 <br/><br/>
 3. **Image:** For a relation R and a product (*, T1, T2), the extensional image operator, “/”, and intensional image operator, “\\”, of the relation on the product are defined as the following, respectively:
-((* T1, T2) → R) ≡ (T1 → (⊥ R  T2))) ≡ (T2 → (⊥ R T1 ))) and
-(R → (× T1 T2)) ≡ ((> R  T2)) → T1) ≡ ((> R T1 )) → T2)
+((* T1, T2) → R) ≡ (T1 → (/ R o T2))) ≡ (T2 → (/ R T1 o))) and (R → (× T1 T2)) ≡ ((\\ R o T2)) → T1) ≡ ((\\ R T1 o)) → T2), where ‘o’ is a special symbol indicating the location of T1 or T2 in the product, and in the component list it can appear in any place, except the first (which is reserved for the relational term). <br/>
+**Example:** “Acid corrodes metal” can be equivalently represented as <(*, acid, metal) --> corrosion>. <acid → (/, corrosion, o metal)>., and <metal --> (\\, corrosion, acid o)>. Where "o" indicates whether it is T1 or T2 and "/", "\\" are extensional and intensional image operators.
