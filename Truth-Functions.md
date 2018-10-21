@@ -38,7 +38,7 @@ Truth value of the conclusion is defined through the positive and total evidence
 
 Exemplification can be considered as "reversed deduction" since it derives an inheritance judgment in the opposite direction of deduction. Negative evidence can not be collected in reverse direction of inheritance and thus not present in exemplification.
 
-Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **exemplification** OpenNARS will derive conclusion _\<S -- > P\> %f; c%_. 
+Suppose two premises are  _\<P --> M\>.%f1; c1%_ and _\<M --> S\>. %f2; c2%_, then using **exemplification** OpenNARS will derive conclusion _\<S --> P\>. %f; c%_ 
 Truth value of the conclusion is defined through the positive and total evidence which are equal since no negative evidence can be collected in reverse direction of inheritance. Thus _positive evidence = f1 * c1 * f2 * c2_ = _total evidence = f1 * c1 * f2 * c2_:<br/><br/> 
 **_F exemplification_: f = 1 and c = (f1 * c1 * f2 * f2)/(f1 * f2 * c1 * c2 + k)**
 <br/> <br/> 
