@@ -28,12 +28,12 @@ NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence
 3. Fundamental **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** used in OpenNARS are described in detail on separate pages, please click on corresponding links
 
 ### NAL-2
-NAL-2 adds similarity, instance and property relations, modifies truth functions and introduces sets. 
+NAL-2 adds similarity, instance and property relations and modifies truth functions. 
 1. **Similarity**, “↔”, is symmetric inheritance relation. The similarity statement “S ↔ P ” is defined by the conjunction of two inheritance statements (S → P) ∧ (P → S). Therefore, the similarity relation is reflexive, symmetric, and transitive.
 <br/><br/>
 **Instance**,“◦→”, is another way to represent the same information. The instance statement “S ◦→ P ” is defined by the inheritance statement “{S} → P ”. The intuitive meaning of “◦→” is similar to the membership relation in set theory. **Example:** “Tweety is a bird” can also be represented as <{Tweety} --> bird>. Meaning that Tweety can be considered as an **instance** of a bird.
 <br/><br/>
-**Property**,“→◦”, is another way to represent the same information. The property statement “S →◦ P ” is defined by the inheritance statement “S → [P]”. **Example:** "Snow is white" can be represented <snow --> [white]> meaning snow "is a kind" of white, that is white color is a property of snow.
+**Property**,“→◦”, is another way to represent the same information. The property statement “S →◦ P ” is defined by the inheritance statement “S → [P]”. **Example:** "Snow is white" can be represented <snow --> [white]>. meaning snow "is a kind" of white, that is white color is a property of snow.
 
 2. Because of similarity is symmetric, truth functions are modified: 
 <br/><br/>
@@ -49,3 +49,5 @@ Suppose two premises are  _\<S <--> M\>. %f1; c1%_ and _\<M --> P\>.%f2; c2%_ or
 **_F deduction2_**<br/>
 Suppose two premises are  _\<S <--> M\>. %f1; c1%_ and _\<M <--> P\>.%f2; c2%_ that is both premises are similarity relations, then using **deduction2** rule OpenNARS will derive conclusion  \<S <--> P\> %f; c%, it can be treated as deduction going in both directions. Thus, <br/>
 **_F deduction2_ truth value**: _f = f1*f2_ and _c = c1 * c2 * (f1 + f2 − f1 * f2)_
+
+### NAL-3
