@@ -15,9 +15,9 @@ This is Aristotle’s second figure, and what Peirce called abduction
 (and hypothesis)
 3. _Induction_ {M → P <f1, c1 >, M → S <f2, c2 >} |-- S → P <f, c>
 This is Aristotle’s third figure, and what Peirce called induction
-4. {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+4. _exemplification_ {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
 This rule, not discussed by Aristotle or Peirce, in NAL it is called
-exemplification, basically reversed deduction
+exemplification, that is basically reversed deduction
 
 NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence through truth value, inference rules, truth functions and Narsese-1 [grammar]((https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)). <br/>
 1. **Inheritance relation**, “→”, is a relation from one term to another term, defined by being reflexive and transitive but neither symmetric nor anti-symmetric. An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S → P”, S is the **subject** term and P is the **predicate** term. Inheritance relation is closely related to many well-known relations, such as “IS-A” or “belongs to” or “subset”.<br/>
