@@ -76,5 +76,9 @@ NAL-4 allows for "ordinary relations", that are the relations not present in pre
 <br/><br/>
 1. **Product:** For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
 <br/><br/>
-**Term as a Relation:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
-as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> (*, acid, base)>.
+2. **Term as a Relation:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
+as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> (*, acid, base)>. Where "*" is product operator
+<br/><br/>
+3. **Image:** For a relation R and a product (*, T1, T2), the extensional image operator, “/”, and intensional image operator, “\\”, of the relation on the product are defined as the following, respectively:
+((* T1, T2) → R) ≡ (T1 → (⊥ R  T2))) ≡ (T2 → (⊥ R T1 ))) and
+(R → (× T1 T2)) ≡ ((> R  T2)) → T1) ≡ ((> R T1 )) → T2)
