@@ -1,1 +1,1 @@
-Under Construction
+There are 9 levels of Narsese Grammar levels that correspond to NARS Logic Levels (NAL). The higher the level the more complex is the grammar and the logic. In general levels can be divided into two (2) groups: First-Order Statements (Levels 1-4) and Higher Order Statements (Level 5-9)
