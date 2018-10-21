@@ -58,4 +58,8 @@ If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as takin
 <br/><br/>
 2. **Set Intersection Definitions**
 <br/><br/>
-**Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by (∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2))).
+**Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by _(∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2)))_.<br/>
+**Example:** “Ravens are black birds” can be represented as <raven -->(&,[black], bird)>., where the predicate term is an extensional intersection of the term [black] and the term bird, and "&" is an operator for extensional intersection.
+<br/><br/>
+** Intensional intersection:** If T1 and T2 are different terms, their intensional intersection, (T1 ∪ T2), is a compound term defined by _(∀x)(((T1 ∪ T2) → x) ≡ ((T1 → x) ∧ (T2 → x)))_.<br/>
+**Example:** "Dogs and cats are pets" can be expressed as <(|,dog, cat)-->pet>. where "|" is an operator for intensional intersection.
