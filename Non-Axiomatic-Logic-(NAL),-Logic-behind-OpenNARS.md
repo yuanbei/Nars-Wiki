@@ -52,6 +52,10 @@ Suppose two premises are  _\<S <--> M\>. %f1; c1%_ and _\<M <--> P\>.%f2; c2%_ t
 
 ### NAL-3
 NAL-3 introduces compound terms and adds operation on the sets such as set intersection and set difference.
-1. In NAL-1 and NAL-2, each term is “atomic”, named by a word. For more complicated descriptions NAL-3 adds compound terms. **Compound term*, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
+1. In NAL-1 and NAL-2, each term is “atomic”, named by a word. For more complicated descriptions NAL-3 adds compound terms. **Compound term**, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
 <br/><br/>
 If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as taking two arguments, both (op c(1) ... c(n)) and (c(1) op ... op c(n)) are compound terms defined recursively as (op (op c(1) ... c(n−1)) c(n)).
+<br/><br/>
+2. **Set Intersection Definitions**
+<br/><br/>
+**Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by (∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2))).
