@@ -41,3 +41,7 @@ _total evidence w = (f1 + f2 - f1 * f2) * c1 * c2_, and _positive evidence = f1 
 ### _F analogy_
 Suppose two premises are  _\<S <--> M\>. %f1; c1%_ and _\<M --> P\>.%f2; c2%_ or _\<P --> M\>. %f1; c1%_ and _\<S <--> M\>.%f2; c2%_ then using **analogy** rule OpenNARS will derive conclusion  \<S --> P\> %f; c% or \<P --> S\> %f; c%. The situation is is similar to deduction.Thus, <br/>
 **_F analogy_**: _f = f1*f2_ and _c = c1 * f2 * f2 * c2 * c2_
+<br/><br/>
+### _F deduction2_
+Suppose two premises are  _\<S <--> M\>. %f1; c1%_ and _\<M <--> P\>.%f2; c2%_ that is both premises are similarity relations, then using **deduction2** rule OpenNARS will derive conclusion  \<S <--> P\> %f; c%, it can be treated as deduction going in both directions. Thus, <br/>
+**_F deduction2_**: _f = f1*f2_ and _c = c1 * c2 * (f1 + f2 − f1 * f2)_
