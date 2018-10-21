@@ -15,7 +15,7 @@ This is Aristotle’s second figure, and what Peirce called abduction
 (and hypothesis)
 3. _Induction_ {M → P <f1, c1 >, M → S <f2, c2 >} |-- S → P <f, c>
 This is Aristotle’s third figure, and what Peirce called induction
-4. _exemplification_ {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+4. _Exemplification_ {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
 This rule, not discussed by Aristotle or Peirce, in NAL it is called
 exemplification, that is basically reversed deduction
 
@@ -24,7 +24,7 @@ NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence
 **Example** <snow --> white>.  means snow "is"  white<br/><br/>
 2. **Truth value** is a pair of real numbers in the range [0,1] that are called **frequency** and **confidence**.
 <br/>**Frequency** is a measurement of uncertainty defined as _positive evidence / total evidence_, while **confidence** measures degree of believe, given _k_ as a temporal constant, might be seen as number of steps taken by the system in the future, confidence _c_ is defined in terms of evidence _w_ as _c = w / (w + k)_, default value for _k_ is 1 <br/>
-**Example:** <snow --> white>. %9/10, 10/11% here truth value of frequency=9/10 and confidence=10/11 mean that snow has been observed white 9 times and 1 time it was not white, thus the total number of observations, that is **total evidence**, is 10, **positive evidence** is 9/10, since white snow appeared 9 times out of 10, and given that by default _k=1_ confidence, **the measure of believe in positive evidence** is 10/11 that is _total evidence=10_ divided by _total evidence_ plus 1.<br/><br/>
+**Example:** <snow --> white>. %9/10, 10/11% here truth value of frequency=9/10 and confidence=10/11 means that snow has been observed white 9 times and 1 time it was not white, thus the total number of observations, that is **total evidence**, is 10, **positive evidence** is 9/10, since white snow appeared 9 times out of 10, and given that by default _k=1_ confidence, **the measure of believe in positive evidence** is 10/11 that is _total evidence=10_ divided by _total evidence_ plus 1.<br/><br/>
 3. Fundamental **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** used in OpenNARS are described in detail on separate pages, please click on corresponding links
 
 ### NAL-2
