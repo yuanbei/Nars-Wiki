@@ -3,4 +3,6 @@ OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1
 In general nine NAL levels are divided into two groups: **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-9)**
 
 ## First-Order Inference (NALs 1-4)
+### NAL-1
 
+NAL-1 is a logical foundation of OpenNARS it it features well known LOGICAL inference rules of _[deduction](https://en.wikipedia.org/wiki/Deductive_reasoning), [abduction](https://en.wikipedia.org/wiki/Abductive_reasoning), [induction](https://en.wikipedia.org/wiki/Inductive_reasoning) and exemplification_.  
