@@ -71,3 +71,10 @@ If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as takin
 **Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).<br/> **Example:** "Human are only beings that can speak" can be represented as <(\~, human,being) --> speak>. Where "~" is an intensional difference operator
 
 ### NAL-4
+
+NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers.
+<br/><br/>
+1. **Product:** For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
+<br/><br/>
+**Term as a Relation:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
+as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> (*, acid, base)>.
