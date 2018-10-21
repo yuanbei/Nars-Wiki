@@ -28,3 +28,5 @@ NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence
 3. Fundamental **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** used in OpenNARS are described in detail on separate pages, please click on corresponding links
 
 ### NAL-2
+NAL-2 adds similarity relation, modifies truth functions and introduces sets, instance and property features. 
+1. **Similarity**, “↔”, is symmetric inheritance relation. The similarity statement “S ↔ P ” is defined by the conjunction of two inheritance statements (S → P) ∧ (P → S). Therefore, the similarity relation is reflexive, symmetric, and transitive.
