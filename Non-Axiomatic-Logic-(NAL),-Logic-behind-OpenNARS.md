@@ -5,4 +5,10 @@ In general nine NAL levels are divided into two groups: **First-Order Inference 
 ## First-Order Inference (NALs 1-4)
 ### NAL-1
 
-NAL-1 is a logical foundation of OpenNARS it it features well known LOGICAL inference rules of _[deduction](https://en.wikipedia.org/wiki/Deductive_reasoning), [abduction](https://en.wikipedia.org/wiki/Abductive_reasoning), [induction](https://en.wikipedia.org/wiki/Inductive_reasoning) and exemplification_.  
+NAL-1 is a logical foundation of OpenNARS it it features well known LOGICAL inference rules of _[deduction](https://en.wikipedia.org/wiki/Deductive_reasoning), [abduction](https://en.wikipedia.org/wiki/Abductive_reasoning), [induction](https://en.wikipedia.org/wiki/Inductive_reasoning) and exemplification_. 
+{M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s first figure, and what Peirce called deduction.
+
+
+
+
