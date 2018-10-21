@@ -1,4 +1,4 @@
-OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1-9). NAL levels are added one by one each of which expands the features and capabilities of a previous layer including the [grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), inference rules and [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions). This article presents each level and briefly describes its features, grammar definition will be omitted from this page instead detailed use of grammar for each NAL level is outlined [here](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS).
+OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1-9). NAL levels are added one by one each of which expands the features and capabilities of a previous layer including the [grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), [inference rules]((https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)) and [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions). This article presents each level and briefly describes its features, grammar definition will be omitted from this page instead detailed use of grammar for each NAL level is outlined [here](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS).
 
 In general nine NAL levels are divided into two groups: **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-9)**
 
@@ -19,7 +19,7 @@ This is Aristotle’s third figure, and what Peirce called induction
 This rule, not discussed by Aristotle or Peirce, in NAL it is called
 exemplification, basically reversed deduction
 
-NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence through truth value, inference rules, truth functions and Narsese-1 grammar. <br/>
+NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence through truth value, inference rules, truth functions and Narsese-1 [grammar]((https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)). <br/>
 1. **Inheritance relation**, “→”, is a relation from one term to another term, defined by being reflexive and transitive but neither symmetric nor anti-symmetric. An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S → P”, S is the **subject** term and P is the **predicate** term. Inheritance relation is closely related to many well-known relations, such as “IS-A” or “belongs to” or “subset”.<br/>
 **Example** <snow --> white>.  means snow "is"  white<br/><br/>
 2. **Truth value** is a pair of real numbers in the range [0,1] that are called **frequency** and **confidence**.
