@@ -68,6 +68,4 @@ If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as takin
 <br/><br/>
 **Extensional Difference:** If T1 and T2 are different terms, their extensional difference, (T1 − T2), is a compound term defined by (∀x)((x → (T1 − T2)) ≡ ((x → T1) ∧ ¬(x → T2))).<br/> **Example:** Penguins are birds that cannot fly” can be represented as <penguin --> (-, bird, [flying])>., where the predicate term is a extensional difference of the term bird and the term [flying], and "-" is extensional difference operator
 <br/><br/>
-**Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).
-<br/>
-**Example:** "Human are only beings that can speak" can be represented as \<(~, human,being) --> speak\>. Where "~" is an intensional difference operator
+**Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).<br/> **Example:** "Human are only beings that can speak" can be represented as \<(~, human,being) --> speak\>. Where "~" is an intensional difference operator
