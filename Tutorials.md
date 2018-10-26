@@ -1,5 +1,5 @@
 # System Tutorials
-[NARS Beginner Tutorial](https://ptrman.keybase.pub/website/nars/tutorial.htm)
+[NARS Beginner Tutorial](https://ptrman.keybase.pub/website/nars/tutorial.htm)<br />
 [NARS Beginner Tutorial #2](https://ptrman.keybase.pub/website/nars/Tutorial2.htm)
 
 # Technical Tutorials
