@@ -13,6 +13,9 @@ This project is still mostly at the conceptual design and prototype development 
 The current stable versions of the system are available for [download](https://drive.google.com/a/temple.edu/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing#). Each version contains a JAR file and some working examples. [Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html) is needed to run the recent versions. There is a [discussion group](http://groups.google.com/group/open-nars) of this project.
 
 ***
+Learn about NARS with [Tutorials](https://github.com/opennars/opennars/wiki/Tutorials) and [Videos](https://github.com/opennars/opennars/wiki/Videos).
+
+***
 [YourKit](https://www.yourkit.com/) supports OpenNARS project with its full-featured Java Profiler. [YourKit, LLC](https://www.yourkit.com/) is the creator of innovative and intelligent tools for profiling Java and .NET applications. Take a look at [YourKit](https://www.yourkit.com/)'s leading software products [YourKit Java Profiler](https://www.yourkit.com/java/profiler/index.jsp) and [YourKit .NET Profiler](https://www.yourkit.com/.net/profiler/index.jsp). 
 
 ![YourKit](https://cloud.githubusercontent.com/assets/11791925/6993790/b132e628-db32-11e4-876a-06f3d3f54f45.png)
