@@ -1,5 +1,5 @@
-Open-NARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project.
-The reasoner "core" of Open-NARS is licensed under [MIT](https://opensource.org/licenses/MIT).
+OpenNARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project.
+The reasoner "core" of OpenNARS is licensed under [MIT](https://opensource.org/licenses/MIT).
 
 This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a _unified theory_, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
 
