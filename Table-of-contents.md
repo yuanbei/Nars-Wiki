@@ -6,60 +6,57 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Language and I/O
     * Narsese grammar
     * experience file
-    -- Narsese symbol list (ASCII version and PDF version)
-    -- term type list
-    -- sentence type list
-    -- truth value
-    -- desire value
-    -- priority-durability values
-    -- GUI explanation
-    -- I/O channels
-    -- database and knowledge-base connection
-    -- interface for plugin
-    -- inter-system communication protocol
-    -- built-in operator list
-    -- experiments on perception
-    -- experiments on natural language processing
+    * Narsese symbol list (ASCII version and PDF version)
+    * term type list
+    * sentence type list
+    * truth value
+    * desire value
+    * priority-durability values
+    * GUI explanation
+    * I/O channels
+    * database and knowledge-base connection
+    * interface for plugin
+    * inter-system communication protocol
+    * built-in operator list
+    * experiments on perception
+    * experiments on natural language processing
   - Logic
-    -- basic principles behind the truth-value/desire-value functions
-    -- revision rule
-    -- choice rule
-    -- basic syllogistic rules
-    -- compositional rules
-    -- structural rules
-    -- backward inference
-    -- temporal inference
-    -- procedural inference
+    * basic principles behind the truth-value/desire-value functions
+    * revision rule
+    * choice rule
+    * basic syllogistic rules
+    * compositional rules
+    * structural rules
+    * backward inference
+    * temporal inference
+    * procedural inference
   - Data structure
-    -- memory overall structure
-    -- bag and its operations
-    -- item and budget-value
-    -- truth-value and evidential basis
-    -- sentence
-    -- task
-    -- task link
-    -- term link
-    -- concept
+    * memory overall structure
+    * bag and its operations
+    * item and budget-value
+    * truth-value and evidential basis
+    * sentence
+    * task
+    * task link
+    * term link
+    * concept
   - Control
-    -- working cycle
-    -- data-driven rule choosing
-    -- budget functions
-    -- emotion and self-control
-    -- parameters and configuration file
+    * working cycle
+    * data-driven rule choosing
+    * budget functions
+    * emotion and self-control
+    * parameters and configuration file
 
 2. Entry points
   - user guides
-    -- beginner's guide
-    -- user's manual
-    -- developer's guide
+    * beginner's guide
+    * user's manual
+    * developer's guide
   - example and demonstration
-    -- selected examples of task processing (i.e., multi-step examples)
-    -- annotated list of experience files in Narsese (i.e., single-step examples)
-    -- annotated list of demonstration
+    * selected examples of task processing (i.e., multi-step examples)
+    * annotated list of experience files in Narsese (i.e., single-step examples)
+    * annotated list of demonstration
   - overview
-    -- glossary
-    -- selected publications
-    -- selected videos
-    -- version history
-    -- ongoing activities
-    -- FAQ
+    * glossary
+    * selected publications
+    * selected videos
