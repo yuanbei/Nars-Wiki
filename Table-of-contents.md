@@ -4,8 +4,8 @@ The pages are roughly divided into two groups, the first group systematically ex
 
 1. Aspects of OpenNARS
   - Language and I/O
-    -- Narsese grammar
-    -- experience file
+    * Narsese grammar
+    * experience file
     -- Narsese symbol list (ASCII version and PDF version)
     -- term type list
     -- sentence type list
