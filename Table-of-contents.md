@@ -4,13 +4,13 @@ The pages are roughly divided into two groups, the first group systematically ex
 
 1. Aspects of OpenNARS
   - Language and I/O
-    * Narsese grammar
-    * experience file
+    * Narsese grammar with annotations
+    * experience file: format and usage
     * Narsese symbol list (ASCII version and PDF version)
-    * term type list
-    * sentence type list
-    * truth value
-    * desire value
+    * term: types, format
+    * sentence: types, format
+    * truth value: definition and examples
+    * desire value: definition and examples
     * priority-durability values
     * GUI explanation
     * I/O channels
@@ -27,22 +27,22 @@ The pages are roughly divided into two groups, the first group systematically ex
     * basic syllogistic rules
     * compositional rules
     * structural rules
-    * backward inference
+    * backward inference (question, query, goal)
     * temporal inference
     * procedural inference
   - Data structure
     * memory overall structure
-    * bag and its operations
-    * item and budget-value
+    * bag, item, and budget-value
     * truth-value and evidential basis
-    * sentence
-    * task
+    * sentence: content and attributes
+    * task and belief
     * task link
     * term link
-    * concept
+    * concept: content and attributes
   - Control
-    * working cycle
-    * data-driven rule choosing
+    * working cycle of the system
+    * life cycle of a task (by type)
+    * data-driven rule choosing (rule table)
     * budget functions
     * emotion and self-control
     * parameters and configuration file
