@@ -34,3 +34,42 @@
 
 # Presentations
 [NARS Presentations](https://www.youtube.com/watch?v=T9eSVYLSSrs&index=1&list=PLIuBkJssgnZEvv1rs1vtknkJDV3UyqOHu)
+
+# Discussions
+[OpenNARS - Simple Memory Model Proposal](https://www.youtube.com/watch?v=LvVw7cciDEc)
+---
+[OpenNARS Termlink & Belief Workshop](https://www.youtube.com/watch?v=iCCF_YWfsG4)
+---
+[OpenNARS 2.0 alpha Actor Model proposal](https://www.youtube.com/watch?v=KfIA57LpSbU)
+---
+[Temporal consequences to memory structure in OpenNARS](https://www.youtube.com/watch?v=DTE3Lv2Um-4)
+---
+[Understanding Anticipation in OpenNARS](https://www.youtube.com/watch?v=2VkRT7octuI)
+---
+[Local Inference Process in OpenNARS](https://www.youtube.com/watch?v=YLFecYuLDT4)
+---
+[Local Inference Updated](https://www.youtube.com/watch?v=E4xepeRLca0)
+---
+[Unveiling Temporal Concepts](https://www.youtube.com/watch?v=x9ued8Ildqg)
+---
+[Tableless Local Inference](https://www.youtube.com/watch?v=3GNbj1XWCio)
+---
+[Short Discussion on Temporal Concepts](https://www.youtube.com/watch?v=lAxafDtIqcY)
+---
+[Emotion in OpenNARS](https://www.youtube.com/watch?v=YTWYUoZwXvA)
+---
+[Attention Updating in OpenNARS 2.0](https://www.youtube.com/watch?v=dQFBbODCkLw)
+---
+[OpenNARS 2.0 Pre-implementation walkthrough](https://www.youtube.com/watch?v=L9aNWF09u4M)
+---
+[(Decision Making)](https://www.youtube.com/watch?v=GGljoA13dEw)
+---
+[OpenNars dev session - 17 03 2016](https://www.youtube.com/watch?v=twcQbxclxQU)
+---
+[NARS dev session 1.6.5 2017-01-26 20:14:51](https://www.youtube.com/watch?v=8S0V1ryaGk4)
+---
+[NARS dev session - 2017 02 06](https://www.youtube.com/watch?v=1tin9ZLzvso)
+---
+[NARS dev session - 2017 07 19](https://www.youtube.com/watch?v=hTE7iAMfqc4)
+---
+[NARS dev session - 2018 01 16](https://www.youtube.com/watch?v=_VA9tbrB1G4)
