@@ -36,6 +36,7 @@
 [NARS Presentations](https://www.youtube.com/watch?v=T9eSVYLSSrs&index=1&list=PLIuBkJssgnZEvv1rs1vtknkJDV3UyqOHu)
 
 # Discussions
+
 [OpenNARS - Simple Memory Model Proposal](https://www.youtube.com/watch?v=LvVw7cciDEc)
 ---
 [OpenNARS Termlink & Belief Workshop](https://www.youtube.com/watch?v=iCCF_YWfsG4)
