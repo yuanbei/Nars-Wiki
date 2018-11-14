@@ -23,8 +23,8 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Logic
     * basic principles behind the truth-value/desire-value functions
     * [NALs](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
-    * revision rule
-    * choice rule
+    * [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
+    * [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
     * basic syllogistic rules
     * compositional rules
     * structural rules
