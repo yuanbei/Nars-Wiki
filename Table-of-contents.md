@@ -30,7 +30,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * structural rules
     * backward inference (question, query, goal)
     * temporal inference
-    * procedural inference
+    * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
   - Data structure
     * memory overall structure
     * bag, item, and budget-value
