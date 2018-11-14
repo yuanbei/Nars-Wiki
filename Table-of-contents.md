@@ -22,6 +22,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * experiments on natural language processing
   - Logic
     * basic principles behind the truth-value/desire-value functions
+    * NALs
     * revision rule
     * choice rule
     * basic syllogistic rules
