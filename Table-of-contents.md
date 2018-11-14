@@ -22,7 +22,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * experiments on natural language processing
   - Logic
     * basic principles behind the truth-value/desire-value functions
-    * [NALs] (https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
+    * [NALs](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
     * revision rule
     * choice rule
     * basic syllogistic rules
