@@ -5,7 +5,7 @@ In general nine NAL levels are divided into two groups: **First-Order Inference 
 ## First-Order Inference (NALs 1-4)
 ### NAL-1
 
-NAL-1 is a logical foundation of OpenNARS, it operates on well known [syllogistic inference rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
+NAL-1 is a logical foundation of OpenNARS, it operates on well known [syllogistic inference rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules).
 
 NAL-1 introduces key features of OpenNARS: inheritance relation, use of evidence through truth value, inference rules, truth functions and Narsese-1 [grammar]((https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)). <br/>
 1. **Inheritance relation**, “→”, is a relation from one term to another term, defined by being reflexive and transitive but neither symmetric nor anti-symmetric. An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S → P”, S is the **subject** term and P is the **predicate** term. Inheritance relation is closely related to many well-known relations, such as “IS-A” or “belongs to” or “subset”.<br/>
