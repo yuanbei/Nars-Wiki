@@ -21,7 +21,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * experiments on perception
     * experiments on natural language processing
   - Logic
-    * [NALs](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
+    * [Non Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
     * [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
     * [variables](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
     * [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
