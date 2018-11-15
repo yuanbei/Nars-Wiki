@@ -4,7 +4,7 @@
 
 
 ### Introduction
-The variable terms of NAL sometimes create confusion. This article is an explanation about when to use which variable type, also some intuitive examples are given.
+The variable terms has been introduced in NAL 6 and they often create confusion. This page provides an explanation about various ways to use different variable types.
 
 ***
 ### Independent Variables
