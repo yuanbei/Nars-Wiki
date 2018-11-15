@@ -26,7 +26,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
     * [variables](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
     * [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
-    * basic syllogistic rules
+    * [basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
     * compositional rules
     * structural rules
     * backward inference (question, query, goal)
