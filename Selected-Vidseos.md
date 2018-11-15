@@ -2,4 +2,4 @@
 
 ## OpenNARS on YouTube:
 
-## OpenNARS Tutorial videos
+## OpenNARS Tutorial videos:
