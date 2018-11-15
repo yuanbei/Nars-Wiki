@@ -58,6 +58,6 @@ The pages are roughly divided into two groups, the first group systematically ex
     * annotated list of experience files in Narsese (i.e., single-step examples)
     * annotated list of demonstration
   - overview
-    * glossary
-    * selected publications
-    * selected videos
+    * [glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
+    * [selected publications](https://github.com/opennars/opennars/wiki/Publications)
+    * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
