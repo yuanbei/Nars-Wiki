@@ -1,0 +1,1 @@
+Current page provides useful publications regarding AGI Concepts, OpenNARS and its future development vector.
