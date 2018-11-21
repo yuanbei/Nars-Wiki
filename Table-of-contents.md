@@ -52,7 +52,7 @@ The pages are roughly divided into two groups, the first group systematically ex
   - user guides
     * beginner's guide
     * user's manual
-    * developer's guide
+    * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
   - example and demonstration
     * selected examples of task processing (i.e., multi-step examples)
     * annotated list of experience files in Narsese (i.e., single-step examples)
