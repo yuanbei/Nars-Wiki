@@ -99,7 +99,7 @@ NAL-5 also introduces **Negation**, that is a negation of a statement is a compo
 Important to note that _Law of Contrapositive_  (S => T ≡ ¬T => ¬S) is no longer true, therefore NAL-5 introduces another variant of conversion rule from NAL-1 that is from  <S1 ==> S2>  %f0; c0%  NAL derives <(--, S2) ==> (--, S1)> %f1; c1% where truth value is computed using <br/>
 **F conversion3:** _f=0, c = (1-f0)c0/(f0c0 + 1)_
 
-
+### NAL-6
 
 
  
