@@ -105,7 +105,7 @@ NAL 6 introduces **variable terms** into the system. Terms in earlier layers are
 Consider the basic inheritance example from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
 (?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. Meaning of inheritance can also be described through intension/extension of a term, that is "**if** something (x) is in extension of S that something is in extension of P, and **if** there is other thing (y) in intension of P it is in intension of S". Variables become necessary when extension/intension of term need to be specified separately and intuitively correspond to meaning of "it" pronoun in natural language.  
 
-There are three types of variables used in the system: _independent_, _dependent_ and _query_ there is a [separate page] (https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) describes the usage of all three types.
+There are three types of variables used in the system: _independent_, _dependent_ and _query_ there is a [separate page](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) describes the usage of all three types.
 
 
 
