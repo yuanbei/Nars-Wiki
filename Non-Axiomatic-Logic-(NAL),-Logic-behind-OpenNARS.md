@@ -100,15 +100,20 @@ Important to note that _Law of Contrapositive_  (S => T ≡ ¬T => ¬S) is no lo
 **F conversion3:** _f=0, c = (1-f0)c0/(f0c0 + 1)_
 
 ### NAL-6
-NAL 6 introduces **variable terms** into the system. Terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. Variable terms are always preceded with question mark "?" 
+NAL 6 introduces **variable terms** into the system. Terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. Variable terms are always preceded with question or hash marks, "?" or "#" 
 
 Consider the basic inheritance example from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
 (?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. Meaning of inheritance can also be described through intension/extension of a term, that is "**if** something (x) is in extension of S that something is in extension of P, and **if** there is other thing (y) in intension of P it is in intension of S". Variables become necessary when extension/intension of term need to be specified separately and intuitively correspond to meaning of "it" pronoun in natural language.  
 
 There are three types of variables used in the system: _independent_, _dependent_ and _query_, [this page](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) describes the usage of all three types.
 
+Independent variable (preceded by "?") **always appears at both sides** of an implication or equivalence relation. It can be substituted by another term without changing the truth value of a judgment, and then a conclusion can be derived.  Substitution of an independent variable is a _unification_ process.
 
+Dependent variable (preceded by "#") refer to a specific term. Intuitively, they allow talking about a thing without having to name it. Dependent variable is only introduced into a **conjunction**
 
+Query variable is a variable term in a question, not a judgement, that represents a term to be found to answer the question
+
+Given that inheritance can be represented in terms implication and use of variables specifying inntension/extension of a term, truth function remain the same just 
  
 
 
