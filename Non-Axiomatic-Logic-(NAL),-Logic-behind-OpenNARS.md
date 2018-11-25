@@ -65,7 +65,7 @@ NAL-4 allows for "ordinary relations", that are the relations not present in pre
 1. **Product:** For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
 <br/><br/>
 2. **Relation as a Term:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
-as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> ( *, acid, base)>. where " *" is product operator
+as <(* ,acid,base) --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> ( *, acid, base)>. where " *" is product operator
 <br/><br/>
 3. **Image:** For a relation R and a product ( * , T1, T2), the extensional image operator, “/”, and intensional image operator, “\\”, of the relation on the product are defined as the following, respectively:
 (( * T1, T2) → R) ≡ (T1 → (/ R o T2))) ≡ (T2 → (/ R T1 o))) and (R → ( * T1 T2)) ≡ ((\\ R o T2)) → T1) ≡ ((\\ R T1 o)) → T2), where ‘o’ is a special symbol indicating the location of T1 or T2 in the product, and in the component list it can appear in any place, except the first (which is reserved for the relational term). <br/>
@@ -75,6 +75,8 @@ as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between 
 As one may notice, in the "first-order" inference, statements are relations among terms, but a statement **cannot** be treated as a term. In "Higher-Order" inference, a statement can be treated as a term, as a statement itself and finally become statement on statements (higher order statements). Thus, grammar, truth functions and syllogistic inference rules are extended to higher NALs preserving most of the previously introduced concepts.
 
 ### NAL-5
-NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning **truth value** while the later only has  a meaning.
+NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning and **truth value** while the later only has  a meaning. For example consider statement: <(*,{Peter}, <sky --> [blue]>) ==> say>. %_f, c_%, here the entire statement has truth value and term <sky --> [blue]> within product operator is a statement it self with just a meaning.
+
+
 
 
