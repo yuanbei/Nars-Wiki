@@ -100,10 +100,10 @@ Important to note that _Law of Contrapositive_  (S => T ≡ ¬T => ¬S) is no lo
 **F conversion3:** _f=0, c = (1-f0)c0/(f0c0 + 1)_
 
 ### NAL-6
-NAL 6 introduces **variable terms** into the system, terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. Variable terms are always preceded with question mark "?" 
+NAL 6 introduces **variable terms** into the system. Terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. Variable terms are always preceded with question mark "?" 
 
-Consider the basic inheritance statement from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
-(?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. The meaning of is described through intension/extension of a term, that is "**if** something (x) is in extension of S that something is in extension of P, and **if** there is other thing (y) in intension of P it is in intension of S"
+Consider the basic inheritance example from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
+(?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. Meaning of inheritance can also be described through intension/extension of a term, that is "**if** something (x) is in extension of S that something is in extension of P, and **if** there is other thing (y) in intension of P it is in intension of S"
 
  
 
