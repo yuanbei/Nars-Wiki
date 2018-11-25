@@ -77,7 +77,7 @@ As one may notice, in the "first-order" inference, statements are relations amon
 ### NAL-5
 NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning and **truth value** while the later has only meaning. For example consider statement: <(*,{Peter}, <sky --> [blue]>) ==> say>. %_f, c_%, here the entire statement has truth value and term <sky --> [blue]> within product operator is a statement it self with just a meaning.
 
-NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<=>), they are higher order relations because they are only defined between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order NALs. See the table below:
+NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<=>), intuitively they correspond to "if then" and "if and only if" meanings and are defined only between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order NALs. See the table below:
 
 **First-Order <--------------------------> Higher-Order** <br/>
 _term <---------------------------------> statement_<br/>
@@ -100,7 +100,10 @@ Important to note that _Law of Contrapositive_  (S => T ≡ ¬T => ¬S) is no lo
 **F conversion3:** _f=0, c = (1-f0)c0/(f0c0 + 1)_
 
 ### NAL-6
-NAL 6 introduces **variable terms** into the system, terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. 
+NAL 6 introduces **variable terms** into the system, terms in earlier layers are **constants terms** that is they are unique in entire system's beliefs, while a **variable term** is unique within a single judgement.  The meaning of a constant terms is determined by its experienced relations with other terms within the system while meaning of a variable term is determined locally  by its relation within the same judgement. i.e. if there are more than one variable name in different judgement they are totally unrelated. Variable terms are always preceded with question mark "?" 
+
+Consider the basic inheritance statement from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
+(?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. 
 
  
 
