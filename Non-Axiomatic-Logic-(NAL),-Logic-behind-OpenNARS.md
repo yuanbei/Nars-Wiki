@@ -72,7 +72,9 @@ as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between 
 **Example:** “Acid corrodes metal” can be equivalently represented as <( *, acid, metal) --> corrosion>. <acid → (/, corrosion, o metal)>., and <metal --> (\\, corrosion, acid o)>. Where "o" indicates whether it is T1 or T2 and "/", "\\" are extensional and intensional image operators.
 
 ## Higher-Order Inference (NALs 5-8)
-As one may notice, in the "first-order" inference, statements are relations among terms, but a statement **cannot** be treated as a term. In "Higher-Order" inference, a statement can be treated as a term, as a statement itself and finally become statement on statements (higher order statements). Thus, grammar, truth functions and syllogistic inference rules are 
-extended to higher NALs preserving most of the previously introduced concepts.
+As one may notice, in the "first-order" inference, statements are relations among terms, but a statement **cannot** be treated as a term. In "Higher-Order" inference, a statement can be treated as a term, as a statement itself and finally become statement on statements (higher order statements). Thus, grammar, truth functions and syllogistic inference rules are extended to higher NALs preserving most of the previously introduced concepts.
 
 ### NAL-5
+NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning **truth value** while the later only has  a meaning.
+
+
