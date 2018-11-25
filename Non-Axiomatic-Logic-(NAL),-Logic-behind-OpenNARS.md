@@ -80,15 +80,15 @@ NAL-5 is the lowest level of higher-order inference, it mainly introduces concep
 NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<==>), they are higher order relations because they are only defined between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order features. 
 
 
-First-Order <--------------------------> Higher-Order <br/>
-term <---------------------------------> statement<br/>
-inheritance <--------------------------> implication<br/>
-similarity <---------------------------> equivalence<br/>
-subject <------------------------------> antecedent<br/>
-predicate <----------------------------> consequent<br/>
-extension <----------------------------> sufficient condition<br/>
-intension <----------------------------> necessary condition<br/>
-extensional intersection <-------------> conjunction<br/> 
+**First-Order <--------------------------> Higher-Order** <br/>
+_term <---------------------------------> statement_<br/>
+_inheritance <--------------------------> implication_<br/>
+_similarity <---------------------------> equivalence_<br/>
+_subject <------------------------------> antecedent_<br/>
+_predicate <----------------------------> consequent_<br/>
+_extension <----------------------------> sufficient condition_<br/>
+_intension <----------------------------> necessary condition_<br/>
+_extensional intersection <-------------> conjunction_<br/> 
 _intensional intersection <-------------> disjunction_<br/>
 
  
