@@ -1,6 +1,6 @@
 OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1-9). NAL levels are added one by one each of which expands the features and capabilities of a previous layer including the [grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), [inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) and [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions). Each NAL layer is accompanied with a corresponding Narsese  grammar resulting in 9 Narsese grammars. This article presents each level and briefly describes its features, grammar definition will be omitted from this page instead detailed use of Narsese grammar for each NAL level is outlined [here](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS).
 
-In general nine NAL levels are divided into two groups: **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-9)**
+In general nine NAL levels are divided into two groups: **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-8)**
 
 ## First-Order Inference (NALs 1-4)
 ### NAL-1
@@ -70,3 +70,6 @@ as <(* ,acid,base)> --> neutralization>., and “Neutralization happens between 
 3. **Image:** For a relation R and a product ( * , T1, T2), the extensional image operator, “/”, and intensional image operator, “\\”, of the relation on the product are defined as the following, respectively:
 (( * T1, T2) → R) ≡ (T1 → (/ R o T2))) ≡ (T2 → (/ R T1 o))) and (R → ( * T1 T2)) ≡ ((\\ R o T2)) → T1) ≡ ((\\ R T1 o)) → T2), where ‘o’ is a special symbol indicating the location of T1 or T2 in the product, and in the component list it can appear in any place, except the first (which is reserved for the relational term). <br/>
 **Example:** “Acid corrodes metal” can be equivalently represented as <( *, acid, metal) --> corrosion>. <acid → (/, corrosion, o metal)>., and <metal --> (\\, corrosion, acid o)>. Where "o" indicates whether it is T1 or T2 and "/", "\\" are extensional and intensional image operators.
+
+## First-Order Inference (NALs 5-8)
+### NAL-5
