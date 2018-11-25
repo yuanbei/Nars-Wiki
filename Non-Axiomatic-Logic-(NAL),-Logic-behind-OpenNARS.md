@@ -107,13 +107,15 @@ Consider the basic inheritance example from NAL-1, S → P, using higher-order N
 
 There are three types of variables used in the system: _independent_, _dependent_ and _query_, [this page](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) describes the usage of all three types.
 
-Independent variable (preceded by "?") **always appears at both sides** of an implication or equivalence relation. It can be substituted by another term without changing the truth value of a judgment, and then a conclusion can be derived.  Substitution of an independent variable is a _unification_ process.
+**Independent variable** (preceded by "?") **always appears at both sides** of an implication or equivalence relation. It can be substituted by another term without changing the truth value of a judgment, and then a conclusion can be derived.  Substitution of an independent variable is a _unification_ process.
 
-Dependent variable (preceded by "#") refer to a specific term. Intuitively, they allow talking about a thing without having to name it. Dependent variable is only introduced into a **conjunction**
+**Dependent variable** (preceded by "#") refer to a specific term. Intuitively, they allow talking about a thing without having to name it. Dependent variable is only introduced into a **conjunction**
 
-Query variable is a variable term in a question, not a judgement, that represents a term to be found to answer the question
+**Query variable** is a variable term in a question, not a judgement, that represents a term to be found to answer the question
 
-Given that inheritance can be represented in terms implication and use of variables specifying inntension/extension of a term, truth function remain the same just 
+Given that inheritance can be represented using implication and use of variables specifying intension/extension of a term, truth functions remain the same where inheritance in premises is being rewritten with use of variables.
+
+
  
 
 
