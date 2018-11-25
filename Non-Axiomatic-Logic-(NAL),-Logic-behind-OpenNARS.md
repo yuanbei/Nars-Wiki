@@ -92,7 +92,7 @@ _intensional intersection <-------------> disjunction_<br/>
 
 Because of such correspondence, the following inference rules are defined similarly in NAL 5: choice, revision, conversion, comparison, analogy, induction, deduction, abduction and exemplification. Term operators introduced in earlier layers such as sets, product, image and ordinary relation treat "higher order" statements just like "first order" terms.
 
-NAL-5 also introduces **Negation**, that is a negation of a statement is a compound term with positive and negative evidence switched. For the statement <S> %_f0, c0_%, its negation is <(\--, S)>%_f1, c1_% where negation truth function is then defined as:<br/>
+NAL-5 also introduces **Negation**, that is a negation of a statement is a compound term with positive and negative evidence switched. For the statement <S> %_f0, c0_%, its negation is <(S)>%_f1, c1_% where negation truth function is then defined as:<br/>
 **F negation truth value:** _f = 1- f0, c = c0_
 
 
