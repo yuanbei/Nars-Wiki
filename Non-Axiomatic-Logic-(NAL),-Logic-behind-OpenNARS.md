@@ -90,6 +90,12 @@ _intension <----------------------------> necessary condition_<br/>
 _extensional intersection <-------------> conjunction_<br/> 
 _intensional intersection <-------------> disjunction_<br/>
 
+Because of such correspondence, the following inference rules are defined similarly in NAL 5: choice, revision, conversion, comparison, analogy, induction, deduction, abduction and exemplification. Term operators introduced in earlier layers such as sets, product, image and ordinary relation treat "higher order" statements just like "first order" terms.
+
+
+
+
+
  
 
 
