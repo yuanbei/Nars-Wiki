@@ -77,7 +77,7 @@ As one may notice, in the "first-order" inference, statements are relations amon
 ### NAL-5
 NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning and **truth value** while the later has only meaning. For example consider statement: <(*,{Peter}, <sky --> [blue]>) ==> say>. %_f, c_%, here the entire statement has truth value and term <sky --> [blue]> within product operator is a statement it self with just a meaning.
 
-NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<==>), they are higher order relations because they are only defined between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order NALs. See the table below:
+NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<=>), they are higher order relations because they are only defined between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order NALs. See the table below:
 
 **First-Order <--------------------------> Higher-Order** <br/>
 _term <---------------------------------> statement_<br/>
