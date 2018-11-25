@@ -89,7 +89,7 @@ predicate <----------------------------> consequent<br/>
 extension <----------------------------> sufficient condition<br/>
 intension <----------------------------> necessary condition<br/>
 extensional intersection <-------------> conjunction<br/> 
-intensional intersection <-------------> disjunction<br/>
+_intensional intersection <-------------> disjunction_<br/>
 
  
 
