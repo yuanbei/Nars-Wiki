@@ -32,5 +32,22 @@ Some temporal properties of an event in OpenNARS is specified with respect to th
 can be achieved by the current design however that since time is measured through system's working inference cycle, time measurement is relevant to unique system only, that is different instances of OpenNARS will have different "time" to an event in their common environment. 
 
 The real-time experience of a OpenNARS is a sequence of Narsese sentences, separated by non-negative numbers indicating the interval in inference cycles between the arriving time of subsequent sentences. That is, let Si be Narsese sentences and Ni be non-negative integers, a real-time experience is expressed as string S1; N1; S2; N2; S3; N3;
-which means that sentence S1 is received at a certain moment, then, after N1 inference cycles, S2 is received etc. Special case when N = 0, two surrounding events are accepted at the same moment of time.
+which means that sentence S1 is received at a certain moment, then, after N1 inference cycles, S2 is received etc. Special case when N = 0, two surrounding events are accepted at the same moment in time.
+
+## Temporal Copulas
+
+It is natural for second temporal relations "when", to represent Events E1 and E2 that happen in the same moment of time using and "∧" operator. Therefore, temporal relations are treated a as a variants of statement operator plus temporal information. Then statement operator “conjunction” (“,”) represents “sequential conjunction” ("before" temopral relation) and (“;”) represents “parallel conjunction” ("when" temporal relation). For example, “(E1, E2)” means “E1 occurs before E2”, while “(E1; E2)” means E1 and E2 "happen at the same time". 
+
+There are also the temporal variants of implication and equivalence defined in NAL-5. For an implication statement <S ⇒ T> where S and T are events, three different temporal relations are established:
+
+1. **<S /⇒ T>** means S happens before T , the statement is called “predictive implication”, where S is called a sufficient precondition of T, and T a necessary postcondition of S.
+
+2. **<S \⇒ T>** means S happens after T, the statement is called “retrospective implication”, where S is called a sufficient postcondition of T, and T a necessary precondition of S.
+
+3. **<S |⇒ T>** means S happens at the same time as T, the statement is called “concurrent implication”, where S is called a sufficient co-condition of T, and T a necessary co-condition of S.
+
+There are three types of temporal equivalence relations (predictive, retrospective, and concurrent) that are defined in a similar way: <S /⇔ T>, <T \⇔ S> and <S |⇔ T>. Narsese only represent <S /⇔ T> and <S |⇔ T> s only represented as
+“S /⇔ T ”, so the copula “ \⇔” is in the grammar of NAL-7. 
+
+Important to note, for judgments about the same statement with the same timestamp, [revision rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) is still used to revise truth value. For judgments about the same statement with different time stamps, revision rule is not applicable instead these judgments are used to describe changes in the environment. 
 
