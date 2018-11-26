@@ -28,8 +28,8 @@ If an absolute time is used to represent the temporal property of event E, then 
 
 In OpenNARS, there is no sharp boundary of time interval that specified in event, or even time interval is not well-defined, for every event. However being a real-time system, OpenNARS not only needs to reason about time, but also reason in time, which demands a personal time monitoring mechanism. The time is then measured by the system’s internal "clock" defined by its own working cycle.
 
-Some temporal properties of an event in OpenNARS is specified with respect to the events defined by an internal clock, with the system’s inference cycle as a unit. Now, it is possible for the internal activity to take a constant time, which
-can be achieved by the current design. Important to note that since time is measured through system's working inference cycle, time measurement is relevant to unique system only, that is different instances of OpenNARS will have different "time" to an event in their common environment. 
+Some temporal properties of an event in OpenNARS is specified with respect to the events defined by an internal clock, with the system’s inference cycle as a unit. It is possible for the internal activity to take a constant time, which
+can be achieved by the current design however that since time is measured through system's working inference cycle, time measurement is relevant to unique system only, that is different instances of OpenNARS will have different "time" to an event in their common environment. 
 
 The real-time experience of a OpenNARS is a sequence of Narsese sentences, separated by non-negative numbers indicating the interval in inference cycles between the arriving time of subsequent sentences. That is, let Si be Narsese sentences and Ni be non-negative integers, a real-time experience is expressed as string S1; N1; S2; N2; S3; N3;
 which means that sentence S1 is received at a certain moment, then, after N1 inference cycles, S2 is received etc. Special case when N = 0, two surrounding events are accepted at the same moment of time.
