@@ -46,8 +46,7 @@ There are also the temporal variants of implication and equivalence defined in N
 
 3. **<S |⇒ T>** means S happens at the same time as T, the statement is called “concurrent implication”, where S is called a sufficient co-condition of T, and T a necessary co-condition of S.
 
-There are three types of temporal equivalence relations (predictive, retrospective, and concurrent) that are defined in a similar way: <S /⇔ T>, <T \⇔ S> and <S |⇔ T>. Narsese only represent <S /⇔ T> and <S |⇔ T> s only represented as
-“S /⇔ T ”, so the copula “ \⇔” is in the grammar of NAL-7. 
+There are three types of temporal equivalence relations (predictive, retrospective, and concurrent) that are defined in a similar way: <S /⇔ T>, <T \⇔ S> and <S |⇔ T>. Narsese only represent <S /⇔ T> and <S |⇔ T> and not <S /⇔ T>, thus there is no copula “\⇔” grammar of NAL-7. 
 
 Important to note, for judgments about the same statement with the same timestamp, [revision rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) is still used to revise truth value. For judgments about the same statement with different time stamps, revision rule is not applicable instead these judgments are used to describe changes in the environment. 
 
