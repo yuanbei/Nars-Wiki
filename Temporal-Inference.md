@@ -15,10 +15,7 @@ In OpenNARS, time is being represented indirectly using through events and their
 2. E1 happens after E2,
 3. E1 and E2 happen at the same time.
 
-The first two categories fall under same temporal relation and therefore, the primitive temporal relations are **“before-after”** and **“at-the-same-time”**.
-**“before-after”** relation is irreflexive, antisymmetric, and transitive while **“at-the-same-time”** is irreflexive, antisymmetric, and transitive. Especially, adjectives like “past”, “current”, and “future” indicate temporal relations between events and “now”, taken as a special event.
-
-
+The first two categories fall under same temporal relation and therefore, there are **two** primitive temporal relations: **“before-after”** and **“at-the-same-time”**. **“before-after”** relation is irreflexive, antisymmetric, and transitive while **“at-the-same-time”** is reflexive, symmetric, and transitive. 
 
 
 
