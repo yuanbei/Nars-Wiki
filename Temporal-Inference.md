@@ -17,5 +17,12 @@ In OpenNARS, time is being represented indirectly using through events and their
 
 The first two categories fall under same temporal relation and therefore, there are **two** primitive temporal relations: **“before-after”** and **“at-the-same-time”**. **“before-after”** relation is irreflexive, antisymmetric, and transitive while **“at-the-same-time”** is reflexive, symmetric, and transitive. 
 
+These two temporal relations are represented using “ordinary relations” defined in NAL-4. Also NAL-7 introduces duration relation, that is if “(t1 × t2) → duration” and “(t1 × t2)” and event E happen at the same time, then E lasts for the duration of a time period from t1 to t2.
+
+In OpenNARS terms t1 and t2 are events themselves with omitted durations and not accurate measurement of absolute time.
+If an absolute time is used to represent the temporal property of event E, then that time itself is to be treated as a special event T, and these two events, E and T, are described as happening at the same time.
+
+
+
 
 
