@@ -8,7 +8,7 @@ All statements in OpenNARS are time dependent including the ones that are define
 
 Thus, event is a statement whose truth-value may change, and this is different from the changes caused by the accumulation of evidence. During specified time period of an event, the evidence collected before becomes outdated, and should be discarded when the current situation is under consideration.
 
-## Time Representation
+## Temporal Relations
 
 In OpenNARS, time is being represented indirectly through events and their temporal relations. Ideally, an event can happen in some arbitrary time interval, during which inference rules can be defined on these time intervals, though, in NAL each event is represented by terms whose corresponding time interval might not be specified. Thus, OpenNARS always assumes less information. Time interval of truth-value can be seen as a point, and referred to as when the corresponding event "happens", then the temporal relation between two atomic events E1 and E2 has been designed to fall in one of the following three categories:
 
@@ -24,6 +24,13 @@ In OpenNARS terms t1 and t2 are events themselves with omitted durations and not
 If an absolute time is used to represent the temporal property of event E, then that time itself is to be treated as a special event T, and these two events, E and T, are described as happening at the same time.
 
 
+## Time Representation
 
+In OpenNARS, there is no sharp boundary of time interval that specified in event, or even time interval is not well-defined, for every event. However being a real-time system, OpenNARS not only needs to reason about time, but also reason in time, which demands a personal time monitoring mechanism. The time is then measured by the system’s internal "clock" defined by its own working cycle.
 
+Some temporal properties of an event in OpenNARS is specified with respect to the events defined by an internal clock, with the system’s inference cycle as a unit. Now, it is possible for the internal activity to take a constant time, which
+can be achieved by the current design. Important to note that since time is measured through system's working inference cycle, time measurement is relevant to unique system only, that is different instances of OpenNARS will have different "time" to an event in their common environment. 
+
+The real-time experience of a OpenNARS is a sequence of Narsese sentences, separated by non-negative numbers indicating the interval in inference cycles between the arriving time of subsequent sentences. That is, let Si be Narsese sentences and Ni be non-negative integers, a real-time experience is expressed as string S1; N1; S2; N2; S3; N3;
+which means that sentence S1 is received at a certain moment, then, after N1 inference cycles, S2 is received etc. Special case when N = 0, two surrounding events are accepted at the same moment of time.
 
