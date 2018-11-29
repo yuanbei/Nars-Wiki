@@ -10,6 +10,6 @@ It is important to mention three types of relation present in OpenNARS NAL 1-3
 
 Consider example of reasoning. Having two premises "water dissolves salt i.e. <(*,water,salt)-->dissolve>" and "rain is water <rain --> water>" one can expect to derive "rain dissolves salt" by deduction, but it does not fit into deduction rule defined in first order inference since common term water is neither the subject nor the predicate of the first premise but a component of its subject. Therefore some strategy is needed to transform first premise into something such that deduction can be applied.
 
-Structural Transformation is a process by which the same statement is equivalently rewritten into other formats, so as to allow a component of the subject term or predicate term of the original statement to be treated as the subject term or predicate term of the new statement, which has the same truth-value as the original. 
+**Structural Transformation** is a process by which the same statement is equivalently rewritten into other formats, so as to allow a component of the subject term or predicate term of the original statement to be treated as the subject term or predicate term of the new statement, which has the same truth-value as the original. 
 
 
