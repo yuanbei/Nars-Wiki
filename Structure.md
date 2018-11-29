@@ -1,4 +1,4 @@
-Structural rules are introduced when sentence becomes larger in structure. With NAL-3 compound terms, sets and set operations are introduced that allows creation of more sophisticated structure for both term and sentences that leads [compositional rules](https://github.com/opennars/opennars/wiki/Composition). NAL-4 Introduce relations on top of sets and its operation leading to structural manipulations and inference.  
+Structural rules are introduced when sentence becomes larger in structure. With NAL-3 compound terms, sets and set operations are introduced that allows creation of more sophisticated structure for both term and sentences that leads to [compositional rules](https://github.com/opennars/opennars/wiki/Composition). NAL-4 Introduce relations on top of sets and its operation leading to structural manipulations and inference.  
 
 It is important to mention three types of relation present in OpenNARS NAL 1-3
 
