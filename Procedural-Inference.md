@@ -17,7 +17,7 @@ As a general-purpose system, NARS can have any belief or goal, as far as its con
 
 ***
 
-###Actions
+### Actions
 
 Each operation consists of an operator and an argument list, like Op(A1, ..., An). From a logical point of view, it is a statement <(*, {SELF}, A1, ..., An) {-- Op>, where the subject is a product indicating a temporal relation between the system itself and the arguments, the predicate is the type of the relation, and the relation is Instance, since operations are countable.
 
@@ -40,7 +40,7 @@ To make compound actions from component actions, the two major term operators ar
 
 At any moment, the system normally has multiple goals to be achieved. They are processed in parallel in a time-sharing manner. There are two types of goal: original goals are whose directly imposed on the system by its environment; derived goals are produced by the system itself from goals and beliefs via backward inference (see 1, page 143). The two types of goals are treated by the system as the same for almost all purposes.
 
-When a new (original or derived) goal arrives, the system does not immediately start to find ways to achieve it. Instead, it is preprocessed in the corresponding concept, where the following factors are considered:
+When a new (original or derived) goal arrives, the system does not immediately start to find ways to achieve it. Instead, it is pre-processed in the corresponding concept, where the following factors are considered:
 
 1. The desire-value of the goal is adjusted according to its relation with other goals. When the same goal get several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
 
@@ -48,14 +48,14 @@ When a new (original or derived) goal arrives, the system does not immediately s
 
 3. The plausibility of the goal is estimated, that is, whether the system knows an approach to achieve the goal. In this evaluation, the details of the approach is omitted.
 
-This preprocessing of goal is a decision making process, by which the system reaches the decision on whether to actively look for a way to achieve the goal. As a special case, if the goal is an operation, the process will decide whether to actually execute it. If a goal passed this stage, it will get a budget value, and be worked upon in the following time, based on its budget-value.
+This pre-processing of goal is a decision making process, by which the system reaches the decision on whether to actively look for a way to achieve the goal. As a special case, if the goal is an operation, the process will decide whether to actually execute it. If a goal passed this stage, it will get a budget value, and be worked upon in the following time, based on its budget-value.
 
 In this way, the system doesn't treat each goal by itself, but attempts to reach an overall optimal solution for all of its tasks, by compromising among their requirements.
 
 Beside directly achieving goal G, the system can also process the following questions:
 
-* "G ==> ?x", whose answers reveal the consequences of G, and contribute to the desire-value of G;
-* "?x ==> G", whose answers reveal plans for achieving G, and contribute to the plausibility of G.
+"G ==> ?x", whose answers reveal the consequences of G, and contribute to the desire-value of G<br/>
+"?x ==> G", whose answers reveal plans for achieving G, and contribute to the plausibility of G
 
 ***
 
@@ -63,7 +63,7 @@ Beside directly achieving goal G, the system can also process the following ques
 
 The inference rules work on goals and operations in the same ways as they works on events in beliefs.
 
-####Procedural Learning
+#### Procedural Learning
 
 The basic notions in procedural inference have been introduced in ProceduralInference, with examples given in ProceduralExamples. In this document, one example is explained with more details. The example itself is in Example-NAL8-5.txt, and here only the abridged version is discussed.
 
@@ -71,7 +71,7 @@ Though this example is simple, it covers all major aspects of procedural inferen
 
 This example is set in the same environment as the other examples used in NAL-8, as described in ProceduralExamples. In this example, only a single operation, ^pick, is involved. Intuitively, when this operation is executed, the system will "pick up" an object indicated by the sole argument.
 
-####Initial input
+#### Initial input
 
 The initial given sentences are the following four lines:
 
