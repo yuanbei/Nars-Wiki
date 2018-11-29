@@ -99,7 +99,7 @@ The key is currently reachable. As shown in other examples in ProceduralExamples
 
 Since this example focuses on the logic of the system rather than the control mechanism, in the following the initial inputs and derived results will be manually selected to feed into the inference engine, with proper timing, so as to lead to the desired behavior, step by step.
 
-####Decision making
+#### Decision making
 
 ```
 ********** [03 + 04 -> 05]:
@@ -136,7 +136,7 @@ OUT: <(*,{SELF},key001) --> ^pick>. :|: %1.00;0.90%
 
 Since there is no other reason to prevent this derived goal from being realized, the operation is executed, and this fact is remembered by the system.
 
-####Expectation and feedback
+#### Expectation and feedback
 
 ```
 ********** [07 + 05 -> 08]:
@@ -180,7 +180,7 @@ OUT: <(*,{SELF},key001) --> hold>. :|: %1.00;0.92%
 
 Now the system is getting new input [09], which can be seen as a response triggered by the derived question sent out previously. Since this feedback confirms the expectation, they are merged into a more confident judgment about the current situation.
 
-####Observation and conditioning
+#### Observation and conditioning
 
 ```
 ********** [07 + 09 -> 11]:
@@ -236,13 +236,13 @@ OUT: <(&/,<a --> b>,+3) =/> <b --> c>>. :\: %0.00;0.45%
 OUT: <<(&/,<a --> b>,+3) =/> <b --> c>>. :\: %0.92;0.91%
 ```
 
-####Procedural Examples
+#### Procedural Examples
 
 The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
 
 This group of examples show how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
-####Example-NAL8-1
+#### Example 1NAL-8
 
 The first example shows how the system (as a robot) uses procedural inference to achieve the goal of opening a door.
 
@@ -295,28 +295,22 @@ EXECUTE: ^go-to({SELF},{t001})
 EXECUTE: ^open({SELF},{t001})
 ```
 
-####Example-NAL8-2
+#### Example 2 NAL-8
 
 This example is a variant of the previous one. Here the goal is not achieved by "hiking on the way", but by the forming of a complete plan, which can be executed later when the goal actually appears.
 
 When a plan is derived, it also comes with a truth value, indicating its estimated chance of success, according to the experience of the system.
 
-####Example-NAL8-3
+#### Example 3 NAL-8
 
 This example shows the decision-making process of the system when facing multiple goals, as well as multiple paths to achieve the same goal.
 
 When the system find that it can simply go to the door and break it, this path will be preferred for is simplicity (therefore higher confidence, everything else being equal). However, when the system realize that in that way the door will be broken (which violate another goal), then it won't take the action, unless it have a sufficiently high motivation (for some other reason) to do that.
 
-####Example-NAL8-4
+#### Example 4 NAL-8
 
 Though in principle all the inference in the previous examples can all be seen as (various types of) learning, this example shows several more typical types of "learning by reasoning" in NARS.
 
 When a belief conflict is judged to be update, the involved beliefs are not revised. Instead, the old belief is added a past tense, and the system's current opinion is completely determined by the new belief.
 
 When a sequence of events are observed, the system will tentatively build hypothesis about their relationship, using a special version of induction (and comparison). In this way, the system can gradually acquire skills and causal knowledge from its experience.
-
-####Reference
-
-1 Pei Wang, Rigid Flexibility: The Logic of Intelligence, Springer, 2006. http://www.springer.com/west/home/computer/artificial?SGWID=4-147-22-173659733-0
-
-2 Pei Wang, Non-Axiomatic Logic: A Model of Intelligent Reasoning, 2013. http://www.worldscientific.com/worldscibooks/10.1142/8665
