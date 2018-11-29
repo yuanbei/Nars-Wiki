@@ -115,7 +115,8 @@ There are three types of variables used in the system: _independent_, _dependent
 
 Given that inheritance can be represented using implication and use of variables specifying intension/extension of a term, truth functions remain the same where inheritance in premises is being rewritten with use of variables.
 
-
+### NAL-7 and NAL 8
+NAL 7 introduces time into the system and elevate system's reasoning to another level. Systems gains abilities to predict future events based on its experience. The concepts of temporal inference are a little more substantial to put them here in NAL overview and therefore a dedicated page of [temporal inference] has been created.
  
 
 
