@@ -54,8 +54,8 @@ In this way, the system doesn't treat each goal by itself, but attempts to reach
 
 Beside directly achieving goal G, the system can also process the following questions:
 
-"G ==> ?x", whose answers reveal the consequences of G, and contribute to the desire-value of G<br/>
-"?x ==> G", whose answers reveal plans for achieving G, and contribute to the plausibility of G
+**"G ==> ?x"**, whose answers reveal the consequences of G, and contribute to the desire-value of G<br/>
+**"?x ==> G"**, whose answers reveal plans for achieving G, and contribute to the plausibility of G
 
 ***
 
