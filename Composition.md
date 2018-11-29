@@ -33,7 +33,7 @@ There are the following compositional rules:
 {T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M < F' difference is applied> <br/>
 
 **Extensional Intersection/Difference** <br/>
-{M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 ∩ T2) <F intersection is applied> <br/>
+{M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 ∩ T2) \<F intersection is applied> <br/>
 {M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 ∪ T2) <F union is applied> <br/>
 {M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 - T2) <F difference is applied> <br/>
 {M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 - T2) <F' difference is applied> <br/>
