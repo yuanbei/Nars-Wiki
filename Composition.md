@@ -27,10 +27,10 @@ Compound terms can be introduced as they are into system's experience or built f
 There are the following compositional rules:
 
 **Extensional Intersection/Difference** <br/>
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∪ T2) --> M <F union is applied> <br/>
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∩ T2) --> M <F intersection is applied> <br/>
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F difference is applied> <br/>
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F' difference is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∪ T2) --> M < F union is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∩ T2) --> M < F intersection is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M < F difference is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M < F' difference is applied> <br/>
 
 **Extensional Intersection/Difference** <br/>
 {M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 ∩ T2) <F intersection is applied> <br/>
