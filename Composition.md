@@ -27,10 +27,10 @@ Compound terms can be introduced as they are into system's experience or built f
 There are the following compositional rules:
 
 **Extensional Intersection/Difference** <br/>
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∪ T2) --> M <F union is applied> 
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∩ T2) --> M <F intersection is applied> 
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F difference is applied> 
-{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F' difference is applied> 
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∪ T2) --> M <F union is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ∩ T2) --> M <F intersection is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F difference is applied> <br/>
+{T1 --> M <f1, c1>, T2 --> M <f2, c2>} |-- (T1 ⊖ T2) --> M <F' difference is applied> <br/>
 
 **Extensional Intersection/Difference** <br/>
 {M --> T1 <f1, c1>, M --> T2 <f2, c2>} |-- M --> (T1 ∩ T2) <F intersection is applied> <br/>
@@ -47,8 +47,7 @@ Three truth-value functions used in compositional rules are decribed below:
 **F union:** f = or(f1, f2) c = and(c1, c2) <br/>
 **F difference:** f = and(f1, not(f2)) c = and(c1, c2) <br/>
 
-In these functions, the frequency of the conclusion is determined by
-the frequency of the premises with the same Boolean operator that defines extension or intension of the compound term, while the confidence of the conclusion is determined conjunctively by the confidence of the premises.
+In these functions, the frequency of the conclusion is determined by the frequency of the premises with the same Boolean operator that defines extension or intension of the compound term, while the confidence of the conclusion is determined conjunctively by the confidence of the premises.
 
 
 
