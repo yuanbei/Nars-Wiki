@@ -8,7 +8,7 @@ It is important to mention three types of relation present in OpenNARS NAL 1-3
 
 **Acquired relation:** An acquired relation is among components of a product, like the relation between raven and worm in <(*,raven, worm) --> food>. <br/>
 
-Consider example of reasoning: Having two premises "water dissolves salt i.e. <(*,water,salt)-->dissolve>" and "rain is water <rain --> water>" one can expect to derive "rain dissolves salt" by deduction, but it does not fit into deduction rule defined in first order inference since common term water is neither the subject nor the predicate of the first premise but a component of its subject. Therefore some strategy is needed to transform first premise into something such that deduction can be applied.
+Consider example of reasoning: Having two premises "water dissolves salt i.e. <(*,water,salt) --> dissolve>" and "rain is water <rain --> water>" one can expect to derive "rain dissolves salt" by deduction, but it does not fit into deduction rule defined in first order inference since common term water is neither the subject nor the predicate of the first premise but a component of its subject. Therefore some strategy is needed to transform first premise into something such that deduction can be applied.
 
 ### Structural Rules
 
