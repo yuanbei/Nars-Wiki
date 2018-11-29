@@ -20,7 +20,7 @@ Thus for a relation R and a product (× T1, T2) the following two structural tra
 ((× T1, T2) --> R) <=> (T1 --> (/R  T2)) <=> (T2 --> (/R T1 ◇))
 
 **Intensional Image transformation**:<br/>
-(R --> (× T1 T2)) <=> ((\R ◇ T2) --> T1) <=> ((\R T1 ◇) --> T2)
+(R --> (× T1, T2)) <=> ((\R, ◇ T2) --> T1) <=> ((\R, T1 ◇) --> T2)
 
 Where "/" is the extensional image connector, "\" intensional image connector and "◇" symbol indicating location of T1 or T2 in the product.
 
