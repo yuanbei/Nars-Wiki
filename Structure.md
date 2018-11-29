@@ -26,7 +26,7 @@ Where "/" is the extensional image connector, "\" intensional image connector an
 
 In the above example product term "(water x salt) --> dissolve" can be transformed to two statements:
 
-water --> (/dissolve ◇ salt)
+water --> (/dissolve ◇ salt) <br/>
 salt --> (/ dissolve water ◇)
 
 Thus water is now appearing in the subject term and not part of a product compound.
