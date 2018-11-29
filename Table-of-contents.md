@@ -27,7 +27,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
     * [basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
     * [compositional rules](https://github.com/opennars/opennars/wiki/Composition)
-    * structural rules
+    * [structural rules](https://github.com/opennars/opennars/wiki/Structure)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
   - Data structure
