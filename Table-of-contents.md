@@ -28,7 +28,6 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
     * compositional rules
     * structural rules
-    * backward inference (question, query, goal)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
   - Data structure
