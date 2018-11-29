@@ -6,7 +6,7 @@ Since compound terms may have compound within themselves some hierarchy has been
 
 The opposite to syntactic complexity is **syntactic simplicity** that is defined as is s = 1/(n^r), where n is syntactic complexity and r > 0 is a system parameter. Since n ≥ 1, s is in (0, 1]. Atomic terms have the highest simplicity, 1.0 since their complexity is 1.
 
-**syntactic simplicity** is necessary when [Choice rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) is applied to selective question of the form "S => ?" or "? ==> P" and S and/or P are compound terms, then the system strives to use the answer that has lowest syntactic simplicity since it will use less system resources to process.
+**Syntactic simplicity** is necessary when [Choice rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) is applied to selective question of the form "S => ?" or "? ==> P" and S and/or P are compound terms, the system strives to use the answer that has lowest syntactic simplicity since it will use less system resources to process.
 
 
 
