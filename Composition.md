@@ -10,10 +10,18 @@ The opposite to syntactic complexity is **syntactic simplicity** that is defined
 
 **Syntactic simplicity** is necessary when [Choice rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) is applied to selective question of the form "S => ?" or "? ==> P" and S and/or P are compound terms, the system strives to use the answer that has lowest syntactic simplicity since it will use less system resources to process.
 
-### Intensinal/Extensional Intersactions
+### Intensinal/Extensional Intersaction and difference
 
 **Extensional intersection:** Given terms T1 and T2, their extensional intersection (T1 ∩ T2) is a compound term defined by (∀x)((x --> (T1 ∩ T2)) <--> ((x --> T1) ^ (x --> T2)))
 This means that if it a term x has inheritance relation with with (T1 ∩ T2) then it it has separate inheritance relations  with T1 and T2 
 
 **Intensional intersection:** Given terms T1 and T2, their intensional intersection (T1 ∪ T2) is a compound term defined by (∀x)(((T1 ∪ T2) --> x)) <--> ((T1 --> x ) ^ (T2 --> x)))
+
+**Extensional Difference:** Given different terms T1 and T2, their extensional difference (T1 - T2) is a compound term defined by (∀x)((x --> (T1 - T2)) <--> ((x --> T1) ^ ¬(x --> T2))) Meaning there is a inheritance relationship x --> (T1 - T2) and x --> T1 but there is **no** inheritance x --> T2
+
+**Intensional difference:** Given different  terms T1 and T2, their intensional difference (T1 ⊖ T2) is a compound term defined by (∀x)(((T1 ⊖ T2) --> x)) <--> ((T1 --> x ) ^ ¬(T2 --> x)))
+
+### Compositional rules
+
+Compositional rules apply when reasoning happen on Compound terms, 
 
