@@ -242,7 +242,7 @@ The general ideas about procedure inference in NARS are explained in ProceduralI
 
 This group of examples show how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
-#### Example 1NAL-8
+#### Example 1 NAL-8
 
 The first example shows how the system (as a robot) uses procedural inference to achieve the goal of opening a door.
 
