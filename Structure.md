@@ -16,10 +16,10 @@ Consider example of reasoning: Having two premises "water dissolves salt i.e. <(
 
 Thus for a relation R and a product (× T1, T2) the following two structural transformation rules are defined:
 
-**Extensional transformation:**<br/>
+**Extensional Image transformation:**<br/>
 ((× T1, T2) --> R) <=> (T1 --> (/R  T2)) <=> (T2 --> (/R T1 ◇))
 
-**Intensional transformation**:<br/>
+**Intensional Image transformation**:<br/>
 (R --> (× T1 T2)) <=> ((\R ◇ T2) --> T1) <=> ((\R T1 ◇) --> T2)
 
 Where "/" is the extensional image connector, "\" intensional image connector and "◇" symbol indicating location of T1 or T2 in the product.
