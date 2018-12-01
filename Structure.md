@@ -1,6 +1,6 @@
 Structural rules are introduced when sentence becomes larger in structure. With NAL-3 compound terms, sets and set operations are introduced that allows creation of more sophisticated structure for both term and sentences that leads to [compositional rules](https://github.com/opennars/opennars/wiki/Composition). NAL-4 Introduce relations on top of sets and its operation leading to structural transformation and manipulation.
 
-It is important to mention three types of relation present in OpenNARS NAL 1-3
+It is important to mention three types of relations present in OpenNARS
 
 **Syntactic relation:** A syntactic relation is between a compound term and its components, like the relation between raven and (raven − [black]). These relations are indicated by the term connector of the compound "-" <br/>
 
