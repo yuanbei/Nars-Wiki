@@ -1,20 +1,18 @@
 Sets and set operations are adds more capability to OpenNARS, it allows to combine terms by creating [compound terms](https://github.com/opennars/opennars/wiki/Composition), adds some structure, [tansform that structure](https://github.com/opennars/opennars/wiki/Structure) and as a result derive more complex conclusions.
-
 #### **Compound Terms**
-
 [In Basic Inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS), each term is “atomic”, which is named by a word. For more complicated descriptions compound terms added to OpenNARS. 
 
 **Compound term**, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
 <br/><br/>
 If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as taking two arguments, both (op c(1) ... c(n)) and (c(1) op ... op c(n)) are compound terms defined recursively as (op (op c(1) ... c(n−1)) c(n)).
-<br/><br/>
+
 #### **Set Intersection Definitions**
 **Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by _(∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2)))_.<br/>
 **Example:** “Ravens are black birds” can be represented as <raven -->(&,[black], bird)>., where the predicate term is an extensional intersection of the term [black] and the term bird, and "&" is an operator for extensional intersection.
 <br/><br/>
 **Intensional intersection:** If T1 and T2 are different terms, their intensional intersection, (T1 ∪ T2), is a compound term defined by _(∀x)(((T1 ∪ T2) → x) ≡ ((T1 → x) ∧ (T2 → x)))_.<br/>
 **Example:** "Dogs and cats are pets" can be expressed as <(|,dog, cat)-->pet>. where "|" is an operator for intensional intersection.
-<br/><br/>
+
 #### **Set Difference Definitions**
 **Extensional Difference:** If T1 and T2 are different terms, their extensional difference, (T1 − T2), is a compound term defined by (∀x)((x → (T1 − T2)) ≡ ((x → T1) ∧ ¬(x → T2))).<br/> **Example:** "Penguins are birds that cannot fly” can be represented as <penguin --> (-, bird, [flying])>., where the predicate term is a extensional difference of the term bird and the term [flying], and "-" is extensional difference operator
 <br/><br/>
