@@ -1,6 +1,6 @@
 The content described on this page is often refereed in literature as [NAL-5 and NAL-6](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS)
 
-#### Statements
+### Statements
 Concept of a statement as a term and "fills" the gap between the first and higher order interference. Please notice the difference between "statement" and "term as a statement", the former has meaning and **truth value** while the later has only meaning. For example consider statement: <(*,{Peter}, <sky --> [blue]>) ==> say>. %_f, c_%, here the entire statement has truth value and term <sky --> [blue]> within product operator is a statement it self with just a meaning.
 
 NAL 5 defines two new copulas, **implication** (==>) and **equivalence** (<=>), intuitively they correspond to "if then" and "if and only if" meanings and are defined only between statements. _Implication_ and _equivalence_ are defined similarly to _inheritance_ and _similarity_ and therefore one can establish correspondence between of first and higher order NALs. See the table below:
