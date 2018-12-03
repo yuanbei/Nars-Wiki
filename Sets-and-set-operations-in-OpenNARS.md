@@ -1,6 +1,8 @@
 Sets and set operations are adds more capability to OpenNARS, it allows to combine terms by creating [compound terms](https://github.com/opennars/opennars/wiki/Composition), adds some structure, [tansform that structure](https://github.com/opennars/opennars/wiki/Structure) and as a result derive more complex conclusions.
 
-1. [In Basic Inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS), each term is “atomic”, which is named by a word. For more complicated descriptions compound terms added to OpenNARS. 
+1. **Compound Terms**
+
+[In Basic Inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS), each term is “atomic”, which is named by a word. For more complicated descriptions compound terms added to OpenNARS. 
 
 **Compound term**, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
 <br/><br/>
