@@ -14,7 +14,7 @@ Consider example of reasoning: Having two premises "water dissolves salt i.e. <(
 
 **Structural Transformation** is a process by which the same statement is equivalently rewritten into other formats, so as to allow a component of the subject term or predicate term of the original statement to be treated as the subject term or predicate term of the new statement, which has the **same truth-value** as the original. 
 
-Thus for a relation R and a product (× T1, T2) the following two structural transformation rules are defined:
+Thus for a relation R and a product (× T1, T2) the following two structural image transformation rules are defined:
 
 **Extensional Image transformation:**<br/>
 ((× T1, T2) --> R) <=> (T1 --> (/R  T2)) <=> (T2 --> (/R T1 ◇))
@@ -22,7 +22,7 @@ Thus for a relation R and a product (× T1, T2) the following two structural tra
 **Intensional Image transformation**:<br/>
 (R --> (× T1, T2)) <=> ((\R, ◇ T2) --> T1) <=> ((\R, T1 ◇) --> T2)
 
-Where "/" is the extensional image connector, "\" intensional image connector and "◇" symbol indicating location of T1 or T2 in the product.
+Where "/" is the extensional image connector, "\" intensional image connector, "◇" symbol indicating location of T1 or T2 in the product and <=> indicates equivalence.
 
 In the above example product term "(water x salt) --> dissolve" can be transformed to two statements:
 
@@ -31,6 +31,16 @@ salt --> (/ dissolve water ◇)
 
 Thus water is now appearing in the subject term and not part of a product compound.
 
+Compose 1 and 2
+{<S --> P>, P@(P|Q)} |- <S --> (P|Q)>
+{<S --> P>, S@(S&T)} |- <(S&T) --> (P&T)> 
+{<S --> P>, S@(M-S)} |- <(M-P) --> (M-S)>
+
+
+De-Compose 1 and 2 
+{<(S|T) --> P>, S@(S|T)} |- <S --> P> 
+{<S --> (P&T)>, P@(P&T)} |- <S --> P>
+{<(S*T) --> (P*T)>, S@(S*T)} |- <S --> P>
 
 
 
