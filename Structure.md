@@ -33,9 +33,9 @@ Thus water is now appearing in the subject term and not part of a product compou
 
 Structural rules are also applied when two premises are given to the system and one of them has compound term. System can then deduce one of the below conclusions: <br/>
 
-1. {S --> P <f1,c1>; (P|Q) <f2,c2>} |-- S --> (P|Q) <F deduction is applied> <br/> 
+**1. {S --> P <f1,c1>; (P|Q) <f2,c2>} |-- S --> (P|Q) <F deduction is applied> <br/> 
 2. {S --> P <f1,c1>; (S&T) <f2,c2>} |-- (S&T) --> (P&T) <F deduction is applied> <br/>
-3. {S --> P <f1,c1>; (M-S) <f2,c3>} |-- (M-P) --> (M-S) <F deduction is applied> 
+3. {S --> P <f1,c1>; (M-S) <f2,c3>} |-- (M-P) --> (M-S) <F deduction is applied>** 
 
 Here the second premise is a compound term where "|" means intensional intersection or extensional union; "&" is extensional intersection or intensional union and "-" is intensional difference.
 
