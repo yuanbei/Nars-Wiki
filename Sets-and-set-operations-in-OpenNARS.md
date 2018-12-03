@@ -18,8 +18,9 @@ If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as takin
 <br/><br/>
 **Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).<br/> **Example:** "Human are only beings that can speak" can be represented as <(\~, human,being) --> speak>. Where "~" is an intensional difference operator
 
-#### **Product:** For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
+#### Product
+For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
 
-#### **Relation as a Term:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
+#### Relation as a Term
+A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
 as <(* ,acid,base) --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> ( *, acid, base)>. where " *" is product operator
-<br/><br/>
