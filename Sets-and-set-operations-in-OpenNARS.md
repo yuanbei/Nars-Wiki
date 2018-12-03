@@ -1,5 +1,6 @@
 Sets and set operations are adds more capability to OpenNARS, it allows to combine terms by creating [compound terms](https://github.com/opennars/opennars/wiki/Composition), adds some structure, [tansform that structure](https://github.com/opennars/opennars/wiki/Structure) and as a result derive more complex conclusions.
 
+2. **Set Intersection Definitions**
 1. **Compound Terms**
 
 [In Basic Inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS), each term is “atomic”, which is named by a word. For more complicated descriptions compound terms added to OpenNARS. 
