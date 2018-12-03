@@ -5,7 +5,7 @@ In general nine NAL levels are divided into two groups: **First-Order Inference 
 ## First-Order Inference (NALs 1-4)
 ### NAL-1
 
-NAL-1 is a logical foundation of OpenNARS, it is described [here](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS). it operates on well known [syllogistic inference rules],(https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules), introduces **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)**.
+NAL-1 is a logical foundation of OpenNARS, it is described [here](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS). it operates on well known [syllogistic inference rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules), introduces **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)**.
 
 ### NAL-2
 NAL-2 adds similarity, instance and property relations and slightly modifies truth functions. Details are outlined on["Basic Inference" page](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS) 
