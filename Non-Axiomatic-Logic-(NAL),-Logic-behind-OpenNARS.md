@@ -15,7 +15,7 @@ NAL-3 introduces compound terms and adds operation on the sets such as set inter
 
 ### NAL-4
 
-NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers. Please look for [Set operations](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) in OpenNARS
+NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers. Please look for [set operations](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) in OpenNARS
 
 ## Higher-Order Inference (NALs 5-8)
 As one may notice, in the "first-order" inference, statements are relations among terms, but a statement **cannot** be treated as a term. In "Higher-Order" inference, a statement can be treated as a term, as a statement itself and finally become statement on statements (higher order statements). Thus, grammar, truth functions and syllogistic inference rules are extended to higher NALs preserving most of the previously introduced concepts.
