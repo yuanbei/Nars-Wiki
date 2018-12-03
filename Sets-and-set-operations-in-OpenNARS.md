@@ -1,0 +1,30 @@
+1. In NAL-1 and NAL-2, each term is “atomic”, named by a word. For more complicated descriptions NAL-3 adds compound terms. **Compound term**, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
+<br/><br/>
+If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as taking two arguments, both (op c(1) ... c(n)) and (c(1) op ... op c(n)) are compound terms defined recursively as (op (op c(1) ... c(n−1)) c(n)).
+<br/><br/>
+2. **Set Intersection Definitions**
+<br/><br/>
+**Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by _(∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2)))_.<br/>
+**Example:** “Ravens are black birds” can be represented as <raven -->(&,[black], bird)>., where the predicate term is an extensional intersection of the term [black] and the term bird, and "&" is an operator for extensional intersection.
+<br/><br/>
+**Intensional intersection:** If T1 and T2 are different terms, their intensional intersection, (T1 ∪ T2), is a compound term defined by _(∀x)(((T1 ∪ T2) → x) ≡ ((T1 → x) ∧ (T2 → x)))_.<br/>
+**Example:** "Dogs and cats are pets" can be expressed as <(|,dog, cat)-->pet>. where "|" is an operator for intensional intersection.
+<br/><br/>
+3. **Set Difference Definitions**
+<br/><br/>
+**Extensional Difference:** If T1 and T2 are different terms, their extensional difference, (T1 − T2), is a compound term defined by (∀x)((x → (T1 − T2)) ≡ ((x → T1) ∧ ¬(x → T2))).<br/> **Example:** "Penguins are birds that cannot fly” can be represented as <penguin --> (-, bird, [flying])>., where the predicate term is a extensional difference of the term bird and the term [flying], and "-" is extensional difference operator
+<br/><br/>
+**Intensional Difference:** If T1 and T2 are different terms, their intensional difference, (T1 ~ T2), is a compound term defined by (∀x)(((T1 ~ T2) → x) ≡ ((T1 → x) ∧ ¬(T2 → x))).<br/> **Example:** "Human are only beings that can speak" can be represented as <(\~, human,being) --> speak>. Where "~" is an intensional difference operator
+
+### NAL-4
+
+NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers.
+<br/><br/>
+1. **Product:** For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
+<br/><br/>
+2. **Relation as a Term:** A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
+as <(* ,acid,base) --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> ( *, acid, base)>. where " *" is product operator
+<br/><br/>
+3. **Image:** For a relation R and a product ( * , T1, T2), the extensional image operator, “/”, and intensional image operator, “\\”, of the relation on the product are defined as the following, respectively:
+(( * T1, T2) → R) ≡ (T1 → (/ R o T2))) ≡ (T2 → (/ R T1 o))) and (R → ( * T1 T2)) ≡ ((\\ R o T2)) → T1) ≡ ((\\ R T1 o)) → T2), where ‘o’ is a special symbol indicating the location of T1 or T2 in the product, and in the component list it can appear in any place, except the first (which is reserved for the relational term). <br/>
+**Example:** “Acid corrodes metal” can be equivalently represented as <( *, acid, metal) --> corrosion>. <acid → (/, corrosion, o metal)>., and <metal --> (\\, corrosion, acid o)>. Where "o" indicates whether it is T1 or T2 and "/", "\\" are extensional and intensional image operators.
