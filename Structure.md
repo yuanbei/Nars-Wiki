@@ -31,7 +31,7 @@ salt --> (/ dissolve water ◇)
 
 Thus water is now appearing in the subject term and not part of a product compound.
 
-Structural transformation rules are also applied when two premises are given to the system and one of them has compound predicate term. System can then deduce one of the below conclusions: <br/>
+Structural transformation rules are also applied when two premises are given to the system and one of them has compound term. System can then deduce one of the below conclusions: <br/>
 
 **1. {S --> P <f1,c1>; (P|Q) <f2,c2>} |-- S --> (P|Q) <F deduction is applied> <br/> 
 2. {S --> P <f1,c1>; (S&T) <f2,c2>} |-- (S&T) --> (P&T) <F deduction is applied> <br/>
