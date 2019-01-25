@@ -6,7 +6,7 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Language and I/O
     * Narsese grammar with annotations
     * experience file: format and usage
-    * Narsese symbol list (ASCII version and PDF version)
+    * [Narsese symbol list (ASCII version and PDF version)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
     * term: types, format
     * sentence: types, format
     * truth value: definition and examples
