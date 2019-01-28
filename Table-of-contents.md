@@ -12,7 +12,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * truth value: definition and examples
     * desire value: definition and examples
     * priority-durability values
-    * GUI explanation
+    * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * I/O channels
     * database and knowledge-base connection
     * interface for plugin
