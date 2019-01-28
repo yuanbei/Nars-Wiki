@@ -1,5 +1,5 @@
 > ### Graphical User Interface  
-> How to work with and what it displays.
+> Brief explanation of OpenNARS GUI.
 
 ***
 ### Launcher
