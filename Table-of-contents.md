@@ -16,7 +16,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * I/O channels
     * database and knowledge-base connection
     * interface for plugin
-    * inter-system communication protocol
+    * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     * built-in operator list
     * experiments on perception
     * experiments on natural language processing
