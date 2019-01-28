@@ -5,4 +5,5 @@ There are three types of sentences are defined in OpenNARS: judgment, question a
 ### First order Backward Inference
 
 ### Goals and Decision Making
+A *goal* is a sentence containing an event that the system desires to realize.
 
