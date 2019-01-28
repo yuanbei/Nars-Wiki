@@ -33,7 +33,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [structural rules](https://github.com/opennars/opennars/wiki/Structure)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
-    * [backward inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
+    * [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
 
   - Data structure
     * memory overall structure
