@@ -14,35 +14,8 @@ Given two premises the left (J and Q), the derived question Q' is derived on the
 2. _Abduction_: {P → M <f1, c1>, S → M} |-- S → P
 3. _Induction_: {M → P <f1, c1>, M → S} |-- S → P
 
-
-Defined in this way, it is easy to get backward inference rules from
-forward inference rules. For example, for a given forward-inference rule
-table, first we take the conclusions in the table as questions (Q), one premise
-(J2) as a judgment (J), and the other premise (J1, without truth value) as
-the derived question. After renaming the terms and rearranging the order,
-we get a backward-inference rule table, in which some terms in the questions
-can be a “??”, indicating a query for terms satisfying given condition.
-For syllogistic rules on the “→” relation (i.e., deduction, abduction, induction, and exemplification), the backward-inference table is the following:
-Q \ J M → P P → M
-S → M S → P S → P
-M → S S → P S → P
-This table turns out to be identical to the syllogism table introduced previously, if we ignore the truth-value functions. This elegant symmetry reveals
-an implicit property of the syllogistic rules of NARS — that is, for any three
-judgments J1, J2, and J3, if J3 can be derived from J1 and J2 by a syllogistic rule, then from J3 and J1 the system can generate J20, which has
-the same statement as J2 (the truth values of J2 and J20 may be different).
-Intuitively, the three inheritance relations constitute a triangle from any
-two sides of which the third side can be derived. Such a property does
-not give rise to infinite loops in the system, because if J3 is really derived
-from J1 and J2, it must share “serial numbers” with each of the two, which
-prevents the system from taking J3 and J1 (or J2) as premises in further
-inferences.
-79In NAL-1, if a question cannot be directly answered by the choice rule,
-backward inference is used to recursively“reduce” the question into derived
-questions, until all of them have direct answers. Then these answers, together with the knowledge contributed in the previous backward inference,
-will derive an answer to the original question by forward inference.
-
-
-
+This shows important property of tiangularity that is always present in OpenNARS: for any three judgments J1, J2, and J3, if J3 can be derived from J1 and J2 by a syllogistic rule, then from J3 and J1 the system can generate J2', which has
+the same statement as J2 however possibly with different truth values. In basic inference, if a question cannot be directly answered by the choice rule, backward inference is used to recursively search for derived questions until each of them has an answer, after which these answers will derive an answer to the original question using forward inference.
 
 ### Goals and Decision Making
 A **goal** is a sentence containing an event that the system desires to realize.
