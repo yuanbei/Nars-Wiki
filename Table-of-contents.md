@@ -6,7 +6,7 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Language and I/O
     * Narsese grammar with annotations
     * experience file: format and usage
-    * [Narsese symbol list (ASCII version and PDF version)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
+    * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
     * term: types, format
     * sentence: types, format
     * truth value: definition and examples
@@ -33,6 +33,8 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [structural rules](https://github.com/opennars/opennars/wiki/Structure)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
+    * [backward inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
+
   - Data structure
     * memory overall structure
     * bag, item, and budget-value
