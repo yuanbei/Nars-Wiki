@@ -44,7 +44,7 @@ When a new (original or derived) goal arrives, the system does not immediately s
 
 1. The desire-value of the goal is adjusted according to its relation with other goals. When the same goal get several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
 
-2. The truth value of the content if the goal is checked. If the goal is already achieved, the system does not need to do anything. The expectation value of the content is used as the "degree of satisfaction" of the goal.
+2. The truth value of the content of the goal is checked. If the goal is already achieved, the system does not need to do anything. The expectation value of the content is used as the "degree of satisfaction" of the goal.
 
 3. The plausibility of the goal is estimated, that is, whether the system knows an approach to achieve the goal. In this evaluation, the details of the approach is omitted.
 
