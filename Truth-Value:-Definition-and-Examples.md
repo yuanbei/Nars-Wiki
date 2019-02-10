@@ -25,8 +25,9 @@ Thus _frequency_ can be seen as degree of certainty system has for the statement
 
 ### Examples
 
-In Narsese statements truth value is attached at the end of the statement: 
-For the examples above the valid Narsese statements will be:
+In Narsese statements truth value is attached at the end of the statement between percentage (%) symbol. 
+
+For the examples above the valid Narsese statements will be: 
 
 <raven --> [black]>. %0.9, 0.9% Here frequency = 0.9 and confidence = 0.9
 <raven --> [black]>. %0.9, 0.99% Here frequency = 0.9 and confidence = 0.99
