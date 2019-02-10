@@ -9,7 +9,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
     * term: types, format
     * sentence: types, format
-    * truth value: definition and examples
+    * [truth value: definition and examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * desire value: definition and examples
     * priority-durability values
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
