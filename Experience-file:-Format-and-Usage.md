@@ -17,13 +17,13 @@ Experience file is nothing but text file, below is a sample experience file
 ![experience_image_1](https://user-images.githubusercontent.com/24262360/52545458-ac87ec00-2d85-11e9-90de-8b2f18da6e4a.png)
 
 Each line starts with "IN" or "OUT" indication whether Narsese statement is input to the system or derivation (output).
-as we can only two inputs were given to the system, the rest are derivations
+In above example only two inputs were given to the system, the rest are derivations
 
 We can see that in addition to Narsese statement with truth values there is other experience information attached between curly braces {}.
 
 The first integer is simply a step number showing at what step this sentence appeared (starts with 0).  For above example the first step was an input statement <{tim} --> cat>. 
 
-After column ":" there are one or more tuples showing id of a reasoner and an integer showing from each input the statement was derived. Reasoner id is useful when there are more than one reasoner in case of network exchange or if experience was resumed at a different instance of a system. 
+After column ":" there are one or more tuples showing id of a reasoner and an integer showing from which input the statement was derived. Reasoner id is useful when there are more than one reasoner in case of network exchange or if experience was resumed at a different instance of a system. 
 
 For example on line 14 in the experience file:<br/>
 OUT: <{garfield,tim} --> cat>. %1.00;0.81% {30 : (-7370839197512280216,1);(-7370839197512280216,0)}<br/>
@@ -34,3 +34,8 @@ The first tuple "(-7370839197512280216,1)" shows that reasoner id is "-737083919
 Thus it is easy to see how experience file is helpful to trace derivations.
 
 ### Instruction
+
+To record experience to the file, before starting the system, in GUI press "Memory" --> "Save experience" at top left corner. Then start the system. Once system is terminated experience is outputed to the file. To continue derivation process at a later time just load the experience file by pressing "Memory" --> "Load experience". The derivation process should be resumed from where it was stopped earlier.
+
+
+
