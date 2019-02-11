@@ -9,7 +9,7 @@ Term can be one of three types: atomic, compound and "term as a statement". All 
 
 **Compound** terms are more complex. They are terms formed by one or more terms, called its components with an operator. The order of components usually matters. In the second example there is a compound term **\*({John},<whale --> mammal>)** here it consists of two components "{John}" and "<whale --> mammal>" connected by product operator "*"
 
-**Term as a Statement** is a term that is a statement itself and is part of a bigger sentence with truth value. "term as a statement" has meaning only but no truth value, it is part of a sentence with truth value. As in the second example   <whale --> mammal> is "term as a statement", it only states that "whale is mammal" but no truth value is attached to it, however the truth value is attached to the entire statement. 
+**Term as a Statement** is a term that is a statement itself and is part of a bigger sentence with truth value. "term as a statement" has meaning only but no truth value, it is part of a sentence with truth value. As in the second example   <whale --> mammal> is "term as a statement", it only states that "whale is mammal" but no truth value is attached to it, however the truth value is attached to the entire sentence. 
 
 **Syntactic Complexity**: for each term system maintains syntactic complexity.If a term is atomic its syntactic complexity is 1. If term is compound, then its syntactic complexity is one bigger than the highest syntactic complexity of its components.
 
