@@ -24,4 +24,11 @@ Inputs:
 IN: <{tim} --> cat>. %1.00;0.90% {0 : (-7370839197512280216,0)}<br/>
 IN: <{garfield} --> cat>. %1.00;0.90% {28 : (-7370839197512280216,1)} 
 
+Sample outputs:
+
+OUT: (--,<{tim} --> cat>). %0.00;0.90% {4 : (-7370839197512280216,0)}<br/>
+OUT: <{garfield} <-> {tim}>. %1.00;0.45% {30 : (-7370839197512280216,1);(-7370839197512280216,0)}
+
+We can see the Narsese statement with truth values and other information attached between curly braces {}
+the first element is the step number. The first sentence in the whole system
 
