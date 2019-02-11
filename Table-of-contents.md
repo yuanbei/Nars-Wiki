@@ -8,7 +8,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
     * [Term: types, format](https://github.com/opennars/opennars/wiki/Term:-types,-format)
     * [Sentence: types, format](https://github.com/opennars/opennars/wiki/Sentence:-types,-format)
-    * built-in operator list
+    * [Built-in operator list](https://github.com/opennars/opennars/wiki/Built-in-operator-list)
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * [Desire Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Desire-Value:-Definition-and-Examples)
     * priority-durability values
