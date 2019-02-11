@@ -29,6 +29,6 @@ In Narsese statements truth value is attached at the end of the statement betwee
 
 For the examples above the valid Narsese statements will be: 
 
-<raven --> [black]>. %0.9, 0.9% Here frequency = 0.9 and confidence = 0.9
-<raven --> [black]>. %0.9, 0.99% Here frequency = 0.9 and confidence = 0.99
+<raven --> [black]>. %0.9; 0.9% Here frequency = 0.9 and confidence = 0.9
+<raven --> [black]>. %0.9; 0.99% Here frequency = 0.9 and confidence = 0.99
 
