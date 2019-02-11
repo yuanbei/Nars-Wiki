@@ -35,7 +35,7 @@ Thus it is easy to see how experience file is helpful to trace derivations.
 
 ### Instruction
 
-To record experience to the file, before starting the system, in GUI press "Memory" --> "Save experience" at top left corner. Then start the system. Once system is terminated experience is outputed to the file. To continue derivation process at a later time just load the experience file by pressing "Memory" --> "Load experience". The derivation process should be resumed from where it was stopped earlier.
+To record experience to the file, before starting the system, in GUI press **"Memory" --> "Save experience"** at top left corner. Then start the system. Once system is terminated experience is outputed to the file. To continue derivation process at a later time just load the experience file by pressing **"Memory" --> "Load experience"**. The derivation process should be resumed from where it was stopped earlier.
 
 
 
