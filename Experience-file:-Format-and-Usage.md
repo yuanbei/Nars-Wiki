@@ -31,4 +31,6 @@ OUT: <{garfield,tim} --> cat>. %1.00;0.81% {30 : (-7370839197512280216,1);(-7370
 Here the integer 30 means that on step 30th the sentence <{garfield,tim} --> cat>. %1.00;0.81% was derived.<br/>
 The first tuple "(-7370839197512280216,1)" shows that reasoner id is "-7370839197512280216" and the sentence was derived from input 1, the second tuple shows that the same sentence was derived also from input 2 by the same reasoner, id is "-7370839197512280216".
 
+Thus it is easy to see how experience file is helpful to trace derivations.
 
+### Instruction
