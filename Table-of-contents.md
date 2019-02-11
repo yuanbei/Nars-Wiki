@@ -8,10 +8,10 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
     * term: types, format
     * sentence: types, format
+    * built-in operator list
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * desire value: definition and examples
     * priority-durability values
-    * built-in operator list
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * experience file: format and usage
     * I/O channels
