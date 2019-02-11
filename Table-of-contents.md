@@ -11,13 +11,13 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * desire value: definition and examples
     * priority-durability values
+    * built-in operator list
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
+    * experience file: format and usage
     * I/O channels
     * database and knowledge-base connection
     * interface for plugin
-    * experience file: format and usage
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
-    * built-in operator list
     * experiments on perception
     * experiments on natural language processing
   - Logic
