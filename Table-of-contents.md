@@ -5,7 +5,7 @@ The pages are roughly divided into two groups, the first group systematically ex
 1. Aspects of OpenNARS
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
-    * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
+    * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
     * term: types, format
     * sentence: types, format
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
