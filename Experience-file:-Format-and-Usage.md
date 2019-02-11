@@ -21,7 +21,7 @@ as we can only two inputs were given to the system, the rest is derivations
 
 Inputs:
 
-IN: <{tim} --> cat>. %1.00;0.90% {0 : (-7370839197512280216,0)}</br></br>
+IN: <{tim} --> cat>. %1.00;0.90% {0 : (-7370839197512280216,0)}<br/>
 IN: <{garfield} --> cat>. %1.00;0.90% {28 : (-7370839197512280216,1)} 
 
 
