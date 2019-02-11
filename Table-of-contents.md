@@ -6,8 +6,8 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
-    * term: types, format
-    * sentence: types, format
+    * [Term: types, format](https://github.com/opennars/opennars/wiki/Term:-types,-format)
+    * [Sentence: types, format](https://github.com/opennars/opennars/wiki/Sentence:-types,-format)
     * built-in operator list
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * desire value: definition and examples
