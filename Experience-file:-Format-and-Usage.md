@@ -12,6 +12,16 @@ Recording an experience of a system is necessary for multiple reasons:
 
 ### Explanation
 
-Experience file is nothing but text file look below for an example 
+Experience file is nothing but text file, below is a sample experience file
 
 ![experience_image_1](https://user-images.githubusercontent.com/24262360/52545458-ac87ec00-2d85-11e9-90de-8b2f18da6e4a.png)
+
+Each line starts with "IN" or "OUT" indication whether Narsese statement is input to the system or derivation (output).
+as we can only two inputs were given to the system, the rest is derivations
+
+Inputs:
+
+IN: <{tim} --> cat>. %1.00;0.90% {0 : (-7370839197512280216,0)} </br>
+IN: <{garfield} --> cat>. %1.00;0.90% {28 : (-7370839197512280216,1)} 
+
+
