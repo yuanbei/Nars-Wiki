@@ -5,7 +5,6 @@ The pages are roughly divided into two groups, the first group systematically ex
 1. Aspects of OpenNARS
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
-    * experience file: format and usage
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-and-PDF-version))
     * term: types, format
     * sentence: types, format
@@ -16,6 +15,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * I/O channels
     * database and knowledge-base connection
     * interface for plugin
+    * experience file: format and usage
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     * built-in operator list
     * experiments on perception
