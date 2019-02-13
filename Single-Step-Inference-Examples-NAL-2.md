@@ -22,13 +22,13 @@
 
 ---------------------------------------------- **Comparison** -------------------------------------------------
 
-`Swan is a type of swimmer.`
+`//Swan is a type of swimmer.`
 <br/>
 <br/>
 `<swan --> swimmer>. %0.90% `
 <br/>
 <br/>
-`Swan is a type of bird. `
+`//Swan is a type of bird. `
 <br/>
 <br/>
 `<swan --> bird>.  `
@@ -37,20 +37,20 @@
 `3`
 <br/>
 <br/>
-`I guess that bird is similar to swimmer.`
+`//I guess that bird is similar to swimmer.`
 <br/>
 <br/>
-`outputMustContain('<bird <-> swimmer>. %0.90;0.45%')`
+`//outputMustContain('<bird <-> swimmer>. %0.90;0.45%')`
 
----------------------------------------------- **Backward Inference** ---------------------------------------------------
+---------------------------------------------- **Backward Inference** -----------------------------------------
 
-`Bird is a type of swimmer.`
+`//Bird is a type of swimmer.`
 <br/>
 <br/>
 `<bird --> swimmer>.  `
 <br/>
 <br/>
-`What is a swimmer?`
+`//What is a swimmer?`
 <br/>
 <br/>
 `<{?1} --> swimmer>?   `
@@ -59,20 +59,20 @@
 `5`
 <br/>
 <br/>
-`What is a bird?`
+`//What is a bird?`
 <br/>
 <br/>
-`outputMustContain('<{?1} --> bird>?')`
+`//outputMustContain('<{?1} --> bird>?')`
 
----------------------------------------------- **Comparison-2** ---------------------------------------------------
+---------------------------------------------- **Comparison-2** ---------------------------------------------
 
-`Sport is a type of competition. `
+`//Sport is a type of competition. `
 <br/>
 <br/>
 `<sport --> competition>. `
 <br/>
 <br/>
-`Chess is a type of competition. `
+`//Chess is a type of competition. `
 <br/>
 <br/>
 `<chess --> competition>. %0.90% `
@@ -81,20 +81,20 @@
 `3`
 <br/>
 <br/>
-`I guess chess is similar to sport.`
+`//I guess chess is similar to sport.`
 <br/>
 <br/>
-`outputMustContain('<chess <-> sport>. %0.90;0.45%')`
+`//outputMustContain('<chess <-> sport>. %0.90;0.45%')`
 
 ------------------------------------------- **Analogy** -----------------------------------------------
 
-`Swan is a type of swimmer. `
+`//Swan is a type of swimmer. `
 <br/>
 <br/>
 `<swan --> swimmer>. `
 <br/>
 <br/>
-`Gull is similar to swan. `
+`//Gull is similar to swan. `
 <br/>
 <br/>
 `<gull <-> swan>. `
@@ -103,20 +103,20 @@
 `3`
 <br/>
 <br/>
-`I think gull is a type of swimmer.`
+`//I think gull is a type of swimmer.`
 <br/>
 <br/>
-`outputMustContain('<gull --> swimmer>. %1.00;0.81%')`
+`//outputMustContain('<gull --> swimmer>. %1.00;0.81%')`
 
-------------------------------------------- **Analogy-2** -----------------------------------------------``
+------------------------------------------- **Analogy-2** -----------------------------------------------
 
-`Gull is a type of swimmer. `
+`//Gull is a type of swimmer. `
 <br/>
 <br/>
 `<gull --> swimmer>. `
 <br/>
 <br/>
-`Gull is similar to a swan. `
+`//Gull is similar to a swan. `
 <br/>
 <br/>
 `<gull <-> swan>.  `
@@ -125,20 +125,20 @@
 `3`
 <br/>
 <br/>
-`I believe a swan is a type of swimmer. `
+`//I believe a swan is a type of swimmer. `
 <br/>
 <br/>
-`outputMustContain('<swan --> swimmer>. %1.00;0.81%')`
+`//outputMustContain('<swan --> swimmer>. %1.00;0.81%')`
 
 //---------------------------------------- **"Resemblance** -------------------------------------------
 
-`Robin is similar to swan. `
+`//Robin is similar to swan. `
 <br/>
 <br/>
 `<robin <-> swan>. `
 <br/>
 <br/>
-`Gull is similar to swan. `
+`//Gull is similar to swan. `
 <br/>
 <br/>
 `<gull <-> swan>. `
@@ -147,20 +147,20 @@
 `3`
 <br/>
 <br/>
-`Gull is similar to robin.`
+`//Gull is similar to robin.`
 <br/>
 <br/>
-`outputMustContain('<gull <-> robin>. %1.00;0.81%')`
+`//outputMustContain('<gull <-> robin>. %1.00;0.81%')`
 
 ----------------------------- **Conversions between Inheritance and Similarity** ------------------------
 
-`Swan is a type of bird. `
+`//Swan is a type of bird. `
 <br/>
 <br/>
 `<swan --> bird>. `
 <br/>
 <br/>
-`Bird is not a type of swan. `
+`//Bird is not a type of swan. `
 <br/>
 <br/>
 `<bird --> swan>. %0.10% `
@@ -169,26 +169,26 @@
 `1`
 <br/>
 <br/>
-`Bird is different from swan.  `
+`//Bird is different from swan.  `
 <br/>
 <br/>
-`outputMustContain('<bird <-> swan>.')`
+`//outputMustContain('<bird <-> swan>.')`
 <br/>
 <br/>
-`outputMustContain('<bird <-> swan>. %0.10')`
+`//outputMustContain('<bird <-> swan>. %0.10')`
 <br/>
 <br/>
-`outputMustContain('<bird <-> swan>. %0.10;0.81%')`
+`//outputMustContain('<bird <-> swan>. %0.10;0.81%')`
 
 ----------------------------- **Structure Transformation** -----------------------------
 
-`Bright is similar to smart. `
+`//Bright is similar to smart. `
 <br/>
 <br/>
 `<bright <-> smart>. %0.90% `
 <br/>
 <br/>
-`Is bright thing a type of smart thing?`
+`//Is bright thing a type of smart thing?`
 <br/>
 <br/>
 `<[smart] --> [bright]>?`
@@ -197,7 +197,7 @@
 `6`
 <br/>
 <br/>
-`Bright thing is a type of smart thing. `
+`//Bright thing is a type of smart thing. `
 <br/>
 <br/>
 `//outputMustContain('<[bright] <-> [smart]>. %0.90;0.90%')`
