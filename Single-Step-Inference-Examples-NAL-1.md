@@ -1,138 +1,135 @@
-
-`***`
-`//---------------------------------------------- Revision ----------------------------------------------------`
+---------------------------------------------- Revision ----------------------------------------------------``
 
 `// Bird is a type of swimmer.`
-
+``
 `<bird --> swimmer>.`
-
+``
 `// Bird is probably not a type of swimmer.`
-
+``
 `<bird --> swimmer>. %0.10;0.60%`
-
+``
 `1`
-
+``
 `// Bird is very likely to be a type of swimmer.`
-
+``
 `// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
 
-`//---------------------------------------------- Deduction ---------------------------------------------------`
+//---------------------------------------------- Deduction ---------------------------------------------------
 
-`// Bird is a type of animal.`
+// Bird is a type of animal.
 
-`<bird --> animal>.`
+<bird --> animal>.
 
-`// Robin is a type of bird.`
+// Robin is a type of bird.
 
-`<robin --> bird>.`
+<robin --> bird>.
 
-`3`
+3
 
-`// Robin is a type of animal.`
+// Robin is a type of animal.
 
-`// outputMustContain('<robin --> animal>. %1.00;0.81%')`
+// outputMustContain('<robin --> animal>. %1.00;0.81%')
 
-`//---------------------------------------------- Induction---------------------------------------------------`
+//---------------------------------------------- Induction---------------------------------------------------
 
-`// Swan is a type of swimmer. `
+// Swan is a type of swimmer.
 
-`<swan --> swimmer>. %0.90%`
+<swan --> swimmer>. %0.90%
 
-`// Swan is a type of bird. `
+// Swan is a type of bird.
 
-`<swan --> bird>. `
+<swan --> bird>.
 
-`3`
+3
 
-`// I guess bird is a type of swimmer.`
+// I guess bird is a type of swimmer.
 
-`// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')`
+// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')
 
-`// I guess swimmer is a type of bird.`
+// I guess swimmer is a type of bird.``
 
-`// outputMustContain('<swimmer --> bird>. %1.00;0.42%')`
+// outputMustContain('<swimmer --> bird>. %1.00;0.42%')
 
-`//------------------------------------------- Exemplification -----------------------------------------------`
+//------------------------------------------- Exemplification -----------------------------------------------
 
-`// Robin is a type of bird.`
+// Robin is a type of bird.
 
-`<robin --> bird>.`
+<robin --> bird>.
 
-`// A bird is a type of animal.`
+// A bird is a type of animal.
 
-`<bird --> animal>.`
+<bird --> animal>.
 
-`3`
+3
 
-`// I guess animal is a type of robin. `
+// I guess animal is a type of robin.
 
-`// outputMustContain('<animal --> robin>. %1.00;0.45%')`
+// outputMustContain('<animal --> robin>. %1.00;0.45%')
 
-`//------------------------------------------- Conversion -----------------------------------------------`
+//------------------------------------------- Conversion -----------------------------------------------``
 
-`// Bird is a type of swimmer. `
+// Bird is a type of swimmer.
 
-`<bird --> swimmer>.`
+<bird --> swimmer>.
 
-`// Is swimmer a type of bird?`
+// Is swimmer a type of bird?
 
-`<swimmer --> bird>? `
+<swimmer --> bird>?
 
-`6`
+6
 
-`// I guess swimmer is a type of bird.`
+// I guess swimmer is a type of bird.
 
-`// outputMustContain('<swimmer --> bird>. %1.00;0.47%')`
+// outputMustContain('<swimmer --> bird>. %1.00;0.47%')
 
-`//---------------------------------------- "Yes/No" Question -------------------------------------------`
+//---------------------------------------- "Yes/No" Question -------------------------------------------
 
-`// Bird is a type of swimmer.`
+// Bird is a type of swimmer.
 
-`<bird --> swimmer>.`
+<bird --> swimmer>.
 
-`// Is bird a type of swimmer?`
+// Is bird a type of swimmer?
 
-`<bird --> swimmer>? `
+<bird --> swimmer>?
 
-`1`
+1
 
-`// Bird is a type of swimmer.`
+// Bird is a type of swimmer.
 
-`// OutputMustContain('<bird --> swimmer>. %1.00;0.90%')`
+// OutputMustContain('<bird --> swimmer>. %1.00;0.90%')
 
-`//---------------------------------------- "Wh" Question -------------------------------------------`
+//---------------------------------------- "Wh" Question -------------------------------------------
 
-`// Bird is a type of swimmer.`
+// Bird is a type of swimmer.
 
-`<bird --> swimmer>. %1.00;0.80%`
+<bird --> swimmer>. %1.00;0.80%
 
-`// What is a type of swimmer?`
+// What is a type of swimmer?
 
-`&lt?x --> swimmer>?  `
+<?x --> swimmer>?
 
-`5`
+5
 
-`// Bird is a type of swimmer.`
+// Bird is a type of swimmer.
 
-`// outputMustContain('<bird --> swimmer>. %1.00;0.80%')`
+// outputMustContain('<bird --> swimmer>. %1.00;0.80%')
 
-`//-------------------------------------- Backward Inference -----------------------------------------`
+//-------------------------------------- Backward Inference -----------------------------------------``
 
-`// Bird is a type of swimmer.`
+// Bird is a type of swimmer.
 
-`<bird --> swimmer>. %1.00;0.80%`
+<bird --> swimmer>. %1.00;0.80%
 
-`// What is a type of swimmer?`
+// What is a type of swimmer?
 
-`<?1 --> swimmer>?  `
+<?1 --> swimmer>?  
 
-`5`
+5
 
-`// What is a type of bird?`
+// What is a type of bird?``
 
-`// outputMustContain('<?1 --> bird>?')`
+// outputMustContain('<?1 --> bird>?')
 
-`// What is the type of bird?`
+// What is the type of bird?``
 
-`// outputMustContain('<bird --> ?1>?')`
-`***`
+// outputMustContain('<bird --> ?1>?')
