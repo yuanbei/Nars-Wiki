@@ -20,7 +20,7 @@
 <br/>
 `// outputMustContain('<robin <-> swan>. %0.87;0.91%')`
 
----------------------------------------------- **### Comparison** -------------------------------------------------
+---------------------------------------------- **Comparison** -------------------------------------------------
 
 `Swan is a type of swimmer.`
 <br/>
@@ -42,123 +42,117 @@
 <br/>
 `outputMustContain('<bird <-> swimmer>. %0.90;0.45%')`
 
----------------------------------------------- **Deduction** ---------------------------------------------------
+---------------------------------------------- **Backward Inference** ---------------------------------------------------
 
-`// Bird is a type of animal.`
+`Bird is a type of swimmer.`
 <br/>
 <br/>
-`<bird --> animal>.`
+`<bird --> swimmer>.  `
 <br/>
 <br/>
-`// Robin is a type of bird.`
+`What is a swimmer?`
 <br/>
 <br/>
-`<robin --> bird>.`
+`<{?1} --> swimmer>?   `
+<br/>
+<br/>
+`5`
+<br/>
+<br/>
+`What is a bird?`
+<br/>
+<br/>
+`outputMustContain('<{?1} --> bird>?')`
+
+---------------------------------------------- **Comparison-2** ---------------------------------------------------
+
+`Sport is a type of competition. `
+<br/>
+<br/>
+`<sport --> competition>. `
+<br/>
+<br/>
+`Chess is a type of competition. `
+<br/>
+<br/>
+`<chess --> competition>. %0.90% `
 <br/>
 <br/>
 `3`
 <br/>
 <br/>
-`// Robin is a type of animal.`
+`I guess chess is similar to sport.`
 <br/>
 <br/>
-`// outputMustContain('<robin --> animal>. %1.00;0.81%')`
+`outputMustContain('<chess <-> sport>. %0.90;0.45%')`
 
----------------------------------------------- **Induction** ---------------------------------------------------
+------------------------------------------- **Analogy** -----------------------------------------------
 
-`// Swan is a type of swimmer.`
+`Swan is a type of swimmer. `
 <br/>
 <br/>
-`<swan --> swimmer>. %0.90%`
+`<swan --> swimmer>. `
 <br/>
 <br/>
-`// Swan is a type of bird.`
+`Gull is similar to swan. `
 <br/>
 <br/>
-`<swan --> bird>.`
+`<gull <-> swan>. `
 <br/>
 <br/>
 `3`
 <br/>
 <br/>
-`// I guess bird is a type of swimmer.`
+`I think gull is a type of swimmer.`
 <br/>
 <br/>
-`// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')`
-<br/>
-<br/>
-`// I guess swimmer is a type of bird.`
-<br/>
-<br/>
-`// outputMustContain('<swimmer --> bird>. %1.00;0.42%')`
+`outputMustContain('<gull --> swimmer>. %1.00;0.81%')`
 
-------------------------------------------- **Exemplification** -----------------------------------------------
+------------------------------------------- **Analogy** -----------------------------------------------``
 
-`// Robin is a type of bird.`
+`Gull is a type of swimmer. `
 <br/>
 <br/>
-`<robin --> bird>.`
+`<gull --> swimmer>. `
 <br/>
 <br/>
-`// A bird is a type of animal.`
+`Gull is similar to a swan. `
 <br/>
 <br/>
-`<bird --> animal>.`
+`<gull <-> swan>.  `
 <br/>
 <br/>
 `3`
 <br/>
 <br/>
-`// I guess animal is a type of robin.`
+`I believe a swan is a type of swimmer. `
 <br/>
 <br/>
-`// outputMustContain('<animal --> robin>. %1.00;0.45%')`
+`outputMustContain('<swan --> swimmer>. %1.00;0.81%')`
 
-------------------------------------------- **Conversion** -----------------------------------------------``
+//---------------------------------------- **"Resemblance** -------------------------------------------
 
-`// Bird is a type of swimmer.`
+`Robin is similar to swan. `
 <br/>
 <br/>
-`<bird --> swimmer>.`
+`<robin <-> swan>. `
 <br/>
 <br/>
-`// Is swimmer a type of bird?`
+`Gull is similar to swan. `
 <br/>
 <br/>
-`<swimmer --> bird>?`
+`<gull <-> swan>. `
 <br/>
 <br/>
-`6`
+`3`
 <br/>
 <br/>
-`// I guess swimmer is a type of bird.`
+`Gull is similar to robin.`
 <br/>
 <br/>
-`// outputMustContain('<swimmer --> bird>. %1.00;0.47%')`
+`outputMustContain('<gull <-> robin>. %1.00;0.81%')`
 
-//---------------------------------------- **"Yes/No" Question** -------------------------------------------
-
-`// Bird is a type of swimmer.`
-<br/>
-<br/>
-`<bird --> swimmer>.`
-<br/>
-<br/>
-`// Is bird a type of swimmer?`
-<br/>
-<br/>
-`<bird --> swimmer>?`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`// Bird is a type of swimmer.`
-<br/>
-<br/>
-`// OutputMustContain('<bird --> swimmer>. %1.00;0.90%')`
-
----------------------------------------- **"Wh" Question** -------------------------------------------
+----------------------------- **conversions between inheritance and similarity** ------------------------
 
 `// Bird is a type of swimmer.`
 <br/>
