@@ -2,33 +2,45 @@
 
 `// Bird is a type of swimmer.`
 <br/>
+<br/>
 `<bird --> swimmer>.`
+<br/>
 <br/>
 `// Bird is probably not a type of swimmer.`
 <br/>
+<br/>
 `<bird --> swimmer>. %0.10;0.60%`
+<br/>
 <br/>
 `1`
 <br/>
+<br/>
 `// Bird is very likely to be a type of swimmer.`
+<br/>
 <br/>
 `// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
 
-//---------------------------------------------- Deduction ---------------------------------------------------
+---------------------------------------------- Deduction ---------------------------------------------------
 
-// Bird is a type of animal.
-
-<bird --> animal>.
-
-// Robin is a type of bird.
-
-<robin --> bird>.
-
-3
-
-// Robin is a type of animal.
-
-// outputMustContain('<robin --> animal>. %1.00;0.81%')
+`// Bird is a type of animal.`
+<br/>
+<br/>
+`<bird --> animal>.`
+<br/>
+<br/>
+`// Robin is a type of bird.`
+<br/>
+<br/>
+`<robin --> bird>.`
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`// Robin is a type of animal.`
+<br/>
+<br/>
+`// outputMustContain('<robin --> animal>. %1.00;0.81%')`
 
 //---------------------------------------------- Induction---------------------------------------------------
 
