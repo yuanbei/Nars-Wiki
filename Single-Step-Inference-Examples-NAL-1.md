@@ -70,21 +70,27 @@
 <br/>
 `// outputMustContain('<swimmer --> bird>. %1.00;0.42%')`
 
-//------------------------------------------- Exemplification -----------------------------------------------
+------------------------------------------- **Exemplification** -----------------------------------------------
 
-// Robin is a type of bird.
-
-<robin --> bird>.
-
-// A bird is a type of animal.
-
-<bird --> animal>.
-
-3
-
-// I guess animal is a type of robin.
-
-// outputMustContain('<animal --> robin>. %1.00;0.45%')
+`// Robin is a type of bird.`
+<br/>
+<br/>
+`<robin --> bird>.`
+<br/>
+<br/>
+`// A bird is a type of animal.`
+<br/>
+<br/>
+`<bird --> animal>.`
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`// I guess animal is a type of robin.`
+<br/>
+<br/>
+`// outputMustContain('<animal --> robin>. %1.00;0.45%')`
 
 //------------------------------------------- Conversion -----------------------------------------------``
 
