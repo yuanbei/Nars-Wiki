@@ -98,3 +98,18 @@
 
 // OutputMustContain('<bird --> swimmer>. %1.00;0.90%')
 
+//---------------------------------------- "Wh" Question -------------------------------------------
+
+// Bird is a type of swimmer.
+
+<bird --> swimmer>. %1.00;0.80%
+
+// What is a type of swimmer?
+
+<?x --> swimmer>?  
+
+5
+
+// Bird is a type of swimmer.
+
+// outputMustContain('<bird --> swimmer>. %1.00;0.80%')
