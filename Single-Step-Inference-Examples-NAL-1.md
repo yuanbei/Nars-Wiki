@@ -135,3 +135,4 @@
 `// What is the type of bird?`
 
 `// outputMustContain('<bird --> ?1>?')`
+`***`
