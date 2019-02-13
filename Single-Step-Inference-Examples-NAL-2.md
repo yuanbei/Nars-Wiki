@@ -108,7 +108,7 @@
 <br/>
 `outputMustContain('<gull --> swimmer>. %1.00;0.81%')`
 
-------------------------------------------- **Analogy** -----------------------------------------------``
+------------------------------------------- **Analogy-2** -----------------------------------------------``
 
 `Gull is a type of swimmer. `
 <br/>
@@ -152,52 +152,55 @@
 <br/>
 `outputMustContain('<gull <-> robin>. %1.00;0.81%')`
 
------------------------------ **conversions between inheritance and similarity** ------------------------
+----------------------------- **Conversions between Inheritance and Similarity** ------------------------
 
-`// Bird is a type of swimmer.`
+`Swan is a type of bird. `
 <br/>
 <br/>
-`<bird --> swimmer>. %1.00;0.80%`
+`<swan --> bird>. `
 <br/>
 <br/>
-`// What is a type of swimmer?`
+`Bird is not a type of swan. `
 <br/>
 <br/>
-`<?x --> swimmer>?`
+`<bird --> swan>. %0.10% `
 <br/>
 <br/>
-`5`
+`1`
 <br/>
 <br/>
-`// Bird is a type of swimmer.`
+`Bird is different from swan.  `
 <br/>
 <br/>
-`// outputMustContain('<bird --> swimmer>. %1.00;0.80%')`
+`outputMustContain('<bird <-> swan>.')`
+<br/>
+<br/>
+`outputMustContain('<bird <-> swan>. %0.10')`
+<br/>
+<br/>
+`outputMustContain('<bird <-> swan>. %0.10;0.81%')`
 
--------------------------------------- **Backward Inference** -----------------------------------------``
+----------------------------- **Structure Transformation** -----------------------------
 
-`// Bird is a type of swimmer.`
+`Bright is similar to smart. `
 <br/>
 <br/>
-`<bird --> swimmer>. %1.00;0.80%`
+`<bright <-> smart>. %0.90% `
 <br/>
 <br/>
-`// What is a type of swimmer?`
+`Is bright thing a type of smart thing?`
 <br/>
 <br/>
-`<?1 --> swimmer>?  `
+`<[smart] --> [bright]>?`
 <br/>
 <br/>
-`5`
+`6`
 <br/>
 <br/>
-`// What is a type of bird?`
+`Bright thing is a type of smart thing. `
 <br/>
 <br/>
-`// outputMustContain('<?1 --> bird>?')`
+`//outputMustContain('<[bright] <-> [smart]>. %0.90;0.90%')`
 <br/>
 <br/>
-`// What is the type of bird?`
-<br/>
-<br/>
-`// outputMustContain('<bird --> ?1>?')`
+`//outputMustContain('<[smart] --> [bright]>. %0.90;0.66%')`
