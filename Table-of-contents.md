@@ -59,7 +59,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
   - example and demonstration
     * selected examples of task processing (i.e., multi-step examples)
-    * annotated list of experience files in Narsese (i.e., single-step examples)
+    * [Single Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * annotated list of demonstration
   - overview
     * [glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
