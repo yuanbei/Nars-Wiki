@@ -114,7 +114,6 @@
 
 // outputMustContain('<bird --> swimmer>. %1.00;0.80%')
 
-
 //-------------------------------------- Backward Inference -----------------------------------------
 
 // Bird is a type of swimmer.
