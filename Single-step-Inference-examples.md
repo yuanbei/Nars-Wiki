@@ -1,7 +1,7 @@
 Single step Inference examples
 
-* [NAL-1: Basic Syntax, Semantics and Inference Rules](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-1)
-* [NAL-2: Derivative Copulas](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-2)
+* [NAL-1: Basic Syntax, Semantics and Inference Rules]https://github.com/opennars/opennars/wiki/NAL-1:-Basic-Syntax,-Semantics-and-Inference-Rules)
+* [NAL-2: Derivative Copulas](https://github.com/opennars/opennars/wiki/NAL-2:-Derivative-Copulas)
 * [NAL-3: Set-Theoretic Terms](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-3)
 * [NAL-4: Relational Terms](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-4)
 * [NAL-5: Statements as Terms](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-5)
