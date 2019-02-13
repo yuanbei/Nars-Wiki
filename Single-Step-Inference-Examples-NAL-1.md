@@ -52,21 +52,17 @@
 
 //------------------------------------------- Exemplification -----------------------------------------------
 
-// Swan is a type of swimmer. 
+// Robin is a type of bird.
 
-<swan --> swimmer>. %0.90%
+<robin --> bird>.
 
-// Swan is a type of bird. 
+// A bird is a type of animal.
 
-<swan --> bird>. 
+<bird --> animal>.
 
 3
 
-// I guess bird is a type of swimmer.
+// I guess animal is a type of robin. 
 
-// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')
-
-// I guess swimmer is a type of bird.
-
-// outputMustContain('<swimmer --> bird>. %1.00;0.42%')
+// outputMustContain('<animal --> robin>. %1.00;0.45%')
 
