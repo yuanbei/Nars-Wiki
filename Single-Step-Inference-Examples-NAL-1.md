@@ -1,4 +1,4 @@
----------------------------------------------- Revision ----------------------------------------------------``
+---------------------------------------------- **Revision** ----------------------------------------------------``
 
 `// Bird is a type of swimmer.`
 <br/>
@@ -20,7 +20,7 @@
 <br/>
 `// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
 
----------------------------------------------- Deduction ---------------------------------------------------
+---------------------------------------------- **Deduction** ---------------------------------------------------
 
 `// Bird is a type of animal.`
 <br/>
@@ -42,25 +42,33 @@
 <br/>
 `// outputMustContain('<robin --> animal>. %1.00;0.81%')`
 
-//---------------------------------------------- Induction---------------------------------------------------
+---------------------------------------------- **Induction** ---------------------------------------------------
 
-// Swan is a type of swimmer.
-
-<swan --> swimmer>. %0.90%
-
-// Swan is a type of bird.
-
-<swan --> bird>.
-
-3
-
-// I guess bird is a type of swimmer.
-
-// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')
-
-// I guess swimmer is a type of bird.``
-
-// outputMustContain('<swimmer --> bird>. %1.00;0.42%')
+`// Swan is a type of swimmer.`
+<br/>
+<br/>
+`<swan --> swimmer>. %0.90%`
+<br/>
+<br/>
+`// Swan is a type of bird.`
+<br/>
+<br/>
+`<swan --> bird>.`
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`// I guess bird is a type of swimmer.`
+<br/>
+<br/>
+`// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')`
+<br/>
+<br/>
+`// I guess swimmer is a type of bird.```
+<br/>
+<br/>
+`// outputMustContain('<swimmer --> bird>. %1.00;0.42%')`
 
 //------------------------------------------- Exemplification -----------------------------------------------
 
