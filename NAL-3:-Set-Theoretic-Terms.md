@@ -126,148 +126,79 @@
 <br/>
 `//outputMustContain('<planetX --> {Pluto}>. %0.63;0.81%')`
 
-------------------------------------------- **Analogy-2** -----------------------------------------------
+------------------------------------------- **Set operations** -----------------------------------------------
 
-`//Gull is a type of swimmer. `
+`//PlanetX is Mars, Pluto, or Venus.`
 <br/>
 <br/>
-`<gull --> swimmer>. `
+`<planetX --> {Mars,Pluto,Venus}>. %0.90% `
 <br/>
 <br/>
-`//Gull is similar to a swan. `
+`//PlanetX is probably neither Pluto nor Saturn.`
 <br/>
 <br/>
-`<gull <-> swan>.  `
+`<planetX --> {Pluto,Saturn}>. %0.10%`
 <br/>
 <br/>
-`3`
+`32`
 <br/>
 <br/>
-`//I believe a swan is a type of swimmer. `
+`//PlanetX is Mars, Pluto, Saturn, or Venus.`
 <br/>
 <br/>
-`//outputMustContain('<swan --> swimmer>. %1.00;0.81%')`
+`//outputMustContain('<planetX --> {Mars,Pluto,Saturn,Venus}>. %0.91;0.81%')`
+<br/>
+<br/>
+`//PlanetX is either Mars or Venus.`
+<br/>
+<br/>
+`//outputMustContain('<planetX --> {Mars,Venus}>. %0.81;0.81%')`
 
----------------------------------------- **"Resemblance** -------------------------------------------
+--------------------------------- **Composition on both sides of a statement** ---------------------------
 
-`//Robin is similar to swan. `
+`//Bird is a type of animal. `
 <br/>
 <br/>
-`<robin <-> swan>. `
+`<bird --> animal>. %0.90% `
 <br/>
 <br/>
-`//Gull is similar to swan. `
+`//Is a swimming bird a type of swimming animal?`
 <br/>
 <br/>
-`<gull <-> swan>. `
+`<(&,bird,swimmer) --> (&,animal,swimmer)>?`
 <br/>
 <br/>
-`3`
+`32`
 <br/>
 <br/>
-`//Gull is similar to robin.`
+`//A swimming bird is probably a type of swimming animal.`
 <br/>
 <br/>
-`//outputMustContain('<gull <-> robin>. %1.00;0.81%')`
+`//outputMustContain('<(&,bird,swimmer) --> (&,animal,swimmer)>. %0.90;0.73%')`
 
------------------------------ **Conversions between Inheritance and Similarity** ------------------------
+----------------------------- **Composition on both sides of a statement** ------------------------
 
-`//Swan is a type of bird. `
+`//Bird is a type of animal.`
 <br/>
 <br/>
-`<swan --> bird>. `
+`<bird --> animal>. %0.90%`
 <br/>
 <br/>
-`//Bird is not a type of swan. `
+`//Is a nonanimal swimmer a type of a nonbird swimmer?`
 <br/>
 <br/>
-`<bird --> swan>. %0.10% `
+`<(-,swimmer,animal) --> (-,swimmer,bird)>?   `
 <br/>
 <br/>
-`1`
+`32`
 <br/>
 <br/>
-`//Bird is different from swan.  `
+`//A nonanimal swimmer is probably a type of nonbird swimmer.`
 <br/>
 <br/>
-`//outputMustContain('<bird <-> swan>.')`
-<br/>
-<br/>
-`//outputMustContain('<bird <-> swan>. %0.10')`
-<br/>
-<br/>
-`//outputMustContain('<bird <-> swan>. %0.10;0.81%')`
+`//outputMustContain('<(-,swimmer,animal) --> (-,swimmer,bird)>. %0.90;0.73%')`
 
------------------------------ **Structure Transformation** -----------------------------
-
-`//Bright is similar to smart. `
-<br/>
-<br/>
-`<bright <-> smart>. %0.90% `
-<br/>
-<br/>
-`//Is bright thing a type of smart thing?`
-<br/>
-<br/>
-`<[smart] --> [bright]>?`
-<br/>
-<br/>
-`6`
-<br/>
-<br/>
-`//Bright thing is a type of smart thing. `
-<br/>
-<br/>
-`//outputMustContain('<[bright] <-> [smart]>. %0.90;0.90%')`
-<br/>
-<br/>
-`//outputMustContain('<[smart] --> [bright]>. %0.90;0.66%')`
-
-------------------- **Conversions between Inheritance and Similarity** -----------------
-
-`//Swan is a type of bird. `
-<br/>
-<br/>
-`<swan --> bird>.`
-<br/>
-<br/>
-`//Bird is different from swan.`
-<br/>
-<br/>
-`<bird <-> swan>. %0.10% `
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//Bird is probably not a type of swan.  `
-<br/>
-<br/>
-`//outputMustContain('<bird --> swan>. %0.10;0.73%')`
-
-------------------- **Structure Transformation** -----------------
-
-`//Birdie is similar to Tweety `
-<br/>
-<br/>
-`<Birdie <-> Tweety>. %0.90%`
-<br/>
-<br/>
-`//Is Birdie similar to Tweety?`
-<br/>
-<br/>
-`<{Birdie} <-> {Tweety}>? `
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//Birdie is similar to Tweety.`
-<br/>
-<br/>
-`//outputMustContain('<{Birdie} <-> {Tweety}>. %0.90;0.73%')`
-
-------------------- **Conversions between inheritance and similarity** -----------------
+----------------------------- **Compound composition, one premise** -----------------------------
 
 `//Swan is a type of bird. `
 <br/>
@@ -275,70 +206,169 @@
 `<swan --> bird>. %0.90%`
 <br/>
 <br/>
-`//Is bird similar to swan?`
+`//Is a swan a type of bird or swimmer?`
 <br/>
 <br/>
-`<bird <-> swan>?`
+`<swan --> (|,bird,swimmer)>?`
 <br/>
 <br/>
-`6`
+`32`
 <br/>
 <br/>
-`//I guess that bird is similar to swan. `
+`//A swan is probably a type of bird or swimmer.`
 <br/>
 <br/>
-`//outputMustContain('<bird <-> swan>. %0.90;0.47%')`
+`//outputMustContain('<swan --> (|,bird,swimmer)>. %0.90;0.73%')`
 
-------------------- **Conversions between inheritance and similarity** -----------------
 
-`//A bird is similar to a swan. `
-<br/>
-<br/>
-`<bird <-> swan>. %0.90% `
-<br/>
-<br/>
-`//Is swan a type of bird?`
-<br/>
-<br/>
-`<swan --> bird>?`
-<br/>
-<br/>
-`6`
-<br/>
-<br/>
-`//A swan is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<swan --> bird>. %0.90;0.81%')`
+------------------- **Compound composition, one premise** -----------------
 
-------------------- **Translating instance into inheritance** -----------------
+`//Swan is a type of bird. `
+<br/>
+<br/>
+`<swan --> bird>. %0.90% `
+<br/>
+<br/>
+`//Is swimming swan a type of bird?`
+<br/>
+<br/>
+`<(&,swan,swimmer) --> bird>?`
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//Swimming swan is a type of bird.`
+<br/>
+<br/>
+`//outputMustContain('<(&,swan,swimmer) --> bird>. %0.90;0.73%')`
 
-`//Tweety is a bird.`
-<br/>
-<br/>
-`<Tweety {-- bird>.`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//Tweety is an instance of bird.`
-<br/>
-<br/>
-`//outputMustContain('<{Tweety} --> bird>. %1.00;0.90%')`
+------------------- **Compound composition, one premise** -----------------
 
-------------------- **Translating property into inheritance** -----------------
+`//Swan is a type of bird.`
+<br/>
+<br/>
+`<swan --> bird>. %0.90%`
+<br/>
+<br/>
+`//Is swan a type of nonbird swimmer?`
+<br/>
+<br/>
+`<swan --> (-,swimmer,bird)>?`
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//A swan is not a type of nonbird swimmer.`
+<br/>
+<br/>
+`//outputMustContain('<swan --> (-,swimmer,bird)>. %0.10;0.73%')`
 
-`//Ravens are black.`
+------------------- **Compound composition, one premise** -----------------
+
+`//Swan is a type of bird.`
 <br/>
 <br/>
-`<raven --] black>.`
+`<swan --> bird>. %0.90%`
 <br/>
 <br/>
-`1`
+`//Is being bird what differ swimmer from swan?`
 <br/>
 <br/>
-`//Raven has a property black`
+`<(~,swimmer, swan) --> bird>? `
 <br/>
 <br/>
-`//outputMustContain('<raven --> [black]>.')`
+`32`
+<br/>
+<br/>
+`//What differs swimmer from swan is not being bird.`
+<br/>
+<br/>
+`//outputMustContain('<(~,swimmer,swan) --> bird>. %0.10;0.73%')`
+
+------------------- **Compound composition, one premise** -----------------
+
+`//Swan is a type of bird. `
+<br/>
+<br/>
+`<swan --> bird>. %0.90%`
+<br/>
+<br/>
+`//Is being bird what differ swimmer from swan?`
+<br/>
+<br/>
+`<(~,swimmer, swan) --> bird>? `
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//What differs swimmer from swan is not being bird.`
+<br/>
+<br/>
+`//outputMustContain('<(~,swimmer,swan) --> bird>. %0.10;0.73%')`
+
+------------------- **Compound decomposition, one premise** -----------------
+
+`//Robin is a type of swimming bird.`
+<br/>
+<br/>
+`<robin --> (&,bird,swimmer)>. %0.90% `
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//Robin is a type of bird.`
+<br/>
+<br/>
+`//outputMustContain('<robin --> bird>. %0.90;0.73%')`
+
+------------------- **Compound decomposition, one premise** -----------------
+
+`//Robin is a type of nonswimming bird.`
+<br/>
+<br/>
+`<robin --> (-,bird,swimmer)>. %0.90%`
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//Robin is a type of bird.`
+<br/>
+<br/>
+`//outputMustContain('<robin --> bird>. %0.90;0.73%')`
+
+------------------- **Compound decomposition, one premise** -----------------
+
+`//Boys and girls are youth.`
+<br/>
+<br/>
+`<(|, boy, girl) --> youth>. %0.90%`
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//Boys are youth.`
+<br/>
+<br/>
+`//outputMustContain('<boy --> youth>. %0.90;0.73%')`
+
+------------------- **Compound decomposition, one premise** -----------------
+
+`//What differs boys from gials are being strong.`
+<br/>
+<br/>
+`<(~, boy, girl) --> [strong]>. %0.90%`
+<br/>
+<br/>
+`32`
+<br/>
+<br/>
+`//Boys are strong.`
+<br/>
+<br/>
+`//outputMustContain('<boy --> [strong]>. %0.90;0.73%')`
