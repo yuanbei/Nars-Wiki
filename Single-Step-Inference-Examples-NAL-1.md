@@ -106,7 +106,7 @@
 
 // What is a type of swimmer?
 
-<?x --> swimmer>?  
+</?/x --> swimmer>?  
 
 5
 
