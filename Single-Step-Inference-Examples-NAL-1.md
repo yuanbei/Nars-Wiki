@@ -66,3 +66,19 @@
 
 // outputMustContain('<animal --> robin>. %1.00;0.45%')
 
+//------------------------------------------- Conversion -----------------------------------------------
+
+// Bird is a type of swimmer. 
+
+<bird --> swimmer>.
+
+// Is swimmer a type of bird?
+
+<swimmer --> bird>? 
+
+6
+
+// I guess swimmer is a type of bird.
+
+// outputMustContain('<swimmer --> bird>. %1.00;0.47%')
+
