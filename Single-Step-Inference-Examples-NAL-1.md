@@ -9,6 +9,7 @@
 1
 
 // Bird is very likely to be a type of swimmer.
+
 // outputMustContain('<bird --> swimmer>. %0.87;0.91%')
 
 //---------------------------------------------- Deduction ---------------------------------------------------
