@@ -65,7 +65,7 @@
 `// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')`
 <br/>
 <br/>
-`// I guess swimmer is a type of bird.```
+`// I guess swimmer is a type of bird.`
 <br/>
 <br/>
 `// outputMustContain('<swimmer --> bird>. %1.00;0.42%')`
