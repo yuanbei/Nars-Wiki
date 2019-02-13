@@ -128,7 +128,9 @@
 5
 
 // What is a type of bird?
+
 // outputMustContain('<?1 --> bird>?')
 
 // What is the type of bird?
+
 // outputMustContain('<bird --> ?1>?')
