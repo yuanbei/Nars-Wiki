@@ -20,6 +20,28 @@
 <br/>
 `// outputMustContain('<robin <-> swan>. %0.87;0.91%')`
 
+---------------------------------------------- **Comparison** ----------------------------------------------------``
+
+`Swan is a type of swimmer.`
+<br/>
+<br/>
+`<swan --> swimmer>. %0.90% `
+<br/>
+<br/>
+`Swan is a type of bird. `
+<br/>
+<br/>
+`<swan --> bird>.  `
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`I guess that bird is similar to swimmer.`
+<br/>
+<br/>
+`outputMustContain('<bird <-> swimmer>. %0.90;0.45%')`
+
 ---------------------------------------------- **Deduction** ---------------------------------------------------
 
 `// Bird is a type of animal.`
