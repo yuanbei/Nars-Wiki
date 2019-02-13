@@ -1,15 +1,24 @@
 ---------------------------------------------- **Revision** ----------------------------------------------------``
 
-'Robin is similar to swan.
-<robin <-> swan>.  
-
-'I think robin is not similar to swan.
-<robin <-> swan>. %0.10;0.60% 
-
-1
-
-'Robin is probably similar to swan. 
-''outputMustContain('<robin <-> swan>. %0.87;0.91%')
+`// Robin is similar to swan.`
+<br/>
+<br/>
+`<robin <-> swan>.  `
+<br/>
+<br/>
+`// I think robin is not similar to swan.`
+<br/>
+<br/>
+`<robin <-> swan>. %0.10;0.60% `
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`// Robin is probably similar to swan. `
+<br/>
+<br/>
+`// outputMustContain('<robin <-> swan>. %0.87;0.91%')`
 
 ---------------------------------------------- **Deduction** ---------------------------------------------------
 
