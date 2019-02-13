@@ -92,70 +92,96 @@
 <br/>
 `// outputMustContain('<animal --> robin>. %1.00;0.45%')`
 
-//------------------------------------------- Conversion -----------------------------------------------``
+------------------------------------------- **Conversion** -----------------------------------------------``
+
+`// Bird is a type of swimmer.`
+<br/>
+<br/>
+`<bird --> swimmer>.`
+<br/>
+<br/>
+`// Is swimmer a type of bird?`
+<br/>
+<br/>
+`<swimmer --> bird>?`
+<br/>
+<br/>
+`6`
+<br/>
+<br/>
+`// I guess swimmer is a type of bird.`
+<br/>
+<br/>
+`// outputMustContain('<swimmer --> bird>. %1.00;0.47%')`
+
+//---------------------------------------- **"Yes/No" Question** -------------------------------------------
 
 // Bird is a type of swimmer.
-
+<br/>
+<br/>
 <bird --> swimmer>.
-
-// Is swimmer a type of bird?
-
-<swimmer --> bird>?
-
-6
-
-// I guess swimmer is a type of bird.
-
-// outputMustContain('<swimmer --> bird>. %1.00;0.47%')
-
-//---------------------------------------- "Yes/No" Question -------------------------------------------
-
-// Bird is a type of swimmer.
-
-<bird --> swimmer>.
-
+<br/>
+<br/>
 // Is bird a type of swimmer?
-
+<br/>
+<br/>
 <bird --> swimmer>?
-
+<br/>
+<br/>
 1
-
+<br/>
+<br/>
 // Bird is a type of swimmer.
-
+<br/>
+<br/>
 // OutputMustContain('<bird --> swimmer>. %1.00;0.90%')
 
-//---------------------------------------- "Wh" Question -------------------------------------------
+//---------------------------------------- **"Wh" Question** -------------------------------------------
 
 // Bird is a type of swimmer.
-
+<br/>
+<br/>
 <bird --> swimmer>. %1.00;0.80%
-
+<br/>
+<br/>
 // What is a type of swimmer?
-
+<br/>
+<br/>
 <?x --> swimmer>?
-
+<br/>
+<br/>
 5
-
+<br/>
+<br/>
 // Bird is a type of swimmer.
-
+<br/>
+<br/>
 // outputMustContain('<bird --> swimmer>. %1.00;0.80%')
 
-//-------------------------------------- Backward Inference -----------------------------------------``
+-------------------------------------- **Backward Inference** -----------------------------------------``
 
 // Bird is a type of swimmer.
-
+<br/>
+<br/>
 <bird --> swimmer>. %1.00;0.80%
-
+<br/>
+<br/>
 // What is a type of swimmer?
-
+<br/>
+<br/>
 <?1 --> swimmer>?  
-
+<br/>
+<br/>
 5
-
+<br/>
+<br/>
 // What is a type of bird?``
-
+<br/>
+<br/>
 // outputMustContain('<?1 --> bird>?')
-
+<br/>
+<br/>
 // What is the type of bird?``
-
+<br/>
+<br/>
 // outputMustContain('<bird --> ?1>?')
