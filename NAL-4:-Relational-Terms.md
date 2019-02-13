@@ -6,7 +6,7 @@
 `<(*,acid,base) --> reaction>.`
 <br/>
 <br/>
-'2'
+`2`
 <br/>
 <br/>
 `//Acid can react with base.`
@@ -28,7 +28,7 @@
 `<acid --> (/,reaction,_,base)>.`
 <br/>
 <br/>
-'3'
+`3`
 <br/>
 <br/>
 `//An acid and a base can have a reaction.`
