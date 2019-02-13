@@ -3,15 +3,15 @@
 `// Bird is a type of swimmer.`
 <br/>
 `<bird --> swimmer>.`
-``
+<br/>
 `// Bird is probably not a type of swimmer.`
-``
+<br/>
 `<bird --> swimmer>. %0.10;0.60%`
-``
+<br/>
 `1`
-``
+<br/>
 `// Bird is very likely to be a type of swimmer.`
-``
+<br/>
 `// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
 
 //---------------------------------------------- Deduction ---------------------------------------------------
