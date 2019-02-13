@@ -1,7 +1,7 @@
 ---------------------------------------------- **Revision** ----------------------------------------------------``
 
-`// Robin is similar to swan.
-<br/>`
+`// Robin is similar to swan.`
+<br/>
 <br/>
 `<robin <-> swan>.  `
 <br/>
