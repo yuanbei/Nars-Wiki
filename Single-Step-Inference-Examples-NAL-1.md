@@ -50,3 +50,23 @@
 
 // outputMustContain('<swimmer --> bird>. %1.00;0.42%')
 
+//---------------------------------------------- Exemplification ---------------------------------------------------
+
+// Swan is a type of swimmer. 
+
+<swan --> swimmer>. %0.90%
+
+// Swan is a type of bird. 
+
+<swan --> bird>. 
+
+3
+
+// I guess bird is a type of swimmer.
+
+// OutputMustContain('<bird --> swimmer>. %0.90;0.45%')
+
+// I guess swimmer is a type of bird.
+
+// outputMustContain('<swimmer --> bird>. %1.00;0.42%')
+
