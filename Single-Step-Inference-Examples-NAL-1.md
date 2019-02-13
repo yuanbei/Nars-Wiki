@@ -175,13 +175,13 @@
 `5`
 <br/>
 <br/>
-`// What is a type of bird?```
+`// What is a type of bird?`
 <br/>
 <br/>
 `// outputMustContain('<?1 --> bird>?')`
 <br/>
 <br/>
-`// What is the type of bird?```
+`// What is the type of bird?`
 <br/>
 <br/>
 `// outputMustContain('<bird --> ?1>?')`
