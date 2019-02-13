@@ -8,4 +8,4 @@ Single step Inference examples
 * [NAL-6: Variable Terms](https://github.com/opennars/opennars/wiki/NAL-6:-Variable-Terms)
 * [NAL-7: Events as Statements](https://github.com/opennars/opennars/wiki/NAL-7:-Events-as-Statements)
 * [NAL-8: Operations and Goals as Events](https://github.com/opennars/opennars/wiki/NAL-8:-Operations-and-Goals-as-Events)
-* [NAL-9: Self-Monitoring and Self-Control](https://github.com/opennars/opennars/wiki/Single-Step-Inference-Examples-NAL-9)
+* [NAL-9: Self-Monitoring and Self-Control](https://github.com/opennars/opennars/wiki/NAL-9:-Self-Monitoring-and-Self-Control)
