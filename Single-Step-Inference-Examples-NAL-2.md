@@ -1,24 +1,15 @@
 ---------------------------------------------- **Revision** ----------------------------------------------------``
 
-`// Bird is a type of swimmer.`
-<br/>
-<br/>
-`<bird --> swimmer>.`
-<br/>
-<br/>
-`// Bird is probably not a type of swimmer.`
-<br/>
-<br/>
-`<bird --> swimmer>. %0.10;0.60%`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`// Bird is very likely to be a type of swimmer.`
-<br/>
-<br/>
-`// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
+'Robin is similar to swan.
+<robin <-> swan>.  
+
+'I think robin is not similar to swan.
+<robin <-> swan>. %0.10;0.60% 
+
+1
+
+'Robin is probably similar to swan. 
+''outputMustContain('<robin <-> swan>. %0.87;0.91%')
 
 ---------------------------------------------- **Deduction** ---------------------------------------------------
 
