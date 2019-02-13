@@ -116,72 +116,72 @@
 
 //---------------------------------------- **"Yes/No" Question** -------------------------------------------
 
-// Bird is a type of swimmer.
+`// Bird is a type of swimmer.`
 <br/>
 <br/>
-<bird --> swimmer>.
+`<bird --> swimmer>.`
 <br/>
 <br/>
-// Is bird a type of swimmer?
+`// Is bird a type of swimmer?`
 <br/>
 <br/>
-<bird --> swimmer>?
+`<bird --> swimmer>?`
 <br/>
 <br/>
-1
+`1`
 <br/>
 <br/>
-// Bird is a type of swimmer.
+`// Bird is a type of swimmer.`
 <br/>
 <br/>
-// OutputMustContain('<bird --> swimmer>. %1.00;0.90%')
+`// OutputMustContain('<bird --> swimmer>. %1.00;0.90%')`
 
-//---------------------------------------- **"Wh" Question** -------------------------------------------
+---------------------------------------- **"Wh" Question** -------------------------------------------
 
-// Bird is a type of swimmer.
+`// Bird is a type of swimmer.`
 <br/>
 <br/>
-<bird --> swimmer>. %1.00;0.80%
+`<bird --> swimmer>. %1.00;0.80%`
 <br/>
 <br/>
-// What is a type of swimmer?
+`// What is a type of swimmer?`
 <br/>
 <br/>
-<?x --> swimmer>?
+`<?x --> swimmer>?`
 <br/>
 <br/>
-5
+`5`
 <br/>
 <br/>
-// Bird is a type of swimmer.
+`// Bird is a type of swimmer.`
 <br/>
 <br/>
-// outputMustContain('<bird --> swimmer>. %1.00;0.80%')
+`// outputMustContain('<bird --> swimmer>. %1.00;0.80%')`
 
 -------------------------------------- **Backward Inference** -----------------------------------------``
 
-// Bird is a type of swimmer.
+`// Bird is a type of swimmer.`
 <br/>
 <br/>
-<bird --> swimmer>. %1.00;0.80%
+`<bird --> swimmer>. %1.00;0.80%`
 <br/>
 <br/>
-// What is a type of swimmer?
+`// What is a type of swimmer?`
 <br/>
 <br/>
-<?1 --> swimmer>?  
+`<?1 --> swimmer>?  `
 <br/>
 <br/>
-5
+`5`
 <br/>
 <br/>
-// What is a type of bird?``
+`// What is a type of bird?```
 <br/>
 <br/>
-// outputMustContain('<?1 --> bird>?')
+`// outputMustContain('<?1 --> bird>?')`
 <br/>
 <br/>
-// What is the type of bird?``
+`// What is the type of bird?```
 <br/>
 <br/>
-// outputMustContain('<bird --> ?1>?')
+`// outputMustContain('<bird --> ?1>?')`
