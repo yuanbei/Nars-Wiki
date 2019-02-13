@@ -1,7 +1,7 @@
 ---------------------------------------------- Revision ----------------------------------------------------``
 
 `// Bird is a type of swimmer.`
-`<br/>`
+<br/>
 `<bird --> swimmer>.`
 ``
 `// Bird is probably not a type of swimmer.`
