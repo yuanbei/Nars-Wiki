@@ -80,81 +80,104 @@
 
 ------------------------------- **Inference on tense** -----------------------------
 
-`//If robin is a type of bird then robin is a type of animal.`
+`//John hold key_101 before he enter room_101`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
+`<<(*,John,key_101) --> hold> =/> <(*,John,room_101) --> enter>>. %1.00;0.90%`
+ <br/>
+<br/>
+`//John entered room_101`
 <br/>
 <br/>
-`//If robin is a type of bird then robin can fly.`
+`<(*,John,room_101) --> enter>. :\: %1.00;0.90%  `
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.80%`
+`3`
 <br/>
 <br/>
-`140`
-<br/>
-<br/>
-`//I guess if robin can fly then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> animal>>. %1.00;0.39%')`
-<br/>
-<br/>
-`//I guess if robin is a type of animal then robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> animal> ==> <robin --> [flying]>>. %0.80;0.45%')`
+`//outputMustContain('<(*,John,key_101) --> hold>. :!-10: %1.00;0.45%')`
 
-------------------------------------------- **Abduction** -----------------------------------
+------------------------------------------- **Inference on tense** -----------------------------------
 
-`//If robin is a type of bird then robin is a type of animal.`
+`//John is opening door_101 now`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
+`<(*,John,door_101) --> open>. :|: `
 <br/>
 <br/>
-`//If robin can fly then robin is probably a type of animal.`
+`6`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> animal>>. %0.8%`
+`//John is entering room_101 now`
 <br/>
 <br/>
-`19`
+`<(*,John,room_101) --> enter>. :|: `
 <br/>
 <br/>
-`//I guess if robin is a type of bird then robin can fly.`
+`10`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> [flying]>>. %1.00;0.39%')`
+`//John will enter room_101 after he open door_101`
 <br/>
 <br/>
-`//I guess if robin can fly then robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> bird>>. %0.80;0.45%')`
+`//outputMustContain('<<(*,John,room_101) --> enter> =\> (&/,<(*,John,door_101) --> open>,+6)>. :!6: %1.00;0.45%')`
 
-------------------------------------------- **Detachment** -----------------------------------------------
+-------------------------------- **Induction on events ** -------------------------------------
 
-`//If robin is a type of bird then robin can fly.`
+`//John is opening door_101 now`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
+`<(*,John,door_101) --> open>. :|: `
 <br/>
 <br/>
-`//Robin is a type of bird. `
+`11`
 <br/>
 <br/>
-`<robin --> bird>.`
+`//John is not entering room_101 now`
 <br/>
 <br/>
-`1`
+`<(*,John,room_101) --> enter>. :|: %0% `
 <br/>
 <br/>
-`//Robin is a type of animal.`
+`10`
 <br/>
 <br/>
-`//outputMustContain('<robin --> animal>. %1.00;0.81%')`
+`//If John open the door_101, he will not enter room_101`
+<br/>
+<br/>
+`//outputMustContain('<(&/,<(*,John,door_101) --> open>,+11) =/> <(*,John,room_101) --> enter>>. :!11: %0.00;0.45%')`
+<br/>
+<br/>
+`//If John enter the door_101, it doesn't mean he will enter the room_101`
+<br/>
+<br/>
+`//outputMustContain('<(&/,<(*,John,door_101) --> open>,+11) </> <(*,John,room_101) --> enter>>. :!11: %0.00;0.45%')`
+<br/>
+<br/>
+`//adjusted +3 to +4`
+<br/>
+<br/>
+`//original output (1.3.3): `
+<br/>
+<br/>
+`//OUT: <<(*,John,room_101) --> enter>=\><(*,John,door_101) --> open>>. :\: %1.00;0.45%  `
+<br/>
+<br/>
+`//OUT: <<(*,John,door_101) --> open>=/><(*,John,room_101) --> enter>>. :\: %1.00;0.45%   `
+<br/>
+<br/>
+`//OUT: <<(*,John,door_101) --> open></><(*,John,room_101) --> enter>>. :\: %1.00;0.45%   `
+<br/>
+<br/>
+`//OUT: <<(*,John,room_101) --> enter>=\><(*,John,door_101) --> open>>. %1.00;0.45%   `
+<br/>
+<br/>
+`//OUT: <<(*,John,door_101) --> open>=/><(*,John,room_101) --> enter>>. %1.00;0.45%   `
+<br/>
+<br/>
+`//OUT: <<(*,John,door_101) --> open></><(*,John,room_101) --> enter>>. %1.00;0.45%   `
+<br/>
+<br/>
 
 --------------------------------- **Detachment** ---------------------------
 
