@@ -1,4 +1,4 @@
-------------------------- **Temporal deduction/explification** -------------------------------------
+------------------------- **Temporal deduction/explification** ----------------------------------
 
 `//Someone enter the room_101 after he open the door_101`
 <br/>
