@@ -2,7 +2,7 @@ Desire Value applies to [goal](https://github.com/opennars/opennars/wiki/Sentenc
 
 During run time of a system there are usually multiple conflicting goals exist. Often achieving one goal makes another one harder to be achieved, therefore system must make decision which goal is better to pursue. Furthermore,  goals may not always be related to each other and thus we cannot expect the system to have explicit knowledge to handle goal conflicts. Desire value is a learned metrics that allows system to compare goals and make a selection during goal conflicts.
 
-As mentioned above, desire value has the same format as truth value, and in fact the two metrics are very related. Desire value has frequency and confidence as its components and range is between 0 and 1, also same [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions), [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) are applied to calculate desire value during inference. 
+As mentioned above, desire value has the same format as truth value, and in fact the two metrics are very related. Desire value has frequency and confidence as its components and with range between 0 and 1, also same [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions), [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) are applied to calculate desire value during inference. 
 
 ### Theoretical explanation
 
