@@ -10,7 +10,7 @@ On this page only sentences are discussed as a complete structural derivations t
 
 **Quest** is a sentence that is similar to the question, however while the question asks to come up with some truth value, quest is about desire value of an event. Goals are finished with \mbox{?`} at the end of a sentence. 
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
+![equation](<img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Cmbox%7B%3F%60%7D%24%0A&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$\mbox{?`}$" width="11" height="14" />)
 
 
 
