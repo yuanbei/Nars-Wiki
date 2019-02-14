@@ -179,27 +179,27 @@
 <br/>
 <br/>
 
---------------------------------- **Detachment** ---------------------------
+--------------------------------- **Induction on events** ---------------------------
 
-`//Usually if robin is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>. %0.70;0.90% `
-<br/>
-<br/>
-`//Robin is a type of animal. `
-<br/>
-<br/>
-`<robin --> animal>.`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//I guess robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> bird>. %1.00;0.36%')`
+//John is opening door_101
+<John --> (/,open,_,door_101)>. :|: 
+
+6
+
+//John is entering room_101
+<John --> (/,enter,_,room_101)>. :|: 
+
+20
+
+//If John enter room_101, he should open door_101 before
+//outputMustContain('<<John --> (/,enter,_,room_101)> =\> (&/,<John --> (/,open,_,door_101)>,+6)>. :!6: %1.00;0.45%')
+
+//new: variable introduction also in time:
+
+//If someone enter room_101, he should open door_101 before
+//outputMustContain('<<$1 --> (/,enter,_,room_101)> =\> (&/,<$1 --> (/,open,_,door_101)>,+6)>. :!6: %1.00;0.45%')
+
+//adjusted +2 to +3 in both conditions
 
 ----------------------------- **Comparison** ------------------------
 
