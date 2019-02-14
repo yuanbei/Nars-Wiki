@@ -1,148 +1,160 @@
-------------------------- **Compound composition, two premises** -------------------------------------
+------------------------- **Variable unification** -------------------------------------
 
-`//If robin can fly then robin is a type of bird.`
+`//If something is a bird, then it is a flyer.`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
+`<<$x --> bird> ==> <$x --> flyer>>.`
 <br/>
 <br/>
-`//If robin can fly then robin may not a type of bird. `
+`//If something is a bird, then it is not a flyer. `
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>. %0.00;0.60% `
+`<<$y --> bird> ==> <$y --> flyer>>. %0.00;0.70% `
 <br/>
 <br/>
 `1`
 <br/>
 <br/>
-`//If robin can fly then robin is a type of bird.`
+`//If something is a bird, then usually, it is a flyer. `
 <br/>
 <br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> bird>>. %0.86;0.91%')`
+`outputMustContain('<< $1--> bird> ==> < $1--> flyer>>. %0.79;0.92%')`
 
-------------------------------------------- **Deduction** --------------------------------------
+---------------------------------- **Variable unification** --------------------------------
 
-`//If robin is a type of bird then robin is a type of animal.`
+`//If something is a bird, then it is an animal. `
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
+`<<$x --> bird> ==> <$x --> animal>>. `
 <br/>
 <br/>
-`//If robin can fly then robin is a type of bird.`
+`//If something is a robin, then it is a bird. `
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
+`<<$y --> robin> ==> <$y --> bird>>. `
 <br/>
 <br/>
-`14`
+`3`
 <br/>
 <br/>
-`//If robin can fly then robin is a type of animal.`
+`//If something is a robin, then it is an animal. `
 <br/>
 <br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> animal>>. %1.00;0.81%')`
+`//outputMustContain('<< $1--> robin> ==> < $1--> animal>>. %1.00;0.81%')`
+<br/>
+<br/>
+`//I guess that if something is an animal, then it is a robin. `
+<br/>
+<br/>
+`//outputMustContain('<< $1--> animal> ==> < $1--> robin>>. %1.00;0.45%')`
 
---------------------------------------- **Exemplification** -------------------------------------
+---------------------------------- **Variable unification** --------------------------------
 
-`//If robin can fly then robin is a type of bird.`
+`//If something is a swan, then it is a bird.`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
+`<<$x --> swan> ==> <$x --> bird>>. %1.00;0.80%  `
 <br/>
 <br/>
-`//If robin is a type of bird then robin is a type of animal. `
+`//If something is a swan, then it is a swimmer.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
+`<<$y --> swan> ==> <$y --> swimmer>>. %0.80% `
 <br/>
 <br/>
-`19`
+`3`
 <br/>
 <br/>
-`//I guess if robin is a type of animal then robin can fly.`
+`//I believe that if something is a swan, then it is a bird or a swimmer.`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> animal> ==> <robin --> [flying]>>. %1.00;0.45%')`
+`//outputMustContain('<< $1--> swan> ==> (||,< $1--> bird>,< $1--> swimmer>)>. %1.00;0.72%')`
+<br/>
+<br/>
+`//I believe that if something is a swan, then usually, it is both a bird and a swimmer.`
+<br/>
+<br/>
+`//outputMustContain('<< $1 --> swan> ==> (&&,< $1 --> bird>,< $1--> swimmer>)>. %0.80;0.72%')`
 
-------------------------------- **Induction** -----------------------------
+------------------------------- **Variable unification** -----------------------------
 
-`//If robin is a type of bird then robin is a type of animal.`
+`//What can be said about bird can also be said about robin.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
+`<<bird --> $x> ==> <robin --> $x>>.`
 <br/>
 <br/>
-`//If robin is a type of bird then robin can fly.`
+`//What can be said about swimmer usually can also be said about robin.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.80%`
+`<<swimmer --> $y> ==> <robin --> $y>>. %0.70;0.90%  `
 <br/>
 <br/>
-`140`
+`3`
 <br/>
 <br/>
-`//I guess if robin can fly then robin is a type of animal.`
+`//What can be said about bird and swimmer can also be said about robin.`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> animal>>. %1.00;0.39%')`
+`outputMustContain('<(&&,<bird --> $1>,<swimmer --> $1>) ==> <robin --> >>. %1.00;0.81%')`
 <br/>
 <br/>
-`//I guess if robin is a type of animal then robin can fly.`
+`//What can be said about bird or swimmer can also be said about robin.`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> animal> ==> <robin --> [flying]>>. %0.80;0.45%')`
+`//outputMustContain('<(||,<bird -->$1 >,<swimmer --> $1>) ==> <robin --> >>. %0.70;0.81%')`
 
-------------------------------------------- **Abduction** -----------------------------------
+------------------------------ **Variable unification** ------------------------------
 
-`//If robin is a type of bird then robin is a type of animal.`
+`//If something can fly and chirp, then it is a bird.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
+`<(&&,<$x --> flyer>,<$x --> [chirping]>) ==> <$x --> bird>>. `
 <br/>
 <br/>
-`//If robin can fly then robin is probably a type of animal.`
+`//If something has wings, then it can fly.`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> animal>>. %0.8%`
+`<<$y --> [with-wings]> ==> <$y --> flyer>>. `
 <br/>
 <br/>
-`19`
+`8`
 <br/>
 <br/>
-`//I guess if robin is a type of bird then robin can fly.`
+`//If something can chirp and has wings, then it is a bird.`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> [flying]>>. %1.00;0.39%')`
-<br/>
-<br/>
-`//I guess if robin can fly then robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> bird>>. %0.80;0.45%')`
+`//outputMustContain('<(&&,<$1 --> [chirping]>,<$1 --> [with-wings]>) ==> <$1 --> bird>>. %1.00;0.81%')`
 
-------------------------------------------- **Detachment** -----------------------------------------------
+---------------------------------- **Variable unification** --------------------------------
 
-`//If robin is a type of bird then robin can fly.`
+`//If something can fly, chirp, and eats worms, then it is a bird.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
+`<(&&,<$x --> flyer>,<$x --> [chirping]>, <(*, $x, worms) --> food>) ==> <$x --> bird>>. `
 <br/>
 <br/>
-`//Robin is a type of bird. `
+`//If something can chirp and has wings, then it is a bird.`
 <br/>
 <br/>
-`<robin --> bird>.`
+`<(&&,<$x --> [chirping]>,<$x --> [with-wings]>) ==> <$x --> bird>>.`
 <br/>
 <br/>
-`1`
+`12`
 <br/>
 <br/>
-`//Robin is a type of animal.`
+`//If something can fly and eats worms, then I guess it has wings.`
 <br/>
 <br/>
-`//outputMustContain('<robin --> animal>. %1.00;0.81%')`
+`//outputMustContain('<(&&,< --> flyer>,<(*,,worms) --> food>) ==> < --> [with-wings]>>. %1.00;0.45%')`
+<br/>
+<br/>
+`//I guess if something has wings, then it can fly and eats worms.`
+<br/>
+<br/>
+`//outputMustContain('<< --> [with-wings]> ==> (&&,< --> flyer>,<(*,,worms) --> food>)>. %1.00;0.45%')`
 
---------------------------------- **Detachment** ---------------------------
+--------------------------------- **Variable unification** ---------------------------
 
 `//Usually if robin is a type of bird then robin is a type of animal.`
 <br/>
