@@ -452,7 +452,7 @@
 `//Robin can swim.`
 <br/>
 <br/>
-`outputMustContain('<robin --> swimmer>. %0.90;0.73%')` 
+`//outputMustContain('<robin --> swimmer>. %0.90;0.73%')` 
 <br/>
 <br/>
 `5`
@@ -465,7 +465,7 @@
 
 -------------------------------------- **Negation** -------------------------------------
 
-`It is unlikely that robin cannot fly. `
+`//It is unlikely that robin cannot fly. `
 <br/>
 <br/>
 `(--,<robin --> [flying]>). %0.1%`
@@ -481,13 +481,13 @@
 
 -------------------------------------- **Negation** -------------------------------------
 
-`Robin can fly. `
+`//Robin can fly. `
 <br/>
 <br/>
 `<robin --> [flying]>. %0.9%`
 <br/>
 <br/>
-`Can robin fly or not?`
+`//Can robin fly or not?`
 <br/>
 <br/>
 `(--,<robin --> [flying]>)?`
@@ -503,13 +503,13 @@
 
 -------------------------------------- **Contraposition** -------------------------------------
 
-`It is unlikely that if robin is not a type of bird then robin can fly. `
+`//It is unlikely that if robin is not a type of bird then robin can fly. `
 <br/>
 <br/>
 `<(--,<robin --> bird>) ==> <robin --> [flying]>>. %0.1%`
 <br/>
 <br/>
-`If robin cannot fly then is robin a type of bird?`
+`//If robin cannot fly then is robin a type of bird?`
 <br/>
 <br/>
 `<(--,<robin --> [flying]>) ==> <robin --> bird>>?`
@@ -525,13 +525,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin can fly and has wings then robin is a bird.`
+`//If robin can fly and has wings then robin is a bird.`
 <br/>
 <br/>
 `<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
 <br/>
 <br/>
-`robin can fly.`
+`//robin can fly.`
 <br/>
 <br/>
 `<robin --> [flying]>.`
@@ -547,13 +547,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin can fly, has wings, and chirps, then robin is a bird`
+`//If robin can fly, has wings, and chirps, then robin is a bird`
 <br/>
 <br/>
 `<(&&,<robin --> [chirping]>,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
 <br/>
 <br/>
-`robin can fly.`
+`//robin can fly.`
 <br/>
 <br/>
 `<<robin --> [flying]>. `
@@ -569,13 +569,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin is a bird and it's living, then robin is an animal`
+`//If robin is a bird and it's living, then robin is an animal`
 <br/>
 <br/>
 `<(&&,<robin --> bird>,<robin --> [living]>) ==> <robin --> animal>>.  `
 <br/>
 <br/>
-`If robin can fly, then robin is a bird`
+`//If robin can fly, then robin is a bird`
 <br/>
 <br/>
 `<<robin --> [flying]> ==> <robin --> bird>>.`
@@ -591,13 +591,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin can fly then robin is a bird.`
+`//If robin can fly then robin is a bird.`
 <br/>
 <br/>
 `<<robin --> [flying]> ==> <robin --> bird>>.`
 <br/>
 <br/>
-`If robin both swims and flys then robin is a bird.`
+`//If robin both swims and flys then robin is a bird.`
 <br/>
 <br/>
 `<(&&,<robin --> swimmer>,<robin --> [flying]>) ==> <robin --> bird>>.`
@@ -613,13 +613,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin is has wings and chirps, then robin is a bird`
+`//If robin is has wings and chirps, then robin is a bird`
 <br/>
 <br/>
 `<(&&,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>. `
 <br/>
 <br/>
-`If robin can fly, has wings, and chirps, then robin is a bird`
+`//If robin can fly, has wings, and chirps, then robin is a bird`
 <br/>
 <br/>
 `<(&&,<robin --> [flying]>,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>.`
@@ -635,13 +635,13 @@
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin can fly and it has wings, then robin is living.`
+`//If robin can fly and it has wings, then robin is living.`
 <br/>
 <br/>
 `<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> [living]>>. %0.9%`
 <br/>
 <br/>
-`If robin can fly and robin is a bird then robin is living.`
+`//If robin can fly and robin is a bird then robin is living.`
 <br/>
 <br/>
 `<(&&,<robin --> [flying]>,<robin --> bird>) ==> <robin --> [living]>>.`
@@ -650,26 +650,26 @@
 `18`
 <br/>
 <br/>
-`I guess if robin is a bird, then robin has wings.`
+`//I guess if robin is a bird, then robin has wings.`
 <br/>
 <br/>
 `//outputMustContain('<<robin --> bird> ==> <robin --> [with-wings]>>. %1.00;0.42%')`
 <br/>
 <br/>
-`I guess if robin has wings, then robin is a bird.`
+`//I guess if robin has wings, then robin is a bird.`
 <br/>
 <br/>
 `//outputMustContain('<<robin --> [with-wings]> ==> <robin --> bird>>. %0.90;0.45%')`
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
-`If robin can fly and robin chirps, then robin is a bird`
+`//If robin can fly and robin chirps, then robin is a bird`
 <br/>
 <br/>
 `<(&&,<robin --> [chirping]>,<robin --> [flying]>) ==> <robin --> bird>>. `
 <br/>
 <br/>
-`If robin can fly then usually robin has a beak.`
+`//If robin can fly then usually robin has a beak.`
 <br/>
 <br/>
 `<<robin --> [flying]> ==> <robin --> [with-beak]>>. %0.90%`
@@ -678,7 +678,7 @@
 `18`
 <br/>
 <br/>
-`I guess that if robin chirps and robin has a beak, then robin is a bird.`
+`//I guess that if robin chirps and robin has a beak, then robin is a bird.`
 <br/>
 <br/>
 `//outputMustContain('<(&&,<robin --> [chirping]>,<robin --> [with-beak]>) ==> <robin --> bird>>. %1.00;0.42%')`
