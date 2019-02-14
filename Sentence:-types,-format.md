@@ -8,6 +8,6 @@ On this page only sentences are discussed as a complete structural derivations t
 
 **Goal** sentence is a statement containing an [event](https://github.com/opennars/opennars/wiki/Temporal-Inference) and attached desire value that looks identical to truth value but has different semantics. Goals asks the system to carry out some operation in order to achieve the goal. Let A be some operation to achieve goal G, then system is asked to come up with sentence <A ==> G> %f;c% whose truth value is as as close to 1 as possible. Goals are finished with "!" at the end of a sentence. 
 
-**Quest** is a sentence that is similar to the question, however while the question asks to come up with some truth value, quest is about desire value of an event. Goals are finished with ![equation](http://bit.ly/2S18QfZ) at the end of a sentence.
+**Quest** is a sentence that is similar to the question, however while the question asks to come up with some truth value, quest is about desire value of an event. Goals are finished with "![equation](http://bit.ly/2S18QfZ)" at the end of a sentence.
 
 
