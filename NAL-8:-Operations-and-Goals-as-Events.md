@@ -16,3 +16,19 @@
 <br/>
 <br/>
 `//outputMustContain('(&/,<(*,SELF,{t002}) --> hold>,<(*,SELF,{t001}) --> at>,(^open,{t001}))! %1.00;0.81%')`
+
+---------------------------------------------------------------------------------------------
+
+`//The goal is to hold t002, then arrive t001 and open t001`
+<br/>
+<br/>
+`(&/,<(*,SELF,{t002}) --> hold>,<(*,SELF,{t001}) --> at>,(^open,{t001}))!`
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`//The goal is to hold t002`
+<br/>
+<br/>
+`//outputMustContain('<(*,SELF,{t002}) --> hold>! %1.00;0.81%')`
