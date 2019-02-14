@@ -1082,7 +1082,7 @@
 `10`
 <br/>
 <br/>
-`outputMustContain('(^reflect,{SELF},<cat --> animal>,<(*,cat,animal) --> inheritance>). :!0: %1.00;0.90%')`
+`//outputMustContain('(^reflect,{SELF},<cat --> animal>,<(*,cat,animal) --> inheritance>). :!0: %1.00;0.90%')`
 
 ---------------------------------------------------------------------------------------------
 
