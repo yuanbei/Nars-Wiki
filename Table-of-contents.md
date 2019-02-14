@@ -57,7 +57,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * user's manual
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
   - example and demonstration
-    * selected examples of task processing (i.e., multi-step examples)
+    * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/Multi-Step-Inference-Examples)
     * [Single Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * annotated list of demonstration
   - overview
