@@ -623,10 +623,14 @@
 <br/>
 `//lock1 is a key`
 `<lock1 --> lock>.`
-
+<br/>
+<br/>
 `7`
-
+<br/>
+<br/>
 `//there is a lock with the property that when opened by something, this something is a key (induction)`
+<br/>
+<br/>
 `//outputMustContain('<(&&,<#1 --> (/,open,,_)>,<#1 --> lock>) ==> < --> key>>. %1.00;0.45%')`
 
 -------------------------------------- **Conditional deduction** -------------------------------------
