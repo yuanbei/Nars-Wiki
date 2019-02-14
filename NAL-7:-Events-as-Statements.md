@@ -184,600 +184,236 @@
 --------------------------------- **Induction on events** ---------------------------
 
 `//John is opening door_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<John --> (/,open,_,door_101)>. :|: `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `6`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John is entering room_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<John --> (/,enter,_,room_101)>. :|: `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `20`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If John enter room_101, he should open door_101 before`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<<John --> (/,enter,_,room_101)> =\> (&/,<John --> (/,open,_,door_101)>,+6)>. :!6: %1.00;0.45%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//new: variable introduction also in time:`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If someone enter room_101, he should open door_101 before`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<< --> (/,enter,_,room_101)> =\> (&/,< --> (/,open,_,door_101)>,+6)>. :!6: %1.00;0.45%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//adjusted +2 to +3 in both conditions`
 
 ----------------------------- **Induction on events** ------------------------
 
 `//John is holding key_101 now`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(*,John,key_101) --> hold>. :|:  %1.00;0.90% `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `6`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//irrelevant  'outputMustContain('<John --> (/,hold,_,key_101)>. :\: %1.00;0.90%') `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//irrelevant  'outputMustContain('<key_101 --> (/,hold,John,_)>. :\: %1.00;0.90%') `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//irrelevant  'outputMustContain('<John --> (/,hold,_,key_101)>. :\: %1.00;0.90%') `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//irrelevant  'outputMustContain('<key_101 --> (/,hold,John,_)>. :\: %1.00;0.90%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If John open door_101, he will enter room_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<<(*,John,door_101) --> open> =/> <(*,John,room_101) --> enter>>. :|:  %1.00;0.90% `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `20`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If John hold key_101 and open door_101 (after 6 steps), he will enter room_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<(&/,<(*,John,key_101) --> hold>,+6,<(*,John,door_101) --> open>) =/> <(*,John,room_101) --> enter>>. :!6: %1.00;0.45%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//changed from +2 to +4 due to changes in interval calculations`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//this one is working, just throwing exception`
 
 ----------------------------- **Updating and revision** -----------------------------
 
 `//John is holding key_101 now`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(*,John,key_101) --> hold>. :|: `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `6`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John is not holding key_101 now`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(*,John,key_101) --> hold>. :|: %0% `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//Is John holding key_101 now? `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(*,John,key_101) --> hold>? :|: `
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `200`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//revision on events`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John maybe holding key_101 now`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<John --> (/,hold,_,key_101)>. :!6: %0.50;0.95%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//but also looking at it as separate:`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John will not hold key_101 in the future`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<John --> (/,hold,_,key_101)>. :!6: %0.00;0.90%')`
 
 
 ------------------------------- **Temporal analogy** -------------------------------
 
 `//If someone open door_101, he will enter room_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<<(*, $x, door_101) --> open> =/> <(*, $x, room_101) --> enter>>. %0.95%`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If someone enter room_101, it means he leave corridor_100`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<<(*, $x, room_101) --> enter> <|> <(*, $x, corridor_100) --> leave>>.`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `40`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//If someone open door_101, he will leave corridor_100`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<<(*,,door_101) --> open> =/> <(*,,corridor_100) --> leave>>. %0.95;0.81%')`
 
 --------------------------------- **Inference on tense** -----------------------------
 
 `//If someone hold key_101, he will enter room_101 (in 100 steps)`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(&/,<(*, $x, key_101) --> hold>,+100) =/> <(*, $x, room_101) --> enter>>.`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John held the key_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `<(*, John, key_101) --> hold>. :\:`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `210`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//John will enter room_101`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//outputMustContain('<(*,John,room_101) --> enter>. :!95: %1.00;0.81%')`
-`<br/>`
-`<br/>`
+<br/>
+<br/>
 `//this one is working, but throws an exception`
 
------------------------------------- **Resemblance** ---------------------------------
+------------------------------------ **Inference on tense** ---------------------------------
 
-`//Robin is a type of animal if and only if robin is a type of bird.`
+`//If someone hold key_101, he will enter room_101 (in 100 steps)`
 <br/>
 <br/>
-`<<robin --> animal> <=> <robin --> bird>>. `
+`<(&/,<(*, $x, key_101) --> hold>,+100) =/> <(*, $x, room_101) --> enter>>.`
 <br/>
 <br/>
-`//Robin is a type of bird if and only if robin can fly.`
+`//John is entering room_101 now`
 <br/>
 <br/>
-`<<robin --> bird> <=> <robin --> [flying]>>. %0.9%`
+`<(*,John,room_101) --> enter>. :|:`
 <br/>
 <br/>
-`19`
+`15`
 <br/>
 <br/>
-`//Robin is a type of animal if and only if robin can fly.`
+`//John held the key_101 (105 steps before)`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> animal>>. %0.90;0.81%')`
+`//outputMustContain('<(*,John,key_101) --> hold>. :!-105: %1.00;0.45%')`
 
-------------------- **Conversions between Implication and Equivalence** -----------------
+------------------- **Inference on tense** -----------------
 
-`//If robin can fly then robin is a type of bird.`
+//If John hold key_101, he will enter room_101
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>. %0.9% `
+<<(*,John,key_101) --> hold> =/> <(*,John,room_101) --> enter>>. 
 <br/>
 <br/>
-`//If robin is a type of bird then robin can fly.`
+//John is holding key_101 now
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.9%`
+<(*,John,key_101) --> hold>. :|:
+<br/>
+<br/> 
+20
 <br/>
 <br/>
-`7`
+//John will enter room_101
 <br/>
 <br/>
-`//Robin can fly if and only if robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> bird>>. %0.81;0.81%')`
+//outputMustContain('<(*,John,room_101) --> enter>. :!5: %1.00;0.81%')
 
-------------------- **Compound composition, two premises** -----------------
+------------------- **Deduction with interval summation** -----------------
 
-`//If robin is a type of bird then robin is a type of animal. `
+`//a + 1 = b`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
+`<(&/, a, +1) =/> b>.`
 <br/>
 <br/>
-`//If robin is a type of bird then robin can fly.`
+`//b + 1 = c`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.9% `
+`<(&/, b, +1) =/> c>.`
 <br/>
 <br/>
-`14`
+`10`
 <br/>
 <br/>
-`//If robin is a type of bird then usually robin is a type of animal and can fly.`
+`//a + 2 = c`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> bird> ==> (&&,<robin --> [flying]>,<robin --> animal>)>. %0.90;0.81%')`
-<br/>
-<br/>
-`//If robin is a type of bird then robin is a type of animal or can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> (||,<robin --> [flying]>,<robin --> animal>)>. %1.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//If robin is a type of bird then robin is a type of animal. `
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
-<br/>
-<br/>
-`//If robin can fly then robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> animal>>. %0.9%`
-<br/>
-<br/>
-`19`
-<br/>
-<br/>
-`//If robin can fly and is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [flying]>,<robin --> bird>) ==> <robin --> animal>>. %1.00;0.81%')`
-<br/>
-<br/>
-`//If robin can fly or is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<(||,<robin --> [flying]>,<robin --> bird>) ==> <robin --> animal>>. %0.90;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//If robin is a type of bird then robin is not a type of flying animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> (&&,<robin --> animal>,<robin --> [flying]>)>. %0%`
-<br/>
-<br/>
-`//If robin is a type of bird then robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> [flying]>>.`
-<br/>
-<br/>
-`8`
-<br/>
-<br/>
-`//It is unlikely that if a robin is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> animal>>. %0.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//Robin cannot be both a flyer and a swimmer.`
-<br/>
-<br/>
-`(&&,<robin --> [flying]>,<robin --> swimmer>). %0%`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`<robin --> [flying]>.`
-<br/>
-<br/>
-`6`
-<br/>
-<br/>
-`//Robin cannot swim.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> swimmer>. %0.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//Robin can fly or swim.`
-<br/>
-<br/>
-`(||,<robin --> [flying]>,<robin --> swimmer>).  `
-<br/>
-<br/>
-`//Robin cannot swim.`
-<br/>
-<br/>
-`<robin --> swimmer>. %0%` 
-<br/>
-<br/>
-`2`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %1.00;0.81%')`
-
-------------------- **Compound composition, one premises** -----------------
-
-`//Robin can fly.`
-<br/>
-<br/>
-`<robin --> [flying]>. `
-<br/>
-<br/>
-`//Can robin fly or swim?`
-<br/>
-<br/>
-`(||,<robin --> [flying]>,<robin --> swimmer>)?` 
-<br/>
-<br/>
-`7`
-<br/>
-<br/>
-`//Robin can fly or swim.`
-<br/>
-<br/>
-`//outputMustContain('(||,<robin --> [flying]>,<robin --> swimmer>). %1.00;0.81%')`
-
-------------------- **Compound composition, one premises** -----------------
-
-`//Robin can fly and swim.`
-<br/>
-<br/>
-`(&&,<robin --> swimmer>,<robin --> [flying]>). %0.9%`
-<br/>
-<br/>
-`//Robin can swim.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> swimmer>. %0.90;0.73%')` 
-<br/>
-<br/>
-`5`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %0.90;0.73%')`
-
--------------------------------------- **Negation** -------------------------------------
-
-`//It is unlikely that robin cannot fly. `
-<br/>
-<br/>
-`(--,<robin --> [flying]>). %0.1%`
-<br/>
-<br/>
-`3`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %0.90;0.90%')`
-
--------------------------------------- **Negation** -------------------------------------
-
-`//Robin can fly. `
-<br/>
-<br/>
-`<robin --> [flying]>. %0.9%`
-<br/>
-<br/>
-`//Can robin fly or not?`
-<br/>
-<br/>
-`(--,<robin --> [flying]>)?`
-<br/>
-<br/>
-`30`
-<br/>
-<br/>
-`//It is unlikely that robin cannot fly.`
-<br/>
-<br/>
-`//outputMustContain('(--,<robin --> [flying]>). %0.10;0.90%')`
-
--------------------------------------- **Contraposition** -------------------------------------
-
-`//It is unlikely that if robin is not a type of bird then robin can fly. `
-<br/>
-<br/>
-`<(--,<robin --> bird>) ==> <robin --> [flying]>>. %0.1%`
-<br/>
-<br/>
-`//If robin cannot fly then is robin a type of bird?`
-<br/>
-<br/>
-`<(--,<robin --> [flying]>) ==> <robin --> bird>>?`
-<br/>
-<br/>
-`29`
-<br/>
-<br/>
-`//I guess it is unlikely that if robin cannot fly then robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<(--,<robin --> [flying]>) ==> <robin --> bird>>. %0.00;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly and has wings then robin is a bird.`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//robin can fly.`
-<br/>
-<br/>
-`<robin --> [flying]>.`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//If robin has wings then robin is a bird`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [with-wings]> ==> <robin --> bird>>. %1.00;0.81%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly, has wings, and chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [chirping]>,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//robin can fly.`
-<br/>
-<br/>
-`<<robin --> [flying]>. `
-<br/>
-<br/>
-`5`
-<br/>
-<br/>
-`//If robin has wings and chirps then robin is a bird.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [chirping]>,<robin --> [with-wings]>) ==> <robin --> bird>>. %1.00;0.81%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin is a bird and it's living, then robin is an animal`
-<br/>
-<br/>
-`<(&&,<robin --> bird>,<robin --> [living]>) ==> <robin --> animal>>.  `
-<br/>
-<br/>
-`//If robin can fly, then robin is a bird`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//If robin is living and it can fly, then robin is an animal.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [flying]>,<robin --> [living]>) ==> <robin --> animal>>. %1.00;0.81%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly then robin is a bird.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
-<br/>
-<br/>
-`//If robin both swims and flys then robin is a bird.`
-<br/>
-<br/>
-`<(&&,<robin --> swimmer>,<robin --> [flying]>) ==> <robin --> bird>>.`
-<br/>
-<br/>
-`7`
-<br/>
-<br/>
-`//I guess robin swims.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> swimmer>. %1.00;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin is has wings and chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//If robin can fly, has wings, and chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>.`
-<br/>
-<br/>
-`5`
-<br/>
-<br/>
-`//I guess that robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %1.00;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly and it has wings, then robin is living.`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> [living]>>. %0.9%`
-<br/>
-<br/>
-`//If robin can fly and robin is a bird then robin is living.`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> bird>) ==> <robin --> [living]>>.`
-<br/>
-<br/>
-`18`
-<br/>
-<br/>
-`//I guess if robin is a bird, then robin has wings.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> [with-wings]>>. %1.00;0.42%')`
-<br/>
-<br/>
-`//I guess if robin has wings, then robin is a bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [with-wings]> ==> <robin --> bird>>. %0.90;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly and robin chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [chirping]>,<robin --> [flying]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//If robin can fly then usually robin has a beak.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> [with-beak]>>. %0.90%`
-<br/>
-<br/>
-`18`
-<br/>
-<br/>
-`//I guess that if robin chirps and robin has a beak, then robin is a bird.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [chirping]>,<robin --> [with-beak]>) ==> <robin --> bird>>. %1.00;0.42%')`
+`//outputMustContain('<(&/,a,+2) =/> c>. %1.00;0.81%')`
