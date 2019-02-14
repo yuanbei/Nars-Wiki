@@ -702,46 +702,387 @@
 
 ---------------------------------------------------------------------------------------------
 
-//If the robot pick key001, it will hold key001. 
+`//If the robot pick key001, it will hold key001. `
 <br/>
 <br/>
-<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|:  
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|:  `
 <br/>
 <br/>
-//The goal is to hold key001.
+`//The goal is to hold key001.`
 <br/>
 <br/>
-<(*,Self,key001) --> hold>!  
+`<(*,Self,key001) --> hold>!  `
 <br/>
 <br/>
-8
+`8`
 <br/>
 <br/>
-//The goal maybe to pick key001.
+`//The goal maybe to pick key001.`
 <br/>
 <br/>
-//outputMustContain('(^pick,key001)! %1.00;0.43%') 
+`//outputMustContain('(^pick,key001)! %1.00;0.43%') `
 
 ---------------------------------------------------------------------------------------------
 
-//Key001 was picked. 
+`//Key001 was picked. `
 <br/>
 <br/>
-(^pick,key001). :\: 
+`(^pick,key001). :\: `
 <br/>
 <br/>
-//If the robot pick key001, it will hold key001. 
+`//If the robot pick key001, it will hold key001. `
 <br/>
 <br/>
-<(^pick,key001) =/> <(*,Self,key001) --> hold>>.  
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>.  `
 <br/>
 <br/>
-15
+`15`
 <br/>
 <br/>
-//The robot is holding key001.
+`//The robot is holding key001.`
 <br/>
 <br/>
-//outputMustContain('<(*,Self,key001) --> hold>. :!0: %1.00;0.81%') 
+`//outputMustContain('<(*,Self,key001) --> hold>. :!0: %1.00;0.81%') `
 
 ---------------------------------------------------------------------------------------------
+
+`//The robot is holding key001. `
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: %1.00;0.81% `
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`//The robot is holding key001. `
+`<(*,Self,key001) --> hold>. :|:`
+<br/>
+<br/>
+5
+<br/>
+<br/>
+`//The robot is holding key001. `
+<br/>
+<br/>
+`//outputMustContain('<(*,Self,key001) --> hold>. :!1: %1.00;0.93%')` 
+
+---------------------------------------------------------------------------------------------
+
+`//The robot is not holding key001. `
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: %0% `
+<br/>
+<br/>
+`5`
+<br/>
+<br/>
+`//The robot is holding key001. `
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: %1.00;0.91% `
+<br/>
+<br/>
+`5`
+<br/>
+<br/>
+`//Is the robot holding key001?`
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>? :|: `
+<br/>
+<br/>
+`50`
+<br/>
+<br/>
+`//The robot may be holding key001.`
+<br/>
+<br/>
+`//outputMustContain('<(*,Self,key001) --> hold>. :!5: %0.53;0.95%') `
+
+---------------------------------------------------------------------------------------------
+
+`//If pick key001, the robot will hold key001. `
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :\: %1.00;0.90%`
+<br/>
+<br/>
+`//If pick key001, the robot may hold key001. `
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :\: %1.00;0.45% `
+<br/>
+<br/>
+`35`
+<br/>
+<br/>
+`//If pick key001, the robot will hold key001. `
+<br/>
+<br/>
+`//outputMustContain('<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :!-5: %1.00;0.91%')`
+
+---------------------------------------------------------------------------------------------
+
+`//The key001 is reachable for the robot now. `
+<br/>
+<br/>
+`<(*,Self,key001) --> reachable>. :|:`
+<br/>
+<br/>
+`11`
+<br/>
+<br/>
+`//If the pick key001, the robot will hold key001. `
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: `
+<br/>
+<br/>
+`20`
+<br/>
+<br/>
+`//If the key001 is reachable for the robot and the robot picks the key001, the robot may hold hey001.`
+<br/>
+<br/>
+`//outputMustContain('<(&/,<(*,Self,key001) --> reachable>,+11,(^pick,key001)) =/> <(*,Self,key001) --> hold>>. :!11: %1.00;0.45%')`
+
+---------------------------------------------------------------------------------------------
+
+`//If the key001 is reachable for the robot and the robot picks the key001, the robot will hold hey001. `
+<br/>
+<br/>
+`<(&/,<(*,Self,key001) --> reachable>,(^pick,key001)) =/> <(*,Self,key001) --> hold>>.`
+<br/>
+<br/>
+`//Now the key001 is reachable. `
+<br/>
+<br/>
+`<(*,Self,key001) --> reachable>. :|:  `
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`//If the robot pick key001, it will hold key001.`
+<br/>
+<br/>
+`//outputMustContain('<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :!0: %1.00;0.81%')`
+
+---------------------------------------------------------------------------------------------
+
+`//If pick the key001 ,the robot will hold the key001. `
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81% `
+<br/>
+<br/>
+`//The goal is to hold key001.`
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>! `
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`//The goal maybe to pick key001.`
+<br/>
+<br/>
+`//outputMustContain('(^pick,key001)! %1.00;0.40%')`
+
+---------------------------------------------------------------------------------------------
+
+`//The robot picks key001. `
+<br/>
+<br/>
+`(^pick,key001). :|:`
+<br/>
+<br/>
+`//If pick the key001 ,the robot will hold the key001. `
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%`
+<br/>
+<br/>
+`8`
+<br/>
+<br/>
+`//The robot will hold the key001. `
+<br/>
+<br/>
+`//outputMustContain('<(*,Self,key001) --> hold>. :!5: %1.00;0.73%')`
+
+---------------------------------------------------------------------------------------------
+
+`//The robot is holding key001. `
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: %1.00;0.73%`
+<br/>
+<br/>
+`6`
+<br/>
+<br/>
+`//The robot is holding key001`
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: %1.00;0.90%`
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`//The robot is holding key001`
+<br/>
+<br/>
+`//outputMustContain('<(*,Self,key001) --> hold>. :!6: %1.00;0.92%')`
+
+---------------------------------------------------------------------------------------------
+
+`//'a' is a type of 'A'`
+<br/>
+<br/>
+`<a --> A>. :|:`
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`//The robot picks key001`
+<br/>
+<br/>
+`(^pick,{SELF},key001). :|: %1.00;0.90% `
+<br/>
+<br/>
+`11`
+<br/>
+<br/>
+`//The robot holds key001`
+<br/>
+<br/>
+`<(*,Self,key001) --> hold>. :|: `
+<br/>
+<br/>
+`16`
+<br/>
+<br/>
+`//If 'a' is a type of 'A', and the robot pick key001, the robot may hold key001. `
+<br/>
+<br/>
+`//outputMustContain('<(&/,<a --> A>,+10,(^pick,{SELF},key001),+11) =/> <(*,Self,key001) --> hold>>. :!21: %1.00;0.42%')`
+<br/>
+<br/>
+`//adjusted +3 to +4 ^`
+
+---------------------------------------------------------------------------------------------
+
+`//If the robot pick key001, it will hold key001.`
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.81%`
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`//If the robot pick key001, it may hold key001.`
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.45%`
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`//If the robot pick key001, it will hold key001.`
+<br/>
+<br/>
+`//outputMustContain('<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :!1: %1.00;0.84%')`
+
+---------------------------------------------------------------------------------------------
+
+`//The key001 is reachable`
+<br/>
+<br/>
+`<(*,Self,key001) --> reachable>. :|: `
+<br/>
+<br/>
+`11`
+<br/>
+<br/>
+`//If pick key001, the robot will hold key001.`
+<br/>
+<br/>
+`<(^pick,key001) =/> <(*,Self,key001) --> hold>>. :|: %1.00;0.84%`
+<br/>
+<br/>
+`17`
+<br/>
+<br/>
+`//If key001 is reachable and the robot pick key001, it may hold key001.`
+<br/>
+<br/>
+`//outputMustContain('<(&/,<(*,Self,key001) --> reachable>,+11,(^pick,key001)) =/> <(*,Self,key001) --> hold>>. :!11: %1.00;0.43%')`
+
+---------------------------------------------------------------------------------------------
+
+`//If key001 is reachable and the robot pick key001, it will hold key001.`
+<br/>
+<br/>
+`<(&/,<(*,Self,key001) --> reachable>,(^pick,key001)) =/> <(*,Self,key001) --> hold>>. %1.00;0.90% `
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`//If key001 is reachable and the robot pick key001, it may hold key001.`
+<br/>
+<br/>
+`<(&/,<(*,Self,key001) --> reachable>,(^pick,key001)) =/> <(*,Self,key001) --> hold>>. %1.00;0.43% `
+<br/>
+<br/>
+`1`
+<br/>
+<br/>
+`//If key001 is reachable and the robot pick key001, it will hold key001.`
+<br/>
+<br/>
+`//outputMustContain('<(&/,<(*,Self,key001) --> reachable>,(^pick,key001)) =/> <(*,Self,key001) --> hold>>. %1.00;0.91%')`
+
+---------------------------------------------------------------------------------------------
+
+`// Add operator`
+<br/>
+<br/>
+`(^add,{SELF},2,3,?1)!`
+<br/>
+<br/>
+`//outputMustContain('(^add,{SELF},2,3,5). :!0: %1.00;0.90%')`
+
+---------------------------------------------------------------------------------------------
+
+`// Count operator`
+<br/>
+<br/>
+`(^count,{SELF},{a,b,c,d},?1)!`
+<br/>
+<br/>
+`//outputMustContain('(^count,{SELF},{a,b,c,d},4). :!0: %1.00;0.90%')`
+
+---------------------------------------------------------------------------------------------
+
+`// Reflect operator`
+<br/>
+<br/>
+`(^reflect,{SELF},<cat --> animal>,?1)!`
+<br/>
+<br/>
+`10`
+<br/>
+<br/>
+`outputMustContain('(^reflect,{SELF},<cat --> animal>,<(*,cat,animal) --> inheritance>). :!0: %1.00;0.90%')`
+
+---------------------------------------------------------------------------------------------
+
