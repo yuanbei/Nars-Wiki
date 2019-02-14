@@ -146,438 +146,488 @@
 `//If something can fly and eats worms, then I guess it has wings.`
 <br/>
 <br/>
-`//outputMustContain('<(&&,< --> flyer>,<(*,,worms) --> food>) ==> < --> [with-wings]>>. %1.00;0.45%')`
+`//outputMustContain('<(&&,<$1 --> flyer>,<(*,$1,worms) --> food>) ==> < $1--> [with-wings]>>. %1.00;0.45%')`
 <br/>
 <br/>
 `//I guess if something has wings, then it can fly and eats worms.`
 <br/>
 <br/>
-`//outputMustContain('<< --> [with-wings]> ==> (&&,< --> flyer>,<(*,,worms) --> food>)>. %1.00;0.45%')`
+`//outputMustContain('<<$1 --> [with-wings]> ==> (&&,<$1 --> flyer>,<(*,$1,worms) --> food>)>. %1.00;0.45%')`
 
 --------------------------------- **Variable unification** ---------------------------
 
-`//Usually if robin is a type of bird then robin is a type of animal.`
+`If something is a bird, then it is an animal.`
 <br/>
 <br/>
-`<<robin --> bird> ==> <robin --> animal>>. %0.70;0.90% `
+`<<$x --> bird> ==> <$x --> animal>>.`
 <br/>
 <br/>
-`//Robin is a type of animal. `
+`A robin is a bird.`
 <br/>
 <br/>
-`<robin --> animal>.`
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//I guess robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> bird>. %1.00;0.36%')`
-
------------------------------ **Comparison** ------------------------
-
-`//If robin is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
-<br/>
-<br/>
-`//If robin is a type of bird then robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.80%`
-<br/>
-<br/>
-`14`
-<br/>
-<br/>
-`//I guess robin is a type of animal if and only if robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> animal>>. %0.80;0.45%')`
-
------------------------------ **Comparison** -----------------------------
-
-`//If robin is a type of bird then usually robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>. %0.70%`
-<br/>
-<br/>
-`//If robin can fly then robin is a type of animal. `
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> animal>>.  `
-<br/>
-<br/>
-`19`
-<br/>
-<br/>
-`//I guess robin is a type of bird if and only if robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> bird>>. %0.70;0.45%')`
-
-
-------------------------------- **Analogy** -------------------------------
-
-`//If robin is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>.`
-<br/>
-<br/>
-`//Usually, robin is a type of bird if and only if robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> <=> <robin --> [flying]>>. %0.80%`
-<br/>
-<br/>
-`14`
-<br/>
-<br/>
-`//If robin can fly then probably robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> ==> <robin --> animal>>. %0.80;0.65%')`
-
---------------------------------- **Analogy** -----------------------------
-
-`//Robin is a type of bird.`
-<br/>
-<br/>
-`<robin --> bird>.`
-<br/>
-<br/>
-`//Usually, robin is a type of bird if and only if robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> <=> <robin --> [flying]>>. %0.80% `
-<br/>
-<br/>
-`1`
-<br/>
-<br/>
-`//I guess usually robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %0.80;0.65%')`
-
------------------------------------- **Resemblance** ---------------------------------
-
-`//Robin is a type of animal if and only if robin is a type of bird.`
-<br/>
-<br/>
-`<<robin --> animal> <=> <robin --> bird>>. `
-<br/>
-<br/>
-`//Robin is a type of bird if and only if robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> <=> <robin --> [flying]>>. %0.9%`
-<br/>
-<br/>
-`19`
-<br/>
-<br/>
-`//Robin is a type of animal if and only if robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> animal>>. %0.90;0.81%')`
-
-------------------- **Conversions between Implication and Equivalence** -----------------
-
-`//If robin can fly then robin is a type of bird.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> bird>>. %0.9% `
-<br/>
-<br/>
-`//If robin is a type of bird then robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.9%`
-<br/>
-<br/>
-`7`
-<br/>
-<br/>
-`//Robin can fly if and only if robin is a type of bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [flying]> <=> <robin --> bird>>. %0.81;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//If robin is a type of bird then robin is a type of animal. `
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
-<br/>
-<br/>
-`//If robin is a type of bird then robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> [flying]>>. %0.9% `
-<br/>
-<br/>
-`14`
-<br/>
-<br/>
-`//If robin is a type of bird then usually robin is a type of animal and can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> (&&,<robin --> [flying]>,<robin --> animal>)>. %0.90;0.81%')`
-<br/>
-<br/>
-`//If robin is a type of bird then robin is a type of animal or can fly.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> (||,<robin --> [flying]>,<robin --> animal>)>. %1.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//If robin is a type of bird then robin is a type of animal. `
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> animal>>. `
-<br/>
-<br/>
-`//If robin can fly then robin is a type of animal.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> animal>>. %0.9%`
-<br/>
-<br/>
-`19`
-<br/>
-<br/>
-`//If robin can fly and is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [flying]>,<robin --> bird>) ==> <robin --> animal>>. %1.00;0.81%')`
-<br/>
-<br/>
-`//If robin can fly or is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<(||,<robin --> [flying]>,<robin --> bird>) ==> <robin --> animal>>. %0.90;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//If robin is a type of bird then robin is not a type of flying animal.`
-<br/>
-<br/>
-`<<robin --> bird> ==> (&&,<robin --> animal>,<robin --> [flying]>)>. %0%`
-<br/>
-<br/>
-`//If robin is a type of bird then robin can fly.`
-<br/>
-<br/>
-`<<robin --> bird> ==> <robin --> [flying]>>.`
-<br/>
-<br/>
-`8`
-<br/>
-<br/>
-`//It is unlikely that if a robin is a type of bird then robin is a type of animal.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> animal>>. %0.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//Robin cannot be both a flyer and a swimmer.`
-<br/>
-<br/>
-`(&&,<robin --> [flying]>,<robin --> swimmer>). %0%`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`<robin --> [flying]>.`
-<br/>
-<br/>
-`6`
-<br/>
-<br/>
-`//Robin cannot swim.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> swimmer>. %0.00;0.81%')`
-
-------------------- **Compound composition, two premises** -----------------
-
-`//Robin can fly or swim.`
-<br/>
-<br/>
-`(||,<robin --> [flying]>,<robin --> swimmer>).  `
-<br/>
-<br/>
-`//Robin cannot swim.`
-<br/>
-<br/>
-`<robin --> swimmer>. %0%` 
-<br/>
-<br/>
-`2`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %1.00;0.81%')`
-
-------------------- **Compound composition, one premises** -----------------
-
-`//Robin can fly.`
-<br/>
-<br/>
-`<robin --> [flying]>. `
-<br/>
-<br/>
-`//Can robin fly or swim?`
-<br/>
-<br/>
-`(||,<robin --> [flying]>,<robin --> swimmer>)?` 
-<br/>
-<br/>
-`7`
-<br/>
-<br/>
-`//Robin can fly or swim.`
-<br/>
-<br/>
-`//outputMustContain('(||,<robin --> [flying]>,<robin --> swimmer>). %1.00;0.81%')`
-
-------------------- **Compound composition, one premises** -----------------
-
-`//Robin can fly and swim.`
-<br/>
-<br/>
-`(&&,<robin --> swimmer>,<robin --> [flying]>). %0.9%`
-<br/>
-<br/>
-`//Robin can swim.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> swimmer>. %0.90;0.73%')` 
-<br/>
-<br/>
-`5`
-<br/>
-<br/>
-`//Robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %0.90;0.73%')`
-
--------------------------------------- **Negation** -------------------------------------
-
-`//It is unlikely that robin cannot fly. `
-<br/>
-<br/>
-`(--,<robin --> [flying]>). %0.1%`
+`<robin --> bird>. `
 <br/>
 <br/>
 `3`
 <br/>
 <br/>
-`//Robin can fly.`
+`//A robin is an animal.`
 <br/>
 <br/>
-`//outputMustContain('<robin --> [flying]>. %0.90;0.90%')`
+`//outputMustContain('<robin --> animal>. %1.00;0.81%')`
 
--------------------------------------- **Negation** -------------------------------------
+----------------------------- **Variable elimination** ------------------------
 
-`//Robin can fly. `
+`//If something is a bird, then it is an animal.`
 <br/>
 <br/>
-`<robin --> [flying]>. %0.9%`
+`<<$x --> bird> ==> <$x --> animal>>. `
 <br/>
 <br/>
-`//Can robin fly or not?`
+`//A tiger is an animal.`
 <br/>
 <br/>
-`(--,<robin --> [flying]>)?`
+`<tiger --> animal>. `
 <br/>
 <br/>
-`30`
+`10`
 <br/>
 <br/>
-`//It is unlikely that robin cannot fly.`
+`//I guess that a tiger is a bird.`
 <br/>
 <br/>
-`//outputMustContain('(--,<robin --> [flying]>). %0.10;0.90%')`
+`//outputMustContain('<tiger --> bird>. %1.00;0.45%')`
 
--------------------------------------- **Contraposition** -------------------------------------
+----------------------------- **Variable elimination** -----------------------------
 
-`//It is unlikely that if robin is not a type of bird then robin can fly. `
+`//Something is an animal if and only if it is a bird.`
 <br/>
 <br/>
-`<(--,<robin --> bird>) ==> <robin --> [flying]>>. %0.1%`
+`<<$x --> animal> <=> <$x --> bird>>. `
 <br/>
 <br/>
-`//If robin cannot fly then is robin a type of bird?`
+`//A robin is a bird.`
 <br/>
 <br/>
-`<(--,<robin --> [flying]>) ==> <robin --> bird>>?`
+`<robin --> bird>.`
 <br/>
 <br/>
-`29`
+`3`
 <br/>
 <br/>
-`//I guess it is unlikely that if robin cannot fly then robin is a type of bird.`
+`//A robin is an animal.`
 <br/>
 <br/>
-`//outputMustContain('<(--,<robin --> [flying]>) ==> <robin --> bird>>. %0.00;0.45%')`
+`//outputMustContain('<robin --> animal>. %1.00;0.81%')`
 
--------------------------------------- **Conditional deduction** -------------------------------------
+------------------------------- **Variable elimination** -------------------------------
 
-`//If robin can fly and has wings then robin is a bird.`
+`//Some bird can swim.`
 <br/>
 <br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
+`(&&,<#x --> bird>,<#x --> swimmer>). `
 <br/>
 <br/>
-`//robin can fly.`
+`//Swan is a type of bird.`
 <br/>
 <br/>
-`<robin --> [flying]>.`
+`<swan --> bird>. %0.90%`
 <br/>
 <br/>
-`1`
+`3`
 <br/>
 <br/>
-`//If robin has wings then robin is a bird`
+`//I guess swan can swim.`
 <br/>
 <br/>
-`//outputMustContain('<<robin --> [with-wings]> ==> <robin --> bird>>. %1.00;0.81%')`
+`//outputMustContain('<swan --> swimmer>. %0.90;0.43%')`
 
--------------------------------------- **Conditional deduction** -------------------------------------
+--------------------------------- **Variable elimination** -----------------------------
 
-`//If robin can fly, has wings, and chirps, then robin is a bird`
+`//Tweety has wings.`
 <br/>
 <br/>
-`<(&&,<robin --> [chirping]>,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> bird>>. `
+`<{Tweety} --> [with-wings]>.`
 <br/>
 <br/>
-`//robin can fly.`
+`//If something can chirp and has wings, then it is a bird.`
 <br/>
 <br/>
-`<<robin --> [flying]>. `
+`<(&&,<$x --> [chirping]>,<$x --> [with-wings]>) ==> <$x --> bird>>.`
+<br/>
+<br/>
+`23`
+<br/>
+<br/>
+`//If Tweety can chirp, then it is a bird.`
+<br/>
+<br/>
+`//outputMustContain('<<{Tweety} --> [chirping]> ==> <{Tweety} --> bird>>. %1.00;0.81%')`
+
+------------------------------------ **Variable elimination** ---------------------------------
+
+`//If something can fly, chirp, and eats worms, then it is a bird.`
+<br/>
+<br/>
+`<(&&,<$x --> flyer>,<$x --> [chirping]>, <(*, $x, worms) --> food>) ==> <$x --> bird>>. `
+<br/>
+<br/>
+`//Tweety can fly.`
+<br/>
+<br/>
+`<{Tweety} --> flyer>.`
+<br/>
+<br/>
+`7`
+<br/>
+<br/>
+`//If Tweety can chirp and eats worms, then it is a bird.`
+<br/>
+<br/>
+`//outputMustContain('<(&&,<(*,{Tweety},worms) --> food>,<{Tweety} --> [chirping]>) ==> <{Tweety} --> bird>>. %1.00;0.81%')`
+
+------------------- **Multiple variable elimination** -----------------
+
+`//Every lock can be opened by every key.`
+<br/>
+<br/>
+`<(&&,<$x --> key>,<$y --> lock>) ==> <$y --> (/,open,$x,_)>>.  `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>. `
+<br/>
+<br/>
+`20`
+<br/>
+<br/>
+`//Lock-1 can be opened by every key.`
+<br/>
+<br/>
+`//outputMustContain('<< $1--> key> ==> <{lock1} --> (/,open,,_)>>. %1.00;0.81%')`
+
+------------------- **Multiple variable elimination** -----------------
+
+`//Every lock can be opened by some key.`
+<br/>
+<br/>
+`<<$x --> lock> ==> (&&,<#y --> key>,<$x --> (/,open,#y,_)>)>.  `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>. `
+<br/>
+<br/>
+`9`
+<br/>
+<br/>
+`//Some key can open Lock-1.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> key>,<{lock1} --> (/,open,#1,_)>). %1.00;0.81%')`
+
+------------------- **Multiple variable elimination** -----------------
+
+`//There is a lock that can be opened by every key.`
+<br/>
+<br/>
+`(&&,<#x --> lock>,<<$y --> key> ==> <#x --> (/,open,$y,_)>>).  `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>.`
+<br/>
+<br/>
+`9`
+<br/>
+<br/>
+`//I guess Lock-1 can be opened by every key.`
+<br/>
+<br/>
+`//outputMustContain('<< $1--> key> ==> <{lock1} --> (/,open,,_)>>. %1.00;0.43%')`
+
+------------------- **Multiple variable elimination** -----------------
+
+`//There is a key that can open some lock.`
+<br/>
+<br/>
+`(&&,<#x --> (/,open,#y,_)>,<#x --> lock>,<#y --> key>).  `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>.`
+<br/>
+<br/>
+`18`
+<br/>
+<br/>
+`//I guess there is a key that can open Lock-1.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> key>,<{lock1} --> (/,open,#1,_)>). %1.00;0.43%')`
+
+------------------- **Variable introduction** -----------------
+
+`//A swan is a bird.`
+<br/>
+<br/>
+`<swan --> bird>.  `
+<br/>
+<br/>
+`//A swan is usually a swimmer.`
+<br/>
+<br/>
+`<swan --> swimmer>. %0.80%`
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`//I guess a bird is usually a swimmer.`
+<br/>
+<br/>
+`//outputMustContain('<< $1--> bird> ==> <$1 --> swimmer>>. %0.80;0.45%')`
+<br/>
+<br/>
+`//I guess a swimmer is a bird.`
+<br/>
+<br/>
+`//outputMustContain('<<$1 --> swimmer> ==> <$1 --> bird>>. %1.00;0.39%')`
+<br/>
+<br/>
+`//I guess a bird is usually a swimmer, and the other way around.`
+<br/>
+<br/>
+`//outputMustContain('<< $1--> bird> <=> < $1--> swimmer>>. %0.80;0.45%')`
+<br/>
+<br/>
+`//Some bird can swim.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> bird>,<#1 --> swimmer>). %0.80;0.81%')`
+
+------------------- **Variable introduction** -----------------
+
+`//A gull is a swimmer.`
+<br/>
+<br/>
+`<gull --> swimmer>. `
+<br/>
+<br/>
+`//Usually, a swan is a swimmer.`
+<br/>
+<br/>
+`<swan --> swimmer>. %0.80% `
+<br/>
+<br/>
+`3`
+<br/>
+<br/>
+`//I guess what can be said about gull usually can also be said about swan.`
+<br/>
+<br/>
+`//outputMustContain('<<gull --> $1> ==> <swan -->$1 >>. %0.80;0.45%')`
+<br/>
+<br/>
+`//I guess what can be said about swan can also be said about gull.`
+<br/>
+<br/>
+`//outputMustContain('<<swan -->$1 > ==> <gull --> $1>>. %1.00;0.39%')`
+<br/>
+<br/>
+`//I guess gull and swan share most properties.`
+<br/>
+<br/>
+`//outputMustContain('<<gull -->$1 > <=> <swan --> $1>>. %0.80;0.45%')`
+<br/>
+<br/>
+`//Gull and swan have some common property.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<gull --> #1>,<swan --> #1>). %0.80;0.81%')`
+
+------------------- **Variables introduction** -----------------
+
+`//Key-1 opens Lock-1.`
+<br/>
+<br/>
+`<{key1} --> (/,open,_,{lock1})>. `
+<br/>
+<br/>
+`//Key-1 is a key.`
+<br/>
+<br/>
+`<{key1} --> key>.`
+<br/>
+<br/>
+`45`
+<br/>
+<br/>
+`//I guess every key can open Lock-1.`
+<br/>
+<br/>
+`//outputMustContain('<< --> key> ==> < --> (/,open,_,{lock1})>>. %1.00;0.45%')`
+<br/>
+<br/>
+`//Some key can open Lock-1.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> (/,open,_,{lock1})>,<#1 --> key>). %1.00;0.81%')`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> (/,open,_,{lock1})>,<#1 --> key>). %1.00;0.25%')`
+
+------------------- **Multiple variables introduction** -----------------
+
+`//Lock-1 can be opened by every key.`
+<br/>
+<br/>
+`<<$x --> key> ==> <{lock1} --> (/,open,$x,_)>>. `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>. `
+<br/>
+<br/>
+`166`
+<br/>
+<br/>
+`//There is a lock that can be opened by every key.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> lock>,<< --> key> ==> <#1 --> (/,open,,_)>>). %1.00;0.81%')`
+<br/>
+<br/>
+`//I guess every lock can be opened by every key.`
+<br/>
+<br/>
+`//outputMustContain('<(&&,< $1--> key>,< $1--> lock>) ==> <$1 --> (/,open,,_)>>. %1.00;0.45%')`
+
+----------------------------- **Multiple variables introduction** -------------------------
+
+`//Lock-1 can be opened by some key.`
+<br/>
+<br/>
+`(&&,<#x --> key>,<{lock1} --> (/,open,#x,_)>).  `
+<br/>
+<br/>
+`//Lock-1 is a lock.`
+<br/>
+<br/>
+`<{lock1} --> lock>. `
+<br/>
+<br/>
+`17`
+<br/>
+<br/>
+`//There is a key that can open some lock.`
+<br/>
+<br/>
+`//outputMustContain('(&&,<#1 --> key>,<#2 --> (/,open,#1,_)>,<#2 --> lock>). %1.00;0.81%')`
+<br/>
+<br/>
+``//I guess every lock can be opened by some key.``
+<br/>
+<br/>
+``//outputMustContain('<< --> lock> ==> (&&,<#2 --> key>,< --> (/,open,#2,_)>)>. %1.00;0.45%')``
+
+-------------------------------------- **Recursion** -------------------------------------
+
+`//0 is a number`
+<br/>
+<br/>
+`<0 --> num>. %1.00;0.90%`
+<br/>
+<br/>
+`//If n is a number, n+1 is also a number`
+<br/>
+<br/>
+`<< $1--> num> ==> <(*,) --> num>>. %1.00;0.90%`
+<br/>
+<br/>
+`//3 is a number?`
+<br/>
+<br/>
+`<(*,(*,(*,0))) --> num>?`
+<br/>
+<br/>
+`70000`
+<br/>
+<br/>
+`//I guess 3 is a number`
+<br/>
+<br/>
+`//outputMustContain('<(*,(*,(*,0))) --> num>. %1.00;0.66%')  `
+
+------------------------ **Second level variable unification** ------------------------
+
+`//there is a lock which is opened by all keys`
+<br/>
+<br/>
+`(&&,<#1 --> lock>,<<$1 --> key> ==> <#1 --> (/,open,,_)>>). %1.00;0.90% `
+<br/>
+<br/>
+`//key1 is a key`
+<br/>
+<br/>
+`<{key1} --> key>. %1.00;0.90% `
 <br/>
 <br/>
 `5`
 <br/>
 <br/>
-`//If robin has wings and chirps then robin is a bird.`
+`//there is a lock which is opened by key1`
 <br/>
 <br/>
-`//outputMustContain('<(&&,<robin --> [chirping]>,<robin --> [with-wings]>) ==> <robin --> bird>>. %1.00;0.81%')`
+`//outputMustContain('(&&,<#1 --> (/,open,{key1},_)>,<#1 --> lock>). %1.00;0.81%')`
+
+------------------------ **Second level variable unification** ----------------------------
+
+`//all locks are opened by some key`
+<br/>
+<br/>
+`<<$1 --> lock> ==> (&&,<#2 --> key>,< --> (/,open,#2,_)>)>. %1.00;0.90% `
+<br/>
+<br/>
+`//key1 is a key`
+<br/>
+<br/>
+`<{key1} --> key>. %1.00;0.90% `
+<br/>
+<br/>
+`5`
+<br/>
+<br/>
+`//maybe all locks are opened by key1`
+<br/>
+<br/>
+`//outputMustContain('<< $1--> lock> ==> <$1 --> (/,open,{key1},_)>>. %1.00;0.43%')`
+
+------------------- **Second variable introduction (induction)** ---------------------
+
+`//If something opens lock1, it is a key`
+<br/>
+<br/>
+`<<lock1 --> (/,open,$1,_)> ==> < --> key>>.`
+<br/>
+<br/>
+`//lock1 is a key`
+`<lock1 --> lock>.`
+
+`7`
+
+`//there is a lock with the property that when opened by something, this something is a key (induction)`
+`//outputMustContain('<(&&,<#1 --> (/,open,,_)>,<#1 --> lock>) ==> < --> key>>. %1.00;0.45%')`
 
 -------------------------------------- **Conditional deduction** -------------------------------------
 
