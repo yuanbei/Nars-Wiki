@@ -633,118 +633,46 @@
 <br/>
 `//outputMustContain('<(&&,<#1 --> (/,open,,_)>,<#1 --> lock>) ==> < --> key>>. %1.00;0.45%')`
 
--------------------------------------- **Conditional deduction** -------------------------------------
+----------------------------- **Variable elimination (deduction)** ---------------------------
 
-`//If robin is a bird and it's living, then robin is an animal`
+`//lock1 is a lock`
 <br/>
 <br/>
-`<(&&,<robin --> bird>,<robin --> [living]>) ==> <robin --> animal>>.  `
+`<lock1 --> lock>. %1.00;0.90%`
 <br/>
 <br/>
-`//If robin can fly, then robin is a bird`
+`//there is a lock with the property that when opened by something, this something is a key`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
+`<(&&,<#1 --> lock>,<#1 --> (/,open,,_)>) ==> < --> key>>. %1.00;0.90% `
 <br/>
 <br/>
-`1`
+`4`
 <br/>
 <br/>
-`//If robin is living and it can fly, then robin is an animal.`
+`//whatever opens lock1 is a key`
 <br/>
 <br/>
-`//outputMustContain('<(&&,<robin --> [flying]>,<robin --> [living]>) ==> <robin --> animal>>. %1.00;0.81%')`
+`//outputMustContain('<<lock1 --> (/,open,$1,_)> ==> <$1 --> key>>. %1.00;0.81%')`
 
--------------------------------------- **Conditional deduction** -------------------------------------
+----------------------- **Abduction with variable elimination (abduction)** -----------------------
 
-`//If robin can fly then robin is a bird.`
+`//whatever opens lock1 is a key`
 <br/>
 <br/>
-`<<robin --> [flying]> ==> <robin --> bird>>.`
+`<<lock1 --> (/,open,$1,_)> ==> < $1--> key>>. %1.00;0.90%`
 <br/>
 <br/>
-`//If robin both swims and flys then robin is a bird.`
+`//there is a lock with the property that when opened by something, this something is a key`
 <br/>
 <br/>
-`<(&&,<robin --> swimmer>,<robin --> [flying]>) ==> <robin --> bird>>.`
+`<(&&,<#1 --> lock>,<#1 --> (/,open,,_)>) ==> < --> key>>. %1.00;0.90%`
 <br/>
 <br/>
-`7`
+`10`
 <br/>
 <br/>
-`//I guess robin swims.`
+`//lock1 is a lock`
 <br/>
 <br/>
-`//outputMustContain('<robin --> swimmer>. %1.00;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin is has wings and chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//If robin can fly, has wings, and chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>,<robin --> [chirping]>) ==> <robin --> bird>>.`
-<br/>
-<br/>
-`5`
-<br/>
-<br/>
-`//I guess that robin can fly.`
-<br/>
-<br/>
-`//outputMustContain('<robin --> [flying]>. %1.00;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly and it has wings, then robin is living.`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> [with-wings]>) ==> <robin --> [living]>>. %0.9%`
-<br/>
-<br/>
-`//If robin can fly and robin is a bird then robin is living.`
-<br/>
-<br/>
-`<(&&,<robin --> [flying]>,<robin --> bird>) ==> <robin --> [living]>>.`
-<br/>
-<br/>
-`18`
-<br/>
-<br/>
-`//I guess if robin is a bird, then robin has wings.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> bird> ==> <robin --> [with-wings]>>. %1.00;0.42%')`
-<br/>
-<br/>
-`//I guess if robin has wings, then robin is a bird.`
-<br/>
-<br/>
-`//outputMustContain('<<robin --> [with-wings]> ==> <robin --> bird>>. %0.90;0.45%')`
-
--------------------------------------- **Conditional deduction** -------------------------------------
-
-`//If robin can fly and robin chirps, then robin is a bird`
-<br/>
-<br/>
-`<(&&,<robin --> [chirping]>,<robin --> [flying]>) ==> <robin --> bird>>. `
-<br/>
-<br/>
-`//If robin can fly then usually robin has a beak.`
-<br/>
-<br/>
-`<<robin --> [flying]> ==> <robin --> [with-beak]>>. %0.90%`
-<br/>
-<br/>
-`18`
-<br/>
-<br/>
-`//I guess that if robin chirps and robin has a beak, then robin is a bird.`
-<br/>
-<br/>
-`//outputMustContain('<(&&,<robin --> [chirping]>,<robin --> [with-beak]>) ==> <robin --> bird>>. %1.00;0.42%')`
+`//outputMustContain('<lock1 --> lock>. %1.00;0.45%')`
