@@ -376,25 +376,25 @@
 
 ------------------- **Inference on tense** -----------------
 
-//If John hold key_101, he will enter room_101
+`//If John hold key_101, he will enter room_101`
 <br/>
 <br/>
-<<(*,John,key_101) --> hold> =/> <(*,John,room_101) --> enter>>. 
+`<<(*,John,key_101) --> hold> =/> <(*,John,room_101) --> enter>>. `
 <br/>
 <br/>
-//John is holding key_101 now
+`//John is holding key_101 now`
 <br/>
 <br/>
-<(*,John,key_101) --> hold>. :|:
+`<(*,John,key_101) --> hold>. :|:`
 <br/>
 <br/> 
-20
+`20`
 <br/>
 <br/>
-//John will enter room_101
+`//John will enter room_101`
 <br/>
 <br/>
-//outputMustContain('<(*,John,room_101) --> enter>. :!5: %1.00;0.81%')
+`//outputMustContain('<(*,John,room_101) --> enter>. :!5: %1.00;0.81%')`
 
 ------------------- **Deduction with interval summation** -----------------
 
