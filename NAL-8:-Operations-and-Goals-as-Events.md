@@ -4,15 +4,15 @@
 <br/>
 <br/>
 `<{t001} --> [opened]>!`
-<br\>
-<br\>
+<br/>
+<br/>
 `//If the robot hold t002, then go to t001 and open t001, then t001 will be opened. `
-<br\>
-<br\>
+<br/>
+<br/>
 `<(&/,<(*,SELF,{t002}) --> hold>,<(*,SELF,{t001}) --> at>,<(*,{t001}) --> ^open>) =/> <{t001} --> [opened]>>.`
-<br\>
-<br\>
+<br/>
+<br/>
 `20`
-<br\>
-<br\>
+<br/>
+<br/>
 `//outputMustContain('(&/,<(*,SELF,{t002}) --> hold>,<(*,SELF,{t001}) --> at>,(^open,{t001}))! %1.00;0.81%')`
