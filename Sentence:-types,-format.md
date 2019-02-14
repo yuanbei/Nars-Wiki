@@ -4,7 +4,7 @@ On this page only sentences are discussed as a complete structural derivations t
 
 **Judgement** is the most common type of sentence that consists of two or more terms of any type and has truth value attached. Judgement statement is always finished with "." and followed by truth vale. Example: **<raven --> [black]>. %1.0;0.9%**
 
-**Question**
+**Question** is the type of sentence without truth value attached and may contain variables. It asks the system to come up with truth value or judgement, the answer to the question with truth value. There are two types of questions: evaluative and selective. Evaluative question is of the form <S -->T>? and the system should come with the truth value. Selective question is of the form **<?x --> T>?** or **<T --> ?x>?** and system is asked to come up with judgement where [variable](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) _x_ is unified with some term. Questions are always finished with "?" at the end of a sentence
 
 **Goal**
 
