@@ -18,8 +18,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * database and knowledge-base connection
     * interface for plugin
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
-    * experiments on perception
-    * experiments on natural language processing
+    
   - Logic
     * [Non Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
     * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
