@@ -35,7 +35,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
 
   - Data structure
-    * memory overall structure
+    * [memory overall structure](https://github.com/opennars/opennars/wiki/memory-overall-structure)
     * bag, item, and budget-value
     * truth-value and evidential basis
     * sentence: content and attributes
