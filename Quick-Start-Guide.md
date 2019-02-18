@@ -72,4 +72,27 @@ Once the jar file is running, you will be greeted by the OpenNARS launcher. This
 ![image](https://user-images.githubusercontent.com/24262360/52943113-63620a00-333a-11e9-9adb-fbc175f8ed34.png)
 <br/>For now, the most important of these is the ‘Main GUI’ option.
 
+### OpenNARS GUI
+Clicking the Main GUI button will open an instance of the NARSGUI. The GUI offers many capabilities. The main one is providing a means to enter tasks into the system, so that they can be parsed and added to the memory of the agent, as well as be processed in real time. In addition, the GUI provides the immediate responses of the system, as well as shows the current activities in it.<br/>
+![image](https://user-images.githubusercontent.com/24262360/52943282-ceabdc00-333a-11e9-8f9a-e4c6835ce953.png)
+<br/>
+### Control Panel
+The left-hand side contains the control elements for the system. The four fields (volume, pause, threads, and decision threshold) represent configuration parameters that influence the workings of the inference engine, and the frequency of output seen by the user.
+
+The play button allows the user to pause, and restart the system. When paused, the system will not perform inference cycles, and the output of the system will stop. The button next to this allows a user to ‘step through’ a single inference cycle.
+
+### Output Panel
+The largest of the three panels is the output area for the system. This is the area where the current workings of the system will be displayed. These will show up as Narsese statements that represent user inputs and derived tasks.
+
+### Input Panel
+The pane below this is the input field for the GUI. Here a user can input lines of Narsese statements to be provided to the system. To test this out, try inputting the following simple sentences:<br/>
+<Sam --> Man>.<br/>
+<Man --> Animal>.<br/>
+<Sam --> Animal>?<br/>
+The input field can accommodate multiple lines of input text. Once any text is entered into the field, an input button will appear. After selecting this, the system will attempt to parse the text, and if properly formatted Narsese is found, the sentence will be entered into the actual NARS agents memory. 
+
+Once the text is inputted (try the above statements out!) you should see the output panel echo back the statements. Once the ‘play’ button is hit, the system will start performing inference cycles. The derived statements that result from this will appear in the output panel.
+
+
+
 
