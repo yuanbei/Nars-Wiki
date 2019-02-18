@@ -1,1 +1,1 @@
-to be finished soon
+Priority and durability are metrics used in implementation of OpenNARS and not available explicitly to the user. 
