@@ -2,14 +2,14 @@
 
 There are multiple ways to start OpenNARS: download executable ready-to-use .jar binary or compile from source
 
-### I. Executable version
+## I. Executable version
 Java 8 is the minimum requirement for the purpose of running OpenNARS, Java 8 or later versions can be downloaded from [here](https://www.java.com/en/)
 
 For executable version, simply download .zip file from [here]() to an accessible location on your machine, then extract the file, navigate to OpenNARS/bin and run **opennars-lab-3.0.0-SNAPSHOT.jar**
 
-### II. Source-code version
+## II. Source-code version
 
-To be able to compile and run from source code the following is required:
+**To be able to compile and run from source code the following is required:**
 <br/><br/>
 **1.** Java jdk 1.8 or higher
 <br/><br/>
@@ -20,13 +20,13 @@ To be able to compile and run from source code the following is required:
 **4.** Java, git and Maven must be written to environment variables such that they are accessible from terminal
 <br/><br/>
 **Note:** In order to use OpenNARS launcher, OpenNARS needs to be installed in three stages: 
-<br/><br/>
-**a.** terminal version of OpenNARS where Narsese statements can be entered from the terminal only
-<br/><br/>
-**b.** OpenNARS GUI where Narsese statements are entered within GUI, and derivations, output and other useful info can also be seen
-<br/><br/>
-**c.** OpenNARS Lab - test cases that demonstrate NARS functionality and abilities
-<br/><br/>
+<br/>
+**a.** **Terminal version** of OpenNARS where Narsese statements can be entered from the terminal only
+<br/>
+**b.** **OpenNARS GUI** where Narsese statements are entered within GUI, and derivations, output and other useful info can also be seen
+<br/>
+**c.** **OpenNARS Lab** - test cases that demonstrate NARS functionality and abilities
+<br/>
 
 ## Instruction to compile and run OpenNARS from source code using Maven
 <br/>
