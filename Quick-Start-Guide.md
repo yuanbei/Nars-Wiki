@@ -73,3 +73,4 @@ Once the jar file is running, you will be greeted by the OpenNARS launcher. This
 ![gui](https://github.com/opennars/opennars/issues/60#issuecomment-464664483)
 
 For now, the most important of these is the ‘Main GUI’ option.
+![](https://github.com/opennars/opennars/issues/60#issuecomment-464664483)
