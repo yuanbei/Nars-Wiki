@@ -5,7 +5,7 @@ There are multiple ways to start OpenNARS: download executable ready-to-use .jar
 ## I. Executable version
 Java 8 is the minimum requirement for the purpose of running OpenNARS, Java 8 or later versions can be downloaded from [here](https://www.java.com/en/)
 
-For executable version, simply download .zip file from [here]() to an accessible location on your machine, then extract the file, navigate to OpenNARS/bin and run **opennars-lab-3.0.0-SNAPSHOT.jar**
+For executable version, simply download .zip file from [here](https://drive.google.com/file/d/1T998jZSy7Qy0xis1ftRudKIsfwDpF89K/view) to an accessible location on your machine, then extract the file, navigate to OpenNARS/bin and run **opennars-lab-3.0.0-SNAPSHOT.jar**
 
 ## II. Source-code version
 
