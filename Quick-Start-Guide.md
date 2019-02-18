@@ -68,9 +68,8 @@ opennars-LAB
 ## III. Launcher
 
 ### Welcome frame
-Once the jar file is running, you will be greeted by the OpenNARS launcher. This lists a variety of applications that allow for interaction with a NARS agent. In addition, the launcher provides links to the wiki, website, and communication channels.<br/> 
+Once the jar file is running, you will be greeted by the OpenNARS launcher. This lists a variety of applications that allow for interaction with a NARS agent. In addition, the launcher provides links to the wiki, website, and communication channels.<br/><br/> 
 ![image](https://user-images.githubusercontent.com/24262360/52943113-63620a00-333a-11e9-9adb-fbc175f8ed34.png)
-
-<br/>  For now, the most important of these is the ‘Main GUI’ option.
+<br/>For now, the most important of these is the ‘Main GUI’ option.
 
 
