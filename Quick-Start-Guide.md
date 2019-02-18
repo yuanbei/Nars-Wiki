@@ -1,4 +1,4 @@
-**Current page is designed to allow users to quickly set up and start using OpenNARS.**
+### Current page is designed to allow users to quickly set up and start using OpenNARS system
 
 There are multiple ways to start OpenNARS: download ready-to-use .jar binary or compile from source
 
