@@ -1,3 +1,8 @@
+***Current page is designed to allow users to quickly set up and start using OpenNARS.*** 
+
+There are multiple ways to start OpenNARS: download ready-to-use .jar binary or compile from source
+
+
 To be able to compile and run from source code the following is required:
 <br/><br/>
 **1.** Java jdk 1.8 or higher
