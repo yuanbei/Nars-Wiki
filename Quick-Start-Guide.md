@@ -73,7 +73,7 @@ Once the jar file is running, you will be greeted by the OpenNARS launcher. This
 <br/>For now, the most important of these is the ‘Main GUI’ option.
 
 ### OpenNARS GUI
-Clicking the Main GUI button will open an instance of the NARSGUI. The GUI offers many capabilities. The main one is providing a means to enter tasks into the system, so that they can be parsed and added to the memory of the agent, as well as be processed in real time. In addition, the GUI provides the immediate responses of the system, as well as shows the current activities in it.<br/><br/>
+Clicking the Main GUI button will open an instance of the OpenNARS GUI which offers many capabilities. The main one is providing a means to enter Narsese sentences into the system, so that they can be parsed and added to the memory of the agent, as well as be processed in real time. In addition, the GUI provides the immediate responses of the system, as well as shows the current activities in it.<br/><br/>
 ![image](https://user-images.githubusercontent.com/24262360/52943282-ceabdc00-333a-11e9-8f9a-e4c6835ce953.png)
 
 ### Control Panel
