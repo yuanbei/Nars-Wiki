@@ -29,7 +29,6 @@ For executable version, simply download .zip file from [here]() to an accessible
 <br/>
 
 ## Instruction to compile and run OpenNARS from source code using Maven
-<br/>
 
 **1.** Create a directory and navigate to it, let call this directory a _root_
 <br/><br/>
