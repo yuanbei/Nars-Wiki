@@ -1,24 +1,27 @@
 ---------------------------------------------- **Revision** ----------------------------------------------------``
 
-`// Bird is a type of swimmer.`
+```
+// Bird is a type of swimmer.
 <br/>
 <br/>
-`<bird --> swimmer>.`
+<bird --> swimmer>.
 <br/>
 <br/>
-`// Bird is probably not a type of swimmer.`
+// Bird is probably not a type of swimmer.
 <br/>
 <br/>
-`<bird --> swimmer>. %0.10;0.60%`
+<bird --> swimmer>. %0.10;0.60%
 <br/>
 <br/>
-`1`
+1
 <br/>
 <br/>
-`// Bird is very likely to be a type of swimmer.`
+// Bird is very likely to be a type of swimmer.
 <br/>
 <br/>
-`// outputMustContain('<bird --> swimmer>. %0.87;0.91%')`
+// outputMustContain('<bird --> swimmer>. %0.87;0.91%')
+
+```
 
 ---------------------------------------------- **Deduction** ---------------------------------------------------
 
