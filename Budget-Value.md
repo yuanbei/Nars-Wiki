@@ -6,13 +6,13 @@ OpenNARS uses "BAG" data structure that on abstract level can be viewed as prior
 
 
 
-### Task
+#### Task
 
-### Concept
+#### Concept
 
 ### Term link
  
 
 
-### Description of Budget Value
+#### Description of Budget Value
 
