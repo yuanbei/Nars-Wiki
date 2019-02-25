@@ -33,7 +33,7 @@ Quality shows a long-term importance of a task such that if priority is being de
 
 ## Budget Value Computation
 
-Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and truth expectation of associated tasks.
+Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and [truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) of associated tasks.
 
 ### Concept update
 **Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
