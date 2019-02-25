@@ -26,6 +26,11 @@ As mentioned above, "Bag" is similar to a priority queue however each element is
 ### Durability
 Given non-absolute nature of priority, it is necessary to adjust priority during run-time since tasks can become more, less or not important at all. In addition because of insufficient storage and computing resources, it is beneficial to "forget" a task after it becomes unimportant. **Durability** determines how quickly priority should decrease. It can be viewed as aging factor of a priority, it "decays" the priority of a task. 
 
-Priority is being adjusted after a task has finished processing and being returned to a bag, new priority is computed by priority before processing of a task multiplied by durability, that is, ***P1 = P0 * D*** where _P1_ is priority after task is being processed, _P0_ priority before task is processed and _D_ is a durability of a task. Thus updated priority is always less then priority before processing of a task and once bag reaches its full capacity, task with lowest priority is being removed from the bag. 
+Priority is adjusted after a task has finished processing and is being returned to a bag. Updated priority is computed by multiplying priority before processing of a task by durability of a task, that is, ***P1 = P0 * D*** where _P1_ is priority after task is being processed, _P0_ priority before task is processed and _D_ is a durability of a task. Thus updated priority is always less then priority before processing of a task and once bag reaches its full capacity, task with lowest priority is being removed from the bag. 
+
+### Quality
+Quality shows a long-term importance of a task such that if priority is being decreased it is not removed from "bag" if quality of a task is high. During run-time at a certain point in time, there are many tasks some of which are important immediately that have high priority, low durability and low quality and some that might be important in the future that have lower priority, higher durability and higher quality. Tasks that have high priority **most likely** will be processed sooner for longer period of time but given low durability, after they are returned to "bag" priority will drop considerably and they will be given a small chance to be processed in the future. However tasks with lower priority but higher durability and higher confidence will stay in bag for much longer time since priority will decrease only marginally.
+
+## Budget Value Computation
 
 
