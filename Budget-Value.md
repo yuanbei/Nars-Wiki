@@ -4,3 +4,6 @@ While [truth](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-
 
 OpenNARS uses "BAG" data structure that on abstract level can be viewed as priority queue with probabilistic behavior of _get()_ operation.  Such  data structureis used to store most of the information present during system runtime. 
 
+
+### Description of Budget Value
+
