@@ -32,7 +32,8 @@ Priority is adjusted after a task has finished processing and is being returned 
 Quality shows a long-term importance of a task such that if priority is being decreased it is not removed from "bag" if quality of a task is high. During run-time at a certain point in time, there are many tasks some of which are important immediately that have high priority, low durability and low quality and some that might be important in the future that have lower priority, higher durability and higher quality. Tasks that have high priority **most likely** will be processed sooner for longer period of time but given low durability, after they are returned to "bag" priority will drop considerably and they will be given a small chance to be processed in the future. However tasks with lower priority but higher durability and higher confidence will stay in bag for much longer time since priority will decrease only marginally.
 
 ## Budget Value Computation
-Input Narsese sentences are being converted into tasks and represented using concepts, term-links and task-links with default Budget Values that are hyper-parameters of the system. However for derived tasks, Budget Values are being computed as explained below.
+
+Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and truth expectation of associated tasks.
 
 ### Concept update
 **Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
@@ -41,12 +42,17 @@ Input Narsese sentences are being converted into tasks and represented using con
 
 **Quality** is being updated only if a concept participated during [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference) inference.
 
+### Task-link update
+**Priority** uses "parent task priority" increased by "priority of a term-link from derived task to a given concept"
 
+**Durability** is computed as following: [("durability of a parent task") / ("complexity of derived task")] * ("term link durability from derived task to a concept of given task-link")
 
-
-### Task-links update
-
+**Quality** is ("truth expectation of parent task") / ("complexity of derived task")
 
 ### Term-links update
+**Priority** is computed using **OR** function as following: ("old priority of a term link") **OR** "increase by activation of the target concept priority") **OR** ("truth expectation of derived task"/ "complexity of derived task")
 
+**Durability** is computed using **OR** function as following: ("old durability of the term link") **OR** ("truth expectation of derived task" / "complexity of derived task") 
+
+**Quality** always stays as a default value
 
