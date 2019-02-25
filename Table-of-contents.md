@@ -34,14 +34,12 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
 
   - Data structure
-    * [memory overall structure](https://github.com/opennars/opennars/wiki/memory-overall-structure)
-    * bag, item, and budget-value
-    * truth-value and evidential basis
-    * sentence: content and attributes
-    * task and belief
-    * task link
-    * term link
-    * concept: content and attributes
+    * [OpenNARS memory sructure](https://github.com/opennars/opennars/wiki/memory-overall-structure)
+    * Concept Object: Content and Attributes
+    * Data structure for evidential basis, beliefs and goals
+    * Sentence internal representation
+    * Type of Links: task and term links
+    
   - Control
     * working cycle of the system
     * life cycle of a task (by type)
