@@ -50,7 +50,7 @@ Every Narsese statement is represented using a task, three or more concepts, tas
 **Quality** is ("truth expectation of parent task") / ("complexity of derived task")
 
 ### Term-links update
-**Priority** is computed using **OR** function as following: ("old priority of a term link") **OR** "increase by activation of the target concept priority") **OR** ("truth expectation of derived task"/ "complexity of derived task")
+**Priority** is computed using **OR** function as following: ("old priority of a term link") **OR** ("increase by activation of the target concept priority") **OR** ("truth expectation of derived task"/ "complexity of derived task")
 
 **Durability** is computed using **OR** function as following: ("old durability of the term link") **OR** ("truth expectation of derived task" / "complexity of derived task") 
 
