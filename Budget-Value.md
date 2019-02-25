@@ -13,7 +13,7 @@ As mentioned on previous pages, input and output of OpenNARS are Narsese [senten
 ### Term-link
 Term-link is a link that points to a term from which a statement is composed. For above Narsese statement within concept for "<raven --> black>" there is a "Bag" with two term-links to "raven" and "black". 
  
-Thus **Budget Value** is assigned to three types items stored in **Bags**: concepts, term-link and task-link 
+Thus **Budget Value** is assigned to three types of items stored in **Bags**: concept, term-link and task-link 
 
 ## Description of Budget Value
 
