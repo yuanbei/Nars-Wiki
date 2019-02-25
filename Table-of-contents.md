@@ -37,7 +37,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [OpenNARS memory sructure](https://github.com/opennars/opennars/wiki/memory-overall-structure)
     * Concept Object: Content and Attributes
     * Data structure for evidential basis, beliefs and goals
-    * Sentence internal representation
+    * Narsese Sentence internal representation
     * Type of Links: task and term links
     
   - Control
