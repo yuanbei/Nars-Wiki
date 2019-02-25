@@ -15,6 +15,14 @@ Term-link is a link that points to a term from which a statement is composed. Fo
  
 Thus **Budget Value** is assigned to three types of items stored in **Bags**: concept, term-link and task-link and is re-computed with each inference step for items participating in inference.
 
-## Description of Budget Value
+## Budget Value Semantics
+
+Budget Value is a composition of three rational numbers in range [0,1]: _priority_, _durability_ and _quality_
+
+### Priority
+As mentioned above, "Bag" is similar to a priority queue however each element is taken out with probability proportional to a priority of an element. Priority identifies importance of an element, that is importance of a task-link, term-link or a concept, the higher the priority, the longer time it will be processed by the system. In OpenNARS a task can be processed  infinite amount of time and time is measured in terms of inference steps, thus a task can be processed using infinite number of inference steps. For example if a system has only single input sentence, it will be converted to a task which will be processing as long as system is running, however if few sentences are given, all of them will turned into task at some point with assigned priority, and a task with a higher priority will **most likely** will be given more inference steps during process than the task with lower priority.
+
+### Durability
+ 
 
 
