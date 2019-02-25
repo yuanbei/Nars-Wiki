@@ -32,5 +32,21 @@ Priority is adjusted after a task has finished processing and is being returned 
 Quality shows a long-term importance of a task such that if priority is being decreased it is not removed from "bag" if quality of a task is high. During run-time at a certain point in time, there are many tasks some of which are important immediately that have high priority, low durability and low quality and some that might be important in the future that have lower priority, higher durability and higher quality. Tasks that have high priority **most likely** will be processed sooner for longer period of time but given low durability, after they are returned to "bag" priority will drop considerably and they will be given a small chance to be processed in the future. However tasks with lower priority but higher durability and higher confidence will stay in bag for much longer time since priority will decrease only marginally.
 
 ## Budget Value Computation
+Input Narsese sentences are being converted into tasks and represented using concepts, term-links and task-links with default Budget Values that are hyper-parameters of the system. However for derived tasks, Budget Values are being computed as explained below.
+
+### Concept update
+**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
+
+**Durability** is updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
+
+**Quality** is being updated only if a concept participated during [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference) inference.
+
+
+
+
+### Task-links update
+
+
+### Term-links update
 
 
