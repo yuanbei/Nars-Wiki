@@ -16,7 +16,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [selected publications](https://github.com/opennars/opennars/wiki/Publications)
     * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
 
-<br/>
+
 2. **Aspects of OpenNARS**
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
