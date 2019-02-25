@@ -11,7 +11,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Built-in operator list](https://github.com/opennars/opennars/wiki/Built-in-operator-list)
     * [Truth Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples)
     * [Desire Value: Definition and Examples](https://github.com/opennars/opennars/wiki/Desire-Value:-Definition-and-Examples)
-    * [Budget value](https://github.com/opennars/opennars/wiki/Priority-and-Durability-Values)
+    * [Budget value](https://github.com/opennars/opennars/wiki/Budget-Value)
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * [Experience file: Format and Usage](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage)
     * I/O channels
