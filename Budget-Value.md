@@ -13,7 +13,9 @@ As mentioned on previous pages, input and output of OpenNARS are Narsese [senten
 ### Term-link
 Term-link is a link that points to a term from which a statement is composed. For above Narsese statement within concept for "<raven --> black>" there is a "Bag" with two term-links to "raven" and "black". 
  
-Thus **Budget Value** is assigned to three types of items stored in **Bags**: concept, term-link and task-link and is re-computed with each inference step for items participating in inference.
+In OpenNARS, every data item participating in resource competition (such as belief, task, concept, as well as the links to them) extends the abstract class Item, which has a budget consisting of 3 EB values: priority, durability, and quality.
+
+Budget Value helps OpenNARS to deal with insufficient resources Thus **Budget Value** is assigned to three types of items stored in **Bags**: concept, term-link and task-link and is re-computed with each inference step for items participating in inference.
 
 ## Budget Value Semantics
 
