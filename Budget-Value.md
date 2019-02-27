@@ -18,12 +18,24 @@ Priority is adjusted after a task has finished processing and is being returned 
 ### Quality
 Quality shows a long-term importance of a task such that if priority is being decreased it is not removed from "bag" if quality of a task is high. During run-time at a certain point in time, there are many tasks some of which are important immediately that have high priority, low durability and low quality and some that might be important in the future that have lower priority, higher durability and higher quality. Tasks that have high priority **most likely** will be processed sooner for longer period of time but given low durability, after they are returned to "bag" priority will drop considerably and they will be given a small chance to be processed in the future. However tasks with lower priority but higher durability and higher confidence will stay in bag for much longer time since priority will decrease only marginally.
 
+## Budget Value Some Properties
+Adjustment of budget values is not a trivial task. There is no absolute correct solution instead an "update policy" has to developed that needs to prioritize system current's demands. The best policy is still being searched and experimented. Properties and computations of budget values below are relevant to current policy used and might change once a better policy is to be considered.
+
+- As with truth value, no component of Budget Value can reach its extremes of 0 or 1 
+
+- [Complexity](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) of an item usually have negative influence on budget value thus less complex items have higher budget values and thus get more resources. 
+
+- The budget of a goal or a question is reduced when the task is partially satisfied. The better the solution is (evaluated by the choice rule), the lower the budget will become. This process and the relative forgetting process will eventually let a task be removed from the system, though it does not necessarily mean that the task has been processed to a certain level of satisfaction.
+
+- A concept is created when an accepted task contains a term for which there is no existing concept. In this case, the initial priority and durability of the concept is determined by those of the task. After that, the budget of the concept is adjusted independently.
+
+
 ## Budget Value Computation
 
 Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and [truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) of associated tasks.
 
 ### Concept update
-**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
+**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is also is increased then task is It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
 
 **Durability** is updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
 
