@@ -6,6 +6,8 @@ Sets and set operations are adds more capability to OpenNARS, it allows to combi
 <br/><br/>
 If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as taking two arguments, both (op c(1) ... c(n)) and (c(1) op ... op c(n)) are compound terms defined recursively as (op (op c(1) ... c(n−1)) c(n)).
 
+Each term in OpenNARS is assign **complexity** metrics. Currently the complexity of a term is completely defined according to its internal structure: atomic terms such a word have complexity value of 1, and a compound's complexity is the sum of the complexity values of its components plus 1 (for the operator). 
+
 #### **Set Intersection Definitions**
 **Extensional intersection:** If T1 and T2 are two different terms, their extensional intersection, (T1 ∩ T2), is a compound term defined by _(∀x)(x → (T1 ∩ T2)) ≡ ((x → T1) ∧ (x → T2)))_.<br/>
 **Example:** “Ravens are black birds” can be represented as <raven -->(&,[black], bird)>., where the predicate term is an extensional intersection of the term [black] and the term bird, and "&" is an operator for extensional intersection.
