@@ -23,12 +23,13 @@ Adjustment of budget values is not a trivial task. There is no absolute correct 
 
 - As with truth value, no component of Budget Value can reach its extremes of 0 or 1 
 
+- Repeated use of an item usually increases priority. Repeated item as input indicates that something user demands it to be processed, when it is converted to tasks and represented in memory, all corresponding data items will have increased priority. If item is happen to be repeated during derivation it indicates its importence and high chance that it will be demanded in short future, thus its priority is also increased. 
+
 - [Complexity](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) of an item usually have negative influence on budget value thus less complex items have higher budget values and thus get more resources. 
 
 - The budget of a goal or a question is reduced when the task is partially satisfied. The better the solution is (evaluated by the choice rule), the lower the budget will become. This process and the relative forgetting process will eventually let a task be removed from the system, though it does not necessarily mean that the task has been processed to a certain level of satisfaction.
 
 - A concept is created when an accepted task contains a term for which there is no existing concept. In this case, the initial priority and durability of the concept is determined by those of the task. After that, the budget of the concept is adjusted independently.
-
 
 ## Budget Value Computation
 
