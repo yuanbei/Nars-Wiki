@@ -23,7 +23,7 @@ Adjustment of budget values is not a trivial task. There is no absolute correct 
 
 - As with truth value, no component of Budget Value can reach its extremes of 0 or 1 
 
-- Repeated use of an item usually increases priority. Repeated item as input indicates that something user demands it to be processed, when it is converted to tasks and represented in memory, all corresponding data items will have increased priority. If item is happen to be repeated during derivation it indicates its importence and high chance that it will be demanded in short future, thus its priority is also increased. 
+- Repeated use of an item usually increases priority. Repeated item as part of input indicates that user demands something that needs to be processed, when it is converted to tasks and represented in memory, all corresponding data items will have increased priority. If item is happen to be repeated during derivation it indicates its importance and such there is a high chance it will be demanded in short future, thus its priority is also increased. 
 
 - [Complexity](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) of an item usually have negative influence on budget value thus less complex items have higher budget values and thus get more resources. 
 
@@ -36,16 +36,16 @@ Adjustment of budget values is not a trivial task. There is no absolute correct 
 Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and [truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) of associated tasks.
 
 ### Concept update
-**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is also is increased then task is It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
+**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is also increased concept is being repeatedly used in derivation or input. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
 
-**Durability** is updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
+**Durability** highly is dependent on the task currently being processed. It updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
 
-**Quality** is being updated only if a concept participated during [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference) inference.
+**Quality** for a concept is mostly stays the same. It is updated only if a concept participates during [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference) inference.
 
 ### Task-link update
-**Priority** uses "parent task priority" increased by "priority of a term-link from derived task to a given concept"
+**Priority** of task-link depend on parent's priority the task is derived from. It uses "parent task priority" increased by "priority of a term-link from derived task to a given concept"
 
-**Durability** is computed as following: [("durability of a parent task") / ("complexity of derived task")] * ("term link durability from derived task to a concept of given task-link")
+**Durability** is computed as following: [("durability of a parent task") / ("complexity of derived task")] * ("term link durability from derived task to a concept of given task-link"). Thus complexity negatively influence durability of a task-link which then affects durability of a concept since durability of a concept is an average of concept's and task-link's durability.
 
 **Quality** is ("truth expectation of parent task") / ("complexity of derived task")
 
