@@ -47,7 +47,7 @@ Every Narsese statement is represented using a task, three or more concepts, tas
 
 **Durability** is computed as following: [("durability of a parent task") / ("complexity of derived task")] * ("term link durability from derived task to a concept of given task-link"). Thus complexity negatively influence durability of a task-link which then affects durability of a concept since durability of a concept is an average of concept's and task-link's durability.
 
-**Quality** is ("truth expectation of parent task") / ("complexity of derived task")
+**Quality** is affected by a complexity and truth expectation of parent's task. It is updated as following: ("truth expectation of parent task") / ("complexity of derived task")
 
 ### Term-links update
 **Priority** is computed using **OR** function as following: ("old priority of a term link") **OR** ("increase by activation of the target concept priority") **OR** ("truth expectation of derived task"/ "complexity of derived task")
@@ -55,4 +55,3 @@ Every Narsese statement is represented using a task, three or more concepts, tas
 **Durability** is computed using **OR** function as following: ("old durability of the term link") **OR** ("truth expectation of derived task" / "complexity of derived task") 
 
 **Quality** always stays as a default value
-
