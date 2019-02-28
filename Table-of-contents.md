@@ -59,7 +59,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * working cycle of the system
     * life cycle of a task (by type)
     * data-driven rule choosing (rule table)
-    * [Budget Update Functions](https://github.com/opennars/opennars/wiki/Budget-Update-Functions)
+    * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * emotion and self-control
     * parameters and configuration file
 
