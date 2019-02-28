@@ -19,7 +19,7 @@ Priority is adjusted after a task has finished processing and is being returned 
 Quality shows a long-term importance of a task such that if priority is being decreased it is not removed from "bag" if quality of a task is high. During run-time at a certain point in time, there are many tasks some of which are important immediately that have high priority, low durability and low quality and some that might be important in the future that have lower priority, higher durability and higher quality. Tasks that have high priority **most likely** will be processed sooner for longer period of time but given low durability, after they are returned to "bag" priority will drop considerably and they will be given a small chance to be processed in the future. However tasks with lower priority but higher durability and higher confidence will stay in bag for much longer time since priority will decrease only marginally.
 
 ## Budget Value Some Properties
-Adjustment of budget values is not a trivial task. There is no absolute correct solution instead an "update policy" has to developed that needs to prioritize system current's demands. The best policy is still being searched and experimented. Properties and computations of budget values below are relevant to current policy used and might change once a better policy is discovered.
+Adjustment of budget values is not a trivial task. There is no absolute correct solution instead an "update policy" has to developed that needs to prioritize system current's demands. The best policy is still being searched and experimented. Properties of budget values below are relevant to current policy used and might change once a better policy is discovered.
 
 - As with truth value, no component of Budget Value can reach its extremes of 0 or 1 
 
@@ -31,3 +31,4 @@ Adjustment of budget values is not a trivial task. There is no absolute correct 
 
 - A concept is created when an accepted task contains a term for which there is no existing concept. In this case, the initial priority and durability of the concept is determined by those of the task. After that, the budget of the concept is adjusted independently.
 
+For updates and computations of budget value, please [look here](https://github.com/opennars/opennars/wiki/Budget-Update-Functions)
