@@ -1,5 +1,9 @@
 ## Budget Value Computation
 
+This is the second page related to Budget Value, it is more technical, for better understanding please take a look at [first page on budget value](https://github.com/opennars/opennars/wiki/Budget-Value)  that describes its semantics.
+
+Because of real-time and dynamic nature of OpenNARS, most of parameters are being learned and re-evaluated, this is no exception for budget value which is getting updated constantly to determine current system demands and priorities. In each working cycle, only the directly related items will have their budget values adjusted, which means the system may need to decide for an item its short and long term importance.
+
 Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and [truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) of associated tasks.
 
 ### Concept update
