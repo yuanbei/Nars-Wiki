@@ -5,7 +5,6 @@ The pages are roughly divided into two groups, the first group systematically ex
 1. **Entry points**
   - user guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
-    * user's manual
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
   - example and demonstration
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples/_edit)
