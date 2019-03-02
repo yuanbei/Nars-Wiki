@@ -11,6 +11,7 @@ Similarly, T-conorm function ***y = or(x1, . . . , xn)*** is used when a quantit
 
 Intuitively, a variable ***y*** is __conjunctively__ determined by variables __x1,..., xn__ when all the x’s are its necessary factors, or numerically, if ***y*** is never bigger than any of them. Similarly, ***y*** is __disjunctively__ determined by __x1, . . . , xn__ when all the x’s are its sufficient factors, or numerically, it is never smaller than any of them.
  
+### Definition
 There are an infinite number of ways of numerically satisfying the prescribed conditions for T-norm and T-conorm. In OpenNARS Boolean functions using "and", "or" and "not" operators are replaced with "T-norm", "T-conorm" and "Negation" functions in the following way:
 
 **Negation:** ***not(x) = 1 − x***<br/>
