@@ -41,6 +41,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [variables, examples](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
     * [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
     * [basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
+    * [Extended Boolean Functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS)
     * [compositional rules](https://github.com/opennars/opennars/wiki/Composition)
     * [structural rules](https://github.com/opennars/opennars/wiki/Structure)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
