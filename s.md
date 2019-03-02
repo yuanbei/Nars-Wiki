@@ -1,7 +1,5 @@
-Most of uncertainty measurements take values from the [0, 1] interval. Even the amount of evidence, which
-is not defined with this range in general, corresponds to this interval. Since they cannot be easily interpreted as “probability” as defined in probability theory and statistics, we cannot directly apply an existing theory to guide their
-calculation. The approach in OpenNARS is to see the values in [0, 1] as extended Boolean values, 0 and 1, and to handle
-their calculation by extending the Boolean operators, namely “not”, “and” and “or”.
+In OpenNARS uncertainty measurements take values from the [0, 1] interval. Even the amount of evidence, which
+is not defined with this range in general, corresponds to this interval. Since they cannot be easily interpreted as “probability” as defined in probability theory and statistics, an existing theory cannot be directly applied to guide their calculation. The approach in OpenNARS is to see the values in [0, 1] as extended Boolean values, 0 and 1, and to handle their calculation by extending the Boolean operators, namely **“not”**, **“and”** and **“or”**.
 
 The extended “and” and “or” are called **Triangular norm (T-norm)** and Triangular **conorm (T-conorm)**. T-norm and T-conorm are functions defined on real numbers in range [0, 1]. Each of them is commutative and associative, and monotonic in each variable and thus they can be extended to take an arbitrary number of arguments in the following way:
 __**and**(x1, . . . , xn) = **and**(and(x1, . . . , xn−1), xn)__
