@@ -31,4 +31,4 @@ Adjustment of budget values is not a trivial task. There is no absolute correct 
 
 - A concept is created when an accepted task contains a term for which there is no existing concept. In this case, the initial priority and durability of the concept is determined by those of the task. After that, the budget of the concept is adjusted independently.
 
-In each working cycle budget value is being updated, please [look here](https://github.com/opennars/opennars/wiki/Budget-Update-Functions) for updates and computation descriptions.
+In each working cycle budget value is being updated, please [look here](https://github.com/opennars/opennars/wiki/Budget-Update) for updates and computation descriptions.
