@@ -1,8 +1,3 @@
-> ### Plugins  
-> How plugins can help, what they need to fulfill to be valid, and what plugins we have.
-
-***
-
 ### Introduction
 
 Beginning with OpenNARS 1.6.1, there is the possibility to code plugins for the system, which can be activated and deactivated at runtime, also they can be added multiple times with different parameters, similar like in an effects program for design. Also the plugins are entirely independent from the plugin manager (they don't need to register themselves), since the plugin manager queries the plugins and its parameters with reflection. The reason why we allow such plugins is that some narrow AI plugins might be useful for certain domains.
@@ -34,13 +29,9 @@ Allow the system to reason about internal processes, when removed NAL9 will not 
 
 - Runtime Settings - Some runtime parameters are not important enough to be part of the main window, but may be interesting to change sometimes, so we decided to add a little plugin which is just for changing runtime parameters which don't fit into the main window.
 
-***
-
 ### New Plugins
 
 Those are plugins which didn't make it into the release anymore. They can be downloaded now, OpenNARS-1.6.1 is able to load them at runtime:
-
-***
 
 ### Global Anticipation
 
