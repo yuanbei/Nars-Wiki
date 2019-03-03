@@ -60,6 +60,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * life cycle of a task (by type)
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
+    * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
     * emotion and self-control
     * parameters and configuration file
 
