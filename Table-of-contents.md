@@ -28,7 +28,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Budget Value](https://github.com/opennars/opennars/wiki/Budget-Value)
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * [Experience file: Format and Usage](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage)
-    * [I/O channels](https://github.com/opennars/opennars/wiki/I-O-channels)
+    * [I/O channels](https://github.com/opennars/opennars/wiki/Input-and-Output-Channels)
     * [Plugins in OpenNars](https://github.com/opennars/opennars/wiki/Plugins)
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     
