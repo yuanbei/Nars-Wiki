@@ -18,7 +18,7 @@ There are some properties a plugin has to fulfill in order to be valid in OpenNA
 
 ### Misc Plugins
 
-- Mental Operators - Because operators may come with parameters, we decided to let operators also inherit from plugin. That way mental operators can be eliminated, added and configured at run-time.
+- Mental Operators - Because operators may come with parameters, we decided to let operators also inherit from plugin. Currently the "base" plugin is SensoryChannel that provides basic methods and operator plugins extend it. That way mental operators can be eliminated, added and configured at run-time.
 
 - Run-time Settings - Some run-time parameters are not important enough to be part of the main window, but may be interesting to change sometimes, so we decided to add a little plugin which is just for changing run-time parameters which don't fit into the main window.
 
