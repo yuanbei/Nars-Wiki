@@ -29,7 +29,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * [Experience file: Format and Usage](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage)
     * I/O channels
-    * interface for plugin
+    * [Plugins in OpenNars](https://github.com/opennars/opennars/wiki/Plugins)
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     
   - Logic
