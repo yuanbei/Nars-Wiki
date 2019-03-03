@@ -27,11 +27,6 @@ Allow the system to reason about internal processes, when removed NAL9 will not 
 
 ***
 
-### Temporal Particle Planner
-
-This plugin is a planner plugin which works by collecting temporal implication statements (=/> etc.), trying to chain them together to find a way with high expectation from currently true statements (they have low cost), to the desired goal by translating the needed intermediate steps into actions which make this intermediate steps true. This happens by sending particles which are guided by priority through this graph. Similar like in an ant colony, an executed path will then be rewarded by the standard control mechanism through temporal induction and revision. When NARS forgets a concept with (=/>) absolutely, it will also be removed in the planner, this way, and due to the fact that the amount of particles and their energy sent in each step is limited, AIKR is preserved. The resulting plan gets executed like the timing suggests, can be updated by newer plans (if the steps have higher priority), and always be interrupted by the general control mechanism. This plugin can help NARS a lot in decision making domains where a lot of planning is needed because it concentrates the spent time on planning. But due to this the time for other mental processes gets reduced, so use this plugin cautiously, since planning can also be done by the standard inference process.
-
-***
 
 ### Misc Plugins
 
