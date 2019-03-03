@@ -1,11 +1,11 @@
 ### Introduction
 
-Beginning with OpenNARS 1.6.1, there is the possibility to code plugins for the system, which can be activated and deactivated at runtime, also they can be added multiple times with different parameters, similar like in an effects program for design. Also the plugins are entirely independent from the plugin manager (they don't need to register themselves), since the plugin manager queries the plugins and its parameters with reflection. The reason why we allow such plugins is that some narrow AI plugins might be useful for certain domains.
+Beginning with OpenNARS 1.6.1, there is the possibility to code plugins for the system, which can be activated and deactivated during run-time, also plugins can be added multiple times with different parameters, similar like in an effects program for design. Plugins are entirely independent from the plugin manager (they don't need to register themselves), since the plugin manager queries the plugins and its parameters with reflection. The reason why we allow such plugins is that some narrow AI plugins might be useful for certain domains.
 
-There are some properties plugins have to fulfill in order to be valid:
+There are some properties a plugin has to fulfill in order to be valid in OpenNARS:
 
 * They are not allowed to violate NAL, if plugins generate NAL statements by other NAL statements, the plugin has to apply valid NAL rules and manage the stamp correctly. For example when a planner-plugin helps the general control mechanism to generate a plan to fulfill a desired goal, the resulting plan will have the same truth-value as the general control mechanism would have created with temporal induction and the temporal chaining rule.
-* If they need the system to actively call an operator in order to use the plugin (most plugins are that way), they need to provide the system with the needed usage desire evidence when loaded. The system won't use what it doesn't know that it exists. A example for a possible wiki-ask-plugin:
+* If they need the system to actively call an operator in order to use the plugin (most plugins are that way), they need to provide the system with the needed usage desire evidence when loaded. The system won't use what it doesn't know that it exists. An example for a possible wiki-ask-plugin:
 
 ```
 <(&/,(^wonder,$sth),(^pluginAskWiki,$sth)) =/> <(*,SELF,$sth) --> knows>>.
@@ -16,22 +16,11 @@ There are some properties plugins have to fulfill in order to be valid:
 
 ***
 
-### Internal Experience
-
-Allow the system to reason about internal processes, when removed NAL9 will not be used by the system if not especially trained. NAL9 is very important for the development of consciousness. (is activated by default)
-
-***
-
-
 ### Misc Plugins
 
-- Mental Operators - Because especially NAL9 operators may come with parameters, we decided to let operators also inherit from plugin. That way mental operators can be eliminated, added and configured at runtime.
+- Mental Operators - Because operators may come with parameters, we decided to let operators also inherit from plugin. That way mental operators can be eliminated, added and configured at run-time.
 
-- Runtime Settings - Some runtime parameters are not important enough to be part of the main window, but may be interesting to change sometimes, so we decided to add a little plugin which is just for changing runtime parameters which don't fit into the main window.
-
-### New Plugins
-
-Those are plugins which didn't make it into the release anymore. They can be downloaded now, OpenNARS-1.6.1 is able to load them at runtime:
+- Run-time Settings - Some run-time parameters are not important enough to be part of the main window, but may be interesting to change sometimes, so we decided to add a little plugin which is just for changing run-time parameters which don't fit into the main window.
 
 ### Global Anticipation
 
