@@ -1,8 +1,3 @@
-> ###Perception In NARS  
-> How to do perception in NARS
-
-***
-
 # Basics
 
 In the context of NARS, "perception" is the process of organizing the system's experience into its internal representation, as concepts, beliefs, and tasks, as well as obtaining additional information about their priority and so on.
