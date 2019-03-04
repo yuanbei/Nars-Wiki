@@ -52,7 +52,7 @@ The pages are roughly divided into two groups, the first group systematically ex
   - Data structure
     * [System Memory (bag, overall structure)](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure))
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
-    * Data structure for evidential basis, beliefs and goals
+    * [Data structure for evidential basis, beliefs and goals](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals)
     * Narsese Sentence internal representation
     * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links)
     
