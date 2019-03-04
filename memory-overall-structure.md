@@ -1,12 +1,16 @@
 ## Introduction
 
-The control problem can be abstractly specified as an optimization problem: given finite processing time and storage space, find the best allocation plan to satisfy the demands as much as possible.
+The following page will be related to Budget Value pages, feel free to read [part I](https://github.com/opennars/opennars/wiki/Budget-Value) and [part II](https://github.com/opennars/opennars/wiki/Budget-Update) of Budget value for better understanding of information present here.
 
-There are many formal models for such problems, but none of them can be used here, because their assumptions cannot be satisfied in NARS, even approximately. For instance, here it cannot be assumed that the problems occur according to a probability distribution (even a unknown one), nor that the problems will appear at specific time. New models need to be developed.
+Being a real-time dynamic system that always operates under AIKR, OpenNARS always faces an optimization problem: given finite processing time and storage space, find the best allocation strategy to satisfy the demands as much as possible.
 
-A major job of the control mechanism is to select the most proper task (judgment, goal, or question) to carry out at every moment. Given that NAL usually does not produce "final solution" to tasks, the more beliefs are used on a task, the better the solution will be. Since new tasks may come to the system at any moment, it is usually impossible to decide an algorithm, with a resource budget, before the processing starts and remains fixed.
+There are many formal models for such problems, but none of them can be used in OpenNARS, because their assumptions cannot be satisfied even approximately. For instance, here it cannot be assumed that the problems occur according to a probability distribution (even a unknown one), nor that the problems will appear at specific time. New models need to be developed.
 
-Given this situation, the objective of NARS is not to process all of its tasks perfectly, not even to process them to a "satisfying level", but to achieve the highest overall efficiency in resource usage. This is achieved by distributing the resources according to priority values summarizing the various factors involved in resource allocation, and to adjust the priority values at run time to reflect the changes in the environment and within the system..
+A major job of OpenNARS [control mechanism](https://github.com/opennars/opennars/wiki/Working-Cycle) is to select the most proper task (judgment, goal, or question) to carry out at every moment. Given that system usually does not produce "final solution" to tasks, the more beliefs are used on a task, the better the solution will be. Since new tasks may come to the system at any moment, it is usually impossible to decide an algorithm, with a resource budget, before the processing starts and remains fixed.
+
+Given this situation, the objective of OpenNARS is not to process all of its tasks perfectly, not even to process them to a "satisfying level", but to achieve the highest overall efficiency in resource usage. This is achieved by distributing the resources according to priority values summarizing the various factors involved in resource allocation, and to adjust the priority values at run time to reflect the changes in the environment and within the system.
+
+### Bag Data Structure
 
 To realize dynamic resource allocation, NARS self-organizes its memory using probabilistic priority-queue to give data items prioritized treatment. A bag is a data structure with the basic operations (1) put in, (2) take out, and (3) access by key. The take-out operation is probabilistic, according to the priority distribution of the items in the bag. Each operation takes a small constant time to finish.
 
