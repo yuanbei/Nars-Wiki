@@ -1,5 +1,5 @@
 > ### Reinforcement Learning  
-> NARS in the RL domain.
+> OpenNARS in the RL domain.
 
 ***
 
@@ -27,7 +27,7 @@ and even if the to these topics proposed related solutions are mostly incompatib
 
 ***
 
-### How to use NARS in RL domains
+### How to use OpenNARS in RL domains
 
 -Actions:-
 
@@ -35,7 +35,7 @@ Let's say we have a finite set of actions: A={a1,...,an}.
 
 In reinforcement learning approaches there is usually a randomization probability, which determines with what probability in the current step, a random element of A is chosen. Usually there is also a fixed decrease-function pre-defined, which is basically problem-specific knowledge, which lowers the randomization-probability in every step.
 
-But with NARS there is a solution to this dilemma: A meta-action ^r, "select a random element of A", where A is presented as
+But with OpenNARS there is a solution to this dilemma: A meta-action ^r, "select a random element of A", where A is presented as
 
 `<{a1,...,an} --> A>.`
 
@@ -49,7 +49,7 @@ an operator ^r is introduced, and an additional goal of average importance which
 
 if (^pick,key) was in A,
 
-in which case NARS will:
+in which case OpenNARS will:
 
 1. Learn the consequences of selecting a random action in a certain situtation like it learns the consequence of any other action.
 
@@ -69,7 +69,7 @@ in case of good reward, and
 
 in case of bad reward.
 
-However, NARS is not restricted to this, you can give anything you can express in Narsese as feedback, and also as goal or other hint information.
+However, OpenNARS is not restricted to this, you can give anything you can express in Narsese as feedback, and also as goal or other hint information.
 
 The goal in this case would be for example:
 
@@ -101,4 +101,4 @@ In order to represent numeric values, it is a good idea to give it information o
 
 ### Conclusion
 
-RL domains can be well represented in NARS, and a lot of RL limitations are overcome by it. How it performs in such domains may become a practical interest in future.
+RL domains can be well represented in OpenNARS, and a lot of RL limitations are overcome by it. How it performs in such domains may become a practical interest in future.
