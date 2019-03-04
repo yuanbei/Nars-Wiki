@@ -50,7 +50,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
 
   - Data structure
-    * [OpenNARS memory sructure](https://github.com/opennars/opennars/wiki/memory-overall-structure)
+    * [System Memory (bag, overall structure)](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure))
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
     * Data structure for evidential basis, beliefs and goals
     * Narsese Sentence internal representation
