@@ -24,37 +24,10 @@ The last operation is common, however the first two are different from the regul
 since they are designed with AIKR in mind. Concretely, "insertion" recognizes the limited storage space, while "deletion" recognizes the limited processing time. On abstract level bag can be seen as probabilistic priority-queue. It differs from
 the ordinary priority-queues in that the items are not removed exactly according to the order of their priority, but probabilistically, with their priority values used to decide their chances in each removal.
 
+## Implementation
 Bag is implemented with underlying hash table and bucket-array called "level" in implementation where each bucket implemented using a set. The "put" operation registers the item in the hash table by its key, and stores it in a bucket by its priority. The "take" operation visits the buckets according to a frequency that is propositional to the ranks of the buckets. Final, "get by key" operation directly gets the item via the hash table. Each operation takes a small constant time to finish.
 
-**Issue:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
+**Future improvements:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
-Since NAL is a term logic, its inference rules typically require shared term in premises, so tasks and beliefs can be indexed and clustered by their component terms. In NARS, each concept is a data structure named by a term, and it links to the tasks and beliefs with the term in it. Consequently, a concept is an independent unit of storage and processing.
-
-"Bag" is used to store most of the information present during system's run-time, including _task-links_, _term-links_ and _concepts_.
-
-Roughly speaking, the system's memory contains a bag of concepts; a concept contains a bag of task-links referring to the relevant tasks (justment, goal, or question) and a bag of term-links referring to the relevant beliefs (judgments only).
-
-
-
-More accurately, the system runs by repeating the following working cycle:
-
-1. Probabilistically select a concept C from the memory
-
-2. Probabilistically select a tasklink from C, which specifies the task T to be used
-
-3. Probabilistically select a termlink from C, which specifies the belief B to be used
-
-4. With T and B as premises, trigger the applicable inference rules to derive new tasks and add them into the task buffer
-
-5. Probabilistically select some tasks from the task buffer for pre-processing
-
-
-
-
-
-
-
-
-
-
-
+## System Memory
+"Bags" are used to store most of the items in OpenNARS including _task-links_, _term-links_ and _concepts_. In general, term system's memory refers to the content of a bag of concepts, and concept is an object itself that contains multiple elements including bag of task-links, bag of term-links and other elements.
