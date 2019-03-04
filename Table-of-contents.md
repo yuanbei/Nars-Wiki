@@ -30,6 +30,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Experience file: Format and Usage](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage)
     * [I/O channels](https://github.com/opennars/opennars/wiki/Input-and-Output-Channels)
     * [Plugins in OpenNars](https://github.com/opennars/opennars/wiki/Plugins)
+    * [OpenNars and Reinforcement Learning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)
     * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     
   - Logic
