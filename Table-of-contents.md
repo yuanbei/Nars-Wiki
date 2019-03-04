@@ -62,6 +62,6 @@ The pages are roughly divided into two groups, the first group systematically ex
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
-    * emotion and self-control
+    * [Emotion and Self-control](https://github.com/opennars/opennars/wiki/Emotion-and-Self-control)
     * parameters and configuration file
 
