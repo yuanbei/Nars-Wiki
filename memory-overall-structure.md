@@ -12,15 +12,29 @@ Thus, the objective of OpenNARS is not to process all of its tasks perfectly, no
 
 ### Bag Data Structure
 
-To realize dynamic resource allocation, NARS self-organizes its memory using probabilistic priority-queue to give data items prioritized treatment. A bag is a data structure with the basic operations (1) put in, (2) take out, and (3) access by key. The take-out operation is probabilistic, according to the priority distribution of the items in the bag. Each operation takes a small constant time to finish.
+To realize dynamic resource allocation OpenNARS self-organizes its memory using **Bag** data structure to give data items prioritized treatment. Bag contains items up to a pre-defined constant capacity where each item has budget value. Bag provides three basic operations found in most data structures: (1) put in, (2) take out, and (3) access by key.
+
+1. **put(_item_)** The given item is put into the bag. If there is already an item with the same key, it is being merged with existent one, if the bag already reaches its maximum capacity, an item with the **lowest** priority is removed to free space for the new item.
+
+2. **take()** Item is taken out of the bag, and the probability for an item to be selected is proportional to its priority value.
+
+3. **get(_key_)** The item with the given key, if it exists, is taken out of the bag
+
+The last operation is common, however the first two are different from the regular "insertion" and "deletion" operations, 
+since they are designed with AIKR in mind. Concretely, "insertion" recognizes the limited storage space, while "deletion" recognizes the limited processing time. On abstract level bag can be seen as probabilistic priority-queue. It differs from
+the ordinary priority-queues in that the items are not removed exactly according to the order of their priority, but probabilistically, with their priority values used to decide their chances in each removal.
+
+Bag is implemented with underlying hash table and bucket-array called "level" in implementation where each bucket implemented using a set. The "put" operation registers the item in the hash table by its key, and stores it in a bucket by its priority. The "take" operation visits the buckets according to a frequency that is propositional to the ranks of the buckets. Final, "get by key" operation directly gets the item via the hash table. Each operation takes a small constant time to finish.
 
 **Issue:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
 Since NAL is a term logic, its inference rules typically require shared term in premises, so tasks and beliefs can be indexed and clustered by their component terms. In NARS, each concept is a data structure named by a term, and it links to the tasks and beliefs with the term in it. Consequently, a concept is an independent unit of storage and processing.
 
+"Bag" is used to store most of the information present during system's run-time, including _task-links_, _term-links_ and _concepts_.
+
 Roughly speaking, the system's memory contains a bag of concepts; a concept contains a bag of task-links referring to the relevant tasks (justment, goal, or question) and a bag of term-links referring to the relevant beliefs (judgments only).
 
-The following figure summarizes the overall architecture and procedure of NARS:
+
 
 More accurately, the system runs by repeating the following working cycle:
 
@@ -34,17 +48,13 @@ More accurately, the system runs by repeating the following working cycle:
 
 5. Probabilistically select some tasks from the task buffer for pre-processing
 
-Pre-processing of a task means to puts it into the corresponding concepts (and create them if they do not exist). Within a concept, the new task may create new belief, revise existing beliefs, satisfy a goal, or answer a question. If an input question obtains a best-so-far answer, it will be reported.
-
-A graphical description of how questions are answered by the system by this process:
-
-**Issue:** It may be necessary to add task buffers to each concept to hold the tasks added, so as to postpone their preprocessing until the concept is selected. Competition can be added into the buffer, so only selected tasks are processed.
 
 
 
 
 
-OpenNARS uses "BAG" data structure which on abstract level can be viewed as priority queue with probabilistic behavior of _get()_ operation, that is an item is removed from the queue with some probability. Such  data structure is used to store most of the information present during system's run-time, including _task-links_, _term-links_ and _concepts_.
+
+
 
 
 
