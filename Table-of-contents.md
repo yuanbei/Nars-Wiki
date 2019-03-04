@@ -57,7 +57,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links)
     
   - Control
-    * working cycle of the system
+    * [Working Cycle of the System]()
     * life cycle of a task (by type)
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
