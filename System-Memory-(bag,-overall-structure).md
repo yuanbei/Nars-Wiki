@@ -30,4 +30,4 @@ Bag is implemented with underlying hash table and bucket-array called "level" in
 **Future improvements:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
 ## System Memory
-"Bags" are used to store most of the items in OpenNARS including _task-links_, _term-links_ and _concepts_. In general, term system's memory refers to the content of a bag of concepts, and concept is an object itself that contains multiple elements including bag of task-links, bag of term-links and other elements.
+"Bags" are used to store most of the items in OpenNARS including _task-links_, _term-links_ and _concepts_. In general, term system's memory refers to the content of a bag of concepts, and [concept](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes) is an object itself that contains multiple elements including bag of task-links, bag of term-links and other elements.
