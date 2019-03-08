@@ -1,5 +1,3 @@
-### Test Chamber
-
 Originally built just to be able to visualize the existing NAL8 examples, it is now our most complex application example, there you can built arbitrary logic circuits, combine doors and lights with switches, create machines which produce pizza, build arbitrary mazes the system has to solve on the fly, where the structure of the circuits are not known to NARS (if not especially told). This example will one day show the difference between narrow AI and general AI very clearly, and already now is a source of very interesting results.
 
 **The Elements of TestChamber in the left window from top to bottom:**
