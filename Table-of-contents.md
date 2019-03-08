@@ -9,8 +9,7 @@ The pages are roughly divided into two groups, the first group systematically ex
   - example and demonstration
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples/_edit)
     * [Single Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
-    * annotated list of demonstration
-  - overview
+    * [List of current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) - overview
     * [glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
     * [selected publications](https://github.com/opennars/opennars/wiki/Publications)
     * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
