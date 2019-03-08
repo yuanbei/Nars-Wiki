@@ -1,0 +1,3 @@
+This example uses NARS to predict the future values of an observed curve: This is where knowledge about often used functions like sine can help a lot, but also here we decided to don't tell the system about anything by default, so that it has to built logic on how the values may behave in future entirely on its own.
+
+![predict](https://cloud.githubusercontent.com/assets/11791925/6994227/b5020c6e-db43-11e4-9150-c6aa4ee797b6.png)
