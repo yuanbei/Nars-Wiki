@@ -14,7 +14,7 @@ Once an event for each input pixel has been received, or a pre-defined duration 
 into OpenNARS (or the next higher-level sensory channel in the hierachy if such one exists) and the budget (so far just an amount of occurrences counter) of {M_BestPrototype} will be increased.
 Also {M_New} will be entered as a prototype with initial budget (so far the initial occurrence counter being 1), kicking out the prototype with the lowest budget (so far simply the prototype with the lowest amount of occurrences) if at full capacity, giving {M_new} the chance to become an useful prototype on its own sake. 
 
-The latter principle is shared with Adaptive Neuro-Symbolic Network agent ANSNA (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel.
+The latter principle is shared with Adaptive Neuro-Symbolic Network agent ANSNA (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
 
 Regarding (ox,oy): This meta-information allows other perception operators to build spatial relationships such as <(*,{M_30},{M_10}) --> leftOf>. :|:
 meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel.
