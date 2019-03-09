@@ -30,5 +30,5 @@ meaning the vision channel allows for a equivariant representation rather than j
 
 Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms, that is, sensory terms with a focal point that can be moved by operator invocation as described in the publication. So far the system automatically places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon in respect to the movements that occur, demonstrating the kind of procedure learning that is so central to explaining human eye movement and active perception in general.
 
-Issues: Compositionality, hierarchical composition should be better captured, allowing for a feature hierachy, as a zoom operator alone might not suffice, also pixel-by-pixel comparison is quite limited.
+Issues: Compositionality, hierarchical composition should be better captured by allowing prototype trees, ultimatively allowing for a feature hierachy, as a zoom operator alone might not suffice, also pixel-by-pixel comparison is quite limited.
 
