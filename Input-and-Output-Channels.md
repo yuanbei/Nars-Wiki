@@ -7,7 +7,7 @@ The vision channel takes in events talking about the brightness level of pixels 
 <{M[x,y]}  --> [bright]>. :|: %b;0.9%
 
 where x and y are the x and y-coordinate each going from -1 to 1, and b encodes a brightness level between 0 and 1 as a truth frequency value.
-Once an event for each input pixel has been received, or a pre-defined duration of time has passed, the brightness information that was gained by the vision channel will be summarized into a 2D truth value matrix {M_New}, a so called sensory term. This sensory term represents a prototype that will be matched to the existing stored prototypes {M_i} by pixel-by-pixel based comparison using abduction truth function, finally summarizing all the obtained truth values with revision obtaining into a single truth value TruthMatch (for the highest TruthMatch truth expectation spatial arrangement offset (ox,oy), for comparison of {M_New} with {M_i}, to achieve translation invariance). The closest prototype will then be entered as
+Once an event for each input pixel has been received, or a pre-defined duration of time has passed, the brightness information that was gained by the vision channel will be summarized into a 2D truth value matrix {M_New}, a so called sensory term. This sensory term represents a prototype that will be matched to the existing stored prototypes {M_i} by pixel-by-pixel based comparison using the comparison truth function, finally summarizing all the obtained truth values with revision obtaining into a single truth value TruthMatch (for the highest TruthMatch truth expectation spatial arrangement offset (ox,oy), for comparison of {M_New} with {M_i}, to achieve translation invariance). The closest prototype will then be entered as
 
 <{MBestPrototype} --> [bright]>. :|: TruthMatch (ox,oy)
 
@@ -29,6 +29,8 @@ Regarding (ox,oy): This meta-information potentially allows other perception ope
 meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel. However such a mechanism is not present and maybe unnecessary, as the movement itself can encode that information, as described in our paper, demonstrated by the following sentence:
 
 <(&/,<{M_30} --> [bright]>,^right({SELF})) =/> <{M_10} --> [bright]>>.
+
+Also syllogistic inference is possible, as described in the paper.
 
 Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms (and the learning of such procedural sentences), that is, sensory terms with a focal point that can be moved by operator invocation as described in the publication. So far the system automatically places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon in respect to the movements that occur, demonstrating the kind of procedure learning that is so central to explaining human eye movement and active perception in general.
 
