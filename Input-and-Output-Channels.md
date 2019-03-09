@@ -30,7 +30,17 @@ meaning the vision channel allows for a equivariant representation rather than j
 
 <(&/,<{M_30} --> [bright]>,^right({SELF})) =/> <{M_10} --> [bright]>>.
 
-Also syllogistic inference is possible, as described in the paper.
+Also syllogistic inference is possible, as described in the paper, using abduction and comparison by pixel-by-pixel based comparison between two premises, that is
+<{M1} --> [bright]>.
+<{M2} --> [bright]>.
+to obtain
+<{M1} <-> {M2}>. revision(pixelwise_comparison(PixelTruths(M1),PixelTruths(M2))
+
+and also abduction:
+
+<{M1} --> [bright]>.
+<{M2} --> [bright]>.
+<{M1} --> {M2}>. revision(pixelwise_abduction(PixelTruths(M1),PixelTruths(M2))
 
 Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms (and the learning of such procedural sentences), that is, sensory terms with a focal point that can be moved by operator invocation as described in the publication. So far the system automatically places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon in respect to the movements that occur, demonstrating the kind of procedure learning that is so central to explaining human eye movement and active perception in general.
 
