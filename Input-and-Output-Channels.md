@@ -2,7 +2,7 @@
 
 ## Vision I/O
 OpenNARS comes with a prototype implementation of a vision channel using the sensory terms (and perceptive terms partly implemented) as presented in our publication "Perception from an AGI Perspective" (https://cis.temple.edu/~pwang/Publication/perception.pdf).
-The vision takes in events talking about the brightness level of pixels at given coordinates:
+The vision channel takes in events talking about the brightness level of pixels at given coordinates:
 <{M3[x,y]}  --> [bright]>. %b;0.9%
 where x and y are the x and y-coordinate each going from -1 to 1, and b encodes a brightness level between 0 and 1 as a truth frequency value.
 Once an event for each input pixel have been received, or a pre-defined duration of time has passed, the brightness information that was gained by the vision channel will be summarized into a 2D truth value matrix {MNew}, a so called sensory term. This sensory term represents a prototype that will be matched to the existing stored prototypes {M_i} by pixel-by-pixel based comparison using induction and comparison truth function, summarizing all the obtained truth values with revision obtaining TruthMatch. The closest prototype will then be entered as
