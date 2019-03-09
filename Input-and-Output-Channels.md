@@ -16,7 +16,9 @@ Also {M_New} will be entered as a prototype with initial budget (so far the init
 
 The latter principle is shared with Adaptive Neuro-Symbolic Network agent ANSNA (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
 
-Regarding (ox,oy): This meta-information allows other perception operators to build spatial relationships such as <(*,{M_30},{M_10}) --> leftOf>. :|:
+Regarding (ox,oy): This meta-information allows other perception operators to build spatial relationships such as 
+<(*,{M_30},{M_10}) --> leftOf>. :|:
+
 meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel.
 
 Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms, that is, sensory terms with a focal point that can be moved by operator invocation. So far the system places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which patterns likely cause others to appear soon.
