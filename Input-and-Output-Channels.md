@@ -14,7 +14,13 @@ Once an event for each input pixel has been received, or a pre-defined duration 
 into OpenNARS (or the next higher-level sensory channel in the hierachy if such one exists) and the budget (so far just an amount of occurrences counter) of {M_BestPrototype} will be increased.
 Also {M_New} will be entered as a prototype with initial budget (so far the initial occurrence counter being 1), kicking out the prototype with the lowest budget (so far simply the prototype with the lowest amount of occurrences) if at full capacity, giving {M_new} the chance to become an useful prototype on its own sake. 
 
-The latter principle is shared with Adaptive Neuro-Symbolic Network agent ANSNA (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
+So in total the role of the vision channel is:
+1. Accumulation for instance, if the channel is of dimension 50x50, 2500 pixel-level events into a 2D truth value matrix (sensory term).
+2. Searching for the best to that sensory term stored prototype, increasing its budget and taking spatial offset for the best matching into account.
+3. Creates nevertheless a new prototype for the new observation (kicking out the worst existing), to allow it to become a useful prototype on its own sake.
+4. Reporting of the best matched protoype to NARS, like <{M21} --> [bright]>. :|: (ox,oy) where M21 is a matrix term and the spatial match-location (ox,oy) is encoded in meta-data.
+
+Point 2,3,4 is shared with Adaptive Neuro-Symbolic Network agent ANSNA for matching events to concepts (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
 
 Regarding (ox,oy): This meta-information allows other perception operators to build spatial relationships such as 
 
@@ -22,5 +28,5 @@ Regarding (ox,oy): This meta-information allows other perception operators to bu
 
 meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel.
 
-Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms, that is, sensory terms with a focal point that can be moved by operator invocation. So far the system places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon.
+Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms, that is, sensory terms with a focal point that can be moved by operator invocation as described in the publication. So far the system automatically places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon.
 
