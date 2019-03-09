@@ -22,11 +22,13 @@ So in total the role of the vision channel is:
 
 Point 2,3,4 is shared with Adaptive Neuro-Symbolic Network agent ANSNA for matching events to concepts (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
 
-Regarding (ox,oy): This meta-information allows other perception operators to build spatial relationships such as 
+Regarding (ox,oy): This meta-information potentially allows other perception operators to build spatial relationships such as 
 
 <(*,{M_30},{M_10}) --> leftOf>. :|:
 
-meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel.
+meaning the vision channel allows for a equivariant representation rather than just an invariant one, not loosing the information of the absolute position of the match within the sensory channel. However such a mechanism is not present and maybe unnecessary, as the movement itself can encode that information, as described in our paper, demonstrated by the following sentence:
+
+<(&/,<{M_30} --> [bright]>,^right({SELF})) =/> <{M_10} --> [bright]>>.
 
 Additionally in OpenNARS-Lab there exists a Webcam example in the Launcher that demonstrates initial use of perceptive terms, that is, sensory terms with a focal point that can be moved by operator invocation as described in the publication. So far the system automatically places its focal point at the areas within the image that change the most, re-identifying patterns it has seen before as well as learning which changing patterns likely cause others to appear soon in respect to the movements that occur, demonstrating the kind of procedure learning that is so central to explaining human eye movement and active perception in general.
 
