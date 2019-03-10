@@ -22,7 +22,7 @@ So in total the role of the vision channel is:
 3. Creates nevertheless a new prototype for the new observation (kicking out the worst existing), to allow it to become a useful prototype on its own sake.
 4. Reporting of the best matched protoype to NARS, like <{M21} --> [bright]>. :|: (ox,oy) where M21 is a matrix term and the spatial match-location (ox,oy) is encoded in meta-data.
 
-Point 2,3,4 is shared with Adaptive Neuro-Symbolic Network agent ANSNA for matching events to concepts (https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
+Point 2,3,4 is shared with Adaptive Neuro-Symbolic Network agent ANSNA for [matching events to concepts](https://github.com/patham9/ANSNA), and extending the principle with the adaptation of prototypes similar to https://github.com/patham9/ANSNA/wiki/Concept:-Conceptual-Interpolation will be a future topic for improving the vision channel, also using SDR's instead of 2D truth-valued sensory terms is a theoretical possibility.
 
 Regarding (ox,oy): This meta-information potentially allows other perception operators to build spatial relationships such as 
 
