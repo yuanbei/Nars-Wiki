@@ -13,19 +13,20 @@ While system is running, user can save derivations and system snapshot to the fi
 
 Ability to exchange derived tasks between different NARS instances working on problems whose evidential spaces intersect allows considerably accelerate the learning process. Starting with OpenNARS 3.0 communication through UDP protocol is supported using Java built-in serialization techniques. Each Narsese sentence is being serialized as a char byte sequence, packed into single UDP packet and sent over the network. NarNode.java class is the only class responsible for network communication between running NARS instances. It serves as a middle layer between the front end application and Nar.java class that actually responsible for programmatic input/output of tasks.
 
-### Programmatic Interaction with OpenNARS
-Description of Nar.java class
-There is also a possibility to communicate with the system bypassing NarNode class and UDP
-communication. For that purpose Nar.java class has following methods:
+### Programmatic Interaction with OpenNARS (Description of Nar.java class)
+
+There is also a possibility to communicate with the system bypassing NarNode class and UDP communication. For that purpose Nar.java class has following methods:
+
 1. addInput() – allows to add single line input to NARS. Once input is receives, it is being
 parsed and inserted to the system
 2. addMultiLineInput() – allows for entering multiline input.
-3. addPlugin() – allows to add input from plugin such as SensoryChannel, Operator or
-Emotions
-4. addInputFile() – add input from supplied file with list of statements
-5. start() – starts derivation process6. stop() – stops derivation process
+3. addPlugin() – allows to add input from plugin such as SensoryChannel, Operator or Emotions
+4. addInputFile() – add input from supplied file with list of statements 
+5. start() – starts derivation process
+6. stop() – stops derivation process
 7. cycle() – execute one inference step
 8. cycles() – execute specified number of inference steps
+
 These methods are helpful in communication with the system through custom designed API or any
 other options.
 
