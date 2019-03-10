@@ -3,7 +3,7 @@ Input and Output to the system happens in the form of Narsese statements. Curren
 ## Text I/O
 
 ## Vision I/O
-OpenNARS comes with a prototype implementation of a vision channel using the sensory terms (and perceptive terms partly implemented) as presented in our publication ["Perception from an AGI Perspective"]https://cis.temple.edu/~pwang/Publication/perception.pdf).
+OpenNARS comes with a prototype implementation of a vision channel using the sensory terms (and perceptive terms partly implemented) as presented in our publication ["Perception from an AGI Perspective"](https://cis.temple.edu/~pwang/Publication/perception.pdf).
 The vision channel takes in events talking about the brightness level of pixels at given coordinates:
 
 <{M[x,y]}  --> [bright]>. :|: %b;0.9%
