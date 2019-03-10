@@ -5,13 +5,13 @@ Narsese statements as ASCII text can be input/output between user and system or 
 
 ### User interaction
 When OpenNARS runs in terminal only, [described here](https://github.com/opennars/opennars/wiki/Quick-Start-Guide), users can input statements in the same instance of the terminal, the derived Narsese statements will output to the same terminal.
-Using GUI, it is easier to interact with the system. There is an input window in GUI for ASCII narsese statements to be input by user, similarly an output window shows derivation statements of the system. Look [here](https://github.com/opennars/opennars/wiki/Graphical-User-Interface) for GUI description.
+Using GUI, it is easier to interact with the system. There is an input window in GUI for ASCII Narsese statements to be input by user, similarly an output window shows derivation statements of the system. Look [here](https://github.com/opennars/opennars/wiki/Graphical-User-Interface) for GUI description.
 
 While system is running, user can save derivations and system snapshot to the file, called [experience file](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage), such that this file can be an input to OpenNARS at a later time and system will resume the derivations.
 
 ### System interaction
 
-To 
+Ability to exchange derived tasks between different NARS instances working on problems whose evidential spaces intersect allows considerably accelerate the learning process. Starting with OpenNARS 3.0 communication through UDP protocol is supported using Java built-in serialization techniques. Each Narsese sentence is being serialized as a char byte sequence, packed into single UDP packet and sent over the network. NarNode.java class is the only class responsible for network communication between running NARS instances. It serves as a middle layer between the front end application and Nar.java class that actually responsible for programmatic input/output of tasks.
 
 
 ## Vision I/O
