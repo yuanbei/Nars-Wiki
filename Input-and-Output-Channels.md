@@ -1,6 +1,18 @@
 Input and Output to the system happens in the form of Narsese statements. Currently OpenNARS support two types of I/O Text and Vision
 
 ## Text I/O
+Narsese statements as ASCII text can be input/output between user and system or between multiple systems:
+
+### User interaction
+When OpenNARS runs in terminal only, [described here](https://github.com/opennars/opennars/wiki/Quick-Start-Guide), users can input statements in the same instance of the terminal, the derived Narsese statements will output to the same terminal.
+Using GUI, it is easier to interact with the system. There is an input window in GUI for ASCII narsese statements to be input by user, similarly an output window shows derivation statements of the system. Look [here](https://github.com/opennars/opennars/wiki/Graphical-User-Interface) for GUI description.
+
+While system is running, user can save derivations and system snapshot to the file, called [experience file](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage), such that this file can be an input to OpenNARS at a later time and system will resume the derivations.
+
+### System interaction
+
+To 
+
 
 ## Vision I/O
 OpenNARS comes with a prototype implementation of a vision channel using the sensory terms (and perceptive terms partly implemented) as presented in our publication ["Perception from an AGI Perspective"](https://cis.temple.edu/~pwang/Publication/perception.pdf).
