@@ -1,3 +1,5 @@
+Input and Output to the system happens in the form of Narsese statements. Currently OpenNARS support two types of I/O Text and Vision
+
 ## Text I/O
 
 ## Vision I/O
