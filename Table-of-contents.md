@@ -58,7 +58,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     
   - Control
     * [Working Cycle of the System](https://github.com/opennars/opennars/wiki/Working-Cycle)
-    * life cycle of a task (by type)
+    * [Task Management (by type)](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS)
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
