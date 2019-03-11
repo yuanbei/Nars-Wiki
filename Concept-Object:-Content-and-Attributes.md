@@ -21,6 +21,9 @@ Every [term](https://github.com/opennars/opennars/wiki/Term:-types,-format) with
 
 5. Goal Table: Array sorted by highest confidence. Goals to be achieved associated with this concept
 
+A concept is visualized below for better understanding. Links pointing example is found [here](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
+
+![concept](https://github.com/opennars/opennars/issues/60#issuecomment-471406161)
 
 
  
