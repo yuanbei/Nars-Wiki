@@ -1,3 +1,4 @@
+This page describes semantics and implementation of "concept" objects in OpenNARS. Information present here is closely related to ["working cycle of the system"](https://github.com/opennars/opennars/wiki/Working-Cycle), ["task management"](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS) and [Types of Links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links). Feel free to read those pages for better understanding. 
 
 Every term within a Narsese statement including statement itself in internal implementation is represented by a concept. For example, statement **<raven --> black>** is represented using three concepts: "raven", "black" and "<raven --> black>". The concept itself is an object, a big chunk of information, that includes much information beyond name of the concept itself. Concept incorporates numerous data structures including two "BAG" data structures where task-links and term-links are stored referred as "Task Bag" and "Term Bag" respectively.
 
@@ -5,9 +6,9 @@ Every term within a Narsese statement including statement itself in internal imp
 
 
 OpenNARS is implemented using “term logic”, which is is characterized by the use of categorical sentences and syllogistic
-inference rules. A property of term logic is that almost all inference rules use two premises which share a term. This is convenient since it naturally localizes the choice range of beliefs that associated with participating terms only. For example, if [task] (https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links) is <raven --> bird>. is being processed, [beliefs](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS) (processed judgements) that can directly interact with it must have terms “raven” or “bird” in it as subject or predicate.
-In NARS, all tasks and beliefs that share a common term are collected
-into a concept, which is named by the shared term. As a result, any valid
+inference rules. A property of term logic is that almost all inference rules use two premises which share a term. Term sharing is convenient since it naturally localizes the choice range of beliefs that is associated with participating terms only. For example, if [task](https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links) <raven --> bird>. is being processed, [beliefs](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS)(processed judgements) that can directly interact with it must have terms “raven” or “bird” in it as subject or predicate.
+
+Such logical approach led to organizing all the term-related information into big buckets or objects called concepts. In OpenNARS, all tasks and beliefs that share a common term are collected into a concept, which is named by the shared term. As a result, any valid
 inference step necessarily happens within a single concept. Therefore, a
 concept becomes a unit for resource allocation, which is larger than a task
 or a belief. The system distributes its resources firstly among the concepts,
