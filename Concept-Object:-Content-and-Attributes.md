@@ -7,7 +7,7 @@ inference rules. A property of term logic is that almost all inference rules use
 Such logical approach led to organizing all the term-related information into big buckets or objects called concepts. In OpenNARS, all tasks and beliefs that share a common term are collected into a concept object, which is named by the shared term. As a result, any valid inference step necessarily happens within a single concept. Therefore, a concept becomes a unit for resource allocation, which is larger than a task or a belief. The system distributes its resources firstly among the concepts, and then secondly, within each concept, among the tasks and beliefs. The result is a two-level memory structure where each level, the notion of [“bag”](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) applies. 
 
 
-Every term within a Narsese statement including statement itself in internal implementation is represented by a concept. For example, statement **<raven --> black>** is represented using three concepts: "raven", "black" and "<raven --> black>". The concept itself is an object, a big chunk of information, that includes much information beyond name of the concept itself. Concept incorporates numerous data structures including two "BAG" data structures where task-links and term-links are stored referred as "Task Bag" and "Term Bag" respectively.
+
 
 We can describe the memory of NARS as a bag of concepts, with, within each concept, a bag of tasks and a bag of beliefs. 1
 For instance, if the statement of a new task is “raven → bird”, then
@@ -16,3 +16,6 @@ the concept “Cbird”. If the task is a judgment, it will add a corresponding
 belief into the belief bag of the two concepts, too. If there is no such concept
 (i.e., the term is novel to the system), it will be created as a result of the
 acceptance of the task.
+
+## Implementation
+Every term within a Narsese statement including statement itself in internal implementation is represented by a concept. For example, statement **<raven --> black>** is represented using three concepts: "raven", "black" and "<raven --> black>". The concept itself is an object, a big chunk of information, that includes much information beyond name of the concept itself. Concept incorporates numerous data structures including two "BAG" data structures where task-links and term-links are stored referred as "Task Bag" and "Term Bag" respectively.
