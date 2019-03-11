@@ -23,7 +23,7 @@ Every [term](https://github.com/opennars/opennars/wiki/Term:-types,-format) with
 
 A concept is visualized below for better understanding. Links pointing example is found [here](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
 
-![concept](https://github.com/opennars/opennars/issues/60#issuecomment-471406161)
+![concept](https://user-images.githubusercontent.com/24262360/54101472-439e8e80-439a-11e9-9eb1-f4b439703489.png)
 
 
  
