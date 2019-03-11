@@ -21,9 +21,11 @@ Every [term](https://github.com/opennars/opennars/wiki/Term:-types,-format) with
 
 5. Goal Table: Array sorted by highest confidence. Goals to be achieved associated with this concept
 
-A concept is visualized below for better understanding. Links pointing example is found [here](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
+6. Supplementary technical data for implementation
 
+A concept is visualized below for better understanding. Links pointing example is found [here](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
 ![concept](https://user-images.githubusercontent.com/24262360/54101472-439e8e80-439a-11e9-9eb1-f4b439703489.png)
 
+With each inference cycle a concept is being selected from the bag with probability propositional to it's budget value and then the system will allocate resources to process items within the concept. For inference cycle of the system please look [here](https://github.com/opennars/opennars/wiki/Working-Cycle)
 
  
