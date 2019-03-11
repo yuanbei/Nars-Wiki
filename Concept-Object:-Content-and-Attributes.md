@@ -8,3 +8,19 @@ Such logical approach led to organizing all the term-related information into bi
 
 ## Implementation
 Every [term](https://github.com/opennars/opennars/wiki/Term:-types,-format) within a Narsese statement including statement itself in internal implementation is represented by a **concept**. For example, statement **<raven --> black>** is represented using three concepts: "raven", "black" and "<raven --> black>". The concept itself is an object, a big chunk of information, that includes much information beyond name of the concept itself. Concept incorporates numerous data structures including two "BAGs" data structures where task-links and term-links are stored referred as "Task Bag" and "Term Bag" respectively.
+
+### Concept components:
+
+1. Concept Name which is the same as term name
+
+2. Bag of term links, term-link bag, that is the bag of links (pointers) which point to **terms** this concept is associated with
+
+3. Bag of task links, task-link bag, that is the bag of links (pointers) which point to tasks this concept(term) is part of. If concept is a task itself then task-link is a self-loop 
+
+4. Believe Table: Array sorted by highest confidence. Beliefs (processed judgements) that this concept is associated with 
+
+5. Goal Table: Array sorted by highest confidence. Goals to be achieved associated with this concept
+
+
+
+ 
