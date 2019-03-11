@@ -54,7 +54,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
     * [Data structure for evidential basis, beliefs and goals](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals)
     * Narsese Sentence internal representation
-    * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links)
+    * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
     
   - Control
     * [Working Cycle of the System](https://github.com/opennars/opennars/wiki/Working-Cycle)
