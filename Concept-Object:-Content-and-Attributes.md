@@ -27,6 +27,6 @@ A concept is visualized below for better understanding. Links pointing example i
 
 ![concept](https://user-images.githubusercontent.com/24262360/54101472-439e8e80-439a-11e9-9eb1-f4b439703489.png)
 
-With each inference cycle a concept is being selected from the bag with probability propositional to it's budget value and then the system will allocate resources to process items within the concept. For inference cycle of the system please look [here](https://github.com/opennars/opennars/wiki/Working-Cycle)
+As one might observe, we can talk about "the meaning of a concept" in the same way as a "the meaning of a term": just like the meaning of term is determined by its experienced relations with other terms, the meaning of a concept is determined by its experienced relations with other concepts. The difference is just that a term is a symbol, while a concept is a data structure named by a term. We can see that using "concept" approach data items are being localized to items associated to the given concept or term thus addressing insufficient resource issue. With each inference cycle a concept is being selected from the bag with probability propositional to it's budget value and then the system will allocate resources to process items within the concept. For inference cycle of the system please look [here](https://github.com/opennars/opennars/wiki/Working-Cycle)
 
  
