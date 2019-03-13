@@ -46,4 +46,4 @@ Task-links to concepts: <bird--> animal> <br/> (task link is a self loop since i
 Belief table: <bird--> animal>. %1.0;0.9% <br/>
 Term-links to concepts: bird, animal> <br/>
 
-Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This are two **different** term-links because they have different budget value. 
+Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This is **not** bi-directional link but two **different** term-links because they have different budget value. 
