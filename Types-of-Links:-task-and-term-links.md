@@ -1,5 +1,45 @@
+Information on this page is related to [memory structure](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) of OpenNARS and [working cycle](https://github.com/opennars/opennars/wiki/Working-Cycle) of the system. Please read those pages for better understanding. 
+
+### Background
+Similarly to [concepts](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes) Task-link and term-link refer to **data items** in OpenNARS but are unlike concepts term and task links are trivial pointers that are stored in ["bags"](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) within concept object.
+
 ### Task and Task-Link
-As mentioned on previous pages, input and output of OpenNARS are Narsese [sentences](https://github.com/opennars/opennars/wiki/Sentence:-types,-format). Every sentence, either input or derived, becomes a **task** that is being processed and participate in Forward or Backward inference. Task is nothing but a Narsese statement with derived **truth value** (using truth functions, choice or revision rules) **and** assigned **budget value**. Task-link is a link pointing to a task. Task-link is being assigned a **budget value** which is initialized with a budget value of a task it points to and task-link's budget value is being recomputed during inference process. For the above example **<raven --> black>**, concept **raven** has a "Task Bag" where one of elements is a task-link pointing to task **<raven --> black>**.  
+As mentioned on other pages, input and output of OpenNARS are Narsese [sentences](https://github.com/opennars/opennars/wiki/Sentence:-types,-format). Every sentence, either input or derived, becomes a **task** that is being processed and participate in Forward or Backward inference. Task is nothing but a Narsese statement with input or derived **truth value** (using truth functions, choice or revision rules) **and** associated [concept](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes) with assigned [**budget value**](https://github.com/opennars/opennars/wiki/Budget-Value). 
+
+**Task-link** is a link(pointer) pointing from a concept to associated task (for concept for the task it points to itself). Because task-links are stored in "bag" it is being assigned a **budget value** which is initialized with a budget value of a task it points to and task-link's budget value is being recomputed during inference process. 
 
 ### Term-link
-Term-link is a link that points to a term from which a statement is composed. For above Narsese statement within concept for "<raven --> black>" there is a "Bag" with two term-links to "raven" and "black". 
+Term-link is a link that links terms of statement. It is a pointer that points from a statement concept to terms from which this statement is composed and vise versa. Term-links are also stored in "bag" within the concept and thus has budget value assigned. Unlike task-links which are uni-directional, term-links are bi-directional, although in implementation there are actually two term-links one for each direction because each has different budget value assigned.
+
+Now it is clear that a system memory looks like a weighted [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) with two  types of edges where nodes are concepts, edges are term and task links, and weights are budget values of term and task links. Let's look at the simple example below that will clearly show term and task links. 
+
+Consider two Narsese input sentences:
+
+**<raven --> bird>. %1.0;0.9%**<br/>
+**<bird --> animal>. %1.0;0.9%**<br/>
+
+Then system will create the following concepts with the following term and task links. Please note that the budget value here is artificial for presentation only.
+Concept <peter --> stupid>
+Tasklinks: <peter --> stupid>. %1.0;0.9%
+Belief table: <peter --> stupid>. %1.0;0.9%
+Termlinks: peter, stupid
+
+Concept peter:
+Tasklinks: <peter --> stupid>. %1.0;0.9%
+Belief table: Empty
+Termlinks: <peter --> stupid>
+
+Concept stupid:
+Tasklinks: <peter --> stupid>. %1.0;0.9%, <human --> stupid>. %1.0;0.9%
+Belief table: Empty
+Termlinks: <peter --> stupid>, <human --> stupid>
+
+Concept human:
+Tasklinks: <human --> stupid>. %1.0;0.9% <human --> stupid>. %0.0;0.9% <human --> stupid>. %0.5;0.9%
+Belief table: Empty
+Termlinks: <human --> stupid>.
+
+Concept <human --> stupid>
+Tasklinks: <human --> stupid>. %1.0;0.9%
+Belief table: <human --> stupid>. %1.0;0.9%
+Tasklinks: <human --> stupid>. %1.0;0.9%
