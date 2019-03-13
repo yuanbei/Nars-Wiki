@@ -22,26 +22,26 @@ Consider two Narsese input sentences:
 Then system will create the following concepts with following [belief table](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals), term and task links. Please note: the budget value is not present here for simplicity.
 
 Concept **<raven --> bird>**<br/>
-Tasklinks to concept: <raven --> bird>. (task link is a self loop since it is the concept for task itself)<br/>
+Task-links to concepts: <raven --> bird>. (task link is a self loop since it is the concept for task itself)<br/>
 Belief table: <raven --> bird>.%1.0;0.9%<br/>
-Termlinks to concept: peter, stupid<br/>
+Term-links to concepts: raven, bird<br/>
 
 Concept **raven** :<br/>
-Tasklinks to concept: <raven --> bird>.<br/>
+Task-links to concepts: <raven --> bird><br/>
 Belief table: Empty<br/>
-Termlinks to concept: <raven --> bird><br/>
+Term-links to concepts: <raven --> bird><br/>
 
 Concept **bird**:
-Tasklinks: <raven --> bird>. %1.0;0.9%, <bird--> animal>. %1.0;0.9%<br/>
+Task-links to concepts: <raven --> bird>, <bird--> animal><br/>
 Belief table: Empty<br/>
-Termlinks: <raven --> bird>., <bird --> animal><br/>
+Term-links to concepts: <raven --> bird>, <bird --> animal><br/>
 
-Concept **human**:<br/>
-Tasklinks: <bird --> animal>.<br/>
+Concept **animal**:<br/>
+Task-links to concepts: <bird --> animal><br/>
 Belief table: Empty<br/>
-Termlinks: <bird --> animal>.<br/>
+Term-links to concepts: <bird --> animal><br/>
 
 Concept **<bird--> animal>**<br/>
-Tasklinks: <bird--> animal><br/>
+Task-links to concepts: <bird--> animal><br/>
 Belief table: <human --> stupid>. %1.0;0.9%<br/>
-Termlinks: <bird--> animal><br/>
+Term-links to concepts: bird, animal><br/>
