@@ -45,3 +45,5 @@ Concept **<bird--> animal>**<br/>
 Task-links to concepts: <bird--> animal> <br/> (task link is a self loop since it is the concept for task itself)<br/>
 Belief table: <bird--> animal>. %1.0;0.9% <br/>
 Term-links to concepts: bird, animal> <br/>
+
+Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This are two **different** term-links because they have different budget value. 
