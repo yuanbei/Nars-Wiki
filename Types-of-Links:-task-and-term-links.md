@@ -13,33 +13,35 @@ Term-link is a link that links terms of statement. It is a pointer that points f
 
 Now it is clear that a system memory looks like a weighted [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) with two  types of edges where nodes are concepts, edges are term and task links, and weights are budget values of term and task links. Let's look at the simple example below that will clearly show term and task links. 
 
+### Example
 Consider two Narsese input sentences:
 
 **<raven --> bird>. %1.0;0.9%**<br/>
 **<bird --> animal>. %1.0;0.9%**<br/>
 
-Then system will create the following concepts with the following term and task links. Please note that the budget value here is artificial for presentation only.
-Concept <peter --> stupid>
-Tasklinks: <peter --> stupid>. %1.0;0.9%
-Belief table: <peter --> stupid>. %1.0;0.9%
-Termlinks: peter, stupid
+Then system will create the following concepts with following [belief table](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals), term and task links. Please note: the budget value is not present here for simplicity.
 
-Concept peter:
-Tasklinks: <peter --> stupid>. %1.0;0.9%
-Belief table: Empty
-Termlinks: <peter --> stupid>
+Concept **<raven --> bird>**<br/>
+Tasklinks to concept: <raven --> bird>. (task link is a self loop since it is the concept for task itself)<br/>
+Belief table: <raven --> bird>.%1.0;0.9%<br/>
+Termlinks to concept: peter, stupid<br/>
 
-Concept stupid:
-Tasklinks: <peter --> stupid>. %1.0;0.9%, <human --> stupid>. %1.0;0.9%
-Belief table: Empty
-Termlinks: <peter --> stupid>, <human --> stupid>
+Concept **raven** :<br/>
+Tasklinks to concept: <raven --> bird>.<br/>
+Belief table: Empty<br/>
+Termlinks to concept: <raven --> bird><br/>
 
-Concept human:
-Tasklinks: <human --> stupid>. %1.0;0.9% <human --> stupid>. %0.0;0.9% <human --> stupid>. %0.5;0.9%
-Belief table: Empty
-Termlinks: <human --> stupid>.
+Concept **bird**:
+Tasklinks: <raven --> bird>. %1.0;0.9%, <bird--> animal>. %1.0;0.9%<br/>
+Belief table: Empty<br/>
+Termlinks: <raven --> bird>., <bird --> animal><br/>
 
-Concept <human --> stupid>
-Tasklinks: <human --> stupid>. %1.0;0.9%
-Belief table: <human --> stupid>. %1.0;0.9%
-Tasklinks: <human --> stupid>. %1.0;0.9%
+Concept **human**:<br/>
+Tasklinks: <bird --> animal>.<br/>
+Belief table: Empty<br/>
+Termlinks: <bird --> animal>.<br/>
+
+Concept **<bird--> animal>**<br/>
+Tasklinks: <bird--> animal><br/>
+Belief table: <human --> stupid>. %1.0;0.9%<br/>
+Termlinks: <bird--> animal><br/>
