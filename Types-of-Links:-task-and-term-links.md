@@ -49,3 +49,5 @@ Term-links to concepts: bird, animal> <br/>
 Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This is **not** bi-directional link but two **different** term-links because they have different budget value. 
 
 Below graph is for above example for clear representation. Concepts are yellow, task-links are red while term-links are blue. _b_ stands for budget value.
+
+![term/task-links](https://github.com/opennars/opennars/issues/60#issuecomment-472332720)
