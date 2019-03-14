@@ -53,7 +53,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [System Memory (bag, overall structure)](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure))
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
     * [Data structure for evidential basis, beliefs and goals](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals)
-    * [Narsese Sentence internal representation](https://github.com/opennars/opennars/wiki/Narsese-Sentence-internal-representation)
+    * [Narsese String internal representation](https://github.com/opennars/opennars/wiki/Narsese-String-internal-representation)
     * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
     
   - Control
