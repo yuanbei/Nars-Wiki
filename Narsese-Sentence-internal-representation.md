@@ -1,1 +1,0 @@
-This page is related to types of links and previous concept discussions. 
