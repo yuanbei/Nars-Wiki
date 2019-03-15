@@ -10,6 +10,8 @@ Sentence in the system is represented as a [compound term](https://github.com/op
 ### Stamp
 
 ### Punctuation
-Punctuation is just a character value of ".", "!", "?" or "" ![equation](http://bit.ly/2S18QfZ) "" to indicate if sentence is a judgment, goal, question or quest.
+Punctuation is just a character value of ".", "!", "?" or "![equation](http://bit.ly/2S18QfZ)" to indicate if sentence is a judgment, goal, question or quest.
+
 ### Truth value
+Generic OpenNARS Truth value with frequency and confidence
 
