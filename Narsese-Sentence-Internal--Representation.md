@@ -17,5 +17,6 @@ Punctuation is just a character value of ".", "!", "?" or "@" to indicate if sen
 Generic OpenNARS truth value with frequency and confidence
 
 Diagram below shows sentence within the input task for better understanding
+
 ![Sentence_in_memory](https://user-images.githubusercontent.com/24262360/54455892-37685780-4733-11e9-839f-fd35dfea69ef.png)
 
