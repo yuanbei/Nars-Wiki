@@ -57,4 +57,4 @@ print("<_d0<->_d1>?")
 print("<_d1<->_d2>?")
 ```
 
-The accuracy may get increased by using n-grams.
+Additionally n-grams may get used to increase the accuracy.
