@@ -5,10 +5,11 @@ From a user perspective, a sentence is just a Narsese string with attached truth
 In OpenNARS **sentence** is a container, it is an object that contains multiple elements: compound term, punctuation, truth value and stamp. Sentence itself resides inside a Task object which has budget value and stored in task buffer. Content of the sentence is discussed below in detail.
 
 ### Compound term
+Sentence in the system is represented as a [compound term](https://github.com/opennars/opennars/wiki/Term:-types,-format) with copula relation. It is being parsed recursively   
 
 ### Stamp
 
 ### Punctuation
-
+Punctuation is just a character value of ".", "!", "?" or "" ![equation](http://bit.ly/2S18QfZ) "" to indicate if sentence is a judgment, goal, question or quest.
 ### Truth value
 
