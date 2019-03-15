@@ -16,4 +16,5 @@ Punctuation is just a character value of ".", "!", "?" or "@" to indicate if sen
 ### Truth value
 Generic OpenNARS truth value with frequency and confidence
 
-Look for the diagram below for visual explanation.
+Diagram below shows sentence within the task visually for better understanding.
+
