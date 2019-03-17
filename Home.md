@@ -9,6 +9,8 @@ This page shows the overall structure of all the wiki pages on OpenNARS, which s
 
 The pages are roughly divided into two groups, the first group systematically explains OpenNARS in its current implementation, with the pages roughly correspond to the structures of the system; the second group provides different tours over the structure, for different users and purposes.
 
+# Table of contents
+
 1. **Entry points**
   - user guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
