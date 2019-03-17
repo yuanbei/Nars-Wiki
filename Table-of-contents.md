@@ -1,3 +1,19 @@
+OpenNARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project.
+The reasoner "core" of OpenNARS is licensed under [MIT](https://opensource.org/licenses/MIT).
+
+This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a _unified theory_, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
+
+What makes NARS different from conventional computer systems is its ability to _learn_ from its experience and to work with _insufficient knowledge and resources_.
+
+This project is still mostly at the conceptual design and prototype development stage. If you are interested to join this research, the best place to start reading is the Wiki pages, not the source code.
+
+***
+Learn about NARS with [Tutorials](https://github.com/opennars/opennars/wiki/Tutorials) and [Videos](https://github.com/opennars/opennars/wiki/Videos).
+
+***
+The current stable versions of the system are available for [download](https://drive.google.com/a/temple.edu/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing#). Each version contains a JAR file and some working examples. [Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html) is needed to run the recent versions. There is a [discussion group](http://groups.google.com/group/open-nars) of this project.
+
+
 This page shows the overall structure of all the wiki pages on OpenNARS, which serve as an intermediate layer between the publications (as listed in https://cis.temple.edu/~pwang/papers.html and https://phillyagiteam.github.io/Website/) and comments of the code (javadoc). The pages are linked to each other, as well as to other materials (PDF files, data files, videos, etc.).
 
 The pages are roughly divided into two groups, the first group systematically explains OpenNARS in its current implementation, with the pages roughly correspond to the structures of the system; the second group provides different tours over the structure, for different users and purposes.
