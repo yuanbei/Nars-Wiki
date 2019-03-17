@@ -11,7 +11,7 @@ The pages are roughly divided into two groups, the first group systematically ex
 
 # Table of contents
 
-1. **Entry points**
+1. ## Entry points
   - user guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
