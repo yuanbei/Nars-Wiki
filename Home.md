@@ -11,7 +11,7 @@ The pages are roughly divided into two groups, the first group systematically ex
 
 # Table of contents
 
-## 1. Entry points
+### 1. Entry points
   - user guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
@@ -25,7 +25,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
 
 
-2. **Aspects of OpenNARS**
+### 2. Aspects of OpenNARS
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
