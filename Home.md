@@ -10,8 +10,7 @@ This page shows the overall structure of all the wiki pages on OpenNARS, which s
 The pages are roughly divided into two groups, the first group systematically explains OpenNARS in its current implementation, with the pages roughly correspond to the structures of the system; the second group provides different tours over the structure, for different users and purposes.
 
 # Table of contents
-
-### 1. Entry points
+## 1. Entry points
   - user guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
@@ -25,7 +24,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
 
 
-### 2. Aspects of OpenNARS
+## 2. Aspects of OpenNARS
   - Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
@@ -56,6 +55,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [structural rules](https://github.com/opennars/opennars/wiki/Structure)
     * [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
+    * [introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference)
     * [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
 
   - Data structure
@@ -66,11 +66,10 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
     
   - Control
-    * [Working Cycle of the System](https://github.com/opennars/opennars/wiki/Working-Cycle)
-    * [Task Management (by type)](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS)
-    * data-driven rule choosing (rule table)
+    * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
+    * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
+    * [Data-driven rule choosing (rule table)](https://github.com/opennars/opennars/wiki/Data-driven-rule-choosing-(rule-table))
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
-    * [Emotion and Self-control](https://github.com/opennars/opennars/wiki/Emotion-and-Self-control)
-    * parameters and configuration file
-
+    * [Emotion and Internal experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-experience)
+    * [System parameters and configuration file](https://github.com/opennars/opennars/wiki/System-parameters-and-configuration-file)
