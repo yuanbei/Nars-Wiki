@@ -23,18 +23,31 @@ System parameters are defined in org.main.parameters.java. It is also possible t
 **DEFAULT_CONFIRMATION_EXPECTATION = 0.6**: Default expectation for confirmation on anticipation.<br/>
 
 **ALWAYS_CREATE_CONCEPT = true**: Ignore expectation for creation of concept.<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
+
+**DEFAULT_CREATION_EXPECTATION = 0.66**: Default expectation for creation of concept.<br/>
+
+**DEFAULT_CREATION_EXPECTATION_GOAL = 0.6**: Default expectation for creation of concept for goals.<br/>
+
+**DEFAULT_JUDGMENT_CONFIDENCE = 0.9**: Default confidence of input judgment.<br/> 
+
+**DEFAULT_JUDGMENT_PRIORITY = 0.8**: Default priority of input judgment<br/>
+
+**DEFAULT_JUDGMENT_DURABILITY = 0.5**: Default durability of input judgment<br/>
+
+**DEFAULT_QUESTION_PRIORITY = 0.9**: Default priority of input question<br/>
+
+**DEFAULT_QUESTION_DURABILITY = 0.9**: Default durability of input question<br/>
+
+**DEFAULT_GOAL_CONFIDENCE = 0.9**: Default confidence of input goal.<br/>
+
+**DEFAULT_GOAL_PRIORITY = 0.9**: Default priority of input goal<br/>
+
+**DEFAULT_GOAL_DURABILITY = 0.9**: Default durability of input goal<br/>
+
+**DEFAULT_QUEST_PRIORITY = 0.9**: Default priority of input quest<br/>
+
+**DEFAULT_QUEST_DURABILITY = 0.9**: Default durability of input quest<br/>
+
 ****:<br/>
 ****:<br/>
 ****:<br/>
