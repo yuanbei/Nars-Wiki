@@ -13,6 +13,7 @@ Roughly speaking, there will be three types of NARS:
 
 Since NARS is now very stable and has reached a certain value of stability and completeness, we decided to create first application examples, also to proof that NARS works in domains where usual a lot of domain knowledge and special algorithms are needed, also domains where usually numerical learning algorithms are applied are shown. In all these examples, NARS is used and no special domain knowledge is input. (although NARS can make use of such knowledge) Usually AI in such domains is unable to master other such domains without programmatical changes and reconfigurations, or even more important, is not able to take knowledge from one domain to the other even if some situations might be similar and be solvable by similar solutions.
 
+* [Pong Game](https://github.com/opennars/opennars/wiki/Pong-Game)
 * [Test Chamber](https://github.com/opennars/opennars/wiki/Test-Chamber)
 * [Rover](https://github.com/opennars/opennars/wiki/Rover)
 * [Tic Tac Toe](https://github.com/opennars/opennars/wiki/Tic-Tac-Toe)
