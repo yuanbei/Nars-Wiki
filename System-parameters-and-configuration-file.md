@@ -9,6 +9,7 @@ System parameters are defined in org.main.parameters.java. It is also possible t
 **NOVELTY_HORIZON = 100000**: what this value represents was originally equal to the term-link record length (10), but we may want to adjust it or make it scaled according to duration since it has more to do with time than number of records.<br/>
 **CONCEPT_BAG_SIZE = 10000**: Size of Concept Bag<br/>
 **DECISION_THRESHOLD = 0.51f**: Minimum expectation for a desire value to execute an operation. The range of "now" is [-DURATION, DURATION]<br/> 
+
 **DURATION = 5**:Cycles per duration. Past/future tense usage convention; How far away "past" and "future" is from "now", in cycles.The range of "now" is [-DURATION/2, +DURATION/2]<br/>
 **HORIZON**:Evidential Horizon, the amount of future evidence to be considered<br/>
 ****:determines the internal precision used for TruthValue calculations. Value of 0.01 gives 100 truth value states between 0 and 1.0. Other values may be used, for example, 0.02 for 50, 0.10 for 10, etc. Change at your own risk, but can't be changed at runtime
