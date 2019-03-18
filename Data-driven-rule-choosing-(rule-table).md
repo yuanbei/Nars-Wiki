@@ -5,7 +5,7 @@ Given that OpenNARS operates under AIKR it demands vast computation resources in
 **Data-driven rule choosing** is an approach of using rules that depends on a type of links being selected during inference. It allows to localize the subset of rules necessary for selected types of links only, thus not exhaustively search for the "right" rule to make a derivation. Data driven rule choosing is a table which is defined in **org.RuleTables.java** as a giant nested switch statement. Type of links are defined as a set of constants in **org.entity.TermLink.java** class.
 
 ## Types of task-link and term-links
-**Note:** types of task-links and term-links described here exist only for implementation purposes, do not mix them with general types of links, that are task and term links. 
+**Note:** types of task-links and term-links described here exist only for implementation purposes, do not mix them with general types of links, which are task and term links. 
 - SELF: for tasklink only, when it points to itself 
     
 - COMPONENT: when a link points to a component of a term
