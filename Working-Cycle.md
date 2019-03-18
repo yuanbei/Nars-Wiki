@@ -12,7 +12,7 @@ NARS is based on the theory that intelligence is a relative rationality, and an 
 
 Roughly speaking, the function of control mechanism in NARS is to dynamically allocate the system's limited resources to the activities demanding them. The objective is to optimize the expected overall efficiency, estimated according to the system's beliefs summarizing the past experience. Under the assumption of insufficient resources, the system will not be able to satisfy all the resource demands, and under the assumption of insufficient knowledge, there is no guarantee that the selections the system makes are really optimal when judged according to the system's future experience.
 
-For theoretical discussions about this approach, see the two books and the [publications on Resource Management](http://www.cis.temple.edu/~pwang/papers.html).
+# Working Cycle
 
 OpenNars runs by repeating the following working cycle:
 1. Probabilistically select a concept C from the memory
