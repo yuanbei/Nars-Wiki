@@ -1,4 +1,4 @@
-####Rover
+###Rover
 
 This is a usual reinforcement learning example, except that the input space is so complex that usually a classifier is applied. NARS has to correlate sequences of actions itself with getting the reward from its body when an object has been catched, like a simple lifeform searching for food, driven by body rewards.
 
