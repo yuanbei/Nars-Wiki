@@ -66,7 +66,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     
   - Control
     * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
-    * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS)
+    * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
