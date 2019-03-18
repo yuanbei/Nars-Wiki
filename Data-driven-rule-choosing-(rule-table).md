@@ -5,20 +5,19 @@ Given that OpenNARS operates under AIKR it demands vast computation resources in
 **Data-driven rule choosing** is an approach of using rules that depends on a type of links being selected during inference. It allows to localize the subset of rules necessary for selected types of links only thus not exhaustively search for the right rule to make a derivation. Data driven rule choosing is a table that is defined in **org.RuleTables.java** as a giant nested switch statement. Type of links are defined as a set of constants in **org.entity.TermLink.java** class.
 
 ## Types of task-link and term-links
+**Note: types of task-links and term-links described here exist only for implementation purposes, do not mix them with general types of links, that are task and term links.
+ 
+    * SELF: for tasklink only, when it points to itself 
+    
+    * COMPONENT: when a link points to a component of a term
 
-These types of links participate in a table:
-/** At C, point to C; TaskLink only */
-    public static final short SELF = 0; 
-    /** At (&amp;&amp;, A, C), point to C */
-    public static final short COMPONENT = 1;
-    /** At C, point to (&amp;&amp;, A, C) */
-    public static final short COMPOUND = 2;
-    /** At &lt;C --&gt; A&gt;, point to C */
-    public static final short COMPONENT_STATEMENT = 3;
-    /** At C, point to &lt;C --&gt; A&gt; */
-    public static final short COMPOUND_STATEMENT = 4;
-    /** At &lt;(&amp;&amp;, C, B) ==&gt; A&gt;, point to C */
-    public static final short COMPONENT_CONDITION = 5;
-    /** At C, point to &lt;(&amp;&amp;, C, B) ==&gt; A&gt; */
-    public static final short COMPOUND_CONDITION = 6;
+    *COMPOUND: when a link points to compound term
+    
+    * COMPONENT_STATEMENT: when a link points to a statement as component
+    
+    * COMPOUND_STATEMENT: when a link points to a compound statement
+    
+    *COMPONENT_CONDITION:
+    
+    *COMPOUND_CONDITION:
 
