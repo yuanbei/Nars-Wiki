@@ -2,4 +2,4 @@ The [control mechanism](https://github.com/opennars/opennars/wiki/Inference-Cont
 
 A system parameter indicates a bias of the system, so different values will give the system different "personalities". There is no best value because a certain personality may be good for solving some problems, but bad for some others. Even though, usually there is a "normal range" for each parameter, and values outside it will not be acceptable.
 
-One way to tune and study system parameters is to compare them in a community of multiple OpenNARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities. However, such experiments should wait until the individual OpenNARS systems to become relatively complete and stable.
+One way to tune and study system parameters is to compare them in a community of multiple OpenNARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities.
