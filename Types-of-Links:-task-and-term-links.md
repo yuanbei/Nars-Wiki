@@ -1,4 +1,4 @@
-Information on this page is related to [memory structure](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) of OpenNARS and [working cycle](https://github.com/opennars/opennars/wiki/Working-Cycle) of the system. Please read those pages for better understanding. 
+Information on this page is related to [memory structure](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) of OpenNARS and [working cycle](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS) of the system. Please read those pages for better understanding. 
 
 ### Background
 Similarly to [concepts](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes) Task-link and term-link refer to **data items** in OpenNARS but are unlike concepts term and task links are trivial pointers that are stored in ["bags"](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure)) within concept object.
