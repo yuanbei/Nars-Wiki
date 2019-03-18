@@ -1,0 +1,5 @@
+The [control mechanism](https://github.com/opennars/opennars/wiki/Inference-Control) is specified with many "system parameters", which are quantities that has not been given a unique value. It is may be because the best value has not been found, but more likely it is because there is no "best value". As the development advances, the former cases will be gradually eliminated, while the latter cases will remain.
+
+A system parameter indicates a bias of the system, so different values will give the system different "personalities". There is no best value because a certain personality may be good for solving some problems, but bad for some others. Even though, usually there is a "normal range" for each parameter, and values outside it will not be acceptable.
+
+One way to tune and study system parameters is to compare them in a community of multiple NARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities. However, such experiments should wait until the individual NARS systems to become relatively complete and stable.
