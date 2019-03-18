@@ -21,7 +21,8 @@ NAL 6 introduces **variable terms** into the system. The details can be found on
 NAL 7 introduces time into the system and elevate system's reasoning to another level. Systems gains abilities to predict future events based on its experience. The concepts of temporal inference are a little more substantial to put them here in NAL overview and therefore a dedicated page of [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference) has been created.
 ### NAL-8
 In NAL-8 procedural interpretation is applied to events so declarative and procedural knowledge are unified it also introduces goals and planning. Similar to NAL-7 It is described on separate page in detailed, please look for [Procedural Inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) and [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) pages
- 
+### NAL-9
+In NAL-9 introspective inference will be mainly implemented as a set of mental operations whose major consequences are within the system itself. These operations carries out various types of self-monitoring and self-control. Please look  [introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference) page for more details.
 
 
 
