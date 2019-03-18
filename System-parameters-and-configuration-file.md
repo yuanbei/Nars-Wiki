@@ -4,7 +4,7 @@ A system parameter indicates a bias of the system, so different values will give
 
 One way to tune and study system parameters is to compare them in a community of multiple OpenNARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities.
 
-System parameters are defined in org.main.parameters.java. It is also possible to define them in a file and feed file to the system at initial stage. Below is a list of parameters with brief description:
+System parameters are defined in **org.main.parameters.java**. It is also possible to define them in a file and feed file to the system at initial stage. Below is a list of parameters with brief description:
 
 **NOVELTY_HORIZON = 100000**: what this value represents was originally equal to the term-link record length (10), but we may want to adjust it or make it scaled according to duration since it has more to do with time than number of records.<br/>
 
