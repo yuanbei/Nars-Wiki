@@ -48,25 +48,64 @@ System parameters are defined in org.main.parameters.java. It is also possible t
 
 **DEFAULT_QUEST_DURABILITY = 0.9**: Default durability of input quest<br/>
 
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
-****:<br/>
+**TASK_LINK_BAG_SIZE = 2000**: Size of Task-Link Bag<br/>
+
+**TERM_LINK_BAG_SIZE = 1000**: Size of Term-Link Bag<br/>
+
+**TERM_LINK_MAX_MATCHED = 10**: Maximum TermLinks checked for novelty for each TaskLink in TermLinkBag<br/>
+
+**NOVEL_TASK_BAG_SIZE = 1000**: Size of Novel Task Buffer<br/>
+
+**SEQUENCE_BAG_SIZE = 300**: Size of derived sequence and input event bag<br/>
+
+**OPERATION_BAG_SIZE = 10**: Size of remembered last operation tasks<br/>
+
+**PROJECTION_DECAY = 0.1**: How fast events decay in confidence<br/>
+
+**MAXIMUM_EVIDENTAL_BASE_LENGTH = 2000**: Maximum length of the evidental base of the Stamp, a power of 2<br/>
+
+**TERMLINK_MAX_REASONED = 3**: Maximum TermLinks used in reasoning for each Task in Concept<br/>
+
+**TERM_LINK_RECORD_LENGTH =10**: Record-length for newly created TermLink's<br/>
+
+**CONCEPT_BELIEFS_MAX = 28**: Maximum number of beliefs kept in a Concept<br/>
+
+**CONCEPT_QUESTIONS_MAX = 5**: Maximum number of questions kept in a Concept<br/>
+
+**CONCEPT_GOALS_MAX = 7**: Maximum number of goals kept in a Concept<br/>
+
+**reliance = 0.9**: Reliance factor, the empirical confidence of analytical truth. The same as default confidence<br/>
+
+**DISCOUNT_RATE = 0.5**: The rate of confidence decrease in mental operations Doubt and Hesitate set to zero to disable this feature<br/>
+
+**IMMEDIATE_ETERNALIZATION=true**: whether eternalization should happen on every derivation<br/>
+
+**CURIOSITY_DESIRE_CONFIDENCE_MUL = 0.1**: how much risk is the system allowed to take just to fulfill its hunger for knowledge? <br/>
+
+**CURIOSITY_DESIRE_PRIORITY_MUL = 0.1**: how much priority should curiosity have?<br/>
+
+**CURIOSITY_DESIRE_DURABILITY_MUL = 0.3**: how much durability should curiosity have?<br/>
+
+**DEFAULT_FEEDBACK_PRIORITY = 0.9**: Default priority of execution feedback<br/>
+
+**DEFAULT_FEEDBACK_DURABILITY = 0.5**: Default durability of execution feedback<br/>
+
+**CONCEPT_FORGET_DURATIONS = 2.0**: Concept decay rate in ConceptBag, in [1, 99].  originally: CONCEPT_FORGETTING_CYCLE How many cycles it takes an item to decay completely to a threshold value (ex: 0.1). Lower means faster rate of decay.<br/>
+
+**TERMLINK_FORGET_DURATIONS = 10.0**: TermLink decay rate in TermLinkBag, in [1, 99]. originally: TERM_LINK_FORGETTING_CYCLE<br/>
+
+**TASKLINK_FORGET_DURATIONS = 4.0**: TaskLink decay rate in TaskLinkBag, in [1, 99]. originally: TASK_LINK_FORGETTING_CYCLE<br/>
+
+**EVENT_FORGET_DURATIONS = 4.0**: Sequence bag forget durations<br/>
+
+**VARIABLE_INTRODUCTION_COMBINATIONS_MAX = 8**: Maximum attempted combinations in variable introduction.<br/>
+
+**ANTICIPATIONS_PER_CONCEPT_MAX = 8**: Maximum anticipations about its content stored in a concept<br/>
+
+**THREADS_AMOUNT = 1**: Default threads amount at startup<br/>
+
+**VOLUME = 0**: Default volume at startup<br/> 
+
+**MILLISECONDS_PER_STEP = 0**: Default miliseconds per step at startup<br/>
+
+**STEPS_CLOCK = true**: Timing mode, steps or real time<br/>
