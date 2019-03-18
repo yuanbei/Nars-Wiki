@@ -1,4 +1,4 @@
-#### Feeling and emotion
+## Feeling and emotion
 Feeling and emotion allow the system to appraise individual items and the overall situation, with respect to the system's goals, so as to make proper response.
 
 This appraisal process starts from the given (input or implant) goals. The desire-value of these goals represent drives and values imposed on the system by its designer or user. From these given goals, plus the system's beliefs, the derived goals are generated, which is biased by the system's own experience.
@@ -23,7 +23,7 @@ The appraisal information will serve several functions:
 
 * The system's feelings and emotions can be communicated to other systems, either by using the "emotional" terms in Narsese, or by showing the related measurements in the GUI.
 
-#### Internal experience
+## Internal experience
 
 Beside satisfaction, the system may use other system-level indicators:
 
