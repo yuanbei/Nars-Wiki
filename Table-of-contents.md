@@ -65,7 +65,7 @@ The pages are roughly divided into two groups, the first group systematically ex
     * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
     
   - Control
-    * [Inference Control](https://github.com/opennars/opennars/wiki/Working-Cycle)
+    * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
     * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Tasks-Management-in-OpenNARS)
     * data-driven rule choosing (rule table)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
