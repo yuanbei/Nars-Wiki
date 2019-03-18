@@ -1,9 +1,9 @@
-## Introspective Inference
+The information present here is closely related to [Emotion and Internal experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-experience). Feel free to read it along with this page. 
 
+## Introspective Inference
 Introspective Inference will be mainly implemented as a set of mental operations whose major consequences are within the system itself. These operations carries out various types of self-monitoring and self-control.
 
 ## Deliberate control
-
 The package nars.operator.mental contains operators that allow the system to deliberately override the automatic inference control mechanism:
 
 * task creation: This group of operators each takes a Term as argument, and uses it as content to create a new task to be processed: ^believe for judgment, ^want for goal, ^wonder for question, and ^evaluate for query.
