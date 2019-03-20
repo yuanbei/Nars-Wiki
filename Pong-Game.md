@@ -29,3 +29,17 @@ After an additional minute of time, both systems had a very low error rate, whic
 
 What we see is that the learning parameters we chose for Q-Learning were sufficient for this task. And in comparison, the Q-Learning method is more robust in learning this task, as it learned the right policy in all 100 trials while NARS failed in 3=100 cases in our test run. The lower robustness in learning this task in a short time was expected and can be
 explained by the control system of NARS which is still under testing and tuning. When both systems acquired the right policy, both worked quite reliable. Here NARS’s mistakes can be explained by its probabilistic control design, while Q-Learning error rate could in principle be reduced by letting the Exploration Rate parameter shrink over time.
+
+Also, see how NARS get improved in most recent versions.
+
+Pong Version 3.0.0
+
+![pong_version_3.0.0](https://github.com/opennars/Metrics/blob/master/OpenNARS%20version%20performance%20graphs/Pong_v3_0_0.png)
+
+Pong Version 3.0.1
+
+![Pong Version 3.0.1](https://github.com/opennars/Metrics/blob/master/OpenNARS%20version%20performance%20graphs/Pong_v3_0_1.png)
+
+Pong Version 3.0.2
+
+![Pong Version 3.0.2](https://github.com/opennars/Metrics/blob/master/OpenNARS%20version%20performance%20graphs/Pong_v3_0_2.png)
