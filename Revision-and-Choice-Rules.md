@@ -2,16 +2,16 @@
 Revision is an inference process in which evidence from different sources is being combined and its truth value revised. 
 Suppose there are two tasks with different truth values, for example: 
 <br/><br/>
-**1. <snow --> {white}>. %9/10, 10/11%** here _(frequency, confidence)_ mean that snow has been observed white 9 times and 1 time it was not white, thus the total evidence is 10, positive evidence is 9/10 and given that by default _k=1_ confidence is 10/11
+**1. <snow --> {white}>. %9/10, 10/11%** here _(frequency, confidence)_ means that snow has been observed white 9 times and 1 time it was not white, thus the total evidence is 10, positive evidence is 9/10 and given that by default _k=1_ confidence is 10/11
 <br/><br/>
 **2. <snow --> {white}>. %3/4, 4/5%** means snow has been observed white 3 times and there are 4 total observations
 <br/><br/>
-Now suppose these two tasks have disjoint evidential spaces that is they have no overlapping evidence then they can be summarized into a task with revised truth value. Basically the idea is to sum positive and total evidences and pick a function such that it appropriately maps new evidence to relevant _frequency_ and _confidence_ values. Such function is called **revision function**.
+Now suppose these two tasks have disjoint evidential spaces that are they have no overlapping evidence then they can be summarized into a task with a revised truth value. Basically, the idea is to sum positive and total evidence and pick a function such that it appropriately maps new evidence to relevant _frequency_ and _confidence_ values. Such function is called **revision function**.
 <br/><br/>
 **Revision function definition:** Given two tasks sharing same concepts, different truth value and disjoint evidential bases, **new** frequency _f_ and confidence _c_ are being defined as
 
-_f = [ f1c1(1 − c2) + f2c2(1 − c1) ] = [ c1(1 − c2) + c2(1 − c1) ]_ <br/>
-_c = [ c1(1 − c2) + c2(1 − c1) ] = [ c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2) ]_
+_f = [ f1c1(1 − c2) + f2c2(1 − c1) ] / [ c1(1 − c2) + c2(1 − c1) ]_ <br/>
+_c = [ c1(1 − c2) + c2(1 − c1) ] / [ c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2) ]_
 
 Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 **Properties:** <br/>
@@ -21,20 +21,20 @@ Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second task<br/>
 <br/><br/>
 
 ### Evidential base
-Each task in a system is assigned a _serial number_. During derivation process the derived task stores the serial numbers of the tasks it is derived from in a list which is called **evidential base**. Derivation process is similar to a tree where two parent-tasks create derived child-task after a certain inference step. Evidential base of a child is a union of evidential bases of its parents, and each task has at least one element in its evidential base, its serial number. Obviously, after numerous inference steps it is technically impossible to store all parent' serial numbers in child's evidential base and current implementation limits the length of evidential base to 4 elements. Thus it is possible that after some derivation steps, early task' serial numbers have been lost and it is exactly what system tries to simulate, the concept of biological memory. Human do not remember all the information that leaded to a certain conclusion, this idea is reflected in evidential base, storing serial numbers of tasks that only recently participated in derivation process.
+Each task in a system is assigned a _serial number_. During the derivation process the derived task stores the serial numbers of the tasks it is derived from in a list which is called **evidential base**. Derivation process is similar to a tree where two parent-tasks create derived child-task after a certain inference step. The evidential base of a child is a union of evidential bases of its parents, and each task has at least one element in its evidential base, its serial number. Obviously, after numerous inference steps, it is technically impossible to store all parent' serial numbers in child's evidential base and current implementation limits the length of the evidential base to 4 elements. Thus it is possible that after some derivation steps, early task' serial numbers have been lost and it is exactly what the system tries to simulate, the concept of biological memory. Human does not remember all the information that led to a certain conclusion, this idea is reflected in the evidential base, storing serial numbers of tasks that only recently participated in the derivation process.
 
 ### Overlapping Evidence
-For two tasks if they share one or more same elements within their evidential bases, their evidence is **overlapped** i.e. they do not have disjoint evidential base. Ideally when combining evidence, and if some portion of evidence is present more than once, it should be subtracted from final result, however since it is impossible to determine exact amount of some portion of evidence influencing certain task this can't be done. **Therefore revision rule applies only if tasks have disjoint evidential bases that is they do not share common elements.**
+For two tasks if they share one or more same elements within their evidential bases, their evidence is **overlapped** i.e. they do not have disjoint evidential bases. Ideally when combining evidence, and if some portion of evidence is present more than once, it should be subtracted from the final result, however since it is impossible to determine the exact amount of some portion of evidence influencing certain task this can't be done. **Therefore revision rule applies only if tasks have disjoint evidential bases that are they do not share common elements.**
 
 ## II. Choice Rule
-Choice rule is applicable in multiple scenarios.
-1. Two tasks are based on overlapping evidence and revision rule can not be applied then choice must be made. For example, for an _evaluative_ question both candidate answers may contain **same** task but different truth values and these two conflicting tasks share at least one element in their evidential bias, the **choice rule** chooses the task with **higher _confidence_ value**. The intuition is that system makes a choice toward more experience of the task. 
+The choice rule is applicable in multiple scenarios.
+1. Two tasks are based on overlapping evidence and revision rule cannot be applied, then a choice must be made. For example, for an _evaluative_ question, both candidate answers may contain **same** task but different truth values and these two conflicting tasks share at least one element in their evidential bias, the **choice rule** chooses the task with **higher _confidence_ value**. The intuition is that the system makes a choice toward more experience of the task. 
 
-2. For the selective question of the form <S-->?1>? or <1? --> P>? the system is asked to predict an element in the intension of S or the extension of P. Suppose there are two competing candidate answers <S --> A>. _%f1, c2%_ and <S --> B> _%f2, c2%_ for the question <S-->?1>?. These candidates may be of the same or different natures and will have different truth values. Thus it is no longer appropriate to choose the answer with higher _confidence_. To handle such situations _truth expectation_ metrics is introduced. The candidate with the higher truth expectation is selected by choice rule.
+2. For the selective question of the form <S-->?1>? or <1? --> P>? the system is asked to predict an element in the intension of S or the extension of P. Suppose there are two competing candidate answers <S --> A>. _%f1, c2%_ and <S --> B> _%f2, c2%_ for the question <S-->?1>?. These candidates may be of the same or different natures and will have different truth values. Thus it is no longer appropriate to choose the answer with higher _confidence_. To handle such situations _truth expectation_ metrics are introduced. The candidate with the higher truth expectation is selected by choice rule.
 
 **Definition**  Truth expectation **_e = c * (f − 0.5) + 0.5_**
 
 **Properties:**
-* Truth expectation combines _frequency_ with _confidence_ and maps to single real number in the range [0,1]
+* Truth expectation combines _frequency_ with _confidence_ and maps to a single real number in the range [0,1]
 * When _confidence_ is close to 1 (full evidence), _truth expectation_ is close to _frequency_
-* When _confidence_ is close to 0 (null evidence), _truth expectation_ is close to 0.5 meaning system may equally encounter piece of positive or negative evidence.
+* When _confidence_ is close to 0 (null evidence), _truth expectation_ is close to 0.5 meaning system may equally encounter a piece of positive or negative evidence.
