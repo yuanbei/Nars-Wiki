@@ -8,7 +8,7 @@
 <br/><br/>
 **Detachment** - an inference where the condition of a conditional statement is evaluated, such as to use **S** and **S-->P** to derive **P**
 <br/><br/>
-**Durability** - measurement of computational resources allocated in priority data structure, it is attached to the concept and also serves as a time decay similar to human memory that tends to forget things
+**Durability** - measurement of priority decay of an item in a bag, and lager values mean to forget slowlt, relatively speaking
 <br/><br/>
 **E**
 <br/><br/>
