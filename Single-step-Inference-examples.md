@@ -1,7 +1,7 @@
-There are example files distributed with the executable version of OpenNARS, in the directory  _bin_lab/nal/single_step/_, where each _*.nal_ file showing conclusions of single-step inference.
+There are example files distributed with the executable version of OpenNARS, in the directory  _bin_lab/nal/single_step/_, where each _*.nal_ file contains the sample input and output of an inference rule in plain ASCII code.
 
-Each file contains a sequence of examples. An example looks like the following:
-
+An example looks like the following:
+```
 'Revision ------
 
 'Bird is a type of swimmer.
@@ -14,7 +14,7 @@ Each file contains a sequence of examples. An example looks like the following:
 
 'Bird is very likely to be a type of swimmer.
 ''outputMustContain('<bird --> swimmer>. %0.87;0.91%')
-
+```
 
 ********** revision
   IN: <bird --> swimmer>.
