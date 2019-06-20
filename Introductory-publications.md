@@ -1,4 +1,4 @@
-The following publications introduces the major ideas behind OpenNARS:
+The following publications introduce the major ideas behind OpenNARS:
 * [The Logic of Intelligence](https://cis.temple.edu/~pwang/Publication/logic_intelligence.pdf)
 * [From Inheritance Relation to Non-Axiomatic Logic](https://cis.temple.edu/~pwang/Publication/inheritance_nal.pdf)
 * [Experience-Grounded Semantics: A theory for intelligent systems](https://cis.temple.edu/~pwang/Publication/semantics.pdf)
