@@ -2,7 +2,7 @@
 <br/><br/>
 **Copula** - a relational operator used within statement to indicate substitutability between terms
 <br/><br/>
-**Confidence** - measurement of stability of believe in range [0,1], given __k__  as a personality parameter, might be seen as amount of future evidence as the reference of comparision, confidence __c__ is defined in terms of available evidence w as **__c = w / (w + k)__**, with the default value for __k__ to be 1
+**Confidence** - measurement of stability of belief in range [0,1], given __k__  as a personality parameter, might be seen as amount of future evidence as the reference of comparision, confidence __c__ is defined in terms of available evidence w as **__c = w / (w + k)__**, with the default value for __k__ to be 1
 <br/><br/>
 **D**
 <br/><br/>
