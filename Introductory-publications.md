@@ -1,4 +1,4 @@
-Current page provides useful publications regarding AGI Concepts, OpenNARS and its future development vector.
+The following publications introduces the major ideas behind OpenNARS:
 <br/>
  1 [The Logic of Intelligence](http://sites.google.com/site/narswang/publications/wang.logic_intelligence.pdf)
 <br/>
