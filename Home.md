@@ -19,9 +19,9 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
     * [List of current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
   - overview
-    * [glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
-    * [selected publications](https://github.com/opennars/opennars/wiki/Publications)
-    * [selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
+    * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
+    * [Selected publications](https://github.com/opennars/opennars/wiki/Publications)
+    * [Selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
 
 
 ## 2. Aspects of OpenNARS
