@@ -14,9 +14,9 @@
 <br/><br/>
 **Evidence** - for statement **S-->P**, its evidence is a term in the union of the _extension _of **S** and the _intension_ of **P**, and among them, the common _extension_ and common _intension_ of the two terms contain **positive** evidence, while the rest is **negative** evidence
 <br/><br/>
-**[Evidential Base](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - each derived task has an evidential base, that is a list of premises the task has been derived from, currently the list is length 4
+**[Evidential Basis](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - each [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples) has an evidential bass, that is a list of serial numbers of the tasks from which the truth-value has been derived from
 <br/><br/>
-**Extension** - extension of a term is a set of terms that appears to the LEFT of inheritance copula (x-->T, where x is extension of t)
+**Extension** - the extension of a term _T_ is a set of terms that each of them, _x_, is related to _T_ as _x-->T
 <br/><br/>
 **Extensional Set** - 
 <br/><br/>
