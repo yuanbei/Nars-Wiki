@@ -15,7 +15,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
   - example and demonstration
-    * [Single Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
+    * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
     * [List of current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
   - overview
