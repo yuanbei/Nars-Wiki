@@ -3,9 +3,9 @@
 
 ***
 
-At the current stage, Open-NARS is not ready to handle complicated inference processes consisting many steps. Even so, this file contains a group of multi-step inference examples to show the expressive and inferential capability of NARS, as implemented in Open-NARS version 1.5.5. The basic format and usage are the same as explained in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
+This file contains a group of multi-step inference examples to show the expressive and inferential capability of NARS, as implemented in OpenNARS version 1.5.5. They should all work for later versions, though the exact output, especially the number of inference cycles needed for each output, may be different from version to version. The basic format and usage are the same as explained in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
 
-In the following, each example starts at a line with a "*" to empty the memory of the system. To run an example, copy/paste the input lines into the input window of the NARS. Listed after the input lines are the lines displayed in the main window of NARS during the processing of the input, followed by a brief explanation of the example.
+In the following, each example starts at a line with a "*" to reset the memory of the system to blank. To run an example, copy/paste the input lines into the input window of the NARS. Listed after the input lines are the lines displayed in the main window of NARS during the processing of the input, followed by a brief explanation of the example.
 
 To only display the relevant output, in the main window of NARS go to menu item "Paremeter", then select "Report Silence Level", and move the scrollbar to its right-most position (value 100). Click "Hide" to finish the change.
 
