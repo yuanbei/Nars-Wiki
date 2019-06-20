@@ -18,21 +18,23 @@
 <br/><br/>
 **Extension** - the extension of a term _T_ contains terms that each of them, _x_, is related to _T_ by _x-->T_
 <br/><br/>
-**Extensional Set** - 
+**Extensional Set** - a compound term defined by listing its instances
 <br/><br/>
 **F**
 <br/><br/>
-**Frequency** - one of key metrics in NARS, it is measurement of uncertainty in the range **[0,1]** and defined as __positive evidence / total evidence__
+**Frequency** - part of [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples), measures the propotion of positive evidence among available evidence
 <br/><br/>
 **I**
 <br/><br/>
-**Intension** - intension of a term is a set of terms that appears to the RIGHT of inheritance copula (T-->x where x is intension of T)
+**Intension** - the intension of a term _T_ contains terms that each of them, _x_, is related to _T_ by _T-->x_
 <br/><br/>
-**Intensional set** - 
+T)
+<br/><br/>
+**Intensional set** - a compound term defined by listing its prperties
 <br/><br/>
 **N**
 <br/><br/>
-**[NAL](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS)** - Non-Axiomatic Logic core logic used in OpenNARS <br />
+**[NAL](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS)** - Non-Axiomatic Logic core logic used in OpenNARS <br/>
 **[Narsese](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - Grammar Statement used for communication with OpenNARS control mechanism
 <br /><br />
 
