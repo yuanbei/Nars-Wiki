@@ -1,4 +1,4 @@
-**This page features some videos about OpenNARS including used cases, description and demonstration.**
+**This page is under construction**
 
 ## OpenNARS on YouTube:
 
