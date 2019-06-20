@@ -8,18 +8,11 @@
 <br/><br/>
 **Detachment** - an inference where the condition of a conditional statement is evaluated, such as to use **S** and **S-->P** to derive **P**
 <br/><br/>
-**Durability** - part of [budget-value](https://github.com/opennars/opennars/wiki/Budget-Value), measures 
-measurement of priority decay of an item in a bag, and lager values mean to forget slowlt, relatively speaking
+**Durability** - part of [budget-value](https://github.com/opennars/opennars/wiki/Budget-Value), measures priority decay of an item in a bag, and lager values mean to be remembered longer
 <br/><br/>
 **E**
 <br/><br/>
-**Evidence** - given the statement **S-->P**, evidence is in the intersection of _extension _of **S** **and** _intension_ of **P**
-<br/><br/>
-**Evidence positive** - given the statement **S-->P**, positive evidence is intersection of _extensions_ of both **S** and **P** **and** intersection of _intensions_ of both **P** and **S**
-<br/><br/>
-**Evidence negative** - given the statement **S-->P**, negative evidence is difference of _extensions_ of both **S** and **P** and difference of _intensions_ of both **P** and **S**
-<br/><br/>
-**Evidence total** - total evidence is the **sum** of negative and positive evidences
+**Evidence** - for statement **S-->P**, its evidence is a term in the union of the _extension _of **S** **and** the _intension_ of **P**, and among them, the intersection of _extensions_ (or _intensions_) of both **S** and **P** contains **positive** evidence, while the rest is **nagative** evidence
 <br/><br/>
 **[Evidential Base](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - each derived task has an evidential base, that is a list of premises the task has been derived from, currently the list is length 4
 <br/><br/>
