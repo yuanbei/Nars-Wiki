@@ -16,7 +16,7 @@ An example looks like the following:
 ''outputMustContain('<bird --> swimmer>. %0.87;0.91%')
 ```
 
-A line starting with a single quotation mark ' is a comment. A single inference step typically has two premises, each as a sentence in Narsese, and the format is explained in [the grammar page](https://github.com/opennars/opennars/wiki/Input-Output-Format). A line containing a single number indicates the number of inference cycles between lines. Spaces, tabs, and blank lines are ignored.
+A line starting with a single quotation mark (or double slash) is a comment. A single inference step typically has two premises, each as a sentence in Narsese, and the format is explained in [the grammar page](https://github.com/opennars/opennars/wiki/Input-Output-Format). A line containing a single number indicates the number of inference cycles between lines. Spaces, tabs, and blank lines are ignored.
 
 In the above example, the first premise takes the default [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples), while the second takes a specific one. These values can be changed to see the effect on the conclusion.
 
