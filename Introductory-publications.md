@@ -1,12 +1,12 @@
 The following publications introduces the major ideas behind OpenNARS:
 <br/>
- 1 [The Logic of Intelligence](http://sites.google.com/site/narswang/publications/wang.logic_intelligence.pdf)
+* [The Logic of Intelligence](https://cis.temple.edu/~pwang/Publication/wang.logic_intelligence.pdf)
 <br/>
- 2 [From NARS to a Thinking Machine](http://sites.google.com/site/narswang/publications/wang.roadmap.pdf)
+* [From Inheritance Relation to Non-Axiomatic Logic](https://cis.temple.edu/~pwang/Publication/wang.inheritance_nal.pdf)
 <br/>
- 3 [From Inheritance Relation to Non-Axiomatic Logic](http://sites.google.com/site/narswang/publications/wang.inheritance_nal.pdf)
+* [Experience-Grounded Semantics: A theory for intelligent systems](https://cis.temple.edu/~pwang/Publication/wang.semantics.pdf)
 <br/>
- 4 [Experience-Grounded Semantics: A theory for intelligent systems](http://sites.google.com/site/narswang/publications/wang.semantics.pdf)
+* [Computation and Intelligence in Problem Solving](https://cis.temple.edu/~pwang/Publication/wang.computation.pdf)
 <br/>
- 5 [Computation and Intelligence in Problem Solving](http://sites.google.com/site/narswang/publications/wang.computation.pdf)
+* [From NARS to a Thinking Machine](https://cis.temple.edu/~pwang/Publication/roadmap.pdf)
 <br/>
