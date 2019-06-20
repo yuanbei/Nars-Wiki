@@ -2,13 +2,14 @@
 <br/><br/>
 **Copula** - a relational operator used within statement to indicate substitutability between terms
 <br/><br/>
-**Confidence** - measurement of stability of belief in range [0,1], given __k__  as a personality parameter, might be seen as amount of future evidence as the reference of comparision, confidence __c__ is defined in terms of available evidence w as **__c = w / (w + k)__**, with the default value for __k__ to be 1
+**Confidence** - part of [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples), measures the stability of a belief
 <br/><br/>
 **D**
 <br/><br/>
 **Detachment** - an inference where the condition of a conditional statement is evaluated, such as to use **S** and **S-->P** to derive **P**
 <br/><br/>
-**Durability** - measurement of priority decay of an item in a bag, and lager values mean to forget slowlt, relatively speaking
+**Durability** - part of [budget-value](https://github.com/opennars/opennars/wiki/Budget-Value), measures 
+measurement of priority decay of an item in a bag, and lager values mean to forget slowlt, relatively speaking
 <br/><br/>
 **E**
 <br/><br/>
