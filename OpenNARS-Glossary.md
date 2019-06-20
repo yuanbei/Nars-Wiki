@@ -1,8 +1,8 @@
 **C**
 <br/><br/>
-**[Copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - a relational operator used within statement to indicate relationship between terms
+**[Copula](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS)** - a relational operator used within statement to indicate substitutability between terms
 <br/><br/>
-**Confidence** - measurement of degree of believe in range [0,1], given __k__  as a temporal constant, might be seen as number of steps in the future, confidence __c__ is defined in terms of evidence w as **__c = w / (w + k)__**, default value for __k__ is 1
+**Confidence** - measurement of stability of believe in range [0,1], given __k__  as a personality parameter, might be seen as amount of future evidence as the reference of comparision, confidence __c__ is defined in terms of available evidence w as **__c = w / (w + k)__**, with the default value for __k__ to be 1
 <br/><br/>
 **D**
 <br/><br/>
