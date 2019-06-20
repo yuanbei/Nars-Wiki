@@ -16,6 +16,8 @@
 <br/><br/>
 **[Evidential Basis](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - each [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples) has an evidential bass, that is a list of serial numbers of the tasks from which the truth-value has been derived from
 <br/><br/>
+**[Expectation function](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - a measurement that combines _frequency_ with _confidence_ as an estimation of the future frequency of the statement
+<br/><br/>
 **Extension** - the extension of a term _T_ contains terms that each of them, _x_, is related to _T_ by _x-->T_
 <br/><br/>
 **Extensional Set** - a compound term defined by listing its instances
@@ -59,7 +61,5 @@ T)
 <br/><br/>
 **Truth-value** - measures the evidential support of a statement using a pair of real numbers (_frequency_ and _confidence_) in the range [0, 1]
 <br/><br/>
-**[Truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - a measurement that combines _frequency_ with _confidence_ as an estimation of the future frequency of the statement
-<br/><br/>
-**[Truth-value Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** - functions that determine truth value under different logical inferences
+**[Truth-value Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)** - functions that determine the truth-value of the conclusion of an inference rule according to the premises
 
