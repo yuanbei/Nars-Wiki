@@ -6,7 +6,7 @@
 <br/><br/>
 **D**
 <br/><br/>
-**Detachment** - an inference where the condition of a conditional statement is evaluated, such as to use **S** and **S-->P** to derive **P**
+**Detachment** - an inference where the condition of a conditional statement is evaluated, such as to use **S** and **S-->&rarrow;P** to derive **P**
 <br/><br/>
 **Durability** - part of [budget-value](https://github.com/opennars/opennars/wiki/Budget-Value), measures priority decay of an item in a bag, and lager values mean to be remembered longer
 <br/><br/>
