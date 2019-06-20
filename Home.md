@@ -1,13 +1,13 @@
-OpenNARS is the open source version of the [NARS](https://sites.google.com/site/narswang/home) project.
+OpenNARS is the open source implementation of [NARS](https://cis.temple.edu/~pwang/NARS-Intro.html).
 The reasoner "core" of OpenNARS is licensed under [MIT](https://opensource.org/licenses/MIT).
 
-This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a _unified theory_, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
+This project attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc, so as to provide a _unified theory, model, and system_ for AI as a whole. The ultimate goal of this research is to build thinking machines.
 
 What makes NARS different from conventional computer systems is its ability to _learn_ from its experience and to work with _insufficient knowledge and resources_.
 
 This page shows the overall structure of all the wiki pages on OpenNARS, which serve as an intermediate layer between the publications (as listed in https://cis.temple.edu/~pwang/papers.html and https://phillyagiteam.github.io/Website/) and comments of the code (javadoc). The pages are linked to each other, as well as to other materials.
 
-The pages are roughly divided into two groups, the first group systematically explains OpenNARS in its current implementation, with the pages roughly correspond to the structures of the system; the second group provides different tours over the structure, for different users and purposes.
+The pages are roughly divided into two groups, the first group provides different tours over the system, for different users and purposes; the second group systematically explains OpenNARS as currently implemented, with the pages roughly correspond to the structures of the system.
 
 # Table of contents
 ## 1. Entry points
