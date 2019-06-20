@@ -16,7 +16,7 @@
 <br/><br/>
 **[Evidential Basis](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** - each [truth-value](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples) has an evidential bass, that is a list of serial numbers of the tasks from which the truth-value has been derived from
 <br/><br/>
-**Extension** - the extension of a term _T_ is a set of terms that each of them, _x_, is related to _T_ as _x-->T
+**Extension** - the extension of a term _T_ contains terms that each of them, _x_, is related to _T_ by _x-->T_
 <br/><br/>
 **Extensional Set** - 
 <br/><br/>
