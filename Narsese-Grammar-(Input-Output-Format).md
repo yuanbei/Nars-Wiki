@@ -1,22 +1,24 @@
-> ### InputOutputFormat  
-> The input/output format of the system 
+> ### Narsese Grammar
+> The input/output format of NARS
 
 ***
 
 ### I/O Format
 
-Each line in the system's input and output is either a task (as defined in the following grammar, in BNF notation), or an integer, indicating the number of inference steps between tasks.
+Each line in the input and output of NARS is either a task (as defined in the following grammar, in BNF notation), or an integer, indicating the number of inference steps between tasks.
 
 In a task, all the space characters are optional, and will be ignored by the system in processing.
 
 ### Narsese Grammar
 
+Narsese is the formal language used by NARS for internal representation and external communication. The language is defined by the following context-free grammar.
+
 ```
              task ::= [budget] sentence                       (* task to be processed *)
 
-         sentence ::= statement"." [tense] [truth]            (* judgement to be remembered *)
-                    | statement"?" [tense] [truth]            (* question to be answered, tense added in OpenNARS 1.7 *)
-                    | statement"@" [tense] [truth]            (* question on desire value to be answered, tense added in OpenNARS 1.7 *)
+         sentence ::= statement"." [tense] [truth]            (* judgement to be absorbed into beliefs *)
+                    | statement"?" [tense] [truth]            (* question on thuth-value to be answered *)
+                    | statement"@" [tense] [truth]            (* question on desire-value to be answered)
                     | statement"!" [tense] [truth]            (* goal to be realized, tense added in OpenNARS 1.7 *)
 
         statement ::= <"<">term copula term<">">              (* two terms related to each other *)
