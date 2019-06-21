@@ -26,7 +26,7 @@ The pages are roughly divided into two groups, the first group provides differen
 
 ## 2. Aspects of OpenNARS
   - Language and I/O
-    * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Input-Output-Format)
+    * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format))
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-))
     * [Term: types, format](https://github.com/opennars/opennars/wiki/Term:-types,-format)
     * [Sentence: types, format](https://github.com/opennars/opennars/wiki/Sentence:-types,-format)
