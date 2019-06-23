@@ -7,7 +7,7 @@ In the above example, a term can be one of three types: atomic, compound, and st
 
 An **atomic** term is just a word as in the first example, it is a unique identifier with no internal structure. 
 
-A **compound** term is more complex. It is formed by one or more terms, called its _components_ with an _operator_. The order of components usually matters. In the second example there is a compound term **(\*, {John},{<whale --> mammal>})** here it consists of two components "{John}" and "{<whale --> mammal>}" connected by the _product_ operator "*".
+A **compound** term is more complex. It is formed by with an _operator_ from one or more terms, called its _components_. The order of components usually matters. In the second example there is a compound term **(\*, {John},{<whale --> mammal>})** here it consists of two components "{John}" and "{<whale --> mammal>}" connected by the _product_ operator "*".
 
 **Term as a Statement** is a term that is a statement itself and is part of a bigger sentence with truth value. "term as a statement" has meaning only but no truth value, it is part of a sentence with truth value. As in the second example   <whale --> mammal> is "term as a statement", it only states that "whale is mammal" but no truth value is attached to it, however the truth value is attached to the entire sentence. 
 
