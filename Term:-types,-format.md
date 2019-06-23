@@ -12,5 +12,3 @@ A **compound** term is more complex. It is formed by a _connector_ from one or m
 A **statement** is a special type of compound term that can be part of a bigger compound term. Such a term only has a binary truth-value, except that it is the outermost statement that is not a component of an even larger compound. As in the second example, <whale --> mammal> is a statement that is a component of a larger compound term, and it only states that "whale is mammal" with an implicit truth-value "true", which is different from the numerical truth-value attached to the entire sentence. 
 
 **Syntactic Complexity**: the _syntactic complexity_ of a term is defined recursively. If it is atomic its syntactic complexity is 1. If it is a compound, then its syntactic complexity is one plus the sum of the syntactic complexity of its components. As the name suggests, this measurement says nothing about the _semantic_ complexity of the term and the concept it refers to.
-
-For more clarification see types of [sentences](https://github.com/opennars/opennars/wiki/Sentence:-types,-format)
