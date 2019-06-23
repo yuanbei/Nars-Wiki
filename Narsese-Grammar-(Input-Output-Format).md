@@ -7,7 +7,7 @@
 
 Each line in the input and output of NARS is either a task (as defined in the following grammar, in BNF notation), or an integer, indicating the number of inference steps between tasks.
 
-In a task, all the space characters are optional, and will be ignored by the system in processing.
+In a task, all the space characters are optional and will be ignored by the system in processing.
 
 ### Narsese Grammar
 
@@ -18,8 +18,8 @@ Narsese is the formal language used by NARS for internal representation and exte
 
          sentence ::= statement"." [tense] [truth]            (* judgement to be absorbed into beliefs *)
                     | statement"?" [tense] [truth]            (* question on thuth-value to be answered *)
-                    | statement"@" [tense] [truth]            (* question on desire-value to be answered)
-                    | statement"!" [tense] [truth]            (* goal to be realized, tense added in OpenNARS 1.7 *)
+                    | statement"!" [desire]                   (* goal to be realized by operations *)
+                    | statement"@" [desire]                   (* question on desire-value to be answered *)
 
         statement ::= <"<">term copula term<">">              (* two terms related to each other *)
                     | <"(">term copula term<")">              (* two terms related to each other, new notation *)
@@ -84,6 +84,7 @@ Narsese is the formal language used by NARS for internal representation and exte
 
          interval ::= <"/">#"\d+"                             (* integer *)
 
+           desire ::= truth                                   (* same format, different interpretations *)
             truth ::= <"%">frequency[<";">confidence]<"%">    (* two numbers in [0,1]x(0,1) *)
            budget ::= <"$">priority[<";">durability][<";">quality]<"$"> (* three numbers in [0,1]x(0,1)x[0,1] *)
 
@@ -97,9 +98,9 @@ Narsese is the formal language used by NARS for internal representation and exte
 
 ### Example Usage
 
-* Tim is dead.
+* Tim is alive.
 
-  `<{Tim} --> [dead]>.`
+  `<{Tim} --> [alive]>.`
 
 * Tim is a human.
 
