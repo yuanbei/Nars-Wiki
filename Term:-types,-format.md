@@ -1,6 +1,6 @@
-In OpenNARS and Narsese grammar **term** is a part of a [sentence](https://github.com/opennars/opennars/wiki/Sentence:-types,-format) that appear at any side of a copula (relation connector). 
+In NARS a **term** refers to a concept within the system, as a part of a [sentence](https://github.com/opennars/opennars/wiki/Sentence:-types,-format) that expresses the relation between some concepts. 
 
-Consider a judgment sentence (discussed below) "raven is black", in [Narsese](https://github.com/opennars/opennars/wiki/Input-Output-Format) it will look as <br/><br/>**<raven --> [black]>.%1.0;0.9%**<br/><br/>
+Consider a sentence (discussed below) "Ravens are black", in [Narsese](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)) it can be represented as <br/><br/>**<raven --> [black]>.%1.0;0.9%**<br/><br/>
 Now both "raven" and "[black]" are terms that in this particular case along with inheritence [copula](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version-)) create a judgment sentence. In a more complex Narsese sentences, terms may be statements themselves for example consider sentence "John knows that whale is a kind of mammal" that is <br/><br/>**<*({John},<whale --> mammal>) ==> knows>. %1.0;0.9%**<br/><br/> Here term "<whale --> mammal>" is a statement itself that consists of simpler terms "whale" and "mammal" which all are part of a sentence. 
 
 Term can be one of three types: atomic, compound and "term as a statement". All three types of terms can have relations between each other. 
