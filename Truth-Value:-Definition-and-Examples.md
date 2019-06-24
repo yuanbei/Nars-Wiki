@@ -1,27 +1,21 @@
 ### Definition
 
-One of most crucial metrics in OpenNARS is **truth value** that shows the degree of believe of given statement and is based on **evidence** collected from prior inferences or input.  There are three amounts of evidence: positive, negative and total evidence: 
+In NARS the **truth value** of a statement is the system's degree of belief on it, based on the **evidence** collected from the system's experience.  There are three amounts of evidence: 
+* the amount of _positive evidence_ is the number of events that support the statement,
+* the amount of _negative evidence_ is the number of events that contradict the statement,
+* the amount of _total evidence_ is the sum of the above two.
 
-_Positive evidence_ is the number that shows the number of events that supports the given statement. 
+Consider an example: for the statement "Ravens are black" system encounters 9 ravens that are actually black and 1 that is white. Then the amount of positive evidence will be 9, that of negative evidence will be 1, and that of total evidence will be 10. 
 
-_Negative evidence_ is the number that shows the number of events that contradicts the given statement.
+To measure evidential support using relative measurements, a **truth value** is a pair of rational numbers in the range from 0 to 1. The first element of the truth value is **frequency** and the second is **confidence**.
 
-_Total evidence_ is the sum of positive and negative evidence.
+**Frequency** is defined as the proportion of positive evidence among total evidence, that is, _(positive evidence)/(total evidence)_. For the example above, frequency will be 9 / 10 = 0.9. As a special case, when the amount of total evidence is 0, _frequency_ is defined to be 0.5.
 
-Consider an example: for the statement "raven is black" system encounters 9 ravens that are actually black and 1 that is white. Then positive evidence will be 9, negative evidence will be 1 and total evidence will be 10. 
+Now consider another example: for the same statement "Ravens are black", the system encounters 9000 black ravens and 1000 white ravens, then the _frequency_ of the statement, in this case, will be as before: 9000/10000 = 0.9. However, it is clear that the statement "Ravens are black" is more "certain" in this case than in the previous one. This is why a second measurement, confidence, is used to represent.
 
-**Truth value** is a tuple of rational numbers in range from 0 to 1 that is nothing but proportion of different types of evidences.
+**Confidence** indicates how sensitive the corresponding _frequency_ is with respect to new evidence, as it is defined as the proportion of total evidence among total evidence plus a constant amount of new evidence, that is, _(total evidence) / (total evidence + k)_ where _k_ is a system parameter and in most discussions takes the default value of 1. In the first example, confidence = 10 / (10 + 1), around 0.9, while in the second it is 10000/(10000 + 1), around 0.99.
 
-The first element of the truth value is **frequency** and the second is **confidence**
-
-**Frequency** is a measurement of uncertainty it is defined as proportion of positive evidence among total evidence that is _(positive evidence)/(total evidence)_, for the example above frequency will be 9 / 10 = 0.9. As a special case when total evidence is 0 and therefore positive evidence is also 0 _frequency_ is defined to be 0.5
-
-Now consider another example: for the same statement "raven is black" system encounters 9000 ravens that are black and 1000 white ravens then positive evidence will be 9000, negative evidence will be 1000 and total evidence will be 10000. 
-_Frequency_ in this case will be as before 9000/10000 = 0.9 however it is clear that statement "raven is black" is more "certain" than before, in other words we convinced more that the ravens are black from the second example more than from the first.
-
-**Confidence** is a degree of believe for the statement with given _frequency_ and shows how much evidence does system has for derived _frequency_. _Confidence_ also shows how long the frequency of the statement will be sustained in the future while system makes inferences. _Confidence_ is defined as _(total evidences) / (total evidence + k)_ where _k_ is constant and system hyper parameter and usually _k = 1_. In the first example, confidence = 10 / (10 + 1) = 0.9 while for the second it is 10000/(10000 + 1) = 0.99
-
-Thus _frequency_ can be seen as degree of certainty system has for the statement and _confidence_ degree of believe in that certainty.
+Thus _frequency_ can be seen as the degree of belief system has for the statement and _confidence_ as the degree of belief for that estimation of frequency.
 
 ### Examples
 
