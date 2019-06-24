@@ -11,7 +11,7 @@ Suppose there is a goal _G_ with desire value %f1;c1%, that is,
 ```
 The goal is conceptually interpreted as implication judgment _<G ==> D>. %f1;c1%_ with the desired state _D_. If the system has a belief
 ```
-    <A ==> G>. %f2;c2%_
+    <A ==> G>. %f2;c2%
 ```
 then using the deduction rule the system derives _<A ==> D>. %f3;c3%_, which is interpreted as a goal
 ```
