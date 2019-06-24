@@ -1,12 +1,12 @@
 ### Definition
 
-One of most crucial metrics in OpenNARS is **truth value** that shows the degree of believe of given statement and is based on **evidence** collected from prior inferences or input.  There are three types of evidence: positive, negative and total evidence: 
+One of most crucial metrics in OpenNARS is **truth value** that shows the degree of believe of given statement and is based on **evidence** collected from prior inferences or input.  There are three amounts of evidence: positive, negative and total evidence: 
 
-_Positive evidence_ is the number that shows number of events that supports given statement. 
+_Positive evidence_ is the number that shows the number of events that supports the given statement. 
 
-_Negative evidence_ is the number that shows number of events that contradicts given statement.
+_Negative evidence_ is the number that shows the number of events that contradicts the given statement.
 
-_Total evidence_ is sum of positive and negative evidence.
+_Total evidence_ is the sum of positive and negative evidence.
 
 Consider an example: for the statement "raven is black" system encounters 9 ravens that are actually black and 1 that is white. Then positive evidence will be 9, negative evidence will be 1 and total evidence will be 10. 
 
