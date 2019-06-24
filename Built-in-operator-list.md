@@ -1,4 +1,5 @@
-The following operators are currently implemented in OpenNARS. It will be updated once more operators to be added to the system
+
+The following operators are currently implemented in OpenNARS that can be invoked by the system to carry out self-perception and self-control functions. It will be updated once more operators to be added to the system.
 
 **Believe:** turn a statement into a task containing a judgment<br/>
 **Want:** turn a statement into a task containing a goal<br/>
