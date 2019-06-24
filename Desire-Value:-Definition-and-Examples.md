@@ -1,18 +1,23 @@
-Desire Value applies to [goal](https://github.com/opennars/opennars/wiki/Sentence:-types,-format) sentences and is key element in [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference). Desire value has identical to [truth value format](https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples) however it has a different semantics.
+During the run time of NARS there are usually multiple conflicting [goals](https://github.com/opennars/opennars/wiki/Sentence:-types,-format) exist. Sometimes achieving one goal makes another one harder to be achieved, therefore the system must make a decision on which goal to pursue from moment to moment. As goals may not be directly related to each other in content and thus the system cannot be expected to have explicit knowledge on how to handle goal conflicts and competitions. To solve this problem, each goal is assigned a _desire value_ to indicate its relative significance to the system. It allows the system to compare goals and make a selection during goal conflicts.
 
-During run time of a system there are usually multiple conflicting goals exist. Often achieving one goal makes another one harder to be achieved, therefore system must make decision which goal is better to pursue. Furthermore,  goals may not always be related to each other and thus we cannot expect the system to have explicit knowledge to handle goal conflicts. Desire value is a learned metrics that allows system to compare goals and make a selection during goal conflicts.
-
-As mentioned above, desire value has the same format as truth value, and in fact the two metrics are very related. Desire value has frequency and confidence as its components and with range between 0 and 1, also same [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions), [revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) are applied to calculate desire value during inference. 
-
-### Theoretical explanation
-
-Suppose the system is asked to achieve goal _G_, then there should be a hypothetical desired state _D_ of the system after the goal is achieved. Then, given the state _D_ one can form the implication statement _S_, that is **<G ==> D>**, and the truth value of _S_ can either come from input if goal is supplied by the user or be derived in ordinary way as for any [implication statement](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS). Once _D_ is omitted, the truth value of _S_  becomes desire value of _G_. 
+Conceptually, the desire value of a goal _G_ is defined to be the truth value of the implication statement _G ==> D_ where _D_ is a virtual statement representing the desired state of the system. That is, "G is desired " is interpreted as "G implies the desired state". Consequently, desire values have the same format as truth values, and are also grounded in the system's experience. The desire values of input goals can be assigned by the user to reflect their relative importance or take default values. Derived goals get their desire values from desire-value functions that are part of the goal-derivation rules.
 
 ### Implementation
 
 Important to mention that hypothetical desire state _D_ does not exist in implementation, the desire value of a first goal comes from an input, all subsequently goals are learned using [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) and their desire values are computed similarly as described above: <br/>
-Suppose there is a goal _G_ and desired state _D_, then implication is formed **<G ==> D> %f1,c1%**, where desire value is f1, c1. Then the system is asked to come up with an operation _A_ such that goal is achieved with certain truth value, i.e. another implication is created **<A ==> G>** %f2,c2% where truth value is f2,c2. Then using deduction rule and truth function for deduction sentence of **<A ==> D>** is created with some computed truth value, **this truth value becomes a desire value for a just derived goal _A_**. Again in implementation _D_ is not present and deduction is applied to directly  calculate desire value of _A_ using truth value of **<A ==> G>** and desire value of _G_
-
+Suppose there is a goal _G_ with desire value %f1;c1%, that is, 
+```
+    G! %f1;c1%
+```
+The goal is conceptually interpreted as implication judgment _<G ==> D>. %f1;c1%_ with the desired state _D_. If the system has a belief
+```
+    <A ==> G>. %f2;c2%_
+```
+then using the deduction rule the system derives _<A ==> D>. %f3;c3%_, which is interpreted as a goal
+```
+    A! %f3;c3%
+```
+In this way, inference rules (not limited to deduction) not only can derive new beliefs, but also new goals, with the above interpretation. 
 
 
 
