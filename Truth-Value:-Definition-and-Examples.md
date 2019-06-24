@@ -19,15 +19,10 @@ Thus _frequency_ can be seen as the degree of belief system has for the statemen
 
 ### Examples
 
-In Narsese statements truth value is attached at the end of the statement between percentage (%) symbol. 
-
-For the examples above the valid Narsese statements will be: 
+In Narsese statements truth value is attached at the end of the statement between percentage (%) symbol. For the two examples above the valid Narsese statements will be, respectively: 
 ```
 <raven --> [black]>. %0.9; 0.9% 
-```
-Here frequency = 0.9 and confidence = 0.9
-```
 <raven --> [black]>. %0.9; 0.99% 
 ```
-Here frequency = 0.9 and confidence = 0.99
+The input judgments can take default truth-values. If no truth-value is specified, it will be taken to be %1.0; 0.9%. If only one number is specified, as %0.7%, it will be taken as the frequency, and the truth-value will be set as %0.7; 0.9%.
 
