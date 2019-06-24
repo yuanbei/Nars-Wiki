@@ -6,6 +6,6 @@ A Narsese **sentence** can be one of the four types: Judgment, Question, Goal, a
 
 **Goal** is the type of sentence with an [event](https://github.com/opennars/opennars/wiki/Temporal-Inference) to be realized by the system by executing some operations. The attached desire value is the truth-value of the system's belief that the realization of the goal is desired.  Goals ask the system to carry out some operation in order to achieve the goal. A goal is formed as a statement followed by "!". 
 
-**Quest** is a sentence that is similar to the question, however, while the question asks a truth-value, a quest asks a desire-value. Quests are finished with " ![equation](http://bit.ly/2S18QfZ) " at the end of a sentence.
+**Quest** is a sentence that is similar to the question, however, while the question asks a truth-value, a quest asks a desire-value. Quests are finished with " ![equation](http://bit.ly/2S18QfZ) " at the end of a sentence in the publications, which is replaced by "@" in the implementation.
 
 
