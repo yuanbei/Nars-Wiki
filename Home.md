@@ -11,18 +11,18 @@ The pages are roughly divided into two groups, the first group provides differen
 
 # Table of contents
 ## 1. Entry points
-  - user guides
+  - User guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
-  - example and demonstration
+  - Example and demonstration
     * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
     * [List of current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
-  - overview
+    * [OpenNARS and Reinforcement Learning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)
+  - Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
-    * [Selected publications](https://github.com/opennars/opennars/wiki/Publications)
-    * [Selected videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
-
+    * [Selected Publications](https://github.com/opennars/opennars/wiki/Publications)
+    * [Selected Videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
 
 ## 2. Aspects of OpenNARS
   - Language and I/O
@@ -37,9 +37,8 @@ The pages are roughly divided into two groups, the first group provides differen
     * [GUI explanation](https://github.com/opennars/opennars/wiki/Graphical-User-Interface)
     * [Experience file: Format and Usage](https://github.com/opennars/opennars/wiki/Experience-file:-Format-and-Usage)
     * [I/O channels](https://github.com/opennars/opennars/wiki/Input-and-Output-Channels)
-    * [Plugins in OpenNars](https://github.com/opennars/opennars/wiki/Plugins)
-    * [OpenNars and Reinforcement Learning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)
-    * [inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
+    * [Inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
+    * [Plugins in OpenNARS](https://github.com/opennars/opennars/wiki/Plugins)
     
   - Logic
     * [Non Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
