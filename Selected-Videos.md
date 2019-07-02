@@ -1,5 +1,5 @@
-**This page is under construction**
+* [OpenNARS on YouTube](https://www.youtube.com/results?search_query=OpenNARS)
 
-## OpenNARS on YouTube:
+* [Related presentations on YouTube](https://www.youtube.com/results?search_query=Pei+Wang+AGI)
 
-## OpenNARS Tutorial videos:
+* [Related presentations in Chinese](https://cis.temple.edu/~pwang/Chinese.html)
