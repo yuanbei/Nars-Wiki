@@ -22,7 +22,7 @@ The pages are roughly divided into two groups, the first group provides differen
   - Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
     * [Selected Publications](https://github.com/opennars/opennars/wiki/Publications)
-    * [Selected Videos](https://github.com/opennars/opennars/wiki/Selected-Vidseos)
+    * [Selected Videos](https://github.com/opennars/opennars/wiki/Selected-Videos)
 
 ## 2. Aspects of OpenNARS
   - Language and I/O
