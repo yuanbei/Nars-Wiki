@@ -9,13 +9,17 @@ In the current design, NAL consists of 9 layers in 4 groups, in the sense that i
 ## [1] Basic Inference
 The simplest non-axiomatic logic, with atomic terms and single copula.
 ### NAL-1
-NAL-1 is a logical core of NAL. The statements in it are all inheritance statements with an atomic subject and an atomic predicate. The truth value of a statement measures its evidential support. The inference rules include local rules (revision and choice), forward syllogism (deduction, induction, abduction), and backward syllogism (question derivation).
+NAL-1 is a logical core of NAL. The statements in it are all inheritance statements with an atomic subject and an atomic predicate. The meaning of a term is defined as its extension and intention. The truth value of a statement measures its evidential support. The inference rules include local rules (revision and choice), forward syllogism (deduction, induction, abduction), and backward syllogism (question derivation).
 
 ## [2] First-Order Inference
+Extending the logic by introducing compound terms and derived copulas, using ideas in set theory.
+
 ### NAL-2
-NAL-2 adds similarity, instance and property relations and slightly modifies truth functions. Details are outlined on["Basic Inference" page](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS) 
+NAL-2 adds similarity, instance, and property copulas that are all based on inheritance copula. Also introduced are sets with a singular instance or property.
+
 ### NAL-3
-NAL-3 introduces compound terms and adds operation on the sets such as set intersection and set difference. Details can be found [here](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
+NAL-3 introduces compound terms in its general form, using set-theoretic connectors _intersection_ and _difference_.
+
 ### NAL-4
 NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers. Please look for [set operations](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) in OpenNARS
 
