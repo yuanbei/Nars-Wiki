@@ -7,8 +7,9 @@ The complete NAL grammar is specified in the [grammar page](https://github.com/o
 In the current design, NAL consists of 9 layers in 4 groups, in the sense that it is possible to only implement one group plus the layer below it to get a functional system with well-defined capability.
 
 ## [1] Basic Inference
+The simplest non-axiomatic logic, with atomic terms and single copula.
 ### NAL-1
-NAL-1 is a logical foundation of OpenNARS, it is described [here](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS). it operates on well known [syllogistic inference rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules), introduces **[Inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)** and **[Truth Functions](https://github.com/opennars/opennars/wiki/Truth-Functions)**.
+NAL-1 is a logical core of NAL. The statements in it are all inheritance statements with an atomic subject and an atomic predicate. The truth value of a statement measures its evidential support. The inference rules include local rules (revision and choice), forward syllogism (deduction, induction, abduction), and backward syllogism (question derivation).
 
 ## [2] First-Order Inference
 ### NAL-2
