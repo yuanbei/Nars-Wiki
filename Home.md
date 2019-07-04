@@ -41,7 +41,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Plugins in OpenNARS](https://github.com/opennars/opennars/wiki/Plugins)
     
   - Logic
-    * [Non Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
+    * [Non Axiomatic Logic (NAL) Overview](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
     * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
     * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
     * [Statements and Variables](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS)
