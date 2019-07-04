@@ -1,4 +1,9 @@
-OpenNARS operates on logic layers called NALs, there are nine NAL levels (NALs 1-9). NAL levels are added one by one each of which expands the features and capabilities of a previous layer including the [grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), [inference rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) and [truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions). Each NAL layer is accompanied with a corresponding Narsese  grammar resulting in 9 Narsese grammars. This article presents each level and briefly describes its features, grammar definition will be omitted from this page instead detailed use of Narsese grammar for each NAL level is outlined [here](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS).
+OpenNARS is the open-source implementation of NARS (Non-Axiomatic Reasoning System), while NARS is based on NAL (Non-Axiomatic Logic).
+
+Conceptually, NAL is defined hierarchically with multiple layers, each of them extends the logic by introducing new grammar rules and inference rules, so as to make the logic more and more powerful in its expressing and inferencing capability. For educational purpose, it is suggested to learn the system in this order. However, the separation of the layers are ignored in implementation, so in the code, the rules in each layer cannot be clearly distinguished from each other. 
+
+The complete NAL grammar is specified in the [grammar page](https://github.com/opennars/opennars/wiki/Narsese-Grammar,-Language-of-OpenNARS), while the inference rules are described in multiple pages, with their truth functions summarized in the [truth-value function page](https://github.com/opennars/opennars/wiki/Truth-Functions). 
+
 In general nine NAL levels are divided into two groups: **First-Order Inference (NALs 1-4)** and **Higher-Order Inferences (NALs 5-8)**
 
 ## First-Order Inference (NALs 1-4)
