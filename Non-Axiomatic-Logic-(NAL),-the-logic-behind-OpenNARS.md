@@ -8,27 +8,31 @@ In the current design, NAL consists of 9 layers in 4 groups, in the sense that i
 
 ## [1] Basic Inference
 The simplest non-axiomatic logic, with atomic terms and single copula.
+
 ### NAL-1
-NAL-1 is a logical core of NAL. The statements in it are all inheritance statements with an atomic subject and an atomic predicate. The meaning of a term is defined as its extension and intention. The truth value of a statement measures its evidential support. The inference rules include local rules (revision and choice), forward syllogism (deduction, induction, abduction), and backward syllogism (question derivation).
+NAL-1 is a logical core of NAL. The statements in it are all _inheritance_ statements with an atomic _subject_ and an atomic _predicate_. The meaning of a term is defined as its _extension_ and _intension_. The truth value of a statement consists of a _frequency_ value and a _confidence_ value. The inference rules include local rules (_revision_ and _choice_), forward syllogism (_deduction, induction, abduction_), and backward syllogism (question derivation).
 
 ## [2] First-Order Inference
-Extending the logic by introducing compound terms and derived copulas, using ideas in set theory.
+Extending the logic by introducing compound terms and derived copulas, using ideas in set theory, while still keeping the term vs. statement distinction.
 
 ### NAL-2
-NAL-2 adds similarity, instance, and property copulas that are all based on inheritance copula. Also introduced are sets with a singular instance or property.
+NAL-2 adds _similarity, instance_, and _property_ copulas that are all defined using _inheritance_ copula. Also introduced are sets with a singular instance or property.
 
 ### NAL-3
 NAL-3 introduces compound terms in its general form, using set-theoretic connectors _intersection_ and _difference_.
 
 ### NAL-4
-NAL-4 allows for "ordinary relations", that are the relations not present in previous NAL layers. Please look for [set operations](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS) in OpenNARS
+NAL-4 maps arbitrary (non-copula) relations into _inheritance_, with the help of _product_ and _image_ connector.
 
 ## [3] Higher-Order Inference
-As one may notice, in the "first-order" inference, statements are relations among terms, but a statement **cannot** be treated as a term. In "Higher-Order" inference, a statement can be treated as a term, as a statement itself and finally become statement on statements (higher order statements). Thus, grammar, truth functions and syllogistic inference rules are extended to higher NALs preserving most of the previously introduced concepts.
+
+By dropping the term vs. statement distinction, NAL is extended to include statements-about-statements, and can do inference on them, using ideas from propositional logic and predicate logic.
+
 ### NAL-5
-NAL-5 is the lowest level of higher-order inference, it mainly introduces concept of a statement as a term and "fills" the gap between the first and higher order interference. Please navigate to ["Statements and Variables"](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS) to find more information on statements. 
+NAL-5 introduce _implication_ and _equivalence_ as isomorphic to _inheritance_ and _similarity_, respectively. It also contains additional rules that are specific to statement-level inference, such as _negation_.
+
 ### NAL-6
-NAL 6 introduces **variable terms** into the system. The details can be found on ["Statements and Variables"](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS) page, while detailed examples of variables are [here](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS).
+NAL-6 introduces _variable terms_ into NAL. Consequently, the extensional statements and intensional statements can be expressed and processed separately. The logic can also carry out hypothetical and abstract inference.
 
 ## [4] Procedural Inference
 ### NAL-7
