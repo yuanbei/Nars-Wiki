@@ -6,13 +6,13 @@ The complete NAL grammar is specified in the [grammar page](https://github.com/o
 
 In the current design, NAL consists of 9 layers in 4 groups, in the sense that it is possible to only implement one group plus the layer below it to get a functional system with well-defined capability.
 
-## [1] Basic Inference
+## [Group 1] Basic Inference
 The simplest non-axiomatic logic, with atomic terms and single copula.
 
 ### NAL-1
 NAL-1 is a logical core of NAL. The statements in it are all _inheritance_ statements with an atomic _subject_ and an atomic _predicate_. The meaning of a term is defined as its _extension_ and _intension_. The truth value of a statement consists of a _frequency_ value and a _confidence_ value. The inference rules include local rules (_revision_ and _choice_), forward syllogism (_deduction, induction, abduction_), and backward syllogism (question derivation).
 
-## [2] First-Order Inference
+## [Group 2] First-Order Inference
 Extending the logic by introducing compound terms and derived copulas, using ideas in set theory, while still keeping the term vs. statement distinction.
 
 ### NAL-2
@@ -24,8 +24,7 @@ NAL-3 introduces compound terms in its general form, using set-theoretic connect
 ### NAL-4
 NAL-4 maps arbitrary (non-copula) relations into _inheritance_, with the help of _product_ and _image_ connector.
 
-## [3] Higher-Order Inference
-
+## [Group 3] Higher-Order Inference
 By dropping the term vs. statement distinction, NAL is extended to include statements-about-statements, and can do inference on them, using ideas from propositional logic and predicate logic.
 
 ### NAL-5
@@ -34,15 +33,17 @@ NAL-5 introduce _implication_ and _equivalence_ as isomorphic to _inheritance_ a
 ### NAL-6
 NAL-6 introduces _variable terms_ into NAL. Consequently, the extensional statements and intensional statements can be expressed and processed separately. The logic can also carry out hypothetical and abstract inference.
 
-## [4] Procedural Inference
+## [Group 4] Procedural Inference
+Using the ideas from logic programming, _event_, _operation_, and _goal_ are introduced into NAL as special types of _statement_, to give the logic the ability of real-time perception and action.
+
 ### NAL-7
-NAL 7 introduces time into the system and elevate system's reasoning to another level. Systems gains abilities to predict future events based on its experience. The concepts of temporal inference are a little more substantial to put them here in NAL overview and therefore a dedicated page of [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference) has been created.
+NAL-7 defines an _event_ as a statement with a time-dependent truth-value, therefore allows time to be expressed and processed as a special type of conceptual relation. Also introduced is an internal clock that provides a subjective time. Consequently, the system can carry out temporal and causal inference.
+
 ### NAL-8
-In NAL-8 procedural interpretation is applied to events so declarative and procedural knowledge are unified it also introduces goals and planning. Similar to NAL-7 It is described on separate page in detailed, please look for [Procedural Inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) and [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) pages
+In NAL-8 procedural interpretation is applied to certain events to express _operations_, and the desired events can become _goals_ to be achieved by the system itself by executing proper operations.  In this way, declarative, episodic, and procedural knowledge are unified, and the system gets sensorimotor capability using plug-in sensors and actuators. Cognitive functions like perception, planning, skill-learning, and problem-solving can be uniformly carried out.
+
 ### NAL-9
-In NAL-9 introspective inference will be mainly implemented as a set of mental operations whose major consequences are within the system itself. These operations carries out various types of self-monitoring and self-control. Please look  [introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference) page for more details.
-
-
+In NAL-9, a set of built-in mental operators are defined to support self-awareness, self-control, and [introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference) page for more details.
 
 
 
