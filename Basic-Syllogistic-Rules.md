@@ -1,14 +1,17 @@
 A syllogistic rule in NAL takes two premises that are statements with a common term, and derive a conclusion with a statement between the other two terms. That is, the two premises are between M--P and S--M, while the conclusion is between S--P. Different types of inference correspond to different combinations of premises and use different truth-value functions to calculate the truth-values of the conclusions from those of the premises.
 
 Here "basic syllogistic rules" refer to those defined in NAL-1 and NAL-2 that use _inheritance_ or _similarity_ copulas.
-* Inheritance copula, “-->”, is a relation from one term to another term, defined by being reflexive and transitive (but neither symmetric nor anti-symmetric). An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S --> P”, S is the _subject_ term and P is the _predicate_ term. Inheritance relation is closely related, though not identical, to many well-known relations, such as “IS-A”,  “belongs to”, or “subset”.<br/>
-**Example** <swan --> bird>  means "Swan is a type of bird."
-* Similarity copula, “<->”, is "two-way inheritance", as it is defined to be reflexive, transitive, and symmetric. The similarity statement “S <-> P ” is defined by the conjunction of two inheritance statements (S --> P) and (P --> S).<br/> 
-**Example** <swan <-> goose> means "Swan is similar to goose."
+* Inheritance, “-->”, is a relation from one term to another term, defined by being reflexive and transitive (but neither symmetric nor anti-symmetric). An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S --> P”, S is the _subject_ term and P is the _predicate_ term. Inheritance relation is closely related, though not identical, to many well-known relations, such as “IS-A”,  “belongs to”, or “subset”.<br/>
+**Example:** <swan --> bird>  means "Swan is a type of bird."
+* Similarity, “<->”, is "two-way inheritance", as it is defined to be reflexive, transitive, and symmetric. The similarity statement “S <-> P ” is defined by the conjunction of two inheritance statements (S --> P) and (P --> S).<br/> 
+**Example:** <swan <-> goose> means "Swan is similar to goose."
 
-There are also three copulas that are only used in external communication, but not in internal representation, as they can be converted into _inheritance_ with the help of the set constructors.
-<br/><br/>
-**Instance**,“◦→”, is another way to represent the same information. The instance statement “S ◦→ P ” is defined by the inheritance statement “{S} → P ”. The intuitive meaning of “◦→” is similar to the membership relation in set theory. **Example:** “Tweety is a bird” can also be represented as <{Tweety} --> bird>. Meaning that Tweety can be considered as an **instance** of a bird.
+There are also three copulas that are only used in the external communication, but not in the internal representation, of the system, as they can be converted into _inheritance_ with the help of the set constructors.
+* Instance, "{--" indicates an inheritance-like relation where the subject term is specified by its single instance, similar to the membership relation in set theory. The instance statement “S {-- P ” is defined as being equivalent to the inheritance statement “{S} --> P". <br>
+**Example:** “Tweety is a bird” can be represented as both <Tweety {-- bird> and <{Tweety} --> bird>, though the former is converted into the latter at the interface.
+* Property, "--]" indicates an inheritance-like relation where the predicate term is specified by its single property, similar to the predicate symbol in predicate logic. The instance statement “S --] P ” is defined as being equivalent to the inheritance statement “S --> [P]". <br>
+**Example:** “Snow is white” be represented as both <snow --] white> and <snow --> [white]>, though the former is converted into the latter at the interface.
+
 <br/><br/>
 **Property**,“→◦”, is another way to represent the same information. The property statement “S →◦ P ” is defined by the inheritance statement “S → [P]”. **Example:** "Snow is white" can be represented <snow --> [white]>. meaning snow "is a kind" of white, that is white color is a property of snow.
 
