@@ -3,7 +3,8 @@ A syllogistic rule in NAL takes two premises that are statements with a common t
 Here "basic syllogistic rules" refer to those defined in NAL-1 and NAL-2 that use _inheritance_ or _similarity_ copulas.
 * Inheritance copula, “-->”, is a relation from one term to another term, defined by being reflexive and transitive (but neither symmetric nor anti-symmetric). An inheritance statement consists of two terms related by the inheritance relation. In the inheritance statement “S --> P”, S is the _subject_ term and P is the _predicate_ term. Inheritance relation is closely related, though not identical, to many well-known relations, such as “IS-A”,  “belongs to”, or “subset”.<br/>
 **Example** <swan --> bird>  means "Swan is a type of bird."
-* Similarity copula, “<->”, is "two-way inheritance", as it is defined to be reflexive, transitive, and symmetric. The similarity statement “S <-> P ” is defined by the conjunction of two inheritance statements (S → P) ∧ (P → S). **Example** <swan <-> goose>  means "Swan is similar to goose."
+* Similarity copula, “<->”, is "two-way inheritance", as it is defined to be reflexive, transitive, and symmetric. The similarity statement “S <-> P ” is defined by the conjunction of two inheritance statements (S --> P) and (P --> S).<br/> 
+**Example** <swan <-> goose> means "Swan is similar to goose."
 
 There are also three copulas that are only used in external communication, but not in internal representation, as they can be converted into _inheritance_ with the help of the set constructors.
 <br/><br/>
