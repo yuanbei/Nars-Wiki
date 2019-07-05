@@ -41,21 +41,21 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Plugins in OpenNARS](https://github.com/opennars/opennars/wiki/Plugins)
     
   - Logic
-    * [Non Axiomatic Logic (NAL) Overview](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) 
-    * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
-    * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
-    * [Statements and Variables](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS)
-    * [Revision and choice rules](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
-    * [Variables, examples](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
-    * [Truth functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
+    * [Non Axiomatic Logic (NAL) Overview](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-the-logic-behind-OpenNARS) 
     * [Basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
+    * [Basic truth-value functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
     * [Extended Boolean Functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS)
+    * [Local rules: revision and choice](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
+    * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
     * [Compositional rules](https://github.com/opennars/opennars/wiki/Composition)
     * [Structural rules](https://github.com/opennars/opennars/wiki/Structure)
+    * [Statements and Variables](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS)
+    * [Inference with variable terms](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
     * [Temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [Procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
     * [Introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference)
     * [Backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
+    * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
 
   - Data structure
     * [System Memory (bag, overall structure)](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure))
