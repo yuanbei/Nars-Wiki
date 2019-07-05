@@ -6,14 +6,20 @@ Here "basic syllogistic rules" refer to those defined in NAL-1 and NAL-2 that us
 * Similarity, “<->”, is "two-way inheritance", as it is defined to be reflexive, transitive, and symmetric. The similarity statement “S <-> P ” is defined by the conjunction of two inheritance statements (S --> P) and (P --> S).<br/> 
 **Example:** <swan <-> goose> means "Swan is similar to goose."
 
-There are also three copulas that are only used in the external communication, but not in the internal representation, of the system, as they can be converted into _inheritance_ with the help of the set constructors.
-* Instance, "{--" indicates an inheritance-like relation where the subject term is specified by its single instance, similar to the membership relation in set theory. The instance statement “S {-- P ” is defined as being equivalent to the inheritance statement “{S} --> P". <br>
-**Example:** “Tweety is a bird” can be represented as both <Tweety {-- bird> and <{Tweety} --> bird>, though the former is converted into the latter at the interface.
-* Property, "--]" indicates an inheritance-like relation where the predicate term is specified by its single property, similar to the predicate symbol in predicate logic. The instance statement “S --] P ” is defined as being equivalent to the inheritance statement “S --> [P]". <br>
-**Example:** “Snow is white” be represented as both <snow --] white> and <snow --> [white]>, though the former is converted into the latter at the interface.
+The syllogistic rules defined on _inheritance_ and _similarity_ include the following types:
 
-<br/><br/>
-**Property**,“→◦”, is another way to represent the same information. The property statement “S →◦ P ” is defined by the inheritance statement “S → [P]”. **Example:** "Snow is white" can be represented <snow --> [white]>. meaning snow "is a kind" of white, that is white color is a property of snow.
+Given two judgments on the left (J1 and J2), the conclusion C is derived on the right:
+1. _Deduction_: {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s first figure, and what Peirce called deduction.
+2. _Abduction_:  {P → M <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s second figure, and what Peirce called abduction
+(and hypothesis)
+3. _Induction_ {M → P <f1, c1 >, M → S <f2, c2 >} |-- S → P <f, c>
+This is Aristotle’s third figure, and what Peirce called induction
+4. _Exemplification_ {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
+This rule, not discussed by Aristotle or Peirce, in NAL it is called
+exemplification, that is basically reversed deduction
+
 
 5. Because of similarity is symmetric, truth functions are modified: 
 <br/><br/>
@@ -33,14 +39,11 @@ OpenNARS operates on well known Syllogistic Rules, that provide a foundation to 
 
 **Brief description:**
 
-Given two judgments on the left (J1 and J2), the conclusion C is derived on the right:
-1. _Deduction_: {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
-This is Aristotle’s first figure, and what Peirce called deduction.
-2. _Abduction_:  {P → M <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
-This is Aristotle’s second figure, and what Peirce called abduction
-(and hypothesis)
-3. _Induction_ {M → P <f1, c1 >, M → S <f2, c2 >} |-- S → P <f, c>
-This is Aristotle’s third figure, and what Peirce called induction
-4. _Exemplification_ {M → P <f1, c1 >, S → M <f2, c2 >} |-- S → P <f, c>
-This rule, not discussed by Aristotle or Peirce, in NAL it is called
-exemplification, that is basically reversed deduction
+
+There are also three copulas that are only used in the external communication, but not in the internal representation, of the system, as they can be converted into _inheritance_ with the help of the set constructors.
+* Instance, "{--" indicates an inheritance-like relation where the subject term is specified by its single instance, similar to the membership relation in set theory. The instance statement “S {-- P ” is defined as being equivalent to the inheritance statement “{S} --> P". <br>
+**Example:** “Tweety is a bird” can be represented as both <Tweety {-- bird> and <{Tweety} --> bird>, though the former is converted into the latter at the interface.
+* Property, "--]" indicates an inheritance-like relation where the predicate term is specified by its single property, similar to the predicate symbol in predicate logic. The instance statement “S --] P ” is defined as being equivalent to the inheritance statement “S --> [P]". <br>
+**Example:** “Snow is white” be represented as both <snow --] white> and <snow --> [white]>, though the former is converted into the latter at the interface.
+* Instance-Property, "{-]", is the combination of the above two, so "S {-] P" is equivalent to "{S} --> [P]".<br/>
+**Example:** “Tweety is yellow” can be represented as both <Tweety {-] yellow> and <{Tweety} --> [yellow]>, though the former is converted into the latter at the interface.
