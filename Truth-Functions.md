@@ -1,5 +1,17 @@
-A typical simple inference cycle in OpenNARS takes two judgements as premise and derives a judgement as a conclusion. An example looks like:<br/>
-**_{\<premise1\>. %f1; c1%, \<premise2\>. %f2; c2%} |-- \<conclusion\>. %f; c%_**
+A typical simple inference rule of NAL takes two premises and derives a conclusion, in the following pattern:<br/>
+**_{\<premise1\>. %f1; c1%, \<premise2\>. %f2; c2%} |- \<conclusion\>. %f; c%_**
+
+The truth-value function of the rule calculates _%f; c%_ from _%f1; c1%_ and _%f2; c2%_. According to the definition of truth-value in NAL, the result of the function should correctly indicate the evidential support the conclusion obtained from the premises (alone).
+
+The function is defined in the following procedure:
+1. Treat all the variable as binary (Boolean), and analyze how the variables are related to each other, according to the semantics.
+2. Find simple and natural Boolean functions to relate these variables.
+3. Replace the Boolean operators by their [extended forms](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS)
+4. Rewrite the relations as a function that maps _%f1; c1%_ and _%f2; c2%_ to _%f; c%_.
+
+All the truth-value functions are explained in detail in  [Non-Axiomatic Logic](https://www.worldscientific.com/worldscibooks/10.1142/8665), and listed in its [Appendix C](https://doi.org/10.1142/9789814440288_bmatter). There is also [an Excel table](http://www.cis.temple.edu/~pwang/Implementation/NAL/NAL-TruthFunctions.xls) that allows simple experiments with the functions.
+
+As far as the [Basic Syllogistic Rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules) are concerned,
 
 Given a certain syllogistic rule applied to derive a conclusion, the truth value of a conclusion is being computed using **truth function**.  
 
