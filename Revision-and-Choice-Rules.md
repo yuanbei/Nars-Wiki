@@ -36,7 +36,7 @@ If the evidential bases of two truth-values have at least one common element, th
 The choice rule is applicable in multiple scenarios.
 1. Two judgments have the same statement and are based on overlapping evidence, and the revision rule cannot be applied, then a choice must be made if the truth-value is needed. For example, for an _evaluative_ question, both candidate answers may contain the **same** statement but different truth-values and these two conflicting answers share at least one element in their evidential bases, the **choice rule** chooses the task with **higher _confidence_ value**. The justification is that an adaptive system prefers answer based on more evidence.
 
-2. For the selective question of the form <S --> ?>? (or <? --> P>?) the system is asked to predict an element in the intension of S (or the extension of P). Suppose for the question _<S --> ?>_ there are two competing candidate answers _<S --> A> %f1, c1%_ and _<S --> B> %f2, c2%_. To answer the question, the _expectations_ of the truth-values are calculated, as estimated future frequency values. The candidate with the higher expectation is selected by the choice rule.
+2. For the selective question of the form <S --> ?>? (or <? --> P>?) the system is asked to predict an element in the intension of S (or the extension of P). 
 
 **Definition**  Truth expectation **_e = c * (f − 0.5) + 0.5_**
 
