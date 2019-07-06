@@ -1,3 +1,5 @@
+These two rules are called "local rules" as they do not generate any new statement, and only working on the existing ones locally. 
+
 ## I. Revision Rule
 Revision is an inference process in which evidence from different sources is being combined in the conclusion. 
 Suppose there are two judgments with the same statement but different truth values, for example: 
