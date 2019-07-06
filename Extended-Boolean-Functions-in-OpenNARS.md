@@ -1,12 +1,11 @@
-In OpenNARS uncertainty measurements take values from the [0, 1] interval. Even the amount of evidence, which
-is not defined with this range in general, corresponds to this interval. Since they cannot be easily interpreted as “probability” as defined in probability theory and statistics, an existing theory cannot be directly applied to guide their calculation. The approach in OpenNARS is to see the values in [0, 1] as extended Boolean values, 0 and 1, and to handle their calculation by extending the Boolean operators, namely **“not”**, **“and”** and **“or”**.
+In NARS, many measurements take values from the [0, 1] interval, including all the components of truth-value, desire-value, budget-value, as well as the amount of evidence in single testing. These values are considered as "extended Boolean values", in the sense that the Boolean values in {0, 1} can be taken as special cases of [0, 1]. The Boolean operators **“not”**, **“and”** and **“or”** are extended into the real-number functions defined on [0, 1], too.
 
 ### Semantics
-The extended “and” and “or” are called **Triangular norm (T-norm)** and **Triangular conorm (T-conorm)**. T-norm and T-conorm are functions defined on real numbers in range [0, 1]. Each of them is commutative, associative, and monotonic in each variable and thus they can be extended to take arbitrary number of arguments in the following way:<br/>
+Traditionally, the extended “and” and “or” are called **Triangular norm (T-norm)** and **Triangular conorm (T-conorm)**, respectively. Each of them is commutative, associative, and monotonic in each variable and thus they can be extended to take arbitrary number of arguments in the following way:<br/>
 __**and**(x1, . . . , xn) = **and**(and(x1, . . . , xn−1), xn)__<br/>
 __**or**(x1, . . . , xn) = **or**(or(x1, . . . , xn−1), xn)__
 
-In OpenNARS, T-norm function ***y = and(x1, . . . , xn)*** is used when a quantity ***y*** is __conjunctively__ determined by two or more other quantities __x1, . . . , xn__. For example ***y = 1*** if and only if ***x1 = ... = xn = 1***, and ***y = 0*** if and only if ***x1 = 0 or ... or xn = 0***. 
+In NARS, T-norm function ***y = and(x1, . . . , xn)*** is used when a quantity ***y*** is __conjunctively__ determined by two or more other quantities __x1, . . . , xn__. For example ***y = 1*** if and only if ***x1 = ... = xn = 1***, and ***y = 0*** if and only if ***x1 = 0 or ... or xn = 0***. 
 
 Similarly, T-conorm function ***y = or(x1, . . . , xn)*** is used when a quantity ***y*** is __disjunctively__ determined by two or more other quantities __x1, ... , xn__. For example, ***y = 1*** if and only if ***x1 = 1 or . . . or xn = 1***, and ***y = 0*** if and only if ***x0 = · · · = xn = 0***. 
 
