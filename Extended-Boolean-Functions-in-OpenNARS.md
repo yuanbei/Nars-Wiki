@@ -20,5 +20,7 @@ In NARS the extended Boolean functions for "and", "or" and "not" operators are d
 ***and(x1, ..., xn) = x1 * ... * xn***<br/>
 ***or(x1, ..., xn) = 1 − [(1 − x1) * ... * (1 − xn)]***
 
-It should be mentioned that though the T-norm and T-conorm used in OpenNARS share intuition and mathematical forms with probabilistic formula, they should not been understood as and(x, y) = P(x and y) and or(x, y) = P(x or y), simply because x and y are usually not random variables with probability distribution function P.
+The ***and*** and ***or*** functions are used under the condition that _x1, ..., xn_ are independent variables in the sense that the value of each of them cannot be determined from the values of the others.
+
+It should be mentioned that though the extended Boolean functions of NARS share intuition and mathematical forms with probabilistic formula, they should not be understood as _and(x, y) = P(x and y)_ and _or(x, y) = P(x or y)_, simply because x and y are usually not random variables with probability distribution function P.
 
