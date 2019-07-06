@@ -38,7 +38,7 @@ The choice rule is applicable in multiple scenarios.
 
 2. For the selective question of the form <S --> ?x>? (or <?x --> P>?) the system is asked to find a term in the intension of S (or the extension of P) to replace the query valuable _?x_. For the former question, if there are multiple candidate answers, the one with the highest expectation value is chosen by the choice rule, as it is more likely to be confirmed in the future.
 
-**Definition**  Truth expectation **_e = c * (f − 0.5) + 0.5_**
+**Definition**  Expectation **_e = c * (f − 0.5) + 0.5_**
 
 **Properties:**
 * Truth expectation combines _frequency_ with _confidence_ and maps to a single real number in the range [0,1]
