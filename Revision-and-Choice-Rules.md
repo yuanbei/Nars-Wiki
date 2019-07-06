@@ -16,6 +16,8 @@ _f = [ f1c1(1 − c2) + f2c2(1 − c1) ] / [ c1(1 − c2) + c2(1 − c1) ]_ <br/
 _c = [ c1(1 − c2) + c2(1 − c1) ] / [ c1(1 − c2) + c2(1 − c1) + (1 − c1)(1 − c2) ]_
 
 Here numbers 1 and 2 correspond to _c_ or _f_ from the first or second judgment, respectively.<br/>
+For the above example, the conclusion is<br/>
+**3. <snow --> [white]>. %12/14, 14/15%**
 
 **Properties:** <br/>
 * The order of premises does not matter.
