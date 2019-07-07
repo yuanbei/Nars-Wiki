@@ -17,7 +17,7 @@ Narsese is the formal language used by NARS for internal representation and exte
              task ::= [budget] sentence                       (* task to be processed *)
 
          sentence ::= statement"." [tense] [truth]            (* judgement to be absorbed into beliefs *)
-                    | statement"?" [tense] [truth]            (* question on thuth-value to be answered *)
+                    | ыtatement"?" [tense] [truth]            (* question on thuth-value to be answered *)
                     | statement"!" [desire]                   (* goal to be realized by operations *)
                     | statement"@" [desire]                   (* question on desire-value to be answered *)
 
