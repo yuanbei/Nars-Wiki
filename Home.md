@@ -48,7 +48,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Local rules: revision and choice](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
     * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
     * [Compositional rules](https://github.com/opennars/opennars/wiki/Composition)
-    * [Structural rules](https://github.com/opennars/opennars/wiki/Structure-rules)
+    * [Structural rules](https://github.com/opennars/opennars/wiki/Structure-Rules)
     * [Statements and Variables](https://github.com/opennars/opennars/wiki/Statements-and-Variables-in-OpenNARS)
     * [Inference with variable terms](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS)
     * [Temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
