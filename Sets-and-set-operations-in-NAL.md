@@ -27,4 +27,4 @@ _(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x)))_<br/>
 For two terms _T1_ and _T2_, their product _(*, T1, T2)_ is a compound term defined by _((*, S1, S2) --> (*, P1, P2)) ≡ ((S1 --> P1) ∧ (S2 --> P2))_. This definition can be extended to allow more than two components in a product.
 <br/>
 A relation is a term _R_ such that there are other terms _T1_ and _T2_ satisfying _(*, T1, T2) --> R_ or _R --> (*, T1, T2)”.<br/>
-**Example:** “Acid and base neutralize each other” can be represented as _<(*, acid,base) --> neutralization>_, and “Neutralization happens between acid and base” can be represented as _<neutralization --> (*, acid, base)>_. 
+**Example:** “Acid and base neutralize each other” can be represented as _<(*, acid, base) --> neutralization>_, and “Neutralization happens between acid and base” can be represented as _<neutralization --> (*, acid, base)>_. 
