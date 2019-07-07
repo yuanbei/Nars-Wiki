@@ -18,7 +18,9 @@ Each term in NARS has a _syntactic complexity_ that is completely defined accord
 **Extensional Difference:** If _T1_ and _T2_ are different terms, their extensional difference, _(-, T1, T2)_, is a compound term defined by _(∀x)((x --> (-, T1, T2)) ≡ ((x --> T1) ∧ ¬(x --> T2)))_.<br/> 
 **Example:** "Penguins are birds that cannot fly” can be represented as _<penguin --> (-, bird, [flying])>_, where the predicate term is a extensional difference of the term _bird_ and the term _[flying]_, i.e., its extension is the difference of the extensions of its components, and its intension is the intensions of its first component.
 <br/>
-**Intensional Difference:** If _T1_ and _T2_ are different terms, their intensional difference, _(~, T1, T2)_, is a compound term defined by _(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x))).<br/> 
+**Intensional Difference:** If _T1_ and _T2_ are different terms, their intensional difference, _(~, T1, T2)_, is a compound term defined by 
+_(∀x)(((|, T1, T2) --> x) ≡ ((T1 --> x) ∧ (T2 --> x)))_
+_(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x))).<br/> 
 **Example:** "Human are only beings that can speak" can be represented as <(\~, human,being) --> speak>. Where "~" is an intensional difference operator
 
 #### Product
