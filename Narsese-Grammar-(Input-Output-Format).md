@@ -58,8 +58,8 @@ Narsese is the formal language used by NARS for internal representation and exte
                     | "(" op-negation "," term ")"            (* negation *)
                     | op-negation term                        (* negation, new notation *)
 
-        op-int-set::= "["                                     (* extensional set *)
-        op-ext-set::= "{"                                     (* intensional set *)
+        op-int-set::= "["                                     (* intensional set *)
+        op-ext-set::= "{"                                     (* extensional set *)
        op-negation::= "--"                                    (* negation *)
       op-int-image::= "\\"                                    (* \ intensional image *)
       op-ext-image::= "/"                                     (* extensional image *)
