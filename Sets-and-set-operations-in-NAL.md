@@ -1,9 +1,9 @@
-Sets and set operations allow the system to specify instance or properties of a concept, as well as to create [compound terms](https://github.com/opennars/opennars/wiki/Composition), so as to express and derive more complex conclusions.
+Sets and set operations allow the system to specify instances or properties of a concept, as well as to create [compound terms](https://github.com/opennars/opennars/wiki/Composition), so as to express and derive more complex conclusions.
 
 #### **Compound Terms**
-[In Basic Inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS), each term is “atomic”, which is named by a word. For more complicated descriptions compound terms added to OpenNARS. 
+[In Basic Syllogistic Inference](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules), each term is “atomic”, named by a word. For more complicated descriptions, compound terms are added to NAL. 
 
-**Compound term**, (op c(1), c(2), c(3) ... c(n-1), c(n)) is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
+Compound term _(op c(1), c(2), c(3) ... c(n-1), c(n))_ is a term formed by one or more terms c(1),..., c(n), called its component, with an operator, op. The order of the components usually matters.
 <br/><br/>
 If c(1),...,c(n) (n > 2) are terms and _op_ is a term operator, defined as taking two arguments, both (op c(1) ... c(n)) and (c(1) op ... op c(n)) are compound terms defined recursively as (op (op c(1) ... c(n−1)) c(n)).
 
