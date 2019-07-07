@@ -17,7 +17,7 @@ Narsese is the formal language used by NARS for internal representation and exte
              task ::= [budget] sentence                       (* task to be processed *)
 
          sentence ::= statement"." [tense] [truth]            (* judgement to be absorbed into beliefs *)
-                    | ыtatement"?" [tense] [truth]            (* question on thuth-value to be answered *)
+                    | statement"?" [tense] [truth]            (* question on thuth-value to be answered *)
                     | statement"!" [desire]                   (* goal to be realized by operations *)
                     | statement"@" [desire]                   (* question on desire-value to be answered *)
 
@@ -47,7 +47,7 @@ Narsese is the formal language used by NARS for internal representation and exte
                     | interval                                (* time measure between events *)
 
     compound-term ::= op-ext-set term {"," term} "}"          (* extensional set *)
-                    | op-int-set term {"," term} "]"          (* intensional set *)
+                    | op-int-set term ["," term} "]"          (* intensional set *)
                     | "("op-multi"," term {"," term} ")"      (* with prefix operator *)
                     | "("op-single"," term "," term ")"       (* with prefix operator *)
                     | "(" term {op-multi term} ")"            (* with infix operator *)
