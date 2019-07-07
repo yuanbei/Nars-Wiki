@@ -16,12 +16,12 @@ Each term in NARS has a _syntactic complexity_ that is completely defined accord
 
 #### **Set Difference Definitions**
 **Extensional Difference:** If _T1_ and _T2_ are different terms, their extensional difference, _(-, T1, T2)_, is a compound term defined by _(∀x)((x --> (-, T1, T2)) ≡ ((x --> T1) ∧ ¬(x --> T2)))_.<br/> 
-**Example:** "Penguins are birds that cannot fly” can be represented as _<penguin --> (-, bird, [flying])>_, where the predicate term is a extensional difference of the term _bird_ and the term _[flying]_, i.e., its extension is the difference of the extensions of its components, and its intension is the intensions of its first component.
+**Example:** "Penguins are birds that cannot fly” can be represented as _<penguin --> (-, bird, [flying])>_, where the predicate term is an extensional difference of the term _bird_ and the term _[flying]_, i.e., its extension is the difference of the extensions of its components, and its intension is the intensions of its first component.
 <br/>
 **Intensional Difference:** If _T1_ and _T2_ are different terms, their intensional difference, _(~, T1, T2)_, is a compound term defined by 
 _(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x)))_<br/>
-_(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x))).<br/> 
-**Example:** "Human are only beings that can speak" can be represented as <(\~, human,being) --> speak>. Where "~" is an intensional difference operator
+**Example:** "Dogs differ from the other pets by their loyalty" can be represented as _<(~, dog, pet) --> [loyal])>_, where the subject term is an intensional difference of the term _dog_ and the term _pet_, i.e., its intension is the difference of the intensions of its components, and its extension is the extensions of its first component.
+<br/>
 
 #### Product
 For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
