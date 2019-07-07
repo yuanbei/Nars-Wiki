@@ -23,9 +23,8 @@ _(∀x)(((~, T1, T2) --> x) ≡ ((T1 --> x) ∧ ¬(T2 --> x)))_<br/>
 **Example:** "Dogs differ from the other pets by their loyalty" can be represented as _<(~, dog, pet) --> [loyal])>_, where the subject term is an intensional difference of the term _dog_ and the term _pet_, i.e., its intension is the difference of the intensions of its components, and its extension is the extensions of its first component.
 <br/>
 
-#### Product
-For two terms T1 and T2, their product (T1 × T2) is a compound term defined by ((S1 × S2) → (P1 × P2)) ≡ ((S1 → P1) ∧ (S2 → P2)). This definition can be extended as before to allow more than two components in a product.
-
-#### Relation as a Term
-A relation is a term R such that there are other terms T1 and T2 satisfying “(T1 × T2) → R” or “R → (T1 × T2)”.<br/>**Example:** “Acid and base neutralize each other” can be represented
-as <(* ,acid,base) --> neutralization>., and “Neutralization happens between acid and base” can be represented as <neutralization --> ( *, acid, base)>. where " *" is product operator
+#### Product and relational term
+For two terms _T1_ and _T2_, their product _(*, T1, T2)_ is a compound term defined by _((*, S1, S2) --> (*, P1, P2)) ≡ ((S1 --> P1) ∧ (S2 --> P2))_. This definition can be extended to allow more than two components in a product.
+<br/>
+A relation is a term _R_ such that there are other terms _T1_ and _T2_ satisfying _(*, T1, T2) --> R_ or _R --> (*, T1, T2)”.<br/>
+**Example:** “Acid and base neutralize each other” can be represented as _<(* ,acid,base) --> neutralization>_, and “Neutralization happens between acid and base” can be represented as _<neutralization --> ( *, acid, base)>_. 
