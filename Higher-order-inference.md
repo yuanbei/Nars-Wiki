@@ -23,11 +23,13 @@ _intension <----------------------------> necessary condition_<br/>
 _extensional intersection <-------------> conjunction_<br/> 
 _intensional intersection <-------------> disjunction_<br/>
 
-Because of such correspondence, the following inference rules are defined similarly in NAL 5: choice, revision, conversion, comparison, analogy, induction, deduction, abduction and exemplification. Term operators introduced in earlier layers such as sets, product, image and ordinary relation treat "higher order" statements just like "first order" terms.
+Given the correspondence, most first-order inference rules can be mapped isomorphically to higher-order. Some term connectors (such as sets, product, and images) treat statements as ordinary terms, so the related inference rules are used in both first-order and higher-order inference without any change.
 
-NAL-5 also introduces **Negation**, that is a negation of a statement is a compound term with positive and negative evidence switched. For the statement \<S> _%f0; c0%_, its negation is <(--, S)> _%f1; c1%_ where negation truth function is then defined as:<br/>
+### Negation
 
-**F negation truth value:** _f = 1 - f0, c = c0_
+In first-order NAL, there is no "term negation" (so "non-bird" is not a valid concept), but only "term difference" (so "animals other than birds" is a valid concept). In higher-order NAL, statement-level negation is introduced. For a statement with a NAL truth-value, the truth-value of its negation is obtained by switching its positive and negative evidence, so for the statement _S. %f;c%_, its negation is (--, S). _%1-f; c%_.
 
-Important to note that _Law of Contrapositive_  (S => T ≡ ¬T => ¬S) is no longer true, therefore NAL-5 introduces another variant of conversion rule from NAL-1 that is from  <S1 ==> S2>  %f0; c0%  NAL derives <(--, S2) ==> (--, S1)> %f1; c1% where truth value is computed using <br/>
-**F conversion3:** _f=0, c = (1-f0)c0/(f0c0 + 1)_
+For an embedded statement, its negation is the same as binary (Boolean) negation.
+
+In NAL, the traditional _Law of Contrapositive_  (S ==> T ≡ ¬T ==> ¬S) is no longer true, since the two statements only share negative evidence, but have distinct positive evidence.
+
