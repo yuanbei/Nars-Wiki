@@ -3,10 +3,15 @@
 Ordinary terms NAL are **constants terms** in the sense that each of them names the same concept, and if the same term appears in multiple sentences, they are all about the same thing, so their meaning is _global_ (defined in the whole memory). On the contrary, a ***variable term*** may be used in different sentences to indicate different concepts, so their meaning is _local_ (defined in a sentence).
 
 [Narsese grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)) includes three types of variable terms:
-* **Independent variable** (with prefix "$") represents an **arbitrary** term in the extension or intension of another term, and normally appears at both sides of an _implication_ or _equivalence_ copula showing the relationship between the extensions (or intensions) of two terms.
-* **Dependent variable** (with prefix "#") represents an **anonymous** term in the extension or intension of another term, and normally appears at multiple components of a _conjunction_ or disjunction showing the relationship between the extensions (or intensions) of the terms.
-* **Query variable** is a variable term in a question or goal, that represents a term to be found or created
-
+* An **independent variable** (with prefix "$") represents an **arbitrary** term in the extension or intension of another term, and normally appears at both sides of an _implication_ or _equivalence_ copula showing the relationship between the extensions (or intensions) of two terms.
+* A **dependent variable** (with prefix "#") represents an **anonymous** term in the extension or intension of another term, and normally appears at multiple components of a _conjunction_ or disjunction showing the relationship between the extensions (or intensions) of the terms.
+* A **query variable** (with prefix "?") is a variable term in a question or goal that represents a term to be found or created.
+The following table lists the typical usages of a variable term: 
+```
+               independent                    dependent                     query
+extensional    <<$x --> S> ==> <$x --> P>>    (&&,<#x --> S>,<#x --> P>)    <?x --> P>
+intensional    <<P --> $x> ==> <S --> $x>>    (&&,<S --> #x>,<P --> #x>)    <S --> ?x>
+```
 
 
 
@@ -120,11 +125,6 @@ As a result, in order to make the goal true, it will ask who is similar to Tom.
 
 Dependent Variables and Independent Variables only get introduced in the following semantic patterns:
 
-```
-               independent                    dependent
-extensional    <<$x --> S> ==> <$x --> P>>    (&&,<#x --> S>,<#x --> P>)
-intensional    <<P --> $x> ==> <S --> $x>>    (&&,<S --> #x>,<P --> #x>) 
-```
 
 and for equivalence
 
