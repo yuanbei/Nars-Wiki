@@ -4,16 +4,25 @@ Ordinary terms NAL are **constants terms** in the sense that each of them names 
 
 [Narsese grammar](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)) includes three types of variable terms:
 * An **independent variable** (with prefix "$") represents an **arbitrary** term in the extension or intension of another term, and normally appears at both sides of an _implication_ or _equivalence_ copula showing the relationship between the extensions (or intensions) of two terms.
-* A **dependent variable** (with prefix "#") represents an **anonymous** term in the extension or intension of another term, and normally appears at multiple components of a _conjunction_ or disjunction showing the relationship between the extensions (or intensions) of the terms.
+* A **dependent variable** (with prefix "#") represents an **anonymous** term in the extension or intension of another term, and normally appears at multiple components of a _conjunction_ showing the relationship between the extensions (or intensions) of the terms.
 * A **query variable** (with prefix "?") is a variable term in a question or goal that represents a term to be found or created.
-The following table lists the typical usages of a variable term: 
+The following table lists some typical statements with variable terms: 
 ```
               independent                   dependent                    query
 extensional   <<$x --> S> ==> <$x --> P>>   (&&,<#x --> S>,<#x --> P>)   <?x --> P>
 intensional   <<P --> $x> ==> <S --> $x>>   (&&,<S --> #x>,<P --> #x>)   <S --> ?x>
 ```
 
+### Inference with valuable terms
 
+Inference on statements with variable terms usually requires one extra step just for the variable(s) before or after an inference rule is used as usual:
+* **Variable introduction:** To replace a constant by a variable. E.g., turning an inductive conclusion from _<<A --> B> ==> <A --> C>>_ to _<<$x --> B> ==> <$x --> C>>_ as a generalization.
+* **Variable elimination:** To replace a variable by a constant. E.g., turning a premise from _<<$x --> B> ==> <$x --> C>>_ to _<<A --> B> ==> <A --> C>>_, so it can do deduction with another premise _<A --> B>_ to get _<A --> C>_. For a query variable, it means to find a solution for the question or goal.
+* **Variable unification:** To replace a variable by a variable. E.g., from _<<$x --> A> ==> <$x --> B>>_ and _<<$y --> B> ==> <$y --> C>>_ to derive _<<$z --> A> ==> <$z --> C>>_ by deduction.
+
+The truth-value function used in the step depends on the nature of the inference.
+
+### Usages of variable terms
 
 Consider the basic inheritance example from NAL-1, S → P, using higher-order NALs it can be rewritten as _((?x → S) ⇒
 (?x → P)) ∧ ((P → ?y) ⇒ (S → ?y))_ where _x_ and _y_ are variable terms. Meaning of inheritance can also be described through intension/extension of a term, that is "**if** something (x) is in extension of S that something is in extension of P, and **if** there is other thing (y) in intension of P it is in intension of S". Variables become necessary when extension/intension of term need to be specified separately and intuitively correspond to meaning of "it" pronoun in natural language.  
@@ -121,17 +130,3 @@ NARS should also be good
 
 As a result, in order to make the goal true, it will ask who is similar to Tom.
 ***
-### Syllogistic Pattern
-
-Dependent Variables and Independent Variables only get introduced in the following semantic patterns:
-
-
-and for equivalence
-
-```
-               independent                    dependent
-extensional    <<$x --> S> <=> <$x --> P>>    <#x --> (&,S,P)>
-intensional    <<P --> $x> <=> <S --> $x>>    <(|,P,S) --> #x>
-```
-
-For example <<$x --> S> ==> <$x --> P>>. can be created based on <a --> S> and <a --> P> because <<$x --> S> ==> <$x --> P>> matches <<$x --> S> ==> <$x --> P>> by instantiating $x with a.
