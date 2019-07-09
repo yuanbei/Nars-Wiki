@@ -49,7 +49,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
     * [Compositional rules](https://github.com/opennars/opennars/wiki/Composition)
     * [Structural rules](https://github.com/opennars/opennars/wiki/Structural-Rules)
-    * [Higher-order-inference](https://github.com/opennars/opennars/wiki/Higher-order-inference)
+    * [Higher-order inference](https://github.com/opennars/opennars/wiki/Higher-order-inference)
     * [Inference with variable terms](https://github.com/opennars/opennars/wiki/Inference-with-variable-terms)
     * [Temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [Procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
