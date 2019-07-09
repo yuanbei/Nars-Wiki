@@ -8,9 +8,9 @@ Ordinary terms NAL are **constants terms** in the sense that each of them names 
 * A **query variable** (with prefix "?") is a variable term in a question or goal that represents a term to be found or created.
 The following table lists the typical usages of a variable term: 
 ```
-               independent                    dependent                     query
-extensional    <<$x --> S> ==> <$x --> P>>    (&&,<#x --> S>,<#x --> P>)    <?x --> P>
-intensional    <<P --> $x> ==> <S --> $x>>    (&&,<S --> #x>,<P --> #x>)    <S --> ?x>
+              independent                   dependent                    query
+extensional   <<$x --> S> ==> <$x --> P>>   (&&,<#x --> S>,<#x --> P>)   <?x --> P>
+intensional   <<P --> $x> ==> <S --> $x>>   (&&,<S --> #x>,<P --> #x>)   <S --> ?x>
 ```
 
 
