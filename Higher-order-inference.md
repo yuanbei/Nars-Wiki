@@ -31,5 +31,5 @@ In first-order NAL, there is no "term negation" (so "non-bird" is not a valid co
 
 For an embedded statement, its negation is the same as binary (Boolean) negation.
 
-In NAL, the traditional _Law of Contrapositive_  (S ==> T ≡ ¬T ==> ¬S) is no longer true, since the two statements only share negative evidence, but have distinct positive evidence.
+In NAL, the traditional _Law of Contrapositive_ <S ==> T> ≡ <(--, T) ==> (--, S)> is no longer true, since the two statements only share negative evidence, but have distinct positive evidence.
 
