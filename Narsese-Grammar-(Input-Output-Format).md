@@ -44,10 +44,9 @@ Narsese is the formal language used by NARS for internal representation and exte
                     | variable                                (* an atomic variable term *)
                     | compound-term                           (* a term with internal structure *)
                     | statement                               (* a statement can serve as a term *)
-                    | interval                                (* time measure between events *)
 
     compound-term ::= op-ext-set term {"," term} "}"          (* extensional set *)
-                    | op-int-set term ["," term} "]"          (* intensional set *)
+                    | op-int-set term {"," term} "]"          (* intensional set *)
                     | "("op-multi"," term {"," term} ")"      (* with prefix operator *)
                     | "("op-single"," term "," term ")"       (* with prefix operator *)
                     | "(" term {op-multi term} ")"            (* with infix operator *)
@@ -80,10 +79,7 @@ Narsese is the formal language used by NARS for internal representation and exte
             tense ::= ":/:"                                   (* future event *)
                     | ":|:"                                   (* present event *)
                     | ":\\:"                                  (* :\: past event *)
-                    | <":">#"\d+"<":">                        (* defined event, output only *)
-
-         interval ::= <"/">#"\d+"                             (* integer *)
-
+          
            desire ::= truth                                   (* same format, different interpretations *)
             truth ::= <"%">frequency[<";">confidence]<"%">    (* two numbers in [0,1]x(0,1) *)
            budget ::= <"$">priority[<";">durability][<";">quality]<"$"> (* three numbers in [0,1]x(0,1)x[0,1] *)
