@@ -7,19 +7,19 @@
 
 Every intelligent system needs a mechanism to achieve various goals. In NARS, this function is mainly carried out as procedural inference, which is inference on beliefs, events, goals, and actions.
 
-In NARS, the system's beliefs are represented as Judgments, each of which is a Narsese sentence, containing a Term as content, and a TruthValue indicating the evidential support to the content. An event is a special type of term whose truth-value is defined only during a certain period of time.
+In NARS, the system's beliefs are represented as Judgments, each of which is a Narsese sentence, containing a Statement as content, and a TruthValue indicating the evidential support to the content. An event is a special type of statement whose truth-value is defined only during a certain period of time.
 
-A Goal is similar to a Judgment, except that its content is an event and the "TruthValue" in it is not really the truth-value of the content, but its "degree of desire", or "desire-value", which is defined as the truth-value for the event to imply a virtual "desired situation" (see 1, page 142).
+A Goal is similar to a Judgment, except that its content is an event and the "TruthValue" in it is not really the truth-value of the content, but its "degree of desire", or "[desire-value](https://github.com/opennars/opennars/wiki/Desire-Value:-Definition-and-Examples)", which is defined as the truth-value for the event to imply a virtual "desired situation".
 
 An Action is what the system can do to cause changes in the outside (or inside) environment. Logically, it is an event that can be "realized", i.e., can be made to happen, by the system.
 
-As a general-purpose system, NARS can have any belief or goal, as far as its content can be expressed in Narsese, and they change from time to time as the system runs and interacts with its environment. On the contrary, in any concrete implementation of NARS, all of its actions are composed recursively from operations, with a constant set of built-in Operators.
+As a general-purpose system, NARS can have any belief or goal, as far as its content can be expressed in Narsese, and they change from time to time as the system runs and interacts with its environment. On the contrary, in any concrete implementation of NARS, all of its actions are composed recursively of operations, with a constant set of built-in Operators.
 
 ***
 
-### Actions
+### Operations
 
-Each operation consists of an operator and an argument list, like Op(A1, ..., An). From a logical point of view, it is a statement <(*, {SELF}, A1, ..., An) {-- Op>, where the subject is a product indicating a temporal relation between the system itself and the arguments, the predicate is the type of the relation, and the relation is Instance, since operations are countable.
+Each operation consists of an operator and an argument list, like Op(A1, ..., An). From a logical point of view, it is a statement <(*, {SELF}, A1, ..., An) {-- Op>, where the subject is a product indicating a temporary relation between the system itself and the arguments, the predicate is the type of relation, and the copula is Instance, since operations are countable.
 
 In the current implementation, adding an operator into the system means
 
@@ -27,35 +27,32 @@ In the current implementation, adding an operator into the system means
 
 * to define a class in nars.operation that extends Operator, with an "execute" method to invoke external "sensorimotor" mechanism that carries out the operation on the given arguments.
 
-In the current code, there are 3 dummy classes in nars.operation for testing purpose.
+In the current code, there are a few dummy classes in nars.operation for testing purpose.
 In this way, in the future NARS can serves as the mind of a robot, or a software agent that uses various software and hardware as tools. Ideally, only the nars.operation package needs to be changed when NARS is equipped with different sensorimotor mechanism. Please note that in NARS, sensation/perception will be carried out by certain actions, so the nars.operation package handles both input and output through sensorimotor.
 
-To the system, the meaning of (the content of) beliefs, goals, and actions are revealed by their relations with other terms, except that for actions it also include their relations with sensorimotor, which can not be fully expressed in Narsese. Especially, the meaning each truth-bearing term is mainly revealed by its sufficient conditions and necessary conditions, some of them have temporal attribute. For each action, its preconditions and consequences are represented mainly by implication and equivalence statements about the action (see 1, page 140).
+To the system, the meaning of (the content of) beliefs, goals, and actions are revealed by their relations with other terms, except that for actions it also include their relations with sensorimotor procedures, which can not be fully expressed in Narsese. Especially, the meaning each truth-bearing term (i.e., statement) is mainly revealed by its sufficient conditions and necessary conditions, some of them have a temporal attribute. For each action, its preconditions and consequences are represented mainly by implication and equivalence statements about the action.
 
-To make compound actions from component actions, the two major term operators are "sequential conjunction" (",") and "parallel conjunction" (";") (see 1, page 136). When applied to actions, they mean "sequential execution" and "parallel execution", respectively. Combined with sufficient conditions and necessary conditions, they can form all kinds of "programs" from the "instructions" provided by the operators.
+To make compound actions from component actions, the two major term operators are "sequential conjunction" ("&/") and "parallel conjunction" ("&/") (see [Temporal Inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)). When applied to operations, they mean "sequential execution" and "parallel execution", respectively. Combined with sufficient conditions and necessary conditions, they can form all kinds of "programs" from the "instructions" provided by the operators.
 
 ***
 
 ### Goals
 
-At any moment, the system normally has multiple goals to be achieved. They are processed in parallel in a time-sharing manner. There are two types of goal: original goals are whose directly imposed on the system by its environment; derived goals are produced by the system itself from goals and beliefs via backward inference (see 1, page 143). The two types of goals are treated by the system as the same for almost all purposes.
+At any moment, the system normally has multiple goals to be achieved. They are processed in parallel in a time-sharing manner. There are two types of goal: original goals are directly imposed on the system by its environment; derived goals are produced by the system itself from goals and beliefs via [backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS). The two types of goals are treated by the system as the same for almost all purposes.
 
 When a new (original or derived) goal arrives, the system does not immediately start to find ways to achieve it. Instead, it is pre-processed in the corresponding concept, where the following factors are considered:
 
-1. The desire-value of the goal is adjusted according to its relation with other goals. When the same goal get several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
+1. The desire-value of the goal is adjusted according to its relation with other goals. When the same goal gets several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
 
-2. The truth value of the content of the goal is checked. If the goal is already achieved, the system does not need to do anything. The expectation value of the content is used as the "degree of satisfaction" of the goal.
+2. The truth-value of the content of the goal is checked. If the goal is already achieved, the system does not need to do anything. The difference between the expectation value of the content and the expectation value of the desire is used as the "degree of satisfaction" of the goal.
 
-3. The plausibility of the goal is estimated, that is, whether the system knows an approach to achieve the goal. In this evaluation, the details of the approach is omitted.
+This pre-processing of a goal is a decision-making process, by which the system reaches the decision on whether to actively look for a way to achieve the goal. As a special case, if the goal is an operation, the process will decide whether to actually execute it. If a goal passed this stage, it will get a [budget value](https://github.com/opennars/opennars/wiki/Budget-Value), and be worked upon in the following time accordingly.
 
-This pre-processing of goal is a decision making process, by which the system reaches the decision on whether to actively look for a way to achieve the goal. As a special case, if the goal is an operation, the process will decide whether to actually execute it. If a goal passed this stage, it will get a budget value, and be worked upon in the following time, based on its budget-value.
+In decision making, the plausibility of a goal is not directly evaluated, but implicitly. If the system cannot find a way to realize a goal, its priority will be gradually decreased by the attention mechanism.
 
-In this way, the system doesn't treat each goal by itself, but attempts to reach an overall optimal solution for all of its tasks, by compromising among their requirements.
+In this way, the system doesn't consider each goal by itself but attempts to reach an overall optimal solution for all of its tasks, by compromising among their requirements.
 
-Beside directly achieving goal G, the system can also process the following questions:
-
-**"G =/> ?x"**, whose answers reveal the consequences of G, and contribute to the desire-value of G<br/>
-**"?x =/> G"**, whose answers reveal plans for achieving G, and contribute to the plausibility of G
+Beside deriving goals from existing goals, NARS can also turn sentences of other types into goals. For example, question **"G =/> ?x"**, whose answers reveal the consequences of G, contribute to the desire-value of G<br/> as a goal, as a way to get knowledge by experiments.
 
 ***
 
