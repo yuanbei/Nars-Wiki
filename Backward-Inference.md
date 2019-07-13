@@ -6,24 +6,17 @@ In a typical inference step of NARS, a task and a belief are used as premises by
 * **Forward inference**, which takes two judgments as premises, and derives one or more judgments as conclusions, and the truth-value of each conclusion is calculated by a corresponding truth-value function. The rules described in the other Wiki pages on inference rules all belong to this category.
 * **Backward inference**, which takes one judgment (the belief) and a non-judgment (goal/question/query, the task) as premises, and derives one or more tasks of the same type, and the conclusions have no truth-value (though goals will have desire-value).
 
-The backward inference in NARS has no specific rules. Instead, it uses the (forward) inference rules _backwards_. That is, for each forward rule _{T, B} |- T'_, there is a backward rule {T', B} |- T_, where the two rules use the same belief, and exchange sentences in the given task and the derived task. In this way, backward inference carries out goal and question (query) derivation, according to the "meta-rule" that task _T'_ is derived from task _T_ and belief _B_, if and only if its solution can derive a solution of _T_ with _B_.
+The backward inference in NARS has no specific rules. Instead, it uses the (forward) inference rules _backwards_. That is, for each forward rule _{B, T} |- T'_, there is a backward rule _{B, T'} |- T_, where the two rules use the same belief, and exchange sentences in the given task and the derived task. In this way, backward inference carries out goal and question (query) derivation, according to the meta-rule that task _T'_ is derived from task _T_ and belief _B_, if and only if its solution can derive a solution of _T_ with _B_.
 
-**Judgement** is the sentence with either predefined or derived truth value while **question** and **goal** are statements whose truth values has to be determined by the system. Goals and questions are similar in a way that both can contain [variables](https://github.com/opennars/opennars/wiki/Use-of-Variables-in-OpenNARS) however for the question, system evaluates truth value of the statement and unifies constant terms for the variables while for the goals system is asked to carry out some operation or sequence of operations to make a goal statement true thus achieving a desired goal. Therefore goal achievement is an example of [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) which itself employs [temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference). Backward inference can be considered as an extension of forward inference and such all of the rules and truth functions remain the same. Below are descriptions of backward inference during [basic inference](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS) (questions)  and more complex procedural inference (goals)
+### Backward Syllogistic Inference
 
-### First order Backward Inference
-The special case of Backward Inference is the [choice rule](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules), when it is applied to make a choice between two competing answers to a selective question. In general, backward inference rules for questions are determined in the following way: given two premises, question *Q* and judgement *J*, the system will try to rise a question *Q'* such that **answer for Q** can be derived from *J* and an answer for *Q'* using forward inference rules. 
+As a special case of backward inference, the (forward) [Syllogistic Rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules) can be turned backward by rearranging the order of judgments and renaming the terms, and it turns out that the inference rules look the same as the forward version if the truth-value function is omitted:
+* {M --> P <f, c>, S --> M} |- S --> P
+* {P --> M <f, c>, S --> M} |- S --> P
+* {M --> P <f, c>, M --> S} |- S --> P
+* {P --> M <f, c>, M --> S} |- S --> P
 
-Therefore having forward inference [Syllogistic Rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules) by rearranging the order of judgements and renaming the terms it is easy to see that the backward inference rules are identical. For example, from Syllogistic Rules table, renaming the conclusion C into question Q then judgement J2 into judgement J and judgement J1 as derived question Q' we will have identical rules as for forward inference, of course the truth functions are not used since derived question does not have truth value.
-
-**Backward inference rule table**
-
-Given two premises the left (J and Q), the derived question Q' is derived on the right (compare it with Syllogistic Rules table it is identical):
-1. _Deduction_: {M → P <f1, c1>, S → M} |-- S → P
-2. _Abduction_: {P → M <f1, c1>, S → M} |-- S → P
-3. _Induction_: {M → P <f1, c1>, M → S} |-- S → P
-
-This shows important property of triangularity that is always present in OpenNARS: for any three judgments J1, J2, and J3, if J3 can be derived from J1 and J2 by a syllogistic rule, then from J3 and J1 the system can generate J2', which has
-the same statement as J2 however possibly with different truth values. In basic inference, if a question cannot be directly answered by the choice rule, backward inference is used to recursively search for derived questions until each of them has an answer, after which these answers will derive an answer to the original question using forward inference.
+Therefore, for syllogistic rules, the forward and backward inference share the same code by which the content of the conclusion is structured. The difference is only in the type of the derived task and the optional truth-value (desire-value) calculation.
 
 ### Goals and Decision Making in Procedural Inference
 A **goal** is a sentence containing an event that the system desires to realize. Backward inference in procedural inference
