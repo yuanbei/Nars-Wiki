@@ -22,6 +22,6 @@ Therefore, for syllogistic rules, the forward and backward inference share the s
 
 ### Planning and skill acquisition
 
-A **goal** is a sentence containing an event that the system desires to realize. Backward inference in procedural inference is similar to the one discussed above. Given goal *G* and judgment *J*, if *J* provides a direct solution to *G*, that is its truth-value indicates that *G* has been achieved, then nothing is needed to be done (trivial case). Otherwise *G'* is derived such that *G* can be derived from *J* and *G'*. 
+A **goal** is a sentence containing an event that the system desires to realize, as described in [Procedural Inference](https://github.com/opennars/opennars/wiki/Procedural-Inference). Backward inference in procedural inference is similar to the one discussed above. Given goal *G* and judgment *J*, if *J* provides a direct solution to *G*, that is its truth-value indicates that *G* has been achieved, then nothing is needed to be done (trivial case). Otherwise *G'* is derived such that *G* can be derived from *J* and *G'*. 
 
 The backward inference in procedural inference corresponds to planning in a sense that for a goal G, group of operations is found to accomplish G. These operations are joined by the connectors to form compound operations, as described in [Procedural Inference](https://github.com/opennars/opennars/wiki/Procedural-Inference). If the same goal appears repeatedly, the corresponding plan is remembered, and the system acquires a new skill.
