@@ -17,7 +17,7 @@ The pages are roughly divided into two groups, the first group provides differen
   - Example and demonstration
     * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
-    * [List of current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
+    * [List of Current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
     * [OpenNARS and Reinforcement Learning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)
   - Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
@@ -55,7 +55,6 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
     * [Introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference)
     * [Backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference) 
-    * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
 
   - Data structure
     * [System Memory (bag, overall structure)](https://github.com/opennars/opennars/wiki/System-Memory-(bag,-overall-structure))
