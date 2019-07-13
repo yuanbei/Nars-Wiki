@@ -18,7 +18,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
     * [List of Current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
-    * [OpenNARS and Reinforcement Learning](https://github.com/opennars/opennars/wiki/Reinforcement-Learning)
+    * [Compared with Reinforcement Learning](https://github.com/opennars/opennars/wiki/Compared-with-Reinforcement-Learning)
   - Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
     * [Selected Publications](https://github.com/opennars/opennars/wiki/Publications)
