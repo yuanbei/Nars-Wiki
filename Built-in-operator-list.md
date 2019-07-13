@@ -11,3 +11,4 @@ The following operators are currently implemented in OpenNARS that can be invoke
 **Hesitate:** decrease the confidence of a goal<br/>
 **Assume:** temporarily take a statement as a belief<br/>
 **Name:** create a simple internal ID to a useful compound term<br/>
+**Feel:** report the current value of an internal sensor
