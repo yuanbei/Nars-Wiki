@@ -54,7 +54,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Temporal inference](https://github.com/opennars/opennars/wiki/Temporal-Inference)
     * [Procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference) 
     * [Introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference)
-    * [Backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference-in-OpenNARS) 
+    * [Backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference) 
     * [Basic Inference in OpenNARS](https://github.com/opennars/opennars/wiki/Basic-Inference-in-OpenNARS)
 
   - Data structure
