@@ -40,9 +40,11 @@ At any moment, the system normally has multiple goals to be achieved. They are p
 
 When a new (original or derived) goal arrives, the system does not immediately start to find ways to achieve it. Instead, it is pre-processed in the corresponding concept, where the following factors are considered:
 
-1. The desire-value of the goal is adjusted according to its relation with other goals. When the same goal gets several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
+1. The [desire-value](https://github.com/opennars/opennars/wiki/Desire-Value:-Definition-and-Examples) of the goal is adjusted according to its relation with other goals. When the same goal gets several different desire-values from different sources, the revision rule is used to get an overall desire-value, which indicates whether the system really desires it, when all available evidence is taken into consideration.
 
 2. The truth-value of the content of the goal is checked. If the goal is already achieved, the system does not need to do anything. The difference between the expectation value of the content and the expectation value of the desire is used as the "degree of satisfaction" of the goal.
+
+### Decision making
 
 This pre-processing of a goal is a decision-making process, by which the system reaches the decision on whether to actively look for a way to achieve the goal. As a special case, if the goal is an operation, the process will decide whether to actually execute it. If a goal passed this stage, it will get a [budget value](https://github.com/opennars/opennars/wiki/Budget-Value), and be worked upon in the following time accordingly.
 
