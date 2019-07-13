@@ -21,7 +21,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Compared with Reinforcement Learning](https://github.com/opennars/opennars/wiki/Compared-with-Reinforcement-Learning)
   - Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
-    * [Selected Publications](https://github.com/opennars/opennars/wiki/Publications)
+    * [Introductory Publications](https://github.com/opennars/opennars/wiki/Introductory-Publications)
     * [Selected Videos](https://github.com/opennars/opennars/wiki/Selected-Videos)
 
 ## 2. Aspects of OpenNARS
@@ -46,7 +46,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Basic truth-value functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
     * [Extended Boolean Functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS)
     * [Local rules: revision and choice](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
-    * [Sets and set operations in OpenNARS](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-OpenNARS)
+    * [Sets and set operations in NAL](https://github.com/opennars/opennars/wiki/Sets-and-set-operations-in-NAL)
     * [Compositional rules](https://github.com/opennars/opennars/wiki/Composition)
     * [Structural rules](https://github.com/opennars/opennars/wiki/Structural-Rules)
     * [Higher-order inference](https://github.com/opennars/opennars/wiki/Higher-order-inference)
