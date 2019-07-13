@@ -1,8 +1,3 @@
-> ### Application Programs  
-> Example Programs using OpenNARS as AI.
-
-***
-
 ### Introduction
 
 Roughly speaking, there will be three types of NARS:
