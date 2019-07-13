@@ -52,21 +52,97 @@ In decision making, the plausibility of a goal is not directly evaluated, but im
 
 In this way, the system doesn't consider each goal by itself but attempts to reach an overall optimal solution for all of its tasks, by compromising among their requirements.
 
-Beside deriving goals from existing goals, NARS can also turn sentences of other types into goals. For example, question **"G =/> ?x"**, whose answers reveal the consequences of G, contribute to the desire-value of G<br/> as a goal, as a way to get knowledge by experiments.
+Beside deriving goals from existing goals, NARS can also turn sentences of other types into goals. For example, question **"G =/> ?x"**, whose answers reveal the consequences of G, contribute to the desire-value of G as a goal. This is like to get knowledge by experiments.
 
 ***
 
 ### Inference Steps
 
-The inference rules work on goals and operations in the same ways as they works on events in beliefs.
+The inference rules work on goals and operations in the same ways as they work on events in beliefs.
 
-#### Procedural Learning
+#### Procedural Inference Examples
 
-The basic notions in procedural inference have been introduced in ProceduralInference, with examples given in ProceduralExamples. In this document, one example is explained with more details. The example itself is in Example-NAL8-5.txt, and here only the abridged version is discussed.
+The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
 
-Though this example is simple, it covers all major aspects of procedural inference, including: how to represent knowledge about operations and goals, how to use this type of knowledge, and where is the knowledge coming from.
+This group of examples shows how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
-This example is set in the same environment as the other examples used in NAL-8, as described in ProceduralExamples. In this example, only a single operation, ^pick, is involved. Intuitively, when this operation is executed, the system will "pick up" an object indicated by the sole argument.
+#### Example 1 NAL-8
+
+The first example shows how the system (as a robot) uses procedural inference to achieve the goal of opening a door.
+
+It starts with 9 input sentences, and they are roughly translated into English in the following.
+
+`*** [01] <{t001} --> [opened]>!`
+
+"To make t001 opened!"
+
+`*** [02] <{t001} --> door>.`
+
+"t001 is a door."
+
+`*** [03] <(&/, <(*, {SELF}, {t002}) --> hold>, <(*, {SELF}, {t001}) --> at>, (^open, {SELF}, {t001})) =/> <{t001} --> [opened]>>.`
+
+"If I hold t002, arrive at t001, and execute the operation 'open' at t001, then t001 will be opened."
+
+`*** [04] <(*, {t002}, {t001}) --> key-of>.`
+
+"t002 is the key of t001."
+
+`*** [05] <(&/, <(*, {SELF}, {t002}) --> reachable>, (^pick, {SELF}, {t002})) =/> <(*, {SELF}, {t002}) --> hold>>.`
+
+"If I can reach t002, and execute the operation 'pick' at t002, then I will hold t002."
+
+`*** [06] <(&|, <(*, $x, #y) --> on>, <(*, {SELF}, #y) --> at>) =|> <(*, {SELF}, $x) --> reachable>>.`
+
+"If an object is on something, which is located at the same place as me, I can reach that object."
+
+`*** [07] <(*, {t002}, {t003}) --> on>. :|:`
+
+"t002 is on t003."
+
+`*** [08] <{t003} --> desk>.`
+
+"t003 is a desk."
+
+`*** [09] <(^go-to, {SELF},$x) =/> <(*, {SELF}, $x) --> at>>.`
+
+"If I execute the 'go to' operation aimed at a place, I'll arrive at that place."
+
+The step-by-step process shows that the system uses backward inference to reduce the given goal into derived goals that can be directly achieved by the execution of operations, and uses forward inference to change the description about the situation, according to the expectations on what each operation will achieve, until the initial is achieved.
+
+In this process, the following operation sequence is displayed in Java console, which is what the system actually does:
+
+```
+EXECUTE: ^go-to({SELF},{t003})
+EXECUTE: ^pick({SELF},{t002})
+EXECUTE: ^go-to({SELF},{t001})
+EXECUTE: ^open({SELF},{t001})
+```
+
+#### Example 2 NAL-8
+
+This example is a variant of the previous one. Here the goal is not achieved by "hiking on the way", but by the forming of a complete plan, which can be executed later when the goal actually appears.
+
+When a plan is derived, it also comes with a truth value, indicating its estimated chance of success, according to the experience of the system.
+
+#### Example 3 NAL-8
+
+This example shows the decision-making process of the system when facing multiple goals, as well as multiple paths to achieve the same goal.
+
+When the system finds that it can simply go to the door and break it, this path will be preferred for its simplicity (therefore higher confidence, everything else being equal). However, when the system realizes that in that way the door will be broken (which violate another goal), then it won't take the action unless it has a sufficiently high motivation (for some other reason) to do that.
+
+#### Example 4 NAL-8
+
+Though in principle all the inference in the previous examples can all be seen as (various types of) learning, this example shows several more typical types of "learning by reasoning" in NARS.
+
+When a belief conflict is judged to be updated, the involved beliefs are not revised. Instead, the old belief is added a past tense, and the system's current opinion is completely determined by the new belief.
+
+When a sequence of events is observed, the system will tentatively build a hypothesis about their relationship, using a special version of induction (and comparison). In this way, the system can gradually acquire skills and causal knowledge from its experience.
+
+
+#### Procedural Learning Example
+
+Though this example is simple, it covers all major aspects of procedural inference, like how to represent knowledge about operations and goals, how to use this type of knowledge, and where is the knowledge coming from.
 
 #### Initial input
 
@@ -86,7 +162,7 @@ Truth-values are optional for input judgments. To make things simple, in this ex
 *** [03] <(&/, <(*, {SELF}, key001) --> reachable>, (^pick, {SELF}, key001)) =/> <(*, {SELF}, key001) --> hold>>.
 ```
 
-The system's knowledge about the `^pick' operator: "If the operator is executed on key001 after it becomes reachable, it will be hold by the system".
+The system's knowledge about the `^pick' operator: "If the operator is executed on key001 after it becomes reachable, it will be held by the system".
 
 In practical situations, such knowledge is usually represented in more general form, with the key001 replaced by independent variable #x, since it applies to many (though not all) terms. However, in that case, the frequency of the belief will not be very high, since there are many things that are reachable, but cannot be picked up. Adding more preconditions will increase the frequency, but decrease the generality and simplicity of the knowledge.
 
@@ -223,7 +299,7 @@ OUT: <(&/,<(*,{SELF},key001) --> reachable>,<(*,{SELF},key001) --> ^pick>) =/> <
 
 Again, the new evidence is merged with the previous knowledge, to gradually increase the confidence of knowledge about operations.
 
-Also it can happen, that a future belief does not happen as predicted, in which case a anticipation is formed by the system, an application of closed world assumption justified by the fact that the system expected to observe it but it didn't. To complete the process, revision takes over.
+Also, it can happen, that a future belief does not happen as predicted, in which case anticipation is formed by the system, an application of closed-world assumption justified by the fact that the system expected to observe it but it didn't. To complete the process, revision takes over.
 
 ```
 IN: <(&/,<a --> b>,+3) =/> <b --> c>>.
@@ -232,82 +308,3 @@ IN: <a --> b>. :|:
 OUT: <(&/,<a --> b>,+3) =/> <b --> c>>. :\: %0.00;0.45%
 OUT: <<(&/,<a --> b>,+3) =/> <b --> c>>. :\: %0.92;0.91%
 ```
-
-#### Procedural Examples
-
-The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
-
-This group of examples show how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
-
-#### Example 1 NAL-8
-
-The first example shows how the system (as a robot) uses procedural inference to achieve the goal of opening a door.
-
-It starts with 9 input sentences, and they are roughly translated into English in the following.
-
-`*** [01] <{t001} --> [opened]>!`
-
-"To make t001 opened!"
-
-`*** [02] <{t001} --> door>.`
-
-"t001 is a door."
-
-`*** [03] <(&/, <(*, {SELF}, {t002}) --> hold>, <(*, {SELF}, {t001}) --> at>, (^open, {SELF}, {t001})) =/> <{t001} --> [opened]>>.`
-
-"If I hold t002, arrive at t001, and execute the operation 'open' at t001, then t001 will be opened."
-
-`*** [04] <(*, {t002}, {t001}) --> key-of>.`
-
-"t002 is the key of t001."
-
-`*** [05] <(&/, <(*, {SELF}, {t002}) --> reachable>, (^pick, {SELF}, {t002})) =/> <(*, {SELF}, {t002}) --> hold>>.`
-
-"If I can reach t002, and execute the operation 'pick' at t002, then I will hold t002."
-
-`*** [06] <(&|, <(*, $x, #y) --> on>, <(*, {SELF}, #y) --> at>) =|> <(*, {SELF}, $x) --> reachable>>.`
-
-"If an object is on something, which is located at the same place as me, I can reach that object."
-
-`*** [07] <(*, {t002}, {t003}) --> on>. :|:`
-
-"t002 is on t003."
-
-`*** [08] <{t003} --> desk>.`
-
-"t003 is a desk."
-
-`*** [09] <(^go-to, {SELF},$x) =/> <(*, {SELF}, $x) --> at>>.`
-
-"If I execute the 'go to' operation aimed at a place, I'll arrive at that place."
-
-The step-by-step process shows that the system uses backward inference to reduce the given goal into derived goals that can be directly achieved by the execution of operations, and uses forward inference to change the description about the situation, according to the expectations on what each operation will achieve, until the initial is achieved.
-
-In this process, the following operation sequence is displayed in Java console, which is what the system actually does:
-
-```
-EXECUTE: ^go-to({SELF},{t003})
-EXECUTE: ^pick({SELF},{t002})
-EXECUTE: ^go-to({SELF},{t001})
-EXECUTE: ^open({SELF},{t001})
-```
-
-#### Example 2 NAL-8
-
-This example is a variant of the previous one. Here the goal is not achieved by "hiking on the way", but by the forming of a complete plan, which can be executed later when the goal actually appears.
-
-When a plan is derived, it also comes with a truth value, indicating its estimated chance of success, according to the experience of the system.
-
-#### Example 3 NAL-8
-
-This example shows the decision-making process of the system when facing multiple goals, as well as multiple paths to achieve the same goal.
-
-When the system find that it can simply go to the door and break it, this path will be preferred for is simplicity (therefore higher confidence, everything else being equal). However, when the system realize that in that way the door will be broken (which violate another goal), then it won't take the action, unless it have a sufficiently high motivation (for some other reason) to do that.
-
-#### Example 4 NAL-8
-
-Though in principle all the inference in the previous examples can all be seen as (various types of) learning, this example shows several more typical types of "learning by reasoning" in NARS.
-
-When a belief conflict is judged to be update, the involved beliefs are not revised. Instead, the old belief is added a past tense, and the system's current opinion is completely determined by the new belief.
-
-When a sequence of events are observed, the system will tentatively build hypothesis about their relationship, using a special version of induction (and comparison). In this way, the system can gradually acquire skills and causal knowledge from its experience.
