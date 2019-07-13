@@ -133,7 +133,7 @@ When a belief conflict is judged to be updated, the involved beliefs are not rev
 
 When a sequence of events is observed, the system will tentatively build a hypothesis about their relationship, using a special version of induction (and comparison). In this way, the system can gradually acquire skills and causal knowledge from its experience.
 
-#### Procedural Learning Example
+### Procedural Learning Example
 
 Though this example is simple, it covers all major aspects of procedural inference, like how to represent knowledge about operations and goals, how to use this type of knowledge, and where is the knowledge coming from.
 
