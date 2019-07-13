@@ -16,6 +16,8 @@ The package nars.operator.mental contains operators that allow the system to del
 
 * Operator binding: The operators ^register add a new operator when the system is running.
 
+* Feeling: The operator ^feel reports the value of an indicator within the system used as the argument.
+
 The name of a mental operator only roughly indicates its meaning. The exact meaning of an operator is revealed by its preconditions and consequences, as well as the operation it carries out.
 
 These mental operators are introduced for experimental purpose. The details in each of them may be revised, and other operators may be introduced. In general, each operator should be relatively simple and meaningful. It is neither necessary nor possible for the system to explicitly manage all its internal actions, so it is not a good idea to define a large number of mental operators.
