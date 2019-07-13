@@ -66,7 +66,7 @@ The general ideas about procedure inference in NARS are explained in ProceduralI
 
 This group of examples shows how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
-#### Example 1 NAL-8
+#### Example 1
 
 The first example shows how the system (as a robot) uses procedural inference to achieve the goal of opening a door.
 
@@ -119,26 +119,25 @@ EXECUTE: ^go-to({SELF},{t001})
 EXECUTE: ^open({SELF},{t001})
 ```
 
-#### Example 2 NAL-8
+#### Example 2
 
 This example is a variant of the previous one. Here the goal is not achieved by "hiking on the way", but by the forming of a complete plan, which can be executed later when the goal actually appears.
 
 When a plan is derived, it also comes with a truth value, indicating its estimated chance of success, according to the experience of the system.
 
-#### Example 3 NAL-8
+#### Example 3
 
 This example shows the decision-making process of the system when facing multiple goals, as well as multiple paths to achieve the same goal.
 
 When the system finds that it can simply go to the door and break it, this path will be preferred for its simplicity (therefore higher confidence, everything else being equal). However, when the system realizes that in that way the door will be broken (which violate another goal), then it won't take the action unless it has a sufficiently high motivation (for some other reason) to do that.
 
-#### Example 4 NAL-8
+#### Example 4
 
 Though in principle all the inference in the previous examples can all be seen as (various types of) learning, this example shows several more typical types of "learning by reasoning" in NARS.
 
 When a belief conflict is judged to be updated, the involved beliefs are not revised. Instead, the old belief is added a past tense, and the system's current opinion is completely determined by the new belief.
 
 When a sequence of events is observed, the system will tentatively build a hypothesis about their relationship, using a special version of induction (and comparison). In this way, the system can gradually acquire skills and causal knowledge from its experience.
-
 
 #### Procedural Learning Example
 
@@ -154,9 +153,9 @@ This is a goal (indicated by "!"), which ask the statement <(*, {SELF}, key001) 
 
 `*** [02] (--, <(*, {SELF}, key001) --> hold>). :|:`
 
-This is a judgment (indicated by ".") saying that the key is not holding by the system. Here "--" is negation, and ":|:" indicates present tense.
+This is a judgment (indicated by ".") saying that the key is not holding by the system. Here "--" is the negation connector, and ":|:" indicates present tense.
 
-Truth-values are optional for input judgments. To make things simple, in this example all input judgments are given as binary statements, which means the default truth-value %1.0;0.9% will be assigned to them by the system. Since the internal representation requires a higher accuracy than external communication, all the derived judgments will have their truth-values represented explicitly.
+Truth-values are optional for input judgments. To make things simple, in this example all input judgments are given as binary statements, which means the default truth-value %1.0;0.9% will be assigned to them by the system. Since the internal representation requires higher accuracy than external communication, all the derived judgments will have their truth-values represented explicitly.
 
 ```
 *** [03] <(&/, <(*, {SELF}, key001) --> reachable>, (^pick, {SELF}, key001)) =/> <(*, {SELF}, key001) --> hold>>.
@@ -182,7 +181,7 @@ IN: <(*,{SELF},key001) --> reachable>. :|:
 OUT: <<(*,{SELF},key001) --> ^pick> =/> <(*,{SELF},key001) --> hold>>. :|: %1.00;0.81%
 ```
 
-The first step simplifies the precondition of the operation by removing the conditions that is already realized. Given the uncertainty introduced by this deduction, the conclusion has a lower confidence value. Furthermore, while judgment [03] is tense-free, judgment [05] is true at the current moment, since the condition [04] is not always true.
+The first step simplifies the precondition of the operation by removing the conditions that are already realized. Given the uncertainty introduced by this deduction, the conclusion has a lower confidence value. Furthermore, while judgment [03] is tense-free, judgment [05] is true at the current moment, since the condition [04] is not always true.
 
 In [03], operation (^pick, {SELF}, key001) becomes <(*,{SELF}, key001) --> ^pick> when loaded into the system, though the former version remains its standard form in Narsese. In the latter version, the subject can be a product with a single argument, because in all operations there is an implicit argument, the system itself.
 
