@@ -1,7 +1,3 @@
-> ### Procedural Learning  
-> Learning temporal and procedural knowledge 
-
-***
 
 ### Introduction
 
