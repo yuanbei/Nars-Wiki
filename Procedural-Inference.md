@@ -11,9 +11,11 @@ In NARS, the system's beliefs are represented as Judgments, each of which is a N
 
 A Goal is similar to a Judgment, except that its content is an event and the "TruthValue" in it is not really the truth-value of the content, but its "degree of desire", or "[desire-value](https://github.com/opennars/opennars/wiki/Desire-Value:-Definition-and-Examples)", which is defined as the truth-value for the event to imply a virtual "desired situation".
 
-An Action is what the system can do to cause changes in the outside (or inside) environment. Logically, it is an event that can be "realized", i.e., can be made to happen, by the system.
+An Operation is what the system can do to cause changes in the outside (or inside) environment. Logically, it is an event that can be "realized", i.e., can be made to happen, by the system.
 
 As a general-purpose system, NARS can have any belief or goal, as far as its content can be expressed in Narsese, and they change from time to time as the system runs and interacts with its environment. On the contrary, in any concrete implementation of NARS, all of its actions are composed recursively of operations, with a constant set of built-in Operators.
+
+The inference rules work on goals and operations in the same ways as they work on events in beliefs.
 
 ***
 
@@ -28,7 +30,7 @@ In the current implementation, adding an operator into the system means
 * to define a class in nars.operation that extends Operator, with an "execute" method to invoke external "sensorimotor" mechanism that carries out the operation on the given arguments.
 
 In the current code, there are a few dummy classes in nars.operation for testing purpose.
-In this way, in the future NARS can serves as the mind of a robot, or a software agent that uses various software and hardware as tools. Ideally, only the nars.operation package needs to be changed when NARS is equipped with different sensorimotor mechanism. Please note that in NARS, sensation/perception will be carried out by certain actions, so the nars.operation package handles both input and output through sensorimotor.
+In this way, in the future NARS can serve as the mind of a robot, or a software agent that uses various software and hardware as tools. Ideally, only the nars.operation package needs to be changed when NARS is equipped with a different sensorimotor mechanism. Please note that in NARS, sensation/perception will be carried out by certain actions, so the nars.operation package handles both input and output through sensorimotor.
 
 To the system, the meaning of (the content of) beliefs, goals, and actions are revealed by their relations with other terms, except that for actions it also include their relations with sensorimotor procedures, which can not be fully expressed in Narsese. Especially, the meaning each truth-bearing term (i.e., statement) is mainly revealed by its sufficient conditions and necessary conditions, some of them have a temporal attribute. For each action, its preconditions and consequences are represented mainly by implication and equivalence statements about the action.
 
@@ -56,13 +58,9 @@ Beside deriving goals from existing goals, NARS can also turn sentences of other
 
 ***
 
-### Inference Steps
+### Examples
 
-The inference rules work on goals and operations in the same ways as they work on events in beliefs.
-
-#### Procedural Inference Examples
-
-The general ideas about procedure inference in NARS are explained in ProceduralInference; and the general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
+The general guideline for how to use the examples is described in [Single Step Testing Cases](https://github.com/opennars/opennars/wiki/Single-Step-Testing-Cases).
 
 This group of examples shows how NARS works step-by-step to achieve goals by executing operations. Since the current focus is the logic, all control-related issues will be omitted. Most of the input tasks use default truth value, except those where the results are sensitive to the accurate truth values.
 
