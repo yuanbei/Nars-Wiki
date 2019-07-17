@@ -24,7 +24,7 @@ The last operation is common, however, the first two are different from the regu
 
 In OpenNARS, bag is implemented with an underlying hash table and bucket-array called "level" where each bucket is implemented using a list. The "put" operation registers the item in the hash table by its key, and stores it in a bucket by its priority. The "take" operation visits the buckets according to a frequency that is correlated with the ranks of the buckets. Final, "get by key" operation directly gets the item via the hash table. Each operation takes a small constant time to finish.
 
-Since AIKR must be respected everywhere in OpenNARS, bags are used to store several types of data items, so the class is specified as generic, with a parameter for the type of data item in it, such as _concept_, _task_, ect.
+Since AIKR must be respected everywhere in OpenNARS, bags are used to store several types of data items, so the class is specified as generic, with a parameter for the type of data item in it, such as _concept_, _task_, etc. Every data type to be maintained in a bag must implement the abstract class _Item_, which will require a [budget value](https://github.com/opennars/opennars/wiki/Budget-Value) for each item.
 
 **Future improvements:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
