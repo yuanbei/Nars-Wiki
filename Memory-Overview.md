@@ -24,10 +24,12 @@ The last operation is common, however, the first two are different from the regu
 
 In OpenNARS, bag is implemented with an underlying hash table and bucket-array called "level" where each bucket is implemented using a list. The "put" operation registers the item in the hash table by its key, and stores it in a bucket by its priority. The "take" operation visits the buckets according to a frequency that is correlated with the ranks of the buckets. Final, "get by key" operation directly gets the item via the hash table. Each operation takes a small constant time to finish.
 
+Since AIKR must be respected everywhere in OpenNARS, bags are used to store several types of data items, so the class is specified as generic, with a parameter for the type of data item in it, such as _concept_, _task_, ect.
+
 **Future improvements:** Currently the probability of an item to be taken out is proportional to its priority value. It may be necessary to add a parameter to control the evenness of the probability.
 
 ## System Memory
 
-Since AIKR must be respected everywhere in OpenNARS, bags are used to store several types of data items, including _task-links_, _term-links_ and _concepts_. 
+The system's memory contains a bag of [concept](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), plus several buffers and tables, such as a bag of new tasks to be processed, a table of registered operators, etc. 
 
-In general, the system's memory contains a bag of [concept](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), and a bag of new tasks to be processed. Within each concept, there are corresponding beliefs, as well as links to the related tasks and terms (names of concepts).
+The memory can be roughly visualized as a concept network where each concept is named by a term. When the system runs, the network's topological structure changes, with new nodes and links added and removed, and the contents of the nodes and links are modified, too, both because of the coming of new experience (input stream) and the reasoning activities of the system itself.
