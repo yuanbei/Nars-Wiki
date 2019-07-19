@@ -1,7 +1,7 @@
 
 ## The notion of "concept" in NARS
 
-In NARS, a **concept** is a unit of storage and processing and is identified by a [term](https://github.com/opennars/opennars/wiki/Term:-types,-format). The meaning of a concept is defined by its experienced relations with the other concepts, so is subjective and dynamic by nature, and used partially each time the concept is involved in a reasoning process.
+In NARS, a **concept** is a unit of storage and processing and is identified by a [term](https://github.com/opennars/opennars/wiki/Term:-types,-format). Therefore, we can talk about "the meaning of a concept" in the same way as a "the meaning of a term": just like the meaning of term is determined by its experienced relations with other terms, the meaning of a concept is determined by its experienced relations with other concepts. The difference is just that a term is a symbol, while a concept is a data structure named by a term. Defined in this way, the meaning of a concept is subjective and dynamic by nature and used partially each time the concept is involved in a reasoning process.
 
 [NAL](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-the-logic-behind-OpenNARS) is a _term logic_, which is characterized by the use of categorical sentences and syllogistic inference rules. A property of term logic is that almost all inference rules use two premises which share a term. Term sharing is convenient since it naturally localizes the choice range of beliefs that are associated with participating terms only. For example, if the [task](https://github.com/opennars/opennars/wiki/Type-of-Links:-task-and-term-links) _<raven --> bird>_ is being processed, [beliefs](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS) that can directly interact with it need to have terms _raven_ or _bird_ in it as subject or predicate.
 
@@ -22,6 +22,5 @@ The Java class _Concept_ contains the following content
 
 ![concept](https://user-images.githubusercontent.com/24262360/54101472-439e8e80-439a-11e9-9eb1-f4b439703489.png)
 
-As one might observe, we can talk about "the meaning of a concept" in the same way as a "the meaning of a term": just like the meaning of term is determined by its experienced relations with other terms, the meaning of a concept is determined by its experienced relations with other concepts. The difference is just that a term is a symbol, while a concept is a data structure named by a term. We can see that using "concept" approach data items are being localized to items associated to the given concept or term thus addressing insufficient resource issue. With each inference cycle a concept is being selected from the bag with probability propositional to it's budget value and then the system will allocate resources to process items within the concept. For inference cycle of the system please look [here](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
 
 
