@@ -61,8 +61,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
     * [Task and Belief](https://github.com/opennars/opennars/wiki/Task-and-Belief)
     * [TaskLink and TermLink](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink)
-    * [Data structure for evidential basis, beliefs and goals](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals)
-    
+
   - Control
     * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
     * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
