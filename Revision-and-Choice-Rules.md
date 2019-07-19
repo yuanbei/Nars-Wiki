@@ -2,7 +2,7 @@ These two rules are called "local rules" as they do not generate any new stateme
 
 ## I. Revision Rule
 Revision is an inference process in which evidence from different sources is being combined in the conclusion. 
-Suppose there are two judgments with the same statement but different truth values, for example: 
+Suppose there are two judgments with the same statement as content but disjoint [evidential bases](https://github.com/opennars/opennars/wiki/Sentence:-types,-format#evidential-base), for example: 
 <br/><br/>
 **1. <snow --> [white]>. %9/10, 10/11%** here _(frequency, confidence)_ means that snow has been observed white 9 times and 1 time it was not white, thus the total evidence is 10, positive evidence is 9/10 and given that by default _k=1_ confidence is 10/11.
 <br/><br/>
@@ -23,10 +23,8 @@ For the above example, the conclusion is<br/>
 * The order of premises does not matter.
 * Similar to a weighted average of _f1_ and _f2_, the new _f_ is usually closer to the one that has more evidence, that is, whose value of _c_ is bigger
 * The value of the new _c_ is never less than either _c1_ or _c2_
-<br/><br/>
 
-### Overlapping Evidence
-If the evidential bases of two truth-values have at least one common element, their evidence is **overlapped** and the revision rule cannot be applied.
+If the [evidential bases](https://github.com/opennars/opennars/wiki/Sentence:-types,-format#evidential-base) of two truth-values have at least one common element, their evidence is **overlapped** and the revision rule cannot be applied.
 
 ## II. Choice Rule
 The choice rule is applicable in multiple scenarios.
