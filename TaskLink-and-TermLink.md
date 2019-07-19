@@ -20,7 +20,7 @@ Consider two Narsese input sentences:
 **<raven --> bird>. %1.0;0.9%**<br/>
 **<bird --> animal>. %1.0;0.9%**<br/>
 
-Then system will create the following concepts with following [belief table](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals), term and task links. Please note: the budget value is not present here for simplicity.
+Then system will create the following concepts with following [belief table](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), term and task links. Please note: the budget value is not present here for simplicity.
 
 Concept **<raven --> bird>** <br/>
 Task-links to concepts: <raven --> bird> (task link is a self loop since it is the concept for task itself) <br/>
