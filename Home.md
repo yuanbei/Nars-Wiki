@@ -59,9 +59,9 @@ The pages are roughly divided into two groups, the first group provides differen
   - Data structure
     * [Memory Overview](https://github.com/opennars/opennars/wiki/Memory-Overview)
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
+    * [Task and Belief](https://github.com/opennars/opennars/wiki/Task-and-Belief)
+    * [TaskLink and TermLink](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink)
     * [Data structure for evidential basis, beliefs and goals](https://github.com/opennars/opennars/wiki/Data-structure-for-evidential-basis,-beliefs-and-goals)
-    * [Narsese sentence internal representation](https://github.com/opennars/opennars/wiki/Narsese-Sentence-Internal--Representation)
-    * [Type of Links: task and term links](https://github.com/opennars/opennars/wiki/Types-of-Links:-task-and-term-links)
     
   - Control
     * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
