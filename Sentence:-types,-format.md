@@ -1,4 +1,4 @@
-A Narsese **sentence** can be one of the four types: Judgment, Question, Goal, and Quest.
+A Narsese **sentence** has a _statement_ as content, and can be one of the four types: Judgment, Question, Goal, and Quest.
 
 **Judgement** is the most common type of sentence that consists of a statement with a truth-value attached. Formally, a judgment is a statement ended by "**.**" and followed by a truth-value. Example: **<raven --> [black]>. %1.0;0.9%**
 
