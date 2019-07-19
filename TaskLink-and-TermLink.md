@@ -15,7 +15,7 @@ Now it is clear that a system memory looks like a weighted [graph](https://en.wi
 
 ### Example
 
-Consider two Narsese input sentences:
+Consider two Narsese input tasks:
 
 **<raven --> bird>. %1.0;0.9%**<br/>
 **<bird --> animal>. %1.0;0.9%**<br/>
@@ -23,32 +23,32 @@ Consider two Narsese input sentences:
 Then system will create the following concepts with following [belief table](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), term and task links. Please note: the budget value is not present here for simplicity.
 
 Concept **<raven --> bird>** <br/>
-Task-links to concepts: <raven --> bird> (task link is a self loop since it is the concept for task itself) <br/>
+Task-links to task: _<raven --> bird>. %1.0;0.9%_<br/>
 Belief table: <raven --> bird>.%1.0;0.9% <br/>
 Term-links to concepts: raven, bird <br/>
 
 Concept **raven** : <br/>
-Task-links to concepts: <raven --> bird> <br/>
+Task-links to task: _<raven --> bird>. %1.0;0.9%_<br/>
 Belief table: Empty <br/>
 Term-links to concepts: <raven --> bird> <br/>
 
 Concept **bird**: <br/>
-Task-links to concepts: <raven --> bird>, <bird --> animal> <br/>
+Task-links to task: _<raven --> bird>. %1.0;0.9%_<br/>
 Belief table: Empty <br/>
 Term-links to concepts: <raven --> bird>, <bird --> animal> <br/>
 
 Concept **animal**:<br/>
-Task-links to concepts: <bird --> animal> <br/>
+Task-links to task: _<raven --> bird>. %1.0;0.9%_<br/>
 Belief table: Empty <br/>
 Term-links to concepts: <bird --> animal> <br/>
 
 Concept **<bird --> animal>** <br/>
-Task-links to concepts: <bird--> animal> <br/> (task link is a self loop since it is the concept for task itself) <br/>
+Task-links to task: _<bird --> animal>. %1.0;0.9%_<br/>
 Belief table: <bird --> animal>. %1.0;0.9% <br/>
 Term-links to concepts: bird, animal <br/>
 
 Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This is **not** bi-directional link but two **different** term-links because they have different budget value. 
 
-Below graph is for above example for clear representation. Concepts are yellow, task-links are red while term-links are blue. _b_ stands for budget value.
+The following graph is for the above example for clear representation. Concepts/tasks are yellow, task-links are red while term-links are blue. _b_ stands for budget value.
 
 ![term/task-links](https://user-images.githubusercontent.com/24262360/54265915-ba7b8900-454c-11e9-985a-cedc2d15bba1.png)
