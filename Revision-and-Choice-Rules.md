@@ -25,10 +25,6 @@ For the above example, the conclusion is<br/>
 * The value of the new _c_ is never less than either _c1_ or _c2_
 <br/><br/>
 
-### Evidential base
-
-Each input task is assigned a _serial number_. During the derivation process a derived task stores the serial numbers of the input tasks it is derived from in a list which is called its **evidential base**. Derivation process can be considered as a tree where two parent-tasks create a derived child-task after a certain inference step. The evidential base of a child is a union of evidential bases of its parents. Obviously, after numerous inference steps, it is technically impossible to store all ancestors' serial numbers in a child's evidential base, so current implementation limits the length of the evidential base to a constant (which is a system parameter, currently is 4). Therefore, it is possible that after some derivation steps, some evidence is mistakenly reused when calculating the truth-value of a conclusion. With insufficient resources, this is inevitable, and we can also find similar effects in human cognition -- human does not remember all the information that led to a certain conclusion. As far as the evidential base is not too small, this will not cause big problems.
-
 ### Overlapping Evidence
 If the evidential bases of two truth-values have at least one common element, their evidence is **overlapped** and the revision rule cannot be applied.
 
