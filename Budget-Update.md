@@ -8,9 +8,15 @@ Because of the real-time and dynamic nature of NARS, most of the factors are bei
 
 The budget functions mostly consist of [extended Boolean functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS), and the budget-related calculation takes roughly constant time in each working cycle, independent of the size of the memory.
 
+There are some general budget adjustment mechanisms that have been mentioned in other pages:
+* There is a general forgetting process, by which every priority value is [decreased according to the durability value](https://github.com/opennars/opennars/wiki/Budget-Value#durability) until it reaches the quality value.
+* Repeated items in the same bag are merged, with the new priority being the **OR** of those being merged.
+
+In the following, only the type-specific budget calculations are described.
+
 ### Concept budget
 
-**Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is also increased concept is being repeatedly used in derivation or input. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
+The **priority** of a concept is being increased when a task is added into the concept (i.e., a task-link is put into the task bag). The updating uses the **OR** function with the "old priority value of the concept" and the "priority of the task" as arguments.
 
 **Durability** highly is dependent on the task currently being processed. It updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
 
