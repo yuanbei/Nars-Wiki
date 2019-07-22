@@ -2,11 +2,14 @@
 
 A [budget value](https://github.com/opennars/opennars/wiki/Budget-Value) consists of three factors, <priority, durability, quality>, and is associated with a data item that participates in time-space resource competition in NARS.
 
-Because of the real-time and dynamic nature of NARS, most of the factors are being learned and re-evaluated from time to time, according to context and history. In each working cycle, only the directly related items will have their budget values adjusted (so it can be done in constant time, independent of the size of the memory), which means the system may need to decide for an item its short and long term importance and urgency. The calculations mostly use extended Boolean functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS).
+An input task can be given a budget by the user of the system that assigns this task to NARS, according to the definition of a budget value. The system can also provide default values for the factors, according to the type and other attributes of the task. The budget value of derived tasks, as well as other types of items (beliefs, concepts, links, etc.) are calculated from the budget of the task that creates then, as well as other relevant information that is available at the moment. 
 
-Every Narsese statement is represented using a task, three or more concepts, task-links and term-links. Budget value of input task is a default value which is a hyper-parameter of the system. Budget Value of a derived task is computed based on budget of its parents, inference rule and type of inference used. Budget values of concepts, task-links and term-links are computed based on budget, complexity and [truth expectation](https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules) of associated tasks.
+Because of the real-time and dynamic nature of NARS, most of the factors are being learned and re-evaluated from time to time, according to context and history. In each working cycle, only the directly related items will have their budget values adjusted, which means the system may need to decide for an item its short and long term importance and urgency. 
 
-### Concept update
+The budget functions mostly consist of [extended Boolean functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS), and the budget-related calculation takes roughly constant time in each working cycle, independent of the size of the memory.
+
+### Concept budget
+
 **Priority** is being increased when a task (to which task-link is pointing) inside a concept is being processed. It is also increased concept is being repeatedly used in derivation or input. It is updated using **OR** function in OpenNARS that is "old priority of a concept" **OR** "priority of a task" 
 
 **Durability** highly is dependent on the task currently being processed. It updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
