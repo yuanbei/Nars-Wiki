@@ -12,7 +12,7 @@ Thus, the objective of OpenNARS is not to process all of its tasks perfectly, no
 
 To realize dynamic resource allocation OpenNARS self-organizes its memory using a "bag" data structure to give data items prioritized treatment. Bag contains items up to a pre-defined constant capacity where each item has a [budget value](https://github.com/opennars/opennars/wiki/Budget-Value). Bag provides three basic operations found in most data structures: (1) put in, (2) take out, and (3) access by key.
 
-1. **put(_item_)** The given item is put into the bag. If there is already an item with the same key, it is being merged with existent one; if the bag already reaches its maximum capacity, an item with the **lowest** priority is removed to free space for the new item.
+1. **put(_item_)** The given item is put into the bag. If there is already an item with the same key, it is being merged with existent one and the priority of the item is increased; if the bag already reaches its maximum capacity, an item with the **lowest** priority is removed to free space for the new item.
 
 2. **take()** An item is selected probabilistically and taken out of the bag, and the probability for an item to be selected is positively correlated with its priority value.
 
