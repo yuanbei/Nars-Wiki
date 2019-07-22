@@ -2,7 +2,7 @@
 
 Every reasoning system has a "logic" part and a "control" part. The former specifies what can be expressed (the grammar and semantics) and what can be derived in each step (the inference rules), while the latter specifies what tasks can be carried out by linking the inference steps into inference processes. This relation is put into an intuitive formula by Robert Kowalski as "Algorithm = Logic + Control", though it can be extended beyond algorithmic processes.
 
-The logic part of OpenNARS consists of the formal language [Narsese](https://github.com/opennars/opennars/wiki/Input-Output-Format), [Experience-Grounded Semantics (EGS)](http://www.cis.temple.edu/~pwang/Publication/semantics.pdf), and [Non-Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-Logic-behind-OpenNARS) described in "Logic" part on home wiki page. Control Mechanism is physical implementation of the logic part that allows OpenNARS to function and be applied for various purposes.
+The logic part of OpenNARS consists of the formal language [Narsese](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)), [Experience-Grounded Semantics (EGS)](http://www.cis.temple.edu/~pwang/Publication/semantics.pdf), and [Non-Axiomatic Logic (NAL)](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-the-logic-behind-OpenNARS). The following is an overview of the control mechanism of OpenNARS.
 
 # Design principle
 
