@@ -1,8 +1,8 @@
 ## Budget Value Computation
 
-This is the second page related to Budget Value, it is more technical, for better understanding please take a look at [first page on budget value](https://github.com/opennars/opennars/wiki/Budget-Value)  that describes its semantics.
+A [budget value](https://github.com/opennars/opennars/wiki/Budget-Value) consists of three factors, <priority, durability, quality>, and is associated with a data item that participates in time-space resource competition in NARS.
 
-Because of real-time and dynamic nature of OpenNARS, most of parameters are being learned and re-evaluated, this is no exception for budget value which is getting updated constantly to determine current system demands and priorities. In each working cycle, only the directly related items will have their budget values adjusted, which means the system may need to decide for an item its short and long term importance.
+Because of the real-time and dynamic nature of NARS, most of the factors in a budget-value are being learned and re-evaluated, this is no exception for budget value which is getting updated constantly to determine current system demands and priorities. In each working cycle, only the directly related items will have their budget values adjusted, which means the system may need to decide for an item its short and long term importance.
 
 Budget value update happens with use of **AND/OR** Boolean functions defined in OpenNARS. The page on Boolean functions and how it is being defined [here](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS).
 
