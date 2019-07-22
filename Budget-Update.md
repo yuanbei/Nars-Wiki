@@ -1,4 +1,4 @@
-## Budget Value Computation
+### Budget Value Computation
 
 A [budget value](https://github.com/opennars/opennars/wiki/Budget-Value) consists of three factors, <priority, durability, quality>, and is associated with a data item that participates in time-space resource competition in NARS.
 
