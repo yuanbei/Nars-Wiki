@@ -12,26 +12,28 @@ There are some general budget adjustment mechanisms that have been mentioned in 
 * There is a general [forgetting process](https://github.com/opennars/opennars/wiki/Budget-Value#durability), by which every priority value is decreased according to the durability value until it reaches the quality value.
 * Repeated items in the same bag [are merged](https://github.com/opennars/opennars/wiki/Memory-Overview#bag-data-structure), with the new priority being the **OR** of those being merged.
 
-In the following, only the type-specific budget calculations are described.
+In the following, only the type-specific budget calculations are described. They are mostly heuristics selected according to the developing and testing results of OpenNARS and need to be refined and put on a more coherent foundation in the future.
 
 ### Concept budget
 
-The **priority** of a concept is being increased when a task is added into the concept (i.e., a task-link is put into the task bag). The updating uses the **OR** function with the "old priority value of the concept" and the "priority of the task" as arguments.
+The **priority** of a concept is being increased when a task is added into the concept (i.e., a task-link is put into the task bag). The updating uses the **OR** function with the "old priority value of the concept" and the "priority of the task" as arguments. This is similar to the priming effect in psychology.
 
-**Durability** highly is dependent on the task currently being processed. It updated by using average of "durability of a concept" and "durability of a task being processed in Task Bag within a concept"
+The **durability** is updated to the average of the "durability of the concept" and the "durability of the task under processing", so it will be adjusted by taking the task into account.
 
-**Quality** for a concept is mostly stays the same. It is updated only if a concept participates during [procedural knowledge](https://github.com/opennars/opennars/wiki/Procedural-Inference) inference.
+**Quality** for a concept is mostly stays the same. It is updated only when a concept participates [procedural inference](https://github.com/opennars/opennars/wiki/Procedural-Inference).
 
-### Task-link update
-**Priority** of task-link depend on parent's priority the task is derived from. It uses "parent task priority" increased by "priority of a term-link from derived task to a given concept"
+### Task-link budget
 
-**Durability** is computed as following: [("durability of a parent task") / ("complexity of derived task")] * ("term link durability from derived task to a concept of given task-link"). Thus complexity negatively influence durability of a task-link which then affects durability of a concept since durability of a concept is an average of concept's and task-link's durability.
+The initial **priority** of task-link is positively correlated to the priority values of its "parents" (a task and a belief) from which the task is derived. 
 
-**Quality** is affected by a complexity and truth expectation of parent's task. It is updated as following: ("truth expectation of parent task") / ("complexity of derived task")
+The initial **durability** is computed similarly from those of the parents, plus that the complexity of the derived task will have a negative impact, so complicated tasks will be forgotten factor when the other factors are the same.
 
-### Term-links update
-**Priority** is computed using **OR** function as following: ("old priority of a term link") **OR** ("increase by activation of the target concept priority") **OR** ("truth expectation of derived task"/ "complexity of derived task")
+The initial **quality** is affected by the expectation of the task positively (favoring affirmative tasks) and the complexity of the task negatively (favoring simpler tasks).
 
-**Durability** is computed using **OR** function as following: ("old durability of the term link") **OR** ("truth expectation of derived task" / "complexity of derived task") 
+### Term-links budget
 
-**Quality** always stays as a default value
+After each inference step, the **priority** value is updated as the following: ("old priority of the term link") **OR** ("priority of the target concept") **OR** ("expectation of the derived task"/ "complexity of the derived task")
+
+The **durability** is updated as the following: ("old durability of the term link") **OR** ("expectation of the derived task" / "complexity of the derived task") 
+
+**Quality** always stays at a default value.
