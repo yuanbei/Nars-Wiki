@@ -10,7 +10,7 @@ The budget functions mostly consist of [extended Boolean functions](https://gith
 
 There are some general budget adjustment mechanisms that have been mentioned in other pages:
 * There is a general forgetting process, by which every priority value is [decreased according to the durability value](https://github.com/opennars/opennars/wiki/Budget-Value#durability) until it reaches the quality value.
-* Repeated items in the same bag are merged, with the new priority being the **OR** of those being merged.
+* Repeated items in the same bag [are merged](https://github.com/opennars/opennars/wiki/Memory-Overview#bag-data-structure), with the new priority being the **OR** of those being merged.
 
 In the following, only the type-specific budget calculations are described.
 
