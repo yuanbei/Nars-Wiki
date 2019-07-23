@@ -62,7 +62,7 @@ System parameters are defined in **org.main.parameters.java**. It is also possib
 
 **PROJECTION_DECAY = 0.1**: How fast events decay in confidence<br/>
 
-**MAXIMUM_EVIDENTAL_BASE_LENGTH = 2000**: Maximum length of the evidential base of the Stamp, a power of 2<br/>
+**MAXIMUM_EVIDENTAL_BASE_LENGTH = 2000**: Maximum length of the evidential base of the Stamp<br/>
 
 **TERMLINK_MAX_REASONED = 3**: Maximum TermLinks used in reasoning for each Task in Concept<br/>
 
@@ -90,7 +90,7 @@ System parameters are defined in **org.main.parameters.java**. It is also possib
 
 **DEFAULT_FEEDBACK_DURABILITY = 0.5**: Default durability of execution feedback<br/>
 
-**CONCEPT_FORGET_DURATIONS = 2.0**: Concept decay rate in ConceptBag, in [1, 99].  originally: CONCEPT_FORGETTING_CYCLE How many cycles it takes an item to decay completely to a threshold value (ex: 0.1). Lower means faster rate of decay.<br/>
+**CONCEPT_FORGET_DURATIONS = 2.0**: Concept decay rate in ConceptBag, in [1, 99].  originally: CONCEPT_FORGETTING_CYCLE. How many cycles it takes for an item to decay completely to a threshold value (ex: 0.1). Lower means a faster rate of decay.<br/>
 
 **TERMLINK_FORGET_DURATIONS = 10.0**: TermLink decay rate in TermLinkBag, in [1, 99]. originally: TERM_LINK_FORGETTING_CYCLE<br/>
 
@@ -108,4 +108,4 @@ System parameters are defined in **org.main.parameters.java**. It is also possib
 
 **MILLISECONDS_PER_STEP = 0**: Default miliseconds per step at startup<br/>
 
-**STEPS_CLOCK = true**: Timing mode, steps or real time<br/>
+**STEPS_CLOCK = true**: Timing mode, internal steps or external clock<br/>
