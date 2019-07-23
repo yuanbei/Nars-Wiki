@@ -69,4 +69,4 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
     * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
     * [Emotion and Internal experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-experience)
-    * [System parameters and configuration file](https://github.com/opennars/opennars/wiki/System-parameters-and-configuration-file)
+    * [System Parameters and Configuration File](https://github.com/opennars/opennars/wiki/System-Parameters-and-Configuration-File)
