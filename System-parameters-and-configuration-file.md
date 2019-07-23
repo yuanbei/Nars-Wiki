@@ -1,34 +1,34 @@
-The [control mechanism](https://github.com/opennars/opennars/wiki/Inference-Control) is specified with many "system parameters", which are quantities that has not been given a unique value. It is may be because the best value has not been found, but more likely it is because there is no "best value". As the development advances, the former cases will be gradually eliminated, while the latter cases will remain.
+OpenNARS, especially its [control mechanism](https://github.com/opennars/opennars/wiki/Inference-Control), is specified with many "system parameters", which are quantities may take different values in separate copies of the model. It is the case either because the best value has not been found, or (more often) because there is no "best value". As the development advances, the former cases will be gradually eliminated, while the latter cases will remain.
 
-A system parameter indicates a bias of the system, so different values will give the system different "personalities". There is no best value because a certain personality may be good for solving some problems, but bad for some others. Even though, usually there is a "normal range" for each parameter, and values outside it will not be acceptable.
+A system parameter indicates a bias of the system, so different values will give the system different "personalities". There is no best value because a certain personality may be good for solving some problems, but bad for some others. Even though usually there is a "normal range" for each parameter, and values outside it will cause serious problems.
 
 One way to tune and study system parameters is to compare them in a community of multiple OpenNARS implementations, each with a different personality. It is also possible to use an evolutionary process to generate and select new personalities.
 
-System parameters are defined in **org.main.parameters.java**. It is also possible to define them in a config XML file and feed file to the system at initial stage. Below is a list of parameters with brief description:
+System parameters are defined in **org.main.parameters.java**. It is also possible to define them in a config XML file and feed file to the system at the initial stage. Below is a list of parameters with brief descriptions:
 
-**NOVELTY_HORIZON = 100000**: what this value represents was originally equal to the term-link record length (10), but we may want to adjust it or make it scaled according to duration since it has more to do with time than number of records.<br/>
+**NOVELTY_HORIZON = 100000**: After a term-link is used on a task, it won't be used on the task again in a period specified by this parameter<br/>
 
-**CONCEPT_BAG_SIZE = 10000**: Size of Concept Bag<br/>
+**CONCEPT_BAG_SIZE = 10000**: The size of the (only) concept bag. It specifies the maximum number of concepts in the memory<br/>
 
-**DECISION_THRESHOLD = 0.51f**: Minimum expectation for a desire value to execute an operation. The range of "now" is [-DURATION, DURATION]<br/> 
+**DECISION_THRESHOLD = 0.51f**: Minimum expectation for a desire value to execute an operation<br/>
 
-**DURATION = 5**:Cycles per duration. Past/future tense usage convention; How far away "past" and "future" is from "now", in cycles.The range of "now" is [-DURATION/2, +DURATION/2]<br/>
+**DURATION = 5**:Cycles per duration. If the current time (by the internal clock) is T, then he range of "now" is [T - DURATION/2, T + DURATION/2]<br/>
 
-**HORIZON = 1**:Evidential Horizon, the amount of future evidence to be considered<br/>
+**HORIZON = 1**: Evidential Horizon, the amount of future evidence to be compared with the available evidence when calculating confidence<br/>
 
-**TRUTH_EPSILON = 0.01 and BUDGET_EPSILON = 0.0001**:determines the internal precision used for TruthValue calculations. Value of 0.01 gives 100 truth value states between 0 and 1.0. Other values may be used, for example, 0.02 for 50, 0.10 for 10, etc. Change at your own risk, but can't be changed at runtime<br/>
+**TRUTH_EPSILON = 0.01 and BUDGET_EPSILON = 0.0001**: The internal precision used for TruthValue calculations. Value of 0.01 gives 100 truth value states between 0 and 1.0. Other values may be used, for example, 0.02 for 50, 0.10 for 10, etc.<br/>
 
-**BUDGET_THRESHOLD = 0.01**:The budget threshold rate for task to be accepted.<br/>
+**BUDGET_THRESHOLD = 0.01**:The budget threshold rate for task to be accepted<br/>
 
-**DEFAULT_CONFIRMATION_EXPECTATION = 0.6**: Default expectation for confirmation on anticipation.<br/>
+**DEFAULT_CONFIRMATION_EXPECTATION = 0.6**: Default expectation for confirmation on anticipation<br/>
 
-**ALWAYS_CREATE_CONCEPT = true**: Ignore expectation for creation of concept.<br/>
+**ALWAYS_CREATE_CONCEPT = true**: Ignore expectation for creation of concept<br/>
 
-**DEFAULT_CREATION_EXPECTATION = 0.66**: Default expectation for creation of concept.<br/>
+**DEFAULT_CREATION_EXPECTATION = 0.66**: Default expectation for creation of concept<br/>
 
-**DEFAULT_CREATION_EXPECTATION_GOAL = 0.6**: Default expectation for creation of concept for goals.<br/>
+**DEFAULT_CREATION_EXPECTATION_GOAL = 0.6**: Default expectation for creation of concept for goals<br/>
 
-**DEFAULT_JUDGMENT_CONFIDENCE = 0.9**: Default confidence of input judgment.<br/> 
+**DEFAULT_JUDGMENT_CONFIDENCE = 0.9**: Default confidence of input judgment<br/> 
 
 **DEFAULT_JUDGMENT_PRIORITY = 0.8**: Default priority of input judgment<br/>
 
@@ -38,7 +38,7 @@ System parameters are defined in **org.main.parameters.java**. It is also possib
 
 **DEFAULT_QUESTION_DURABILITY = 0.9**: Default durability of input question<br/>
 
-**DEFAULT_GOAL_CONFIDENCE = 0.9**: Default confidence of input goal.<br/>
+**DEFAULT_GOAL_CONFIDENCE = 0.9**: Default confidence of input goal<br/>
 
 **DEFAULT_GOAL_PRIORITY = 0.9**: Default priority of input goal<br/>
 
@@ -62,7 +62,7 @@ System parameters are defined in **org.main.parameters.java**. It is also possib
 
 **PROJECTION_DECAY = 0.1**: How fast events decay in confidence<br/>
 
-**MAXIMUM_EVIDENTAL_BASE_LENGTH = 2000**: Maximum length of the evidental base of the Stamp, a power of 2<br/>
+**MAXIMUM_EVIDENTAL_BASE_LENGTH = 2000**: Maximum length of the evidential base of the Stamp, a power of 2<br/>
 
 **TERMLINK_MAX_REASONED = 3**: Maximum TermLinks used in reasoning for each Task in Concept<br/>
 
