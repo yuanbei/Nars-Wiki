@@ -67,6 +67,5 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
     * [Data-Driven Rule Choosing](https://github.com/opennars/opennars/wiki/Data-Driven-Rule-Choosing)
     * [Budget Update](https://github.com/opennars/opennars/wiki/Budget-Update)
-    * [Perception](https://github.com/opennars/opennars/wiki/Perception-In-OpenNARS)
-    * [Emotion and Internal experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-experience)
+    * [Emotion and Internal Experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-Experience)
     * [System Parameters and Configuration File](https://github.com/opennars/opennars/wiki/System-Parameters-and-Configuration-File)
