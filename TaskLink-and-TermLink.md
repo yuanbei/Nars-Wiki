@@ -51,4 +51,4 @@ Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>
 
 The following graph is for the above example for clear representation. Concepts are yellow, task objects are light red, task-links are red while term-links are blue. _b_ stands for budget value.
 
-![term/task-links](https://user-images.githubusercontent.com/24262360/54265915-ba7b8900-454c-11e9-985a-cedc2d15bba1.png)
+![term/task-links](https://user-images.githubusercontent.com/24262360/61977023-44d3ff00-afbb-11e9-8263-17551cab7adb.png)
