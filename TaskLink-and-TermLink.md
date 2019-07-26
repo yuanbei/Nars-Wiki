@@ -49,6 +49,6 @@ Term-links to concepts: bird, animal <br/>
 
 Now consider two concepts **<raven --> bird>** and **raven**. **<raven --> bird>** has term-link to **raven** and **raven** also has a term-link to **<raven --> bird>**. This is **not** bi-directional link but two **different** term-links because they have different budget value. 
 
-The following graph is for the above example for clear representation. Concepts are yellow, task objects are light red, task-links are red while term-links are blue. _b_ stands for budget value.
+The following graph is for the above example for clear representation. Concepts are yellow, task objects are orange, task-links are red while term-links are blue. _b_ stands for budget value.
 
 ![term/task-links](https://user-images.githubusercontent.com/24262360/61977023-44d3ff00-afbb-11e9-8263-17551cab7adb.png)
