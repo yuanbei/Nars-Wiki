@@ -12,6 +12,8 @@
 
 * [OpenNARS v1.6.5 Preview2: Some other examples](https://www.youtube.com/watch?v=1AxBqeciYfg)
 
+* [OpenNARS v1.6.5 Preview: Procedural Learning](https://www.youtube.com/watch?v=84nMQX444hk)
+
 * [AGI-16 The OpenNARS implementation of the Non-Axiomatic Reasoning System](https://www.youtube.com/watch?v=-vZffKgILiI)
 
 
