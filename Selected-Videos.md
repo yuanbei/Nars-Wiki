@@ -16,11 +16,7 @@
 
 * [AGI-16 The OpenNARS implementation of the Non-Axiomatic Reasoning System](https://www.youtube.com/watch?v=-vZffKgILiI)
 
-
-
-
-
-
+* [Related Videos on YouTube](https://www.youtube.com/results?search_query=OpenNARS)
 
 * [Related presentations on YouTube](https://www.youtube.com/results?search_query=Pei+Wang+AGI)
 
