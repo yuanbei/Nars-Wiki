@@ -10,6 +10,8 @@
 
 * [OpenNARS v1.6.6 Preview2: Test Chamber](https://www.youtube.com/watch?v=hAO1zRj2z9A)
 
+* [OpenNARS v1.6.5 Preview2: Some other examples](https://www.youtube.com/watch?v=1AxBqeciYfg)
+
 * [AGI-16 The OpenNARS implementation of the Non-Axiomatic Reasoning System](https://www.youtube.com/watch?v=-vZffKgILiI)
 
 
