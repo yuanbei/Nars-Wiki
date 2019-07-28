@@ -13,7 +13,7 @@ The pages are roughly divided into two groups, the first group provides differen
 ## 1. Entry points
   - User guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
-    * [Developer's Guide](https://github.com/opennars/opennars/wiki/Developers-Guide)
+    
   - Example and demonstration
     * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
