@@ -2,7 +2,17 @@
 
 * [OpenNARS v3.0.2: Street Scene](https://www.youtube.com/watch?v=Ji73HF6NN_0)
 
+* [OpenNARS v3.0.2: Spatial Reasoning and Decision Making](https://www.youtube.com/watch?v=xSYgN-O_4lE)
+
+* [OpenNARS v3.0.1 Generalization Specialization](https://www.youtube.com/watch?v=e92RV1BBeKU)
+
 * [OpenNARS v3.0.0: Traffic Crossing](https://www.youtube.com/watch?v=TlxoZ64cVvQ)
+
+* [OpenNARS v1.6.6 Preview2: Test Chamber](https://www.youtube.com/watch?v=hAO1zRj2z9A)
+
+* [AGI-16 The OpenNARS implementation of the Non-Axiomatic Reasoning System](https://www.youtube.com/watch?v=-vZffKgILiI)
+
+
 
 
 
