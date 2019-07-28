@@ -2,6 +2,8 @@
 
 * [OpenNARS v3.0.2: Street Scene](https://www.youtube.com/watch?v=Ji73HF6NN_0)
 
+* [OpenNARS v3.0.0: Traffic Crossing](https://www.youtube.com/watch?v=TlxoZ64cVvQ)
+
 
 
 
