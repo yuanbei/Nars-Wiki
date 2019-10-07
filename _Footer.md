@@ -1,1 +1,1 @@
-[Home](https://github.com/opennars/opennars/wiki) | [Download](https://drive.google.com/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing) | [NARS Integrated Into OpenCog](http://bazaar.launchpad.net/~seh999/jcog/proto2/files/head%3A/cog.nars/org/opencog/) | [Applied NARS](http://www.applied-nars.com/)
+[Home](https://github.com/opennars/opennars/wiki) | [Download](https://drive.google.com/folderview?id=0B8Z4Yige07tBUk5LSUtxSGY0eVk&usp=sharing) |[Applied NARS](http://www.applied-nars.com/)
