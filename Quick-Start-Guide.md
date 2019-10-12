@@ -89,6 +89,6 @@ The pane below this is the input field for the GUI. Here a user can input lines 
 <Sam --> Man>.<br/>
 <Man --> Animal>.<br/>
 <Sam --> Animal>?<br/>
-The input field can accommodate multiple lines of input text. Once any text is entered into the field, an input button will appear. After selecting this, the system will attempt to parse the text, and if properly formatted Narsese is found, the sentence will be entered into the actual NARS agents memory. 
+The input field can accommodate multiple lines of input text. Once any text is entered into the field, an input button will appear. After selecting this, the system will attempt to parse the text, and if properly formatted Narsese is found, the sentence will be entered into the actual NARS agents memory. You can also use "Ctrl-Enter" to enter the text.
 
 Once the text is inputted (try the above statements out!) you should see the output panel echo back the statements. Once the ‘play’ button is hit, the system will start performing inference cycles. The derived statements that result from this will appear in the output panel.
