@@ -77,7 +77,7 @@ Clicking the Main GUI button will open an instance of the OpenNARS GUI which off
 ![image](https://user-images.githubusercontent.com/24262360/52943282-ceabdc00-333a-11e9-8f9a-e4c6835ce953.png)
 
 ### Control Panel
-The left-hand side contains the control elements for the system. The four fields (volume, pause, threads, and decision threshold) represent configuration parameters that influence the workings of the inference engine, and the frequency of output seen by the user.
+The left-hand side contains the control elements for the system. The four fields (volume, pause, threads, and decision threshold) represent configuration parameters that influence the workings of the inference engine, especially relevant is volume that filters by task priority. If it's set to lowest value, the GUI will only show answers to questions and operator executions, while every inference result will be shown when it's set to maximum.
 
 The play button allows the user to pause, and restart the system. When paused, the system will not perform inference cycles, and the output of the system will stop. The button next to this allows a user to ‘step through’ a single inference cycle.
 
