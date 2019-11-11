@@ -2,9 +2,9 @@
 
 A [budget value](https://github.com/opennars/opennars/wiki/Budget-Value) consists of three factors, <priority, durability, quality>, and is associated with a data item that participates in time-space resource competition in NARS.
 
-An input task can be given a budget by the user of the system that assigns this task to NARS, according to the definition of a budget value. The system can also provide default values for the factors, according to the type and other attributes of the task. The budget value of derived tasks, as well as other types of items (beliefs, concepts, links, etc.) are calculated from the budget of the task that creates then, as well as other relevant information that is available at the moment. 
+An input task can be given a budget by the user of the system that assigns this task to NARS, according to the definition of a budget value. The system can also provide default values for the factors, according to the type and other attributes of the task. The budget value of derived tasks, as well as other types of items (beliefs, concepts, links, etc.) are calculated from the budget of the task that creates it, as well as other relevant information that is available at the moment. 
 
-Because of the real-time and dynamic nature of NARS, most of the factors are being learned and re-evaluated from time to time, according to context and history. In each working cycle, only the directly related items will have their budget values adjusted, which means the system may need to decide for an item its short and long term importance and urgency. 
+Because of the real-time and dynamic nature of OpenNARS, most of the factors are being learned and re-evaluated from time to time, according to context and history. In each working cycle, only the directly related items will have their budget values updated, which means the system may need to decide for an item its short and long term importance and urgency. 
 
 The budget functions mostly consist of [extended Boolean functions](https://github.com/opennars/opennars/wiki/Extended-Boolean-Functions-in-OpenNARS), and the budget-related calculation takes roughly constant time in each working cycle, independent of the size of the memory.
 
