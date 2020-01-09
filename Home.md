@@ -70,4 +70,4 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Emotion and Internal Experience](https://github.com/opennars/opennars/wiki/Emotion-and-Internal-Experience)
     * [System Parameters and Configuration File](https://github.com/opennars/opennars/wiki/System-Parameters-and-Configuration-File)
 
-And to study the code, see !(Code Map)[https://github.com/opennars/opennars/wiki/Code-Map]
+And to study the code, see [Code Map](https://github.com/opennars/opennars/wiki/Code-Map)
