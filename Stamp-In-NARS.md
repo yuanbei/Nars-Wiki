@@ -7,7 +7,7 @@
 
 A Stamp (nars.entity.Stamp) serves several related functions in NARS. It is a component of a Sentence (nars.entity.Stamp), though conceptually some of its components are actually about the TruthValue or DesireValue of the sentence.
 
-A Stamp contains an evidential base, a derivation chain, a creation time, and an optional occurrence time. Once created, all the information in a stamp remains unchanged.
+A Stamp contains an evidential base, a creation time, and an optional occurrence time. Once created, all the information in a stamp remains unchanged.
 
 ### Evidential base
 
@@ -23,21 +23,11 @@ Since a Question has no truth-value, it has no evidential base, neither. A Goal 
 
 Before the revision rule is applied to a pair of candidate premises, the evidential bases of the two are compared, and revision happens only when the two lists are disjoint, i.e., have no common element. Without restriction, the revision rule could use the same evidence repeatedly to increase the confidence of a conclusion. However, if the same sentence happens multiple times in experience, each instance will get different serial numbers, so can be used by the revision rule to derive more confident conclusions. What is invalidated is multiple usage of the evidental source of a sentence in order to strenghten a statement which depends on the sentence the source claimed with revision.
 
-The evidential base of the conclusion of two sentences (a belief and the task sentence) is conceptually the union (or concatenation) of their evidental bases, while the deviation chain will also add the two sentences itself. However, it is not directly implemented in this way, otherwise the time and space needed for evidential bases and derivation chains would grow exponentially to the length of the inference chain. Under the assumption of insufficient resources, the maximum size of an evidential base must be a constant (as a system parameter, MAXIMUM_EVIDENTAL_BASE_LENGTH, MAXIMUM_DERIVATION_CHAIN_LENGTH). The evidential bases of the premises are interwoven, then cut at the maximum length.
+The evidential base of the conclusion of two sentences (a belief and the task sentence) is conceptually the union (or concatenation) of their evidental bases, while the deviation chain will also add the two sentences itself. However, it is not directly implemented in this way, otherwise the time and space needed for evidential bases would grow exponentially to the length of the inference chain. Under the assumption of insufficient resources, the maximum size of an evidential base must be a constant (as a system parameter, MAXIMUM_EVIDENTAL_BASE_LENGTH). The evidential bases of the premises are interwoven, then cut at the maximum length.
 
 In this way, the order of elements in the list matters, and the two premises are treated equally. It will not work as well if the list is turned into a set, then the union of two sets are reduced to the maximum size, because in that way the serial numbers in the conclusion may only come from one parent.
 
 Though this design works fine for most cases, it has the limitation that it cannot detect common ancestor beyond the maximum length allows.
-
-### Derivation chain
-
-The derivation chain keeps track of all premises and conclusions in their specific rule-application-steps which leaded to the derivation of the new statement. Every derived sentence has a derivation chain, no matter what is the type of the sentence (i.e., judgment, question, goal, ...).
-
-Before a non-revision rule is applied to a pair of candidate premises, to derive a new conclusion C, the derivation chain of both premises is checked if it contains C, only if they don't the rule-application will be allowed. This policy is established to prevent circular inference. Given the reversibility of the syllogistic rules in NAL, circular inference could happen if no restriction were made when premises are selected for inference. Whenever a new derived conclusion, depends on itself in order to derive itself, this would be faulty circular reasoning which needs to be avoided.
-
-Derivation chain also helps debugging and tuning of the system. It can be visualized to show where a conclusion comes from.
-
-Similar to evidential base, the derivation chain also has a maximum length to avoid unlimited resource demand, which may cause errors.
 
 ### Creation time
 
