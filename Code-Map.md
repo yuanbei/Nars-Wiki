@@ -33,52 +33,68 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/entity/Item.java - Abstract class for items with budget value, from which specialized items (Concept, TaskLinks, Termlinks, Tasks) inherit from.
 
-./src/main/java/org/opennars/entity/Sentence.java
+./src/main/java/org/opennars/entity/Sentence.java - Sentence object, including term, punctuation (either question, goal, belief, quest), truth value, and stamp, see https://github.com/opennars/opennars/wiki/Sentence:-types,-format
 
-./src/main/java/org/opennars/entity/Stamp.java
-./src/main/java/org/opennars/entity/TLink.java
-./src/main/java/org/opennars/entity/Task.java
-./src/main/java/org/opennars/entity/TaskLink.java
-./src/main/java/org/opennars/entity/TermLink.java
-./src/main/java/org/opennars/entity/TruthValue.java
-./src/main/java/org/opennars/entity/package-info.java
-./src/main/java/org/opennars/inference
-./src/main/java/org/opennars/inference/BudgetFunctions.java
-./src/main/java/org/opennars/inference/CompositionalRules.java
-./src/main/java/org/opennars/inference/LocalRules.java
-./src/main/java/org/opennars/inference/RuleTables.java
-./src/main/java/org/opennars/inference/StructuralRules.java
-./src/main/java/org/opennars/inference/SyllogisticRules.java
-./src/main/java/org/opennars/inference/TemporalRules.java
-./src/main/java/org/opennars/inference/TruthFunctions.java
-./src/main/java/org/opennars/inference/UtilityFunctions.java
-./src/main/java/org/opennars/inference/package-info.java
-./src/main/java/org/opennars/interfaces
-./src/main/java/org/opennars/interfaces/Eventable.java
-./src/main/java/org/opennars/interfaces/InputFileConsumer.java
-./src/main/java/org/opennars/interfaces/Multistepable.java
-./src/main/java/org/opennars/interfaces/NarseseConsumer.java
-./src/main/java/org/opennars/interfaces/Pluggable.java
-./src/main/java/org/opennars/interfaces/Resettable.java
-./src/main/java/org/opennars/interfaces/SensoryChannelConsumer.java
-./src/main/java/org/opennars/interfaces/TaskConsumer.java
-./src/main/java/org/opennars/interfaces/Timable.java
-./src/main/java/org/opennars/interfaces/pub
-./src/main/java/org/opennars/interfaces/pub/Reasoner.java
-./src/main/java/org/opennars/io
-./src/main/java/org/opennars/io/ConfigReader.java
-./src/main/java/org/opennars/io/Narsese.java
-./src/main/java/org/opennars/io/Parser.java
-./src/main/java/org/opennars/io/Symbols.java
-./src/main/java/org/opennars/io/Texts.java
-./src/main/java/org/opennars/io/events
-./src/main/java/org/opennars/io/events/AnswerHandler.java
-./src/main/java/org/opennars/io/events/EventEmitter.java
-./src/main/java/org/opennars/io/events/EventHandler.java
-./src/main/java/org/opennars/io/events/Events.java
-./src/main/java/org/opennars/io/events/OutputHandler.java
-./src/main/java/org/opennars/io/events/TextOutputHandler.java
-./src/main/java/org/opennars/io/package-info.java
+./src/main/java/org/opennars/entity/Stamp.java - Includes the evidenal base (evidence input id's which are not supposed to overlap!), and other metadata like the occurrence time and creation time of a sentence, see https://github.com/opennars/opennars/wiki/Stamp-In-NARS
+
+./src/main/java/org/opennars/entity/TLink.java - General class for links from which both Tasklinks and Termlinks inherit from
+
+./src/main/java/org/opennars/entity/Task.java - The "working items" NARS processes, which are sentences with budget value, see https://github.com/opennars/opennars/wiki/Task-and-Belief
+
+./src/main/java/org/opennars/entity/TaskLink.java - Link structure for the sampling of tasks (see https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink and for processing https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
+
+./src/main/java/org/opennars/entity/TermLink.java - Link structure to make the sampling of beliefs efficient (see https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink and for processing https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
+
+./src/main/java/org/opennars/entity/TruthValue.java - NAL truth value, see https://github.com/opennars/opennars/wiki/Truth-Value:-Definition-and-Examples 
+
+./src/main/java/org/opennars/inference - Inference package, basically capturing NAL inference, see https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-the-logic-behind-OpenNARS
+
+./src/main/java/org/opennars/inference/BudgetFunctions.java - To decide the importance and usefulness of data items as stored by BudgetValue, see https://github.com/opennars/opennars/wiki/Budget-Update and https://github.com/opennars/opennars/wiki/Budget-Value 
+
+./src/main/java/org/opennars/inference/CompositionalRules.java - NAL rules which compose terms, see https://github.com/opennars/opennars/wiki/Composition
+
+./src/main/java/org/opennars/inference/LocalRules.java - Revision, choice, question answering, see https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules
+
+./src/main/java/org/opennars/inference/RuleTables.java - Main inference entry point, applies all NAL rules to the task and the belief based on the term/link structure, see https://github.com/opennars/opennars/wiki/Data-Driven-Rule-Choosing
+
+./src/main/java/org/opennars/inference/StructuralRules.java - Rules for structural transformations of terms, transforming conclusions to a different representation (such as image to product or back), see https://github.com/opennars/opennars/wiki/Structural-Rules
+
+./src/main/java/org/opennars/inference/SyllogisticRules.java - Basic syllogistic rules inspired by Aristoteles's term logic, see https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules
+
+./src/main/java/org/opennars/inference/TemporalRules.java - Temporal rules to establish temporal relations between events, see https://github.com/opennars/opennars/wiki/Temporal-Inference
+
+./src/main/java/org/opennars/inference/TruthFunctions.java - NAL truth functions to decide the truth value of the conclusion by the truth value of the premises, see https://github.com/opennars/opennars/wiki/Truth-Functions
+
+./src/main/java/org/opennars/inference/UtilityFunctions.java - Helper functions for the truth functions to extend boolean functions to continuous ones, see https://github.com/opennars/opennars/wiki/Truth-Functions
+
+./src/main/java/org/opennars/interfaces - Self-explanatory interfaces for external usage, serves no conceptual purpose other than making code less reliant on specific implementations, hence explanations of interface files are omitted here.
+
+./src/main/java/org/opennars/io - Package for I/O
+
+./src/main/java/org/opennars/io/ConfigReader.java - Read config files in which parameter values and plugins to load and attach at startup can be specified.
+
+./src/main/java/org/opennars/io/Narsese.java - The Narsese parser, parsing strings into input tasks, see https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)
+
+./src/main/java/org/opennars/io/Parser.java - Just a convenient parser interface in case that other knowledge formats will be supported for input as well in the future.
+
+./src/main/java/org/opennars/io/Symbols.java - The symbols used in I/O, see https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)
+
+./src/main/java/org/opennars/io/Texts.java - Just convenient string processing and string representations, only helper functions, it serves no conceptual role.
+
+./src/main/java/org/opennars/io/events - A package about events an application can listen to
+
+./src/main/java/org/opennars/io/events/AnswerHandler.java - Listen to answers for questions
+
+./src/main/java/org/opennars/io/events/EventEmitter.java - Allows to listen to internal reasoner events (CycleStart, ConceptSelected etc., these are not events in NARS sense but events from a reasoning engine / software perspective)
+
+./src/main/java/org/opennars/io/events/EventHandler.java - Event handler for listening to reasoner events.
+
+./src/main/java/org/opennars/io/events/Events.java - The internal reasoner event types.
+
+./src/main/java/org/opennars/io/events/OutputHandler.java - General class for handling reasoner output (a subset of the software events the reasoner generates internally), such as question answers, derivations, from which TextOutputHandler inherits from.
+
+./src/main/java/org/opennars/io/events/TextOutputHandler.java - Transforms output events into actual output to be displayed.
+
 ./src/main/java/org/opennars/language
 ./src/main/java/org/opennars/language/AbstractTerm.java
 ./src/main/java/org/opennars/language/CompoundTerm.java
