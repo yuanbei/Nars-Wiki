@@ -5,7 +5,8 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars - The main code package of the project
 
-./src/main/java/org/opennars/control - Includes code about the control mechanism (see 2.4 at the Wiki main page, https://github.com/opennars/opennars/wiki)
+./src/main/java/org/opennars/control - Includes code about the control mechanism (see 2.4 Control on the Wiki main page, https://github.com/opennars/opennars/wiki)
+
 ./src/main/java/org/opennars/control/DerivationContext.java - Not conceptually important, it just stores the selected premises and the stamp with the evidental base union of both of them.
 
 ./src/main/java/org/opennars/control/GeneralInferenceControl.java - Implements the main working cycle with concept task and belief selection, then applying RuleTable on task and belief, see https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS )
@@ -14,7 +15,7 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/control/concept - Package to implement the processing within a concept, including revision (for beliefs and goals) and question answering (between questions and beliefs, goals and beliefs, quests and goals) as described in https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules)
 
-./src/main/java/org/opennars/control/concept/ProcessAnticipation.java - When a judgment about the future is derived and then processed, it will trigger an expectation that the predicted event will indeed occur as input. If not, negative evidence for the hypotheses which led to the prediction will be generated. Else the success will be noticed by induction + revision.
+./src/main/java/org/opennars/control/concept/ProcessAnticipation.java - When a judgment about the future is derived and then processed, it will trigger an expectation that the predicted event will indeed occur as input. If not, negative evidence for the hypotheses which led to the prediction will be generated. Else the success will be noticed by induction + revision (see https://github.com/opennars/opennars/wiki/Temporal-Inference and https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules).
 
 ./src/main/java/org/opennars/control/concept/ProcessGoal.java - see https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules
 
@@ -22,13 +23,18 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/control/concept/ProcessQuestion.java - see https://github.com/opennars/opennars/wiki/Revision-and-Choice-Rules
 
-./src/main/java/org/opennars/control/concept/ProcessTask.java - Processing of derived tasks
+./src/main/java/org/opennars/control/concept/ProcessTask.java - Processing of derived tasks (see Pre-processing in https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
 
-./src/main/java/org/opennars/entity
-./src/main/java/org/opennars/entity/BudgetValue.java
-./src/main/java/org/opennars/entity/Concept.java
-./src/main/java/org/opennars/entity/Item.java
+./src/main/java/org/opennars/entity - Package for the main datastructures of the system (see 2.3 Data structure in https://github.com/opennars/opennars/wiki )
+
+./src/main/java/org/opennars/entity/BudgetValue.java - The budget value, a triple (Priority, Durability, Quality), see https://github.com/opennars/opennars/wiki/Budget-Value
+
+./src/main/java/org/opennars/entity/Concept.java - The concept data structure summarizing questions, beliefs, goals about a term, and allowing inference with neighbours, see https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes
+
+./src/main/java/org/opennars/entity/Item.java - Abstract class for items with budget value, from which specialized items (Concept, TaskLinks, Termlinks, Tasks) inherit from.
+
 ./src/main/java/org/opennars/entity/Sentence.java
+
 ./src/main/java/org/opennars/entity/Stamp.java
 ./src/main/java/org/opennars/entity/TLink.java
 ./src/main/java/org/opennars/entity/Task.java
