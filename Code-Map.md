@@ -242,11 +242,16 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/plugin/perception/VisionChannel.java - A vision channel using a prototype-based approach for unsupervised pattern learning and recognition, uses NAL revision, and generates NARS events to be fed into the reasoner. See perception from an AGI perspective https://cis.temple.edu/~pwang/Publication/perception.pdf
 
-./src/main/java/org/opennars/plugin/perception/VisualSpace.java - A
-./src/main/java/org/opennars/storage
-./src/main/java/org/opennars/storage/Bag.java
-./src/main/java/org/opennars/storage/Distributor.java
-./src/main/java/org/opennars/storage/Memory.java
-./src/main/java/org/opennars/storage/package-info.java
-./src/main/java/org/opennars/util
-./src/main/java/org/opennars/util/ListUtil.java
+./src/main/java/org/opennars/plugin/perception/VisualSpace.java - Used to support sensory terms, terms with 2D truth value, and perceptive terms (with zooming, position etc. parameters additionally), as well as the corresponding operators, as described in https://cis.temple.edu/~pwang/Publication/perception.pdf
+
+./src/main/java/org/opennars/storage - A package for the system's memory
+
+./src/main/java/org/opennars/storage/Bag.java - The Bag datastructure for implementing Attention by sampling items with chance correlated with their priority, see Bag Data Structure in https://github.com/opennars/opennars/wiki/Memory-Overview and https://github.com/opennars/opennars/wiki/Inference-Control-and-Memory-Structure#memory-structure-and-control-strategy
+
+./src/main/java/org/opennars/storage/Distributor.java - Sampling structure deciding the amount of "selections" in each level, essentially the sampling distribution, so that higher levels will have more and thus the items in them a higher access frequency.
+
+./src/main/java/org/opennars/storage/Memory.java - The memory implementation, in which the concepts "live", and the tasks and beliefs. See https://github.com/opennars/opennars/wiki/Memory-Overview and https://github.com/opennars/opennars/wiki/Inference-Control-and-Memory-Structure
+
+./src/main/java/org/opennars/util - Just misc utilities
+
+./src/main/java/org/opennars/util/ListUtil.java - Useful Java8 "extension" for lists.
