@@ -11,21 +11,21 @@ The pages are roughly divided into two groups, the first group provides differen
 
 # Table of contents
 ## 1. Entry points
-  - User guides
+  - 1.1 User guides
     * [Quick Start Guide](https://github.com/opennars/opennars/wiki/Quick-Start-Guide)
     
-  - Example and demonstration
+  - 1.2 Example and demonstration
     * [Single-Step Inference Examples](https://github.com/opennars/opennars/wiki/Single-step-Inference-examples)
     * [Multi-Step Inference Examples](https://github.com/opennars/opennars/wiki/MultiStep-Examples)
     * [List of Current Demos](https://github.com/opennars/opennars/wiki/List-of-current-Demos) 
     * [Compared with Reinforcement Learning](https://github.com/opennars/opennars/wiki/Compared-with-Reinforcement-Learning)
-  - Overview
+  - 1.3 Overview
     * [Glossary](https://github.com/opennars/opennars/wiki/OpenNARS-Glossary)
     * [Introductory Publications](https://github.com/opennars/opennars/wiki/Introductory-Publications)
     * [Selected Videos](https://github.com/opennars/opennars/wiki/Selected-Videos)
 
 ## 2. Aspects of OpenNARS
-  - Language and I/O
+  - 2.1 Language and I/O
     * [Narsese grammar with annotations](https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format))
     * [Narsese symbol list (Publication and ASCII input)](https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version))
     * [Term: types, format](https://github.com/opennars/opennars/wiki/Term:-types,-format)
@@ -40,7 +40,7 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Inter-system communication protocol](https://github.com/opennars/opennars/wiki/NarNode,-communication-between-reasoners-over-UDP)
     * [Plugins in OpenNARS](https://github.com/opennars/opennars/wiki/Plugins)
     
-  - Logic
+  - 2.2 Logic
     * [Non Axiomatic Logic (NAL) Overview](https://github.com/opennars/opennars/wiki/Non-Axiomatic-Logic-(NAL),-the-logic-behind-OpenNARS) 
     * [Basic syllogistic rules](https://github.com/opennars/opennars/wiki/Basic-Syllogistic-Rules)
     * [Basic truth-value functions](https://github.com/opennars/opennars/wiki/Truth-Functions)
@@ -56,13 +56,13 @@ The pages are roughly divided into two groups, the first group provides differen
     * [Introspective inference](https://github.com/opennars/opennars/wiki/Introspective-Inference)
     * [Backward inference](https://github.com/opennars/opennars/wiki/Backward-Inference) 
 
-  - Data structure
+  - 2.3 Data structure
     * [Memory Overview](https://github.com/opennars/opennars/wiki/Memory-Overview)
     * [Concept Object: Content and Attributes](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes)
     * [Task and Belief](https://github.com/opennars/opennars/wiki/Task-and-Belief)
     * [TaskLink and TermLink](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink)
 
-  - Control
+  - 2.4 Control
     * [Inference Control](https://github.com/opennars/opennars/wiki/Inference-Control)
     * [Working Cycle and Task Management](https://github.com/opennars/opennars/wiki/Working-Cycle-and-Tasks-Management-in-OpenNARS)
     * [Data-Driven Rule Choosing](https://github.com/opennars/opennars/wiki/Data-Driven-Rule-Choosing)
