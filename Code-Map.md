@@ -77,7 +77,7 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/io/Parser.java - Just a convenient parser interface in case that other knowledge formats will be supported for input as well in the future.
 
-./src/main/java/org/opennars/io/Symbols.java - The symbols used in I/O, see https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)
+./src/main/java/org/opennars/io/Symbols.java - The symbols used in I/O, see https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version) and https://github.com/opennars/opennars/wiki/Narsese-Grammar-(Input-Output-Format)
 
 ./src/main/java/org/opennars/io/Texts.java - Just convenient string processing and string representations, only helper functions, it serves no conceptual role.
 
@@ -95,84 +95,154 @@ While code comments plus code shed light on the "how" (how is it implemented?), 
 
 ./src/main/java/org/opennars/io/events/TextOutputHandler.java - Transforms output events into actual output to be displayed.
 
-./src/main/java/org/opennars/language
-./src/main/java/org/opennars/language/AbstractTerm.java
-./src/main/java/org/opennars/language/CompoundTerm.java
+./src/main/java/org/opennars/language - Objects for the NAL term types, see https://github.com/opennars/opennars/wiki/Term:-types,-format and https://github.com/opennars/opennars/wiki/Narsese-symbol-list-(ASCII-version)
+
+./src/main/java/org/opennars/language/AbstractTerm.java - Just an interface for terms in general.
+
+./src/main/java/org/opennars/language/CompoundTerm.java - An abstract class from which all compound term objects inherit.
+
 ./src/main/java/org/opennars/language/Conjunction.java
+
 ./src/main/java/org/opennars/language/DifferenceExt.java
+
 ./src/main/java/org/opennars/language/DifferenceInt.java
+
 ./src/main/java/org/opennars/language/Disjunction.java
+
 ./src/main/java/org/opennars/language/Equivalence.java
+
 ./src/main/java/org/opennars/language/Image.java
+
 ./src/main/java/org/opennars/language/ImageExt.java
+
 ./src/main/java/org/opennars/language/ImageInt.java
+
 ./src/main/java/org/opennars/language/Implication.java
+
 ./src/main/java/org/opennars/language/Inheritance.java
+
 ./src/main/java/org/opennars/language/Instance.java
+
 ./src/main/java/org/opennars/language/InstanceProperty.java
+
 ./src/main/java/org/opennars/language/IntersectionExt.java
+
 ./src/main/java/org/opennars/language/IntersectionInt.java
+
 ./src/main/java/org/opennars/language/Interval.java
+
 ./src/main/java/org/opennars/language/Negation.java
+
 ./src/main/java/org/opennars/language/Product.java
+
 ./src/main/java/org/opennars/language/Property.java
+
 ./src/main/java/org/opennars/language/SetExt.java
+
 ./src/main/java/org/opennars/language/SetInt.java
-./src/main/java/org/opennars/language/SetTensional.java
+
+./src/main/java/org/opennars/language/SetTensional.java - Set term abstract class, used by SetExt and SetInt.
+
 ./src/main/java/org/opennars/language/Similarity.java
+
 ./src/main/java/org/opennars/language/Statement.java
+
 ./src/main/java/org/opennars/language/Tense.java
-./src/main/java/org/opennars/language/Term.java
-./src/main/java/org/opennars/language/Terms.java
+
+./src/main/java/org/opennars/language/Term.java - Atomic term, the only one which isn't a CompoundTerm.
+
+./src/main/java/org/opennars/language/Terms.java - Term utilities, such as for extracting intervals recursively.
+
 ./src/main/java/org/opennars/language/Variable.java
-./src/main/java/org/opennars/language/Variables.java
-./src/main/java/org/opennars/language/package-info.java
-./src/main/java/org/opennars/main
-./src/main/java/org/opennars/main/MiscFlags.java
-./src/main/java/org/opennars/main/Nar.java
-./src/main/java/org/opennars/main/NarNode.java
-./src/main/java/org/opennars/main/Parameters.java
-./src/main/java/org/opennars/main/Shell.java
-./src/main/java/org/opennars/main/overview.html
-./src/main/java/org/opennars/main/ParseTest.java
-./src/main/java/org/opennars/operator
-./src/main/java/org/opennars/operator/FunctionOperator.java
-./src/main/java/org/opennars/operator/ImaginationSpace.java
-./src/main/java/org/opennars/operator/NullOperator.java
-./src/main/java/org/opennars/operator/Operation.java
-./src/main/java/org/opennars/operator/Operator.java
-./src/main/java/org/opennars/operator/mental
-./src/main/java/org/opennars/operator/mental/Anticipate.java
-./src/main/java/org/opennars/operator/mental/Believe.java
-./src/main/java/org/opennars/operator/mental/Consider.java
-./src/main/java/org/opennars/operator/mental/Doubt.java
-./src/main/java/org/opennars/operator/mental/Evaluate.java
-./src/main/java/org/opennars/operator/mental/Feel.java
-./src/main/java/org/opennars/operator/mental/FeelBusy.java
-./src/main/java/org/opennars/operator/mental/FeelSatisfied.java
-./src/main/java/org/opennars/operator/mental/Hesitate.java
-./src/main/java/org/opennars/operator/mental/Name.java
-./src/main/java/org/opennars/operator/mental/Register.java
-./src/main/java/org/opennars/operator/mental/Remind.java
-./src/main/java/org/opennars/operator/mental/Want.java
-./src/main/java/org/opennars/operator/mental/Wonder.java
-./src/main/java/org/opennars/operator/misc
-./src/main/java/org/opennars/operator/misc/Add.java
-./src/main/java/org/opennars/operator/misc/Count.java
-./src/main/java/org/opennars/operator/misc/Reflect.java
-./src/main/java/org/opennars/operator/misc/System.java
-./src/main/java/org/opennars/plugin
-./src/main/java/org/opennars/plugin/Plugin.java
-./src/main/java/org/opennars/plugin/mental
-./src/main/java/org/opennars/plugin/mental/Abbreviation.java
-./src/main/java/org/opennars/plugin/mental/ComplexEmotions.java
-./src/main/java/org/opennars/plugin/mental/Counting.java
-./src/main/java/org/opennars/plugin/mental/Emotions.java
-./src/main/java/org/opennars/plugin/mental/InternalExperience.java
-./src/main/java/org/opennars/plugin/perception
-./src/main/java/org/opennars/plugin/perception/SensoryChannel.java
-./src/main/java/org/opennars/plugin/perception/VisionChannel.java
-./src/main/java/org/opennars/plugin/perception/VisualSpace.java
+
+./src/main/java/org/opennars/language/Variables.java - Utility functions for processing terms with variables, mainly Unification algorithm and variable substitution.
+
+./src/main/java/org/opennars/main - The main package of NARS
+
+./src/main/java/org/opennars/main/MiscFlags.java - Some misc flags for debug and logging purposes, only relevant for developers.
+
+./src/main/java/org/opennars/main/Nar.java - The main Nar object to use OpenNARS in an application, it supports important methods such as .addInput(Narsese string), .cycles(amount of cycles to run the reasoner), addPlugin (for registering plugins, such as operators NARS can call), addSensoryChannel, and ability to register software event handlers for question answers etc.
+
+./src/main/java/org/opennars/main/NarNode.java - A Nar object which runs in the network, communicating to other Nar nodes and accepting inputs from other applications via UDP.
+
+./src/main/java/org/opennars/main/Parameters.java - The system parameters
+
+./src/main/java/org/opennars/main/Shell.java - Main shell supporting interactive usage of OpenNARS in the shell.
+
+./src/main/java/org/opennars/operator - A package for all operators the system can call.
+
+./src/main/java/org/opennars/operator/FunctionOperator.java - For operators which return a single value, like ^add.
+
+./src/main/java/org/opennars/operator/ImaginationSpace.java - An "imaginary"/mental context which groups perceptive terms with values and operators on the same space type (like zooming in visual space and the zoom value, filtering in audio space and filter values, ops regarding some mental internal playground or internal map etc.), these operators usually generate events with new perceptive terms (which are terms with a non-null ImaginationSpace attached). This is experimental and was first introduced for the vision channel, to support its perceptive terms. For instance VisualSpace inherits from it.
+
+./src/main/java/org/opennars/operator/NullOperator.java - An operator which has no effect, it's only used for examples and testing, to see whether the system calls the right operators in certain examples.
+
+./src/main/java/org/opennars/operator/Operation.java And inheritance with the format ```<(*,{SELF},arg1,...,argn) --> ^Operator>```, which has both an operator and the arguments the operator should be called with.
+
+./src/main/java/org/opennars/operator/Operator.java - Operators NARS can call to interact with "whatever" (change motor speed in a robot, generate user message, change paramters of own internal resource allocation etc.). Encoded as an atomic term starting with ^, associated with a Java procedure which can be invoked.
+
+./src/main/java/org/opennars/operator/mental - Mental operators, operators which consequences appear directly within the system, a NAL-9 construct, see https://github.com/opennars/opennars/wiki/Introspective-Inference and https://github.com/opennars/opennars/wiki/Built-in-operator-list 
+
+./src/main/java/org/opennars/operator/mental/Anticipate.java - Anticipating outcomes as a mental operator, see https://github.com/opennars/opennars/wiki/Introspective-Inference
+
+./src/main/java/org/opennars/operator/mental/Believe.java - The system anually changing its own belief
+
+./src/main/java/org/opennars/operator/mental/Consider.java - The system manually processing a concept
+
+./src/main/java/org/opennars/operator/mental/Doubt.java - The system manually reducing its confidence about a belief
+
+./src/main/java/org/opennars/operator/mental/Evaluate.java - The system asking itself a question about the desire of a goal, this kind of question we call quest.
+
+./src/main/java/org/opennars/operator/mental/Feel.java - Abstract class for the system actively querying internal values.
+./src/main/java/org/opennars/operator/mental/FeelBusy.java - The system querying its busyiness in terms of average priority of recently processed tasks.
+
+./src/main/java/org/opennars/operator/mental/FeelSatisfied.java - The system querying its state of satisfaction
+
+./src/main/java/org/opennars/operator/mental/Hesitate.java - The system reducing the confidence of a goal
+
+./src/main/java/org/opennars/operator/mental/Name.java - Giving a name to a term
+
+./src/main/java/org/opennars/operator/mental/Register.java - An operator to register an operator at runtime
+
+./src/main/java/org/opennars/operator/mental/Remind.java - The system manually increasing the priority of a concept
+
+./src/main/java/org/opennars/operator/mental/Want.java - The system manually creating a goal
+
+./src/main/java/org/opennars/operator/mental/Wonder.java - The system manually generating a question
+
+./src/main/java/org/opennars/operator/misc - A package for misc operators
+
+./src/main/java/org/opennars/operator/misc/Add.java - An operator allowing the system to add numbers, it's like an internal "pocket calculator"
+
+./src/main/java/org/opennars/operator/misc/Count.java - An operator to let the system count the cardinality of sets.
+
+./src/main/java/org/opennars/operator/misc/Reflect.java - An operator to let the system reflect on the structure of compound terms.
+
+./src/main/java/org/opennars/operator/misc/System.java - An operator to call a tool available in the Shell/OS environment
+
+./src/main/java/org/opennars/plugin - A package for adding plugins to OpenNARS.
+
+./src/main/java/org/opennars/plugin/Plugin.java - Plugins like operators, sensory channels, knowledge base connections, system monitors etc.
+
+./src/main/java/org/opennars/plugin/mental - Plugins affecting the internal processing of the system. Note: while operators are also plugins, plugins can consist of multiple operators, and can be sensory channels as well.
+
+./src/main/java/org/opennars/plugin/mental/Abbreviation.java - A plugin which allows the system to simplify terms
+
+./src/main/java/org/opennars/plugin/mental/ComplexEmotions.java - A plugin for self-regulation investigations.
+
+./src/main/java/org/opennars/plugin/mental/Counting.java - A plugin allowing the system to count quantities.
+
+./src/main/java/org/opennars/plugin/mental/Emotions.java - A plugin which introduces internal measurements to OpenNARS, such as Busyness, Satisfaction, which are for self-monitoring and self-control, NAL-9.
+
+./src/main/java/org/opennars/plugin/mental/InternalExperience.java - A plugin which listens to reasoner events and generates internal experience, allowing the system to reflect on what it is believing, thinking, wanting etc.
+
+./src/main/java/org/opennars/plugin/perception - Plugins for perception purposes
+
+./src/main/java/org/opennars/plugin/perception/SensoryChannel.java - Abstract class, a class to create plugins for sensor-related processing.
+
+./src/main/java/org/opennars/plugin/perception/VisionChannel.java - A vision channel using a prototype-based approach for unsupervised pattern learning and recognition, uses NAL revision, and generates NARS events to be fed into the reasoner. See perception from an AGI perspective https://cis.temple.edu/~pwang/Publication/perception.pdf
+
+./src/main/java/org/opennars/plugin/perception/VisualSpace.java - A
 ./src/main/java/org/opennars/storage
 ./src/main/java/org/opennars/storage/Bag.java
 ./src/main/java/org/opennars/storage/Distributor.java
