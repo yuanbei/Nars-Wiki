@@ -1,6 +1,8 @@
 This pages serves to link the code files and their purpose to the corresponding Wiki pages with explanations.
 While code comments plus code shed light on the "how" (how is it implemented?), the Wiki pages give insights about the "why" (what is the purpose / why is it needed?) 
 
+Most relevant to study the way the system works are the packages control, memory and inference, where for the latter it mostly suffices to know that it implements NAL, expecting a task and belief sentence as premise and deriving tasks to be added to memory according to the applicable rules. Also in entity there are the data types (Task, Sentence, Term, TruthValue) and Narsese is implemented by the equally named Narsese.java in the io package.
+
 ./pom.xml - The Maven configuration file of the project, including software library dependencies, and build config.
 
 ./src/main/java/org/opennars - The main code package of the project
